@@ -1,0 +1,115 @@
+body,html {
+    margin: 0;
+    font-size: 16px;
+    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    box-sizing: border-box;
+    background-color: #FFF;
+    color: #333;
+    height: 100%;
+}
+
+.house-container {
+    height: 100%;
+}
+
+.house-container .header {
+    height: 2.2rem;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 16px;
+    position: relative;
+}
+
+.house-container .header .back {
+    position: absolute;
+    top: 0.7rem;
+    left: 1.1rem;
+}
+
+.house-container .header img {
+    width: 9px;
+    height: 18px;
+}
+
+.house-container .header h1 {
+    text-align: center;
+    font-size: .8rem;
+    line-height: 2.2rem;
+}
+
+.house-container .house-content {
+    background: #F5F5F5;
+    padding-top: .5rem;
+    height: 100%;
+}
+
+.house-content .house-card {
+    padding:0 .9rem .9rem .9rem;
+    text-align: center;
+    background: #FFFFFF;
+}
+
+.house-card .title {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: .8rem;
+}
+
+.select select {
+    height: 1.7rem;
+    line-height: 1.7rem;
+    width: 100%;
+}
+
+.radio {
+    text-align: left;
+    margin-top: .7rem;
+}
+
+.radio label{
+    margin-right: .7rem;
+}
+
+.house-list .weui-btn {
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    border: 1px solid #737373;
+    border-radius: 0;
+    font-size: .7rem;
+    text-align: center;
+}
+
+.house-list .weui-btn:after {
+    border: none;
+}
+
+.house-list .weui-btn.btn-disable {
+    background: #D4D4D4;
+    color: #333;
+}
+
+.house-list .weui-btn.btn-select {
+    background: #FF4040;
+    color: #FFF;
+}
+
+.house-container .footer {
+    position: fixed;
+    bottom: 0;
+    background: #FFF;
+    height: 2.5rem;
+    padding-top: 0.25rem;
+    width: 100%;
+}
+
+.house-container .footer .footer-btn {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    height: 2rem;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 0.8rem;
+    line-height: 2rem;
+}

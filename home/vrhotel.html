@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>我的</title>
+    <link rel="stylesheet" href="assets/stylesheets/vr.css" />
+    <link rel="stylesheet" href="assets/stylesheets/weui.css">
+    <link rel="stylesheet" href="assets/stylesheets/jquery-weui.css">
+    <link href="assets/stylesheets/video-js.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/video.min.js"></script>
+</head>
+<body>
+<div class="my-container my vr-hotel">
+    <div class="header">
+        <a href="" class="back">
+            <img src="assets/images/back.png" alt="">
+        </a>
+        <h1>松泉公寓</h1>
+    </div>
+    <div class="content">
+        <div class="show">
+            <img  class="slide"  src="assets/images/vr-slider.png" alt="">
+            <div class="like">
+                <img src="assets/images/hasattention.png" alt="">
+                <p>已关注</p>
+            </div>
+            <div class="home">
+                <img src="assets/images/source.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="recommend">
+        <div class="title">
+            <div class="line-left"></div>
+            <div class="text">VR视频</div>
+            <div class="line-right"></div>
+        </div>
+        <div class="img-list">
+            <video id="video_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" width="375" height="164"
+                   poster="assets/images/house1.png"
+                   data-setup="{}">
+                <source src="http://视频地址格式1.mp4" type='video/mp4' />
+                <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+            </video>
+            <video id="video_2" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" width="375" height="164"
+                   poster="assets/images/house2.png"
+                   data-setup="{}">
+                <source src="http://视频地址格式1.mp4" type='video/mp4' />
+                <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+            </video>
+        </div>
+    </div>
+
+    <div class="recommend source">
+        <div class="title">
+            <div class="line-left"></div>
+            <div class="text">推荐房源</div>
+            <div class="line-right"></div>
+        </div>
+        <div class="img-list">
+            <a href="" class="img-item">
+                <img src="assets/images/room1.png" alt="">
+                <p>公寓A户型</p>
+            </a>
+            <a href="" class="img-item">
+                <img src="assets/images/room2.png" alt="">
+                <p>公寓A户型</p>
+            </a>
+            <a href="" class="img-item">
+                <img src="assets/images/room1.png" alt="">
+                <p>公寓A户型</p>
+            </a>
+            <a href="" class="img-item">
+                <img src="assets/images/room2.png" alt="">
+                <p>公寓A户型</p>
+            </a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

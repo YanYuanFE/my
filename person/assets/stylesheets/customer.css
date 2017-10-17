@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    box-sizing: border-box;
+    background-color: #FFF;
+    color: #333;
+}
+
+body,html,.customer-container,.content {
+    height: 100%;
+}
+
+.customer-container .header {
+    height: 2.2rem;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 16px;
+    position: relative;
+}
+
+.customer-container .header .back {
+    position: absolute;
+    top: 0.7rem;
+    left: 1.1rem;
+}
+
+.customer-container .header img {
+    width: 9px;
+    height: 18px;
+}
+
+.customer-container .header h1 {
+    text-align: center;
+    font-size: .8rem;
+    line-height: 2.2rem;
+}
+.customer-container .content {
+    background: #F5F5F5;
+    padding: .5rem 1rem;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.content .time {
+    background: #D5D5D5;
+    color: #FFF;
+    font-size: .5rem;
+    padding: .3rem .3rem;
+    border-radius: 4px;
+}
+
+.customer-message {
+    display: flex;
+    justify-content: flex-start;
+    margin: .75rem 0;
+    align-items: center;
+}
+
+.customer-message .message:before {
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid transparent;
+    border-right: .75rem solid #8FD026;
+    border-bottom: 0.5rem solid transparent;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -.75rem;
+    margin-top: -.5rem;
+}
+
+.user-message {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user-message .message:before {
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid transparent;
+    border-left: .75rem solid #FFF;
+    border-bottom: 0.5rem solid transparent;
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: -.75rem;
+    margin-top: -.5rem;
+}
+
+.customer-message .message {
+    background: #8FD026;
+    color: #FFF;
+    border-radius: 4px;
+    margin-left: 1rem;
+    padding: .8rem 1rem 1.5rem 1rem;
+    position: relative;
+}
+
+.user-message .message {
+    background: #FFF;
+    color: #000;
+    border-radius: 4px;
+    margin-right: 1rem;
+    padding: .8rem 1rem 1.5rem 1rem;
+    position: relative;
+}
+
+.customer-message .customer-avatar {
+    background: #8FD026;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    text-align: center;
+    display: table;
+}
+.customer-message .customer-avatar span,.user-message .user-avatar span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.customer-message .customer-avatar img {
+    width: 1.4rem;
+    height: 1.4rem;
+    vertical-align: middle;
+}
+
+.user-message .user-avatar img {
+    width: 2.2rem;
+    height: 2.2rem;
+    vertical-align: middle;
+    border-radius: 50%;
+ }
+
+.user-message .user-avatar {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    text-align: center;
+    display: table;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #FFF;
+    height: 2.15rem;
+    border-top: 1px solid #DADADA;
+    padding-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .input {
+    border: none;
+    border-bottom: 1px solid #8FD026;
+    color: #9C9C9C;
+    height: 1.7rem;
+    margin-left: 1rem;
+}
+
+.footer .submit {
+    background: #8FD026;
+    color: #FFF;
+    padding: .2rem 1rem;
+    border: none;
+    border-radius: 4px;
+    height: 1.6rem;
+    line-height: 1.3rem;
+    margin-right: 1rem;
+}

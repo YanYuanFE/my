@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>我的</title>
+    <link rel="stylesheet" href="assets/stylesheets/house.css" />
+    <link rel="stylesheet" href="assets/stylesheets/weui.css">
+    <link rel="stylesheet" href="assets/stylesheets/jquery-weui.css">
+</head>
+<body>
+<div class="house-container">
+    <div class="header">
+        <a href="" class="back">
+            <img src="assets/images/back.png" alt="">
+        </a>
+        <h1>房源地图</h1>
+    </div>
+    <div class="house-content">
+        <div class="house-card">
+            <div class="title">惠鑫公寓A栋</div>
+            <div class="select">
+                <select name="" id="">
+                    <option>全部户型</option>
+                </select>
+            </div>
+            <div class="radio">
+                <label><input name="Fruit" type="radio" value="" />已租</label>
+                <label><input name="Fruit" type="radio" value="" />未租</label>
+            </div>
+            <div class="house-list">
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">201</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">301</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select">401</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">501</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">601</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">701</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">801</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">901</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1001</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1011</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1012</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1013</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1014</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select">1015</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1016</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1017</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1018</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1019</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1020</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1021</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-btn">设为已租/未租</div>
+    </div>
+
+</div>
+<script src="assets/js/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.weui-btn').click(function(e) {
+            console.log($(this))
+            if($(this).hasClass("btn-disable")){
+                return;
+            } else {
+                $(this).toggleClass("btn-select")
+            }
+        })
+
+    });
+
+</script>
+</body>
+</html>

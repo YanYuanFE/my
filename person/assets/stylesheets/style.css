@@ -1,0 +1,287 @@
+body, html {
+    margin: 0;
+    font-size: 16px;
+    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    box-sizing: border-box;
+    background-color: #FFF;
+    color: #333;
+    height: 100%;
+}
+
+.my-container {
+    height: 100%;
+}
+
+.my-container .message {
+    position: absolute;
+    top:.5rem;
+    right:1rem;
+}
+
+.my-container a.message img {
+    width: 1.1rem;
+    height: 1rem;
+}
+
+.my-container .header {
+    height: 2.2rem;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 16px;
+    position: relative;
+}
+
+.my-container .header .back {
+    position: absolute;
+    top: 0.7rem;
+    left: 1.1rem;
+}
+
+.my-container .header img {
+    width: 9px;
+    height: 18px;
+}
+
+.my-container .header h1 {
+    text-align: center;
+    font-size: .8rem;
+    line-height: 2.2rem;
+}
+
+.my-container .order-content {
+    background: #F5F5F5;
+}
+
+.my-container .bg {
+    height: 10rem;
+    background: url("../images/mybg.png");
+    background-position: center center;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.my-container .bg .avatar {
+    width: 4.9rem;
+    height: 4.9rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2.45rem;
+}
+
+.my-container .bg img {
+    width: 4.9rem;
+    height: 4.9rem;
+    border-radius: 50%;
+}
+
+.my-container .nikename {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 1.33rem;
+}
+
+.my-container .menu .weui-cells{
+    margin-top: 0;
+}
+
+.my-container .menu .weui-cell__bd{
+    font-size: 0.46rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.my-container .menu .weui-cell__bd img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.77rem;
+}
+
+.my-container .menu .weui-cell__bd p {
+    font-size: .8rem;
+}
+
+.my-container .weui-tabbar {
+    background: #fff;
+}
+
+.foot-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.35rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.foot-item img {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.person-info .weui-cell__ft img {
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+}
+
+.person-info .info-content {
+    height: 100%;
+    background: #F5F5F5;
+    padding-top: .5rem;
+}
+
+.about .weui-cell {
+    height: 2rem;
+}
+
+.my {
+    background: #F5F5F5;
+}
+
+.my .nikename {
+    font-size: 0.8rem;
+    text-align: center;
+    padding-bottom: 1.33rem;
+    margin: 0;
+    background: #FFF;
+}
+
+.my .menu {
+    background: #FFF;
+}
+.my .menu .weui-grid__icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .85rem;
+}
+
+.my .bg .avatar{
+    width:3.3rem;
+    height: 3.3rem;
+    margin-left: -1.65rem;
+}
+
+.my .bg .avatar img{
+    width:3.3rem;
+    height: 3.3rem;
+}
+
+.my .menu .weui-grid__icon img {
+    max-width: 1rem;
+    height: auto;
+    /*max-height: 1rem;*/
+}
+
+.my .menu .weui-grid__icon.foot img {
+    width: .7rem;
+    height: auto;
+}
+
+.my .recommend {
+    background: #FFFFFF;
+    margin: .4rem 0 5rem;
+}
+
+.my .recommend .title {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my .recommend .title .line-left {
+    width: 0;
+    height: 0;
+    border-top: 1px solid transparent;
+    border-right: 80px solid #DADADA;
+    border-bottom: 1px solid transparent;
+    position: relative;
+}
+
+.my .recommend .title .line-left:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #DADADA;
+    position: absolute;
+    left: 80px;
+    top: -2px;
+}
+
+.my .recommend .title .line-right {
+    width: 0;
+    height: 0;
+    border-top: 1px solid transparent;
+    border-left: 80px solid #DADADA;
+    border-bottom: 1px solid transparent;
+    position: relative;
+}
+
+.my .recommend .title .text {
+    margin: 0 .5rem;
+}
+
+.my .recommend .title .line-right:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #DADADA;
+    position: absolute;
+    right: 78px;
+    top: -2px;
+}
+
+.my .recommend .img-list {
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.my .recommend .img-item {
+    height: 8.2rem;
+    display: inline-block;
+}
+
+.my .recommend .img-item img {
+    width: 100%;
+    height: 8.2rem;
+}
+
+.my .weui-tabbar {
+    position: fixed;
+    bottom: 0;
+}
+
+.my-attention .recommend {
+    background: #F5F5F5;
+}
+
+.my-attention .recommend .img-list{
+    margin: 0;
+}
+
+.my-attention .recommend .img-item{
+    height: 10.2rem;
+    margin-top: .5rem;
+    background: #ffffff;
+}
+
+.my-attention .recommend .img-item p{
+    padding-left: 1rem;
+    color: #333;
+}
+
+.my-message .info-content .menu .weui-cells{
+    margin-top: .5rem;
+}
+
+.my-message .info-content .menu .weui-cells a{
+    padding: 20px 15px;
+}

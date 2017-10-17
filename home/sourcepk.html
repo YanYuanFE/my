@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>房源对比</title>
+    <link rel="stylesheet" href="assets/stylesheets/pk.css" />
+    <link rel="stylesheet" href="assets/stylesheets/weui.css">
+    <link rel="stylesheet" href="assets/stylesheets/jquery-weui.css">
+</head>
+<body>
+<div class="source-pk">
+    <div class="header">
+        <a href="" class="back">
+            <img src="assets/images/back.png" alt="">
+        </a>
+        <h1>房源对比</h1>
+    </div>
+    <div class="content">
+        <div class="weui-cells weui-cells_checkbox">
+            <label class="weui-cell weui-check__label" for="sourceA">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" name="sourceA" id="sourceA" checked="checked">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+                    <p>A房源</p>
+                </div>
+                <div class="weui-cell__ft cancel">删除</div>
+            </label>
+            <label class="weui-cell weui-check__label" for="sourceB">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" name="sourceA" id="sourceB" checked="checked">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+                    <p>B房源</p>
+                </div>
+                <div class="weui-cell__ft cancel">删除</div>
+            </label>
+            <label class="weui-cell weui-check__label" for="sourceC">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" name="sourceA" id="sourceC" >
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+                    <p>C房源</p>
+                </div>
+                <div class="weui-cell__ft cancel">删除</div>
+            </label>
+            <label class="weui-cell weui-check__label" for="sourceD">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" name="sourceA" id="sourceD" >
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+                    <p>D房源</p>
+                </div>
+                <div class="weui-cell__ft cancel">删除</div>
+            </label>
+        </div>
+        <div class="add">
+            <span class="icon">+</span>
+            <span class="text">添加户型</span>
+        </div>
+    </div>
+    <div class="foot">
+        <a href="pkdetail.html">开始对比</a>
+    </div>
+</div>
+<script type='text/javascript' src='assets/js/jquery.js' charset='utf-8'></script>
+<script type='text/javascript' src='assets/js/jquery-weui.js' charset='utf-8'></script>
+<script src="assets/js/fastclick.js"></script>
+<script>
+  $(document).ready(function() {
+    var lines = $(".weui-check__label");
+    var len = lines.length;
+    var lastX, lastXForMobile;
+
+    // 用于记录被按下的对象
+    var pressedObj;  // 当前左滑的对象
+    var lastLeftObj; // 上一个左滑的对象
+
+    // 用于记录按下的点
+    var start;
+
+    // 网页在移动端运行时的监听
+    for (var i = 0; i < len; ++i) {
+      lines[i].addEventListener('touchstart', function(e){
+        lastXForMobile = e.changedTouches[0].pageX;
+        pressedObj = this; // 记录被按下的对象
+
+        // 记录开始按下时的点
+        var touches = event.touches[0];
+        start = {
+          x: touches.pageX, // 横坐标
+          y: touches.pageY  // 纵坐标
+        };
+      });
+
+      lines[i].addEventListener('touchmove',function(e){
+        // 计算划动过程中x和y的变化量
+        var touches = event.touches[0];
+        delta = {
+          x: touches.pageX - start.x,
+          y: touches.pageY - start.y
+        };
+
+        // 横向位移大于纵向位移，阻止纵向滚动
+        if (Math.abs(delta.x) > Math.abs(delta.y)) {
+          event.preventDefault();
+        }
+      });
+
+      lines[i].addEventListener('touchend', function(e){
+        if (lastLeftObj && pressedObj != lastLeftObj) {
+          $(lastLeftObj).children('.cancel').animate({right:"-3rem"}, 500); // 右滑
+          lastLeftObj = null;
+        }
+        var diffX = e.changedTouches[0].pageX - lastXForMobile;
+        if (diffX < -150) {
+          $(pressedObj).children('.cancel').animate({right:"0"}, 200); // 左滑
+          lastLeftObj && lastLeftObj != pressedObj &&
+          $(lastLeftObj).animate({marginLeft:"0"}, 500);
+          lastLeftObj = pressedObj;
+        } else if (diffX > 150) {
+          if (pressedObj == lastLeftObj) {
+            $(pressedObj).children('.cancel').animate({right:"-3rem"}, 200); // 右滑
+            lastLeftObj = null;
+          }
+        }
+      });
+    }
+
+  })
+</script>
+</body>
+</html>
