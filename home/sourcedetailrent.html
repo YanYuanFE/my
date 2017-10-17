@@ -28,8 +28,11 @@
                     <div class="swiper-slide"><img src="assets/images/sourcedetail1.png" alt=""></div>
                 </div>
                 <div class="pagination absolute">1/10</div>
-                <div class="pk absolute"><a href="">PK</a></div>
-                <div class="heart absolute"><img src="assets/images/yellow-heart.png" alt=""></div>
+                <div class="pk absolute"><a href="sourcepk.html">PK</a></div>
+                <div class="heart absolute" id="collect">
+                    <img src="assets/images/yellow-heart.png" alt="" id="collected" class="collected">
+                    <img src="assets/images/uncollect.png" alt="" id="uncollect" class="uncollect">
+                </div>
             </div>
         </div>
         <div class="source-box">
@@ -46,7 +49,7 @@
         </div>
         <div class="source-discount">
             <div class="select">
-                <h1>房源选择</h1>
+                <h1 id="sourceSelect">房源选择</h1>
                 <a href="" class="go">
                     <img src="assets/images/go.png" alt="">
                 </a>
@@ -207,7 +210,7 @@
         </div>
 
     </div>
-    <div class="rent-modal">
+    <div id="rentModal" class="rent-modal">
         <div class="rent-wrapper">
             <div class="rent-img">
                 <img src="assets/images/rent-img.png" alt="">
@@ -287,6 +290,86 @@
             </div>
         </div>
     </div>
+    <div id="selectModal" class="rent-modal">
+        <div class="rent-wrapper">
+            <div class="rent-img">
+                <img src="assets/images/rent-img.png" alt="">
+            </div>
+            <div class="head">
+                <p class="rent-price">￥1500元</p>
+            </div>
+            <div class="rent-close">+</div>
+            <div class="tips">
+                <h1>告知：</h1>
+                <ul>
+                    <li>1.灰色房源表示房源已租</li>
+                    <li>2.付款后平台客服人员将会在60分钟内与公寓管家核实，确保该房源在购买期间未被出租</li>
+                    <li>3.如果该房源已被租出，金额1个工作日内全额返还，并推送相似房源</li>
+                    <li> 4.如果是预定房源，请在48小时内签约，如因个人原因造成交易未能完成，定金归公寓所有，平台慨不退还</li>
+                    <li> 5.如果房源虚假造成交易无法完成，</li>
+                </ul>
+            </div>
+            <div class="weui-cells weui-cells_checkbox">
+                <label class="weui-cell weui-check__label" for="s11">
+                    <div class="weui-cell__hd">
+                        <input type="checkbox" class="weui-check" name="checkbox1" id="s11" checked="checked">
+                        <i class="weui-icon-checked"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p class="title">已阅读</p>
+                    </div>
+                </label>
+            </div>
+            <div class="rent-detail">
+                <p class="title">房源选择</p>
+                <div class="source-box">
+                    <div class="source-item selected">201</div>
+                    <div class="source-item">301</div>
+                    <div class="source-item">401</div>
+                    <div class="source-item">501</div>
+                    <div class="source-item">201</div>
+                    <div class="source-item">301</div>
+                    <div class="source-item">401</div>
+                    <div class="source-item">501</div>
+                </div>
+                <p class="title">房源信息</p>
+                <div class="rent-info">
+                    <p>朝向：朝南 </p>
+                    <p>>楼层：10/18</p>
+                    <p>面积：120㎡</p>
+                </div>
+                <p class="title">租期选择</p>
+                <div class="weui-cells">
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd"></div>
+                        <div class="weui-cell__bd">
+                            <p>选择月份</p>
+                        </div>
+                        <div class="weui-cell__ft">
+                            <div class="gw_num">
+                                <span class="jian">-</span>
+                                <input type="text" value="1" class="num"/>
+                                <span class="add">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                        <div class="weui-cell__hd"><img src=""></div>
+                        <div class="weui-cell__bd">
+                            <p>选择优惠券</p>
+                        </div>
+                        <div class="weui-cell__ft">100</div>
+                    </a>
+                </div>
+                <div class="discount">
+                    一次性付款6个月享受9折优惠，付款12个月享受8.5折优惠
+                </div>
+            </div>
+            <div class="rent-btn" id="selectOk">
+                确定
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
@@ -315,7 +398,7 @@
     })
     $('.rent').click(function(e) {
       $('.mask').css('display', 'block');
-      $('.rent-modal').css('display', 'block');
+      $('#rentModal').css('display', 'block');
 //      $('.content').css('overflow', 'hidden');
 //      $('.rent-modal').css('overflow', 'auto');
       $('.content,.mask').bind("touchmove",function(e){
@@ -339,13 +422,49 @@
         }
         $(this).toggleClass("selected")
       })
-    })
+    });
+    $('#sourceSelect').click(function(e) {
+      $('.mask').css('display', 'block');
+      $('#selectModal').css('display', 'block');
+//      $('.content').css('overflow', 'hidden');
+//      $('.rent-modal').css('overflow', 'auto');
+      $('.content,.mask').bind("touchmove",function(e){
+        e.preventDefault();
+      });
+      $(".add").click(function(){
+        var n=$(this).prev().val();
+        var num=parseInt(n)+1;
+        if(num==0){ return;}
+        $(this).prev().val(num);
+      });
+      $(".jian").click(function(){
+        var n=$(this).next().val();
+        var num=parseInt(n)-1;
+        if(num==0){ return}
+        $(this).next().val(num);
+      });
+      $('.source-item').click(function(e) {
+        if ($(this).parent().children().hasClass('selected')) {
+          $(this).parent().children().removeClass('selected')
+        }
+        $(this).toggleClass("selected")
+      })
+
+      $('#selectOk').click(function(e) {
+        $('.mask').css('display', 'none');
+        $('.rent-modal').css('display', 'none');
+      })
+    });
 
     $('.rent-close, .mask').click(function(e) {
       $('.mask').css('display', 'none');
       $('.rent-modal').css('display', 'none');
     })
 
+    $("#collect").click(function(e) {
+      $('#uncollect').toggle();
+      $('#collected').toggle();
+    })
 
   })
 </script>

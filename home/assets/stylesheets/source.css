@@ -72,6 +72,10 @@ body {
     line-height: 1.5rem;
 }
 
+.source-detail .pk a {
+    color: #FFF;
+}
+
 .source-detail .heart {
     bottom: .45rem;
     right: .75rem;
@@ -80,6 +84,10 @@ body {
 .source-detail .heart img{
     width: 1.25rem;
     height: 1.25rem;
+}
+
+.source-detail .heart img.collected{
+    display: none;
 }
 
 .source-box {
@@ -600,12 +608,15 @@ body {
     text-align: center;
     color: #FFF;
     margin: 0 .3rem;
+    position: fixed;
+    width: 97%;
+    bottom: 0;
 }
 
 .source-detail .rent-modal .rent-btn a{
     color: #FFF;
 }
 
-.source-detail a {
+.source-detail .rent-btn a {
     color: #FFF;
 }

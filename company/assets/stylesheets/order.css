@@ -204,3 +204,14 @@ body,html,.pre-detail,.order-container {
 .order-container .footer .footer-btn.agree {
     background: #8FD026;
 }
+
+.pre-detail .footer {
+    justify-content: flex-end;
+}
+
+.pre-detail .footer .btn {
+    background: #FF4040;
+    color: #FFF;
+    padding: .2rem .5rem;
+    margin-right: 1rem;
+}

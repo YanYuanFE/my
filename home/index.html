@@ -19,7 +19,7 @@
         </a>
         <div class="search-input">
             <img src="assets/images/search-input.png" alt="">
-            <input type="text" placeholder="搜索片区、小区、品牌公寓名">
+            <input id="search" type="text" placeholder="搜索片区、小区、品牌公寓名">
             <span class="cancel">+</span>
         </div>
 
@@ -213,6 +213,9 @@
   $(document).ready(function(){
     $(function() {
       FastClick.attach(document.body);
+    });
+    $("#search").focus(function(){
+      window.location.pathname="/my/home/search.html"
     });
     $('.weui-loadmore').css('display', 'none');
     var loading = false;

@@ -53,9 +53,34 @@
                 <p>更改理由：临时出差所以需要更改时间</p>
             </div>
         </div>
+        <div class="footer">
+            <div class="btn">取消预约</div>
+        </div>
+
     </div>
 
 
 </div>
+<script type='text/javascript' src='assets/js/jquery.js' charset='utf-8'></script>
+<script type='text/javascript' src='assets/js/jquery-weui.js' charset='utf-8'></script>
+<script src="assets/js/fastclick.js"></script>
+<script>
+  $(document).ready(function() {
+    $(function () {
+      FastClick.attach(document.body);
+    });
+    $('.btn').click(function (e) {
+      $.confirm({
+        title: '',
+        text: '确定取消预约？',
+        onOK: function () {
+          //点击确认
+        },
+        onCancel: function () {
+        }
+      });
+    })
+  })
+</script>
 </body>
 </html>
