@@ -205,6 +205,7 @@ body {
     text-align: center;
     line-height: 2.5rem;
     box-shadow:1px -2px 1px #CCC;
+    background: #FFF;
 }
 
 .footer-flex {
@@ -237,7 +238,7 @@ body {
     margin-right: 6px;
 }
 
-.source-detail .map img {
+.source-detail .map #map {
     width: 100%;
     height: 8.5rem;
     margin-top: .5rem;
@@ -355,6 +356,10 @@ body {
     color: #FFF;
     line-height: 2rem;
     margin: 5px;
+}
+
+.footer-btn a {
+    color: #FFF;
 }
 
 .source-detail .mask {
@@ -619,4 +624,8 @@ body {
 
 .source-detail .rent-btn a {
     color: #FFF;
+}
+
+.weui-photo-browser-modal {
+    z-index: 99;
 }

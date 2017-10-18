@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="map">
-            <img src="assets/images/map.png" alt="">
+            <div id="map"></div>
         </div>
         <div class="home-detail">
             <h2>房源详情</h2>
@@ -373,19 +373,62 @@
 </div>
 
 </body>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
 <script type='text/javascript' src='assets/js/jquery.js' charset='utf-8'></script>
 <script type='text/javascript' src='assets/js/jquery-weui.js' charset='utf-8'></script>
 <script type='text/javascript' src='assets/js/swiper.js' charset='utf-8'></script>
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/layer.js"></script>
+<script src="assets/js/three.min.js"></script>
+<script src="assets/js/photo-sphere-viewer.min.js"></script>
 <script>
   $(document).ready(function() {
+//      var PSV = new PhotoSphereViewer({
+//          // Path to the panorama
+//          panorama: '1.jpg',
+//
+//          // Container
+//          container: div1
+//      });
+      var map = new BMap.Map("map");
+//      map.centerAndZoom("深圳",15);
+      map.centerAndZoom(new BMap.Point(114.126694,22.548281), 15);
+      map.setCurrentCity("深圳");
+      var marker = new BMap.Marker(new BMap.Point(114.126694,22.548281));
+      map.addOverlay(marker);
+      map.enableScrollWheelZoom(true);
     $(function () {
       FastClick.attach(document.body);
     });
+    var allImg = $('.swiper-wrapper').children().length;
     $(".swiper-container").swiper({
       autoplay: 3000,
-      loop: true
+      loop: true,
+      onSlideChangeEnd: function(swiper){
+          console.log(swiper.activeIndex)
+          var active = swiper.activeIndex;
+          if(active === allImg+1) {
+              active = 1;
+          }
+          $('.pagination').text(active+'/' + allImg)
+      },
+      onTouchStart: function(swiper,even){
+        var active = swiper.activeIndex;
+        if(active === allImg+1) {
+          active = 1;
+        }
+        if(active === 1) {
+          window.location= 'my/home/vrimg.html'
+        }
+        var img = $('.swiper-slide').children('img')[active-1].src;
+        var pb = $.photoBrowser({
+          items: [
+            img
+          ]
+        });
+        pb.open();
+        console.log(swiper);
+      }
     })
     $('.see-modal').click(function(e) {
       $('.mask').css('display', 'block');
