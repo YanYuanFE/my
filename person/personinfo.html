@@ -22,15 +22,16 @@
       <div class="info-content">
         <div class="menu">
           <div class="weui-cells">
-            <a class="weui-cell weui-cell_access" href="javascript:;">
+            <input id="fileBtn" type="file"  accept="image/*" capture="camera"/>
+            <a class="weui-cell weui-cell_access" href="javascript:;" id="changeAvatar">
               <div class="weui-cell__bd">
                 <p>头像</p>
               </div>
               <div class="weui-cell__ft">
-                <img src="assets/images/avatar.png" alt="">
+                <img src="assets/images/avatar.png" alt="" id="img">
               </div>
             </a>
-            <a class="weui-cell weui-cell_access" href="javascript:;">
+            <a class="weui-cell weui-cell_access" href="changename.html">
               <div class="weui-cell__bd">
                 <p>昵称</p>
               </div>
@@ -50,5 +51,31 @@
         </div>
       </div>
     </div>
+    <script type='text/javascript' src='assets/js/jquery.js' charset='utf-8'></script>
+    <script type='text/javascript' src='assets/js/jquery-weui.js' charset='utf-8'></script>
+    <script src="assets/js/fastclick.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#changeAvatar').click(function () {
+          console.log(11)
+          $('#fileBtn').click()
+        })
+
+        $('#fileBtn').change(function () {
+          upload('#fileBtn', '#img')
+        })
+
+         function upload(c, d){
+          var $c = $(c),
+            $d = $(d);
+            file = $c[0].files[0],
+            reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = function(e){
+            $d.attr("src", e.target.result);
+          };
+        };
+      })
+    </script>
   </body>
 </html>

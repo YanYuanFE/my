@@ -285,3 +285,8 @@ body, html {
 .my-message .info-content .menu .weui-cells a{
     padding: 20px 15px;
 }
+
+#fileBtn {
+    /*visibility: hidden;*/
+    display: none;
+}

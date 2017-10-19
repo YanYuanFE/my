@@ -23,7 +23,7 @@
         <div class="source-img">
             <div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="assets/images/sourcedetail1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="assets/images/129571742.jpg" alt=""></div>
                     <div class="swiper-slide"><img src="assets/images/sourcedetail1.png" alt=""></div>
                     <div class="swiper-slide"><img src="assets/images/sourcedetail1.png" alt=""></div>
                 </div>
@@ -49,7 +49,7 @@
         </div>
         <div class="source-discount">
             <div class="select">
-                <h1 id="sourceSelect">房源选择</h1>
+                <h1 id="sourceSelect">房源选择<span></span></h1>
                 <a href="" class="go">
                     <img src="assets/images/go.png" alt="">
                 </a>
@@ -494,6 +494,9 @@
       })
 
       $('#selectOk').click(function(e) {
+        var home = $('#selectModal .source-item.selected').text();
+        var month = $('#selectModal .num').val();
+        $('#sourceSelect').children('span').html('房间号'+home+','+month+'个月')
         $('.mask').css('display', 'none');
         $('.rent-modal').css('display', 'none');
       })
