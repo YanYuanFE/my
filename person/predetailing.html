@@ -60,6 +60,7 @@
     </div>
 </div>
 <script src="assets/js/jquery.js"></script>
+<script type='text/javascript' src='assets/js/jquery-weui.js' charset='utf-8'></script>
 <script src="assets/js/layer.js"></script>
 <script>
     $(document).ready(function(){
@@ -69,10 +70,11 @@
                 content: '确定取消预约?',
                 className: 'modal',
                 btn: ['取消','确定' ],
-                yes: function(index){
+                no: function(index){
                     layer.close(index);
+                    $.toast("取消预约成功");
                 },
-                no:function(index){
+                yes:function(index){
                     layer.close(index);
                 }
             });

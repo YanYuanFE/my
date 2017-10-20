@@ -90,6 +90,7 @@ body, html {
     background: #8FD026;
     border: none;
     color: #FFF;
+    appearance:none;
 }
 
 .order-content {

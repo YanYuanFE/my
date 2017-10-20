@@ -18,9 +18,11 @@
             <img src="assets/images/index.png" alt="">
         </a>
         <div class="search-input">
-            <img src="assets/images/search-input.png" alt="">
-            <input id="search" type="text" placeholder="搜索片区、小区、品牌公寓名">
-            <span class="cancel">+</span>
+            <a href="search.html">
+                <img src="assets/images/search-input.png" alt="">
+                <input id="search" type="text" placeholder="搜索片区、小区、品牌公寓名">
+                <span class="cancel">+</span>
+            </a>
         </div>
 
 
@@ -215,7 +217,7 @@
       FastClick.attach(document.body);
     });
     $("#search").focus(function(){
-      window.location.pathname="/my/home/search.html"
+//      window.location.pathname="/my/home/search.html"
     });
     $('.weui-loadmore').css('display', 'none');
     var loading = false;
