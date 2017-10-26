@@ -18,9 +18,11 @@
             <img src="assets/images/index.png" alt="">
         </a>
         <div class="search-input">
-            <img src="assets/images/search-input.png" alt="">
-            <input id="search" type="text" placeholder="搜索片区、小区、品牌公寓名">
-            <span class="cancel">+</span>
+            <a href="search.html">
+                <img src="assets/images/search-input.png" alt="">
+                <input id="search" type="text" placeholder="搜索片区、小区、品牌公寓名">
+                <span class="cancel">+</span>
+            </a>
         </div>
 
 
@@ -53,7 +55,7 @@
                 <div class="weui-panel__bd">
                     <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
                         <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="assets/images/my-order.png">
+                            <img class="lazy weui-media-box__thumb" data-original="assets/images/my-order.png">
                         </div>
                         <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
@@ -69,7 +71,7 @@
                 <div class="weui-panel__bd">
                     <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
                         <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="assets/images/house4.png">
+                            <img class="lazy weui-media-box__thumb" data-original="assets/images/house4.png">
                         </div>
                         <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
@@ -85,7 +87,7 @@
                 <div class="weui-panel__bd">
                     <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
                         <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="assets/images/house5.png">
+                            <img class="lazy weui-media-box__thumb" data-original="assets/images/house5.png">
                         </div>
                         <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
@@ -101,7 +103,7 @@
                 <div class="weui-panel__bd">
                     <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
                         <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="assets/images/house3.png">
+                            <img class="lazy weui-media-box__thumb" data-original="assets/images/house3.png">
                         </div>
                         <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
@@ -117,7 +119,7 @@
                 <div class="weui-panel__bd">
                     <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
                         <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="assets/images/house5.png">
+                            <img class="lazy weui-media-box__thumb" data-original="assets/images/house5.png">
                         </div>
                         <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
@@ -133,7 +135,7 @@
                 <div class="weui-panel__bd">
                     <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
                         <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="assets/images/house3.png">
+                            <img class="lazy weui-media-box__thumb" data-original="assets/images/house3.png">
                         </div>
                         <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
@@ -149,7 +151,7 @@
                 <div class="weui-panel__bd">
                     <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
                         <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="assets/images/house5.png">
+                            <img class="lazy weui-media-box__thumb" data-original="assets/images/house5.png">
                         </div>
                         <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
@@ -165,7 +167,7 @@
                 <div class="weui-panel__bd">
                     <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
                         <div class="weui-media-box__hd">
-                            <img class="weui-media-box__thumb" src="assets/images/house3.png">
+                            <img class="lazy weui-media-box__thumb" data-original="assets/images/house3.png">
                         </div>
                         <div class="weui-media-box__bd">
                             <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
@@ -209,13 +211,15 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/lazyload.min.js"></script>
 <script>
   $(document).ready(function(){
+    $(".lazy").lazyload();
     $(function() {
       FastClick.attach(document.body);
     });
     $("#search").focus(function(){
-      window.location.pathname="/my/home/search.html"
+//      window.location.pathname="/my/home/search.html"
     });
     $('.weui-loadmore').css('display', 'none');
     var loading = false;
@@ -229,7 +233,7 @@
           "                <div class=\"weui-panel__bd\">\n" +
           "                    <a href=\"sourcedetailrent.html\" class=\"weui-media-box weui-media-box_appmsg\">\n" +
           "                        <div class=\"weui-media-box__hd\">\n" +
-          "                            <img class=\"weui-media-box__thumb\" src=\"assets/images/house3.png\">\n" +
+          "                            <img class=\"lazy weui-media-box__thumb\" data-original=\"assets/images/house3.png\">\n" +
           "                        </div>\n" +
           "                        <div class=\"weui-media-box__bd\">\n" +
           "                            <h4 class=\"weui-media-box__title\">万科大厦A座A-1户型</h4>\n" +

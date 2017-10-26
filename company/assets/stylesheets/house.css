@@ -59,6 +59,14 @@ body,html {
     height: 1.7rem;
     line-height: 1.7rem;
     width: 100%;
+    appearance:none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("../images/arrow.png") scroll right center transparent;
+    background-size:10px 10px ;
+    background-repeat: no-repeat;
+    padding-left: 13px;
+    background-position: 98% 50%;
 }
 
 .radio {

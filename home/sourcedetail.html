@@ -23,15 +23,15 @@
         <div class="source-img">
             <div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="assets/images/sourcedetail1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="assets/images/129571742.jpg" alt=""></div>
                     <div class="swiper-slide"><img src="assets/images/sourcedetail1.png" alt=""></div>
                     <div class="swiper-slide"><img src="assets/images/sourcedetail1.png" alt=""></div>
                 </div>
                 <div class="pagination absolute">1/10</div>
                 <div class="pk absolute"><a href="sourcepk.html">PK</a></div>
                 <div class="heart absolute" id="collect">
-                    <img src="assets/images/yellow-heart.png" alt="" id="collected" class="collected">
-                    <img src="assets/images/uncollect.png" alt="" id="uncollect" class="uncollect">
+                    <img src="assets/images/yellow-heart.png" alt="" id="collected" class="colaction collected">
+                    <img src="assets/images/uncollect.png" alt="" id="uncollect" class="colaction uncollect">
                 </div>
             </div>
         </div>
@@ -124,10 +124,13 @@
                 </div>
             </div>
             <div class="detail-btn">
-                <div class="btn-item">监控</div>
+                <div class="btn-item">油烟机</div>
                 <div class="btn-item">门禁</div>
+                <div class="btn-item">天台</div>
+                <div class="btn-item">网络</div>
+                <div class="btn-item">24H监控</div>
+                <div class="btn-item">专业维修</div>
                 <div class="btn-item">清洁服务</div>
-                <div class="btn-item">花园</div>
             </div>
             <div class="home-info">
                 <p>
@@ -315,12 +318,31 @@
       autoplay: 3000,
       loop: true,
       onSlideChangeEnd: function(swiper){
-          console.log(swiper.activeIndex)
-          var active = swiper.activeIndex;
-          if(active === allImg+1) {
-              active = 1;
-          }
-          $('.pagination').text(active+'/' + allImg)
+        console.log(swiper.activeIndex)
+        var active = swiper.activeIndex;
+        if(active === allImg+1) {
+          active = 1;
+        }
+        $('.pagination').text(active+'/' + allImg)
+      },
+      onClick: function(swiper,event){
+        console.log(event)
+        if($(event.target).hasClass('colaction')) return;
+        var active = swiper.activeIndex;
+        if(active === allImg+1) {
+          active = 1;
+        }
+        if(active === 1) {
+          window.location= 'my/home/vrimg.html'
+        }
+        var img = $('.swiper-slide').children('img')[active].src;
+        var pb = $.photoBrowser({
+          items: [
+            img
+          ]
+        });
+        pb.open();
+        console.log(swiper);
       }
     })
     $('.see-modal').click(function(e) {
@@ -368,10 +390,13 @@
           $('.mask').css('display', 'none');
           $('.rent-modal').css('display', 'none');
       })
-      $("#collect").click(function(e) {
-          $('#uncollect').toggle();
-          $('#collected').toggle();
-      })
+    $("#collect").on('click', function(e) {
+      console.log(e)
+      e.stopPropagation();
+      $('#uncollect').toggle();
+      $('#collected').toggle();
+      return false
+    })
 
   })
 </script>

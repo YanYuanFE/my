@@ -82,9 +82,16 @@ body,html {
 .order-container .order-content .select select{
     width: 14.2rem;
     height: 1.7rem;
-    background: #FFF;
     color: #9C9C9C;
     border: 1px solid #DADADA;
+    appearance:none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("../images/arrow.png") scroll right center transparent;
+    background-size:10px 10px ;
+    background-repeat: no-repeat;
+    padding-left: 13px;
+    background-position: 98% 50%;
 }
 
 .order-container .order-content .location img {
@@ -276,4 +283,9 @@ body,html {
 .ok {
     background: #8FD026;
     color: #FFF;
+}
+
+.nodata {
+    text-align: center;
+    padding-top: 20px;
 }

@@ -21,6 +21,7 @@
         </div>
         <a href="mymessage.html" class="message">
             <img src="assets/images/message.png" alt="" width="23" height="20">
+            <span class="num">1</span>
         </a>
     </div>
     <div class="nikename">vava</div>
@@ -100,13 +101,25 @@
             <div class="text">推荐房源</div>
             <div class="line-right"></div>
         </div>
-        <div class="img-list">
-            <a href="" class="img-item">
-                <img src="assets/images/house1.png" alt="">
-            </a>
-            <a href="" class="img-item">
-                <img src="assets/images/house2.png" alt="">
-            </a>
+        <div class="img-list" id="list" style="overflow-y:auto; overflow-x:hidden;width:100%; height:100%;">
+            <div id="content">
+                <a href="../home/vrhotel.html" class="img-item">
+                    <img src="assets/images/house1.png" alt="">
+                </a>
+                <a href="../home/vrhotel.html" class="img-item">
+                    <img src="assets/images/house2.png" alt="">
+                </a>
+                <a href="../home/vrhotel.html" class="img-item">
+                    <img src="assets/images/house1.png" alt="">
+                </a>
+                <a href="../home/vrhotel.html" class="img-item">
+                    <img src="assets/images/house2.png" alt="">
+                </a>
+            </div>
+            <div class="weui-loadmore">
+                <i class="weui-loading"></i>
+                <span class="weui-loadmore__tips">正在加载</span>
+            </div>
         </div>
     </div>
 
@@ -131,5 +144,29 @@
         </a>
     </div>
 </div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script>
+  $(document).ready(function(){
+    $(function() {
+      FastClick.attach(document.body);
+    });
+    $('.weui-loadmore').css('display', 'none');
+    var loading = false;
+    $("#list").infinite(100).on("infinite", function() {
+      $('.weui-loadmore').css('display', 'block');
+      if(loading) return;
+      loading = true;
+      setTimeout(function() {
+        console.log(loading);
+        $("#content").append("<a href=\"../home/vrhotel.html\" class=\"img-item\">\n" +
+          "                    <img src=\"assets/images/house2.png\" alt=\"\">\n" +
+          "                </a>");
+        loading = false;
+      }, 2000);
+    });
+  });
+</script>
 </body>
 </html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>我的</title>
+    <link rel="stylesheet" href="assets/stylesheets/source.css" />
+    <link rel="stylesheet" href="assets/stylesheets/weui.css">
+    <link rel="stylesheet" href="assets/stylesheets/jquery-weui.css">
+</head>
+<body>
+<div class="order-container house-source weui-tab">
+    <div class="header weui-navbar">
+        <a href="" class="back">
+            <img src="assets/images/back.png" alt="">
+        </a>
+        <div class="tab">
+
+            <a class="tab-item hasrent weui-navbar__item weui-bar__item--on" href="#rent">已租</a>
+            <a class="tab-item norent weui-navbar__item" href="#norent">未租</a>
+        </div>
+    </div>
+    <div class="order-content weui-tab__bd">
+        <div id="rent" class="weui-tab__bd-item weui-tab__bd-item--active">
+            <div class="house-search">
+                <div class="select">
+                    <select name="" id="">
+                        <option>全部户型</option>
+                    </select>
+                </div>
+                <div class="location">
+                    <a href="housemap.html">
+                        <img src="assets/images/lbs-big.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="listA" style="overflow-y:auto; overflow-x:hidden;width:100%; height:100%;">
+                <div id="contentA" class="nodata">
+                    <i class="weui-icon-warn weui-icon_msg-primary"></i>
+                    <div class="weui-loadmore weui-loadmore_line">
+                        <span class="weui-loadmore__tips">暂无数据</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="norent" class="weui-tab__bd-item">
+            <div class="house-search">
+                <div class="select">
+                    <select name="" id="select">
+                        <option>全部户型</option>
+                    </select>
+                </div>
+                <div class="location">
+                    <img src="assets/images/lbs-big.png" alt="">
+                </div>
+            </div>
+            <div id="listB" style="overflow-y:auto; overflow-x:hidden;width:100%; height:100%;">
+                <div id="contentA" class="nodata">
+                    <i class="weui-icon-warn weui-icon_msg-primary"></i>
+                    <div class="weui-loadmore weui-loadmore_line">
+                        <span class="weui-loadmore__tips">暂无数据</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
+<script src="assets/js/jquery.js"></script>
+<script type='text/javascript' src='assets/js/jquery-weui.js' charset='utf-8'></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/layer.js"></script>
+<script>
+  $(document).ready(function(){
+    $(function() {
+      FastClick.attach(document.body);
+    });
+    $('.house-btn').click(function(e) {
+      console.log($(this))
+      if($(this).hasClass("rent")){
+        layer.open({
+          content: '是否标为未租房源，您的此房源将展示',
+          className: 'modal',
+          btn: ['是', '否'],
+          yes: function(index){
+            layer.close(index);
+            $.toast("成功");
+          },
+          no:function(index){
+            layer.close(index);
+          }
+        });
+      } else {
+        layer.open({
+          content: '是否标已租房源，您的此房源将不再展示',
+          className: 'modal',
+          btn: ['是', '否'],
+          yes: function(index){
+            layer.close(index);
+            $.toast("成功");
+          },
+          no:function(index){
+            layer.close(index);
+          }
+        });
+      }
+    })
+
+  });
+
+</script>
+</body>
+</html>

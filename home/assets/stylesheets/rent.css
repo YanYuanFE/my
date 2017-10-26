@@ -71,6 +71,14 @@ body,html,.rent-container {
     margin: 0 auto;
 }
 
+.rent-container .order-detail {
+    padding-left: 20px;
+}
+
+.rent-container .price-time span{
+    color: #FA2F2F;
+}
+
 
 
 .rent-container .login-btn {
@@ -165,13 +173,19 @@ body,html,.rent-container {
 }
 
 .time-picker select{
+    padding: 0 10px;
     display: flex;
     border: 1px solid #E6E6E6;
     margin-right: .5rem;
     height: 1.7rem;
     width: 7.5rem;
-    background: #F9F9F9;
-    border: 1px solid #E6E6E6;
+    appearance:none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("../images/select-arrow.png") no-repeat scroll right center transparent;
+    background-size: 14px 7px;
+    background-position: 97% 50%;
+    background-color: #F9F9F9;
 }
 
 .time input {
