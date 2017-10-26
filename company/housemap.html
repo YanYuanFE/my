@@ -25,16 +25,18 @@
             <div class="select">
                 <select name="" id="">
                     <option>全部户型</option>
+                    <option>A户型</option>
+                    <option>B户型</option>
                 </select>
             </div>
             <div class="radio">
-                <label><input name="Fruit" type="radio" value="" />已租</label>
-                <label><input name="Fruit" type="radio" value="" />未租</label>
+
             </div>
             <div class="house-list">
+                <h3>A户型</h3>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">201</a>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">301</a>
-                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select">401</a>
+                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select rent">401</a>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">501</a>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">601</a>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">701</a>
@@ -42,6 +44,7 @@
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">901</a>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1001</a>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1011</a>
+                <h3>B户型</h3>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1012</a>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1013</a>
                 <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1014</a>
@@ -57,11 +60,12 @@
     </div>
 
     <div class="footer">
-        <div class="footer-btn">设为已租/未租</div>
+        <div class="footer-btn" id="setRent">设为未租</div>
     </div>
 
 </div>
 <script src="assets/js/jquery.js"></script>
+<script src="assets/js/layer.js"></script>
 <script>
     $(document).ready(function(){
         $('.weui-btn').click(function(e) {
@@ -71,6 +75,21 @@
             } else {
                 $(this).toggleClass("btn-select")
             }
+        })
+
+        $("#setRent").click(function () {
+          layer.open({
+            content: '是否标为未租房源，您的此房源将展示',
+            className: 'modal',
+            btn: ['是', '否'],
+            yes: function(index){
+              layer.close(index);
+              $.toast("成功");
+            },
+            no:function(index){
+              layer.close(index);
+            }
+          });
         })
 
     });

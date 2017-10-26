@@ -98,6 +98,10 @@ body, html {
     padding-right: 13px;
 }
 
+.order-content .result {
+    color: #FA2F2F;
+}
+
 .order-content {
     padding: .55rem .55rem;
     height: 100%;

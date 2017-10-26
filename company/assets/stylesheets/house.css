@@ -86,6 +86,7 @@ body,html {
     border-radius: 0;
     font-size: .7rem;
     text-align: center;
+    padding: 0 14px;
 }
 
 .house-list .weui-btn:after {
@@ -100,6 +101,7 @@ body,html {
 .house-list .weui-btn.btn-select {
     background: #FF4040;
     color: #FFF;
+    border-color: #FF4040;
 }
 
 .house-container .footer {
@@ -120,4 +122,60 @@ body,html {
     color: #FFF;
     font-size: 0.8rem;
     line-height: 2rem;
+}
+
+.modal .layui-m-layerbtn {
+    display: flex;
+    justify-content: space-around;
+    border: none;
+    background-color: #FFF;
+    height: 36px;
+    line-height: 36px;
+}
+
+
+.cancel, .ok {
+    padding: .2rem 2rem;
+}
+
+.layui-m-layersection .layui-m-layercont {
+    padding: 20px 15px;
+}
+
+.layui-m-layerchild.modal {
+    box-sizing: border-box!important;
+    padding: 1rem 1.3rem;
+    border-radius: 0;
+}
+
+.modal .layui-m-layerbtn span[no], .modal .layui-m-layerbtn span[yes]{
+    width: 1.5rem;
+    border-radius: 0;
+    padding: 0rem 1rem;
+    line-height: 36px;
+}
+
+.modal .layui-m-layerbtn span:nth-child(1){
+    color: #8FD026;
+    border: 1px solid #8FD026;
+    background: #FFF;
+}
+
+.modal .layui-m-layerbtn span:nth-child(2){
+    background: #8FD026;
+    color: #FFF;
+}
+
+.cancel {
+    color: #8FD026;
+    border: 1px solid #8FD026;
+}
+
+.ok {
+    background: #8FD026;
+    color: #FFF;
+}
+
+.house-content h3{
+    text-align: left;
 }
