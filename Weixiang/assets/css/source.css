@@ -1,0 +1,642 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    box-sizing: border-box;
+    background-color: #FFF;
+    color: #333;
+}
+
+.source-detail .header {
+    height: 2.2rem;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 16px;
+    position: relative;
+}
+
+.source-detail .header .back {
+    position: absolute;
+    top: 0.7rem;
+    left: 1.1rem;
+}
+
+.source-detail .header img {
+    width: 9px;
+    height: 18px;
+}
+
+.source-detail .header h1 {
+    text-align: center;
+    font-size: .8rem;
+    line-height: 2.2rem;
+}
+
+.source-detail .content {
+    background: #F5F5F5;
+    margin-bottom: 2rem;
+}
+.swiper-container {
+    width: 100%;
+    height: 12.2rem;
+}
+
+.swiper-container img {
+    width: 100%;
+    height: 12.2rem;
+}
+
+.swiper-container .absolute {
+    position: absolute;
+    z-index: 999;
+}
+
+.source-detail .pagination {
+    top: .5rem;
+    right: .5rem;
+    padding: .1rem .8rem;
+    border-radius: .8rem;
+    background: #BFC0BA;
+    color: #FFF;
+}
+
+.source-detail .pk {
+    bottom: .6rem;
+    right: 2.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #818483;
+    color: #FFF;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.source-detail .pk a {
+    color: #FFF;
+}
+
+.source-detail .heart {
+    bottom: .45rem;
+    right: .75rem;
+}
+
+.source-detail .heart img{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.source-detail .heart img.collected{
+    display: none;
+}
+
+.source-box {
+    padding-left: 1rem;
+    margin-top: .5rem;
+    background: #FFF;
+}
+
+.hotel-title h1 {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.source-price {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: .5rem;
+}
+
+.source-detail .price {
+    color: #FA2F2F;
+}
+
+.source-detail .see {
+    border-left: 1px solid #E5E5E5;
+    color: #8FD026;
+    margin-left: 1rem;
+    padding-left: .5rem;
+}
+
+.source-detail .see a {
+    color: #8FD026;
+}
+
+.source-detail .see .money {
+    font-size: 9px;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    background: #8FD026;
+    color: #FFF;
+    display: inline-block;
+    text-align: center;
+    margin-right: .5rem;
+}
+
+.source-detail .count {
+    font-size: .6rem;
+    color: #9C9C9C;
+    margin-top: .5rem;
+}
+
+.source-detail .source-discount {
+    margin-top: .5rem;
+    background: #FFF;
+    padding: .4rem .5rem;
+}
+
+.source-detail .select {
+    height: 2.2rem;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 16px;
+    position: relative;
+}
+
+.select .go {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.1rem;
+}
+
+.select img {
+    width: 9px;
+    height: 18px;
+}
+
+.select h1 {
+    text-align: center;
+    font-size: .8rem;
+    line-height: 2.2rem;
+}
+
+.select h1 span {
+    margin-left: 1rem;
+}
+
+.source-detail .discount-info {
+    margin-top: .75rem;
+}
+
+.source-detail .discount {
+    color: #FA2F2F;
+    font-size: .6rem;
+    margin-top: .5rem;
+}
+
+.source-detail .discount span {
+    color: #6F6F6F;
+    padding-left: .5rem;
+}
+
+.source-detail .room-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .9rem;
+}
+
+.detail-item span {
+    color: #9C9C9C;
+    font-size: .7rem;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    box-shadow:1px -2px 1px #CCC;
+    background: #FFF;
+}
+
+.footer-flex {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    background: #FFF;
+    box-shadow:1px -2px 1px #CCC;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-flex .footer-btn.pre {
+    background: #ff9639;
+}
+
+.footer-flex .footer-btn.pre a {
+    color: #FFF;
+}
+
+.source-detail .source-area {
+    margin-top: 1rem;
+}
+
+.source-detail .source-area img{
+    width: .7rem;
+    height: .85rem;
+    margin-right: 6px;
+}
+
+.source-detail .map #map {
+    width: 100%;
+    height: 8.5rem;
+    margin-top: .5rem;
+}
+
+.source-detail .home-detail {
+    padding: 1rem .5rem 1rem .9rem;
+    background: #FFF;
+}
+
+.source-detail .home-detail h2 {
+    font-size: .75rem;
+}
+
+.source-detail .detail-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.source-detail .detail-box img {
+    height: .75rem;
+    width:auto;
+    margin-right: .5rem;
+}
+
+.source-detail .euip-item {
+    width: 25%;
+    margin-top: 1.1rem;
+}
+
+.source-detail .detail-btn {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.3rem;
+    flex-wrap: wrap;
+}
+.source-detail .btn-item {
+    padding: 0 .5rem;
+    color: #fff;
+    background: #8FD026;
+    margin: 0 .5rem .5rem 0;
+}
+
+.source-detail .home-info {
+    margin-top: .9rem;
+    color: #6F6F6F;
+    font-size: .7rem;
+}
+
+.source-detail .home-info p {
+    margin-bottom: 1rem;
+}
+
+.source-detail .home-info .strong {
+   color: #333;
+   font-size: .8rem;
+   font-weight: 600;
+}
+
+.source-detail .similar-price {
+    margin-top: .5rem;
+    background: #FFF;
+    padding: .6rem 1rem;
+}
+
+.source-detail .similar-price h2 {
+    font-size: .75rem;
+}
+.similar-price .weui-media-box {
+    padding-left: 0;
+}
+
+.similar-price .weui-media-box .weui-media-box__hd {
+    width: 5.4rem;
+    height: 4.1rem;
+}
+
+.similar-price .weui-media-box img {
+    height: 100%;
+}
+
+.similar-price .weui-media-box:before {
+    border: none;
+}
+
+.similar-price a:not(:last-child) {
+    border-bottom: 1px solid #DADADA;
+}
+
+.similar-price .hotel-house {
+    font-size: .6rem;
+    color: #6F6F6F;
+    margin-top: .2rem;
+    font-weight: 400;
+}
+
+.similar-price .hotel-time {
+    font-size: .6rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.similar-price .hotel-price {
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FF4040;
+}
+
+.footer-btn {
+    width: 97%;
+    height: 2rem;
+    background: #8FD026;
+    color: #FFF;
+    line-height: 2rem;
+    margin: 5px;
+}
+
+.footer-btn a {
+    color: #FFF;
+}
+
+.source-detail .mask {
+    position: absolute;
+    width: 100%;
+    height: 1000%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #6E6F6B;
+    z-index: 200;
+    opacity: .5;
+    display: none;
+}
+
+.source-detail .price-modal {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    margin: 0 auto;
+    background: #FFF;
+    z-index: 999;
+}
+
+.source-detail .price-modal .title {
+    background: #8FD026;
+    color: #FFF;
+    text-align: center;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+
+.source-detail .price-modal .content {
+    padding: .95rem;
+    background: #FFF;
+    margin-bottom: 0rem;
+}
+
+.source-detail .price-modal .content .list-item {
+    margin-bottom: .5rem;
+}
+
+.source-detail .price-modal .content .subtitle {
+    color: #8FD026;
+}
+
+.source-detail .price-modal .content .item-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.source-detail .price-modal .bottom {
+    color: #FA2F2F;
+    padding: 1rem 1.5rem;
+    margin: .2rem;
+    border-top: 1px solid #DADADA;
+    font-size: .6rem;
+    text-align: center;
+}
+
+.source-detail .modal .close-btn {
+    position: absolute;
+    left: 50%;
+    margin-left: -.8rem;
+    margin-top: 1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: transparent;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    text-align: center;
+    z-index: 999;
+    transform: rotate(45deg);
+}
+
+.source-detail .modal {
+    display: none;
+}
+
+.source-detail .rent-modal {
+    position: fixed;
+    top:20%;
+    background: transparent;
+    z-index: 999;
+    display: none;
+    bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 1rem;
+}
+
+.source-detail .rent-modal .rent-wrapper {
+    position: relative;
+    background: #FFF;
+}
+
+.source-detail .rent-modal .rent-img {
+    width: 5.1rem;
+    height: 5.1rem;
+    border: 1px solid #F0F0F0;
+    border-radius: 2px;
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+}
+
+.source-detail .rent-modal .rent-img img {
+    width: 5.1rem;
+    height: 5.1rem;
+}
+
+.source-detail .rent-modal p.title {
+    font-weight: 600;
+}
+
+.source-detail .rent-modal .head .rent-price {
+    color: #FA2F2F;
+    text-align: center;
+}
+
+.source-detail .rent-modal .rent-close {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    border: 1px solid #818181;
+    color: #818181;
+    font-size: .7rem;
+    transform: rotate(45deg);
+    text-align: center;
+    line-height: 1.1rem;
+}
+
+.source-detail .rent-modal .tips {
+    margin-top: 5rem;
+    padding: 0 1rem;
+}
+
+.source-detail .rent-modal .tips h1 {
+    font-size: .75rem;
+}
+
+.source-detail .rent-modal ul {
+    list-style: none;
+    color: #6F6F6F;
+    font-size: .7rem;
+    margin-top: .5rem;
+}
+
+.source-detail .rent-modal .weui-cells:before,.source-detail .rent-modal .weui-cells:after {
+    border: none;
+}
+
+.source-detail .rent-modal .rent-detail {
+    padding-top: .5rem;
+    padding-left: .85rem;
+    margin-top: .5rem;
+    background: #FFF;
+    padding-bottom: 38px;
+}
+
+.source-detail .rent-modal .source-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: .5rem;
+    padding: 0;
+}
+
+.source-detail .rent-modal .source-item {
+    background: #FFF;
+    border:1px solid #8FD026;
+    color: #8FD026;
+    padding: .2rem 1rem;
+    margin-right: .5rem;
+    margin-top: .45rem;
+}
+
+.source-detail .rent-modal .source-item.selected {
+    color: #FFF;
+    background: #8FD026;
+}
+
+.source-detail .rent-modal .rent-info p {
+    color: #6F6F6F;
+}
+
+.source-detail .rent-modal .rent-info {
+    padding: .5rem 0;
+}
+
+.source-detail .rent-modal .weui-cell {
+    padding-left: 0;
+}
+
+.gw_num{
+    border: 1px solid #dbdbdb;
+    width: 110px;
+    line-height: 26px;
+    overflow: hidden;
+}
+.gw_num span{
+    display: block;
+    height: 26px;
+    width: 26px;
+    float: left;
+    color: #7A7979;
+    border-right: 1px solid #dbdbdb;
+    text-align: center;
+    cursor: pointer;
+    background: #DADADA;
+}
+.gw_num .num{
+    display: block;
+    float: left;
+    text-align: center;
+    width: 52px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    border: 0;
+}
+.gw_num span.add{
+    float: right;
+    border-right: 0;
+    border-left: 1px solid #dbdbdb;
+}
+
+.rent-detail .weui-cell:before {
+    border:none;
+}
+
+.rent-detail .weui-cells .weui-cell {
+    border-bottom: 1px solid #DADADA;
+}
+
+.source-detail .rent-modal .rent-detail .discount {
+    color: #8FD026;
+    padding: 1rem;
+}
+
+.source-detail .rent-modal .rent-btn {
+    background: #8FD026;
+    height: 2.1rem;
+    line-height: 2.1rem;
+    text-align: center;
+    color: #FFF;
+    margin: 0 .3rem;
+    position: fixed;
+    width: 97%;
+    bottom: 0;
+    z-index: 99;
+}
+
+.source-detail .rent-modal .rent-btn a{
+    color: #FFF;
+}
+
+.source-detail .rent-btn a {
+    color: #FFF;
+}
+
+.weui-photo-browser-modal {
+    z-index: 99;
+}
+
+.swiper-pagination-bullets {
+    display: none;
+}
