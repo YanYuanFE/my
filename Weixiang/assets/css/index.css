@@ -12,6 +12,10 @@ body, html {
     padding: 0;
 }
 
+.banner img {
+    width: 100%;
+    height: auto;
+}
 .header {
     height: 80px;
     line-height: 80px;
@@ -27,7 +31,7 @@ body, html {
 }
 
 .header .row {
-    padding: 0 160px;
+    padding: 0 110px;
 }
 .header .menu ul {
     overflow: hidden;
