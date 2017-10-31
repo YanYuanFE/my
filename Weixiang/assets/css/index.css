@@ -39,15 +39,18 @@ body, html {
     margin: 0;
     padding: 0;
 }
-
-.header .menu ul li {
+.menu .drop-menu {
+    position: absolute;
+    z-index: 999;
+}
+.header .menu > ul > li {
     float: left;
     list-style: none;
     color: #111111;
     margin-right: 70px;
 }
 
-.header .menu ul li a {
+.header .menu ul > li a {
     color: #111111;
     font-size: 20px;
     display: inline-block;
@@ -55,10 +58,10 @@ body, html {
     text-decoration: none;
 }
 
-.header .menu ul li a:hover {
+.header .menu ul > li a:hover {
     border-bottom: 2px solid #E50112;
-} 
-.header .menu ul li a.active {
+}
+.header .menu ul > li a.active {
     color: #E50112;
     border-bottom: 2px solid #E50112;
 }
@@ -217,7 +220,7 @@ body, html {
 .side.weui-navbar a {
     display: block;
     height: 80px;
-    width: 145px;
+    width: 190px;
     position: relative;
     text-decoration: none;
 }
@@ -227,8 +230,8 @@ body, html {
     width: 1px;
     background-color: #ccc;
     position: absolute;
-    right: 10px;
-    top: 30px;
+    right: 40px;
+    top: 40px;
 }
 
 .side.weui-navbar a img {
@@ -253,7 +256,12 @@ body, html {
     display: inline-block;
 }
 
-.side.weui-navbar a.weui-bar__item--on{
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: #FFF;
+    color: #E50112;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
     background-color: #FFF;
     color: #E50112;
 }
@@ -267,7 +275,6 @@ body, html {
 .tab-container .navbar a {
     line-height: 60px;
     height: 60px;
-    line-height: 60px;
     text-align: center;
     width: 200px;
     background-color: #FFF;
@@ -312,7 +319,7 @@ body, html {
 }
 
 .network .tab-header .left>span {
-    margin-right:35px; 
+    margin-right:35px;
 }
 
 .network .tab-header .num {
