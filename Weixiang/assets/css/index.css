@@ -431,3 +431,38 @@ body, html {
 p.indent {
     padding-left: 113px;
 }
+
+
+.connect-container .connect-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #CCC;
+    height: 400px;
+    padding: 10px;
+    max-width: 1200px;
+}
+
+.connect-left, .connect-right {
+    flex: 1;
+}
+
+.connect-left img {
+    width: 600px;
+    height: 380px;
+}
+
+.connect-right {
+    padding: 70px 100px;
+}
+
+.connect-right .connect-city {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.connect-right .connect-city span {
+    display: inline-block;
+    width: 8px;
+    height: 24px;
+    background: #FA2F2F;
+}

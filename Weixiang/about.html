@@ -45,68 +45,57 @@
     </div>
     <div class="content weui-tab">
         <div class="col-md-3 side weui-navbar">
-            <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
-                <span>精准数据</span>
-                <img src="assets/images/yuan_2.png" alt="">
-                <img class="on" src="assets/images/yuan.png" alt="">
-                <span class="vline"></span>
-            </a>
-            <a class="weui-navbar__item" href="#tab2">
-                <span>标准化服务</span>
-                <img src="assets/images/yuan_2.png" alt="">
-                <img class="on" src="assets/images/yuan.png" alt="">
-                <span class="vline"></span>
-            </a>
-            <a class="weui-navbar__item" href="#tab3">
-                <span>全国网络</span>
-                <img src="assets/images/yuan_2.png" alt="">
-                <img class="on" src="assets/images/yuan.png" alt="">
-            </a>
+            <ul id="myTab" class="nav nav-pills nav-stacked">
+                <li class="active">
+                    <a href="#tab1" data-toggle="tab">
+                        <span>公司简历</span>
+                        <img src="assets/images/yuan_2.png" alt="">
+                        <img class="on" src="assets/images/yuan.png" alt="">
+                        <span class="vline"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab2" data-toggle="tab">
+                        <span>业务合作</span>
+                        <img src="assets/images/yuan_2.png" alt="">
+                        <img class="on" src="assets/images/yuan.png" alt="">
+                        <span class="vline"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab3" data-toggle="tab">
+                        <span>联系我们</span>
+                        <img src="assets/images/yuan_2.png" alt="">
+                        <img class="on" src="assets/images/yuan.png" alt="">
+                    </a>
+                </li>
+            </ul>
+
         </div>
-        <div class="col-md-9 tab-container weui-tab__bd">
-            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active data">
-                <div class="data-container">
-                    <div class="data-left">
+        <div class="col-md-9 tab-container tab-content">
+            <div id="tab1" class="tab-pane fade in active company">
+                <div class="company-container">
+                    <h1 class="company-title"></h1>
+                    <p></p>
+                    <div class="company-img">
                         <img class="mac" src="assets/images/iMac.png" alt="">
-                        <img class="ipad" src="assets/images/iPad-Air.png" alt="">
-                        <img class="iphone" src="assets/images/iPhone-5S.png" alt="">
                     </div>
-                    <div class="data-right">
-                        <div class="data-title">
-                            <img src="assets/images/data.png" alt="">
-                            精准数据
-                        </div>
-                        <div class="data-list">
-                            <div class="list-item">
-                                <span class="list-icon"></span>
-                                指定区域；指定小区；指定投放方式；指定日期
-                            </div>
-                            <div class="list-item">
-                                <span class="list-icon"></span>
-                                实时下单，所见即所得
-                            </div>
-                            <div class="list-item">
-                                <span class="list-icon"></span>
-                                多端口数据共享
-                            </div>
-                        </div>
-                    </div>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
                 </div>
             </div>
-            <div id="tab2" class="weui-tab__bd-item">
-                <div class="tab">
+            <div id="tab2" class="tab-pane fade">
+                <div class="work-container tab">
                     <div class="navbar">
                         <a class="navbar__item bar__item--on" href="#sz">
                             海报画面要求
                         </a>
                         <a class="navbar__item" href="#sh">
                             海报物料要求
-                        </a>
-                        <a class="navbar__item" href="#hz">
-                            费用时间要求
-                        </a>
-                        <a class="navbar__item" href="#hz">
-                            上刊要求
                         </a>
                     </div>
                     <div class="tab-content">
@@ -153,45 +142,20 @@
                     </div>
                 </div>
             </div>
-            <div id="tab3" class="weui-tab__bd-item">
-                <div class="tab network-tab">
-                    <div class="navbar">
-                        <a class="navbar__item bar__item--on" href="#sz">
-                            深圳
-                        </a>
-                        <a class="navbar__item" href="#sh">
-                            上海
-                        </a>
-                        <a class="navbar__item" href="#hz">
-                            惠州
-                        </a>
-                    </div>
-                    <div class="tab-content">
-                        <div id="sz" class="tab-item tab-item-active">
-                            <div class="network">
-                                <div class="tab-header">
-                                    <div class="left">
-                                        <span><span class="num">400</span>个小区</span>
-                                        <span><span class="num">500</span>个电梯</span>
-                                        <span><span class="num">600</span>个单元数量</span>
-                                        <span><span class="num">1000</span>个单元数量</span>
-                                    </div>
-                                    <div class="right">
-                                        <a href="">列表</a>
-                                        <a href="">点位表下载</a>
-                                        <a href="">空置表显示</a>
-                                    </div>
-                                </div>
-                                <div class="tab-main">
-                                    <img src="assets/images/service.png" alt="">
-                                </div>
+            <div id="tab3" class="tab-pane fade">
+                <div class="connect-container">
+                    <div class="connect-item">
+                        <div class="connect-left">
+                            <img src="assets/images/sz.png" alt="">
+                        </div>
+                        <div class="connect-right">
+                            <div class="connect-city">
+                                <span></span>深圳
                             </div>
-                        </div>
-                        <div id="sh" class="tab-item">
-                            <h1>页面二</h1>
-                        </div>
-                        <div id="hz" class="tab-item">
-                            <h1>页面二</h1>
+                            <p>联系人：何志强</p>
+                            <p>联系人：何志强</p>
+                            <p>联系人：何志强</p>
+                            <p>联系人：何志强</p>
                         </div>
                     </div>
                 </div>
@@ -245,11 +209,15 @@
 
 </div>
 <script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/swiper.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
 <script>
   $(document).ready(function(){
-
+    $('#myTabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
     $('.navbar__item').click(function() {
       var index = $(this).index();
       $(this).addClass('bar__item--on').siblings('.navbar__item').removeClass('bar__item--on');

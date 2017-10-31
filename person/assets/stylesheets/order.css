@@ -95,7 +95,7 @@ body, html,.order-container  {
 }
 
 .order-pay .order-action .action{
-    padding: 0 .7rem;
+    padding: 0 .5rem;
     border: 1px solid #DADADA;
     color: #6F6F6F;
     font-size: .8rem;
