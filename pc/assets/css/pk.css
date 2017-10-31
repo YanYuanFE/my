@@ -1,0 +1,190 @@
+html {
+    font-size: 20px;
+    height: 100%;
+}
+
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    background-color: #FFF;
+    color: #333;
+    height: 100%;
+}
+
+.source-pk, .pk-detail {
+    height: 100%;
+}
+
+.source-pk .header, .pk-detail .header {
+    height: 2.2rem;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 16px;
+    position: relative;
+}
+
+.source-pk .header .back, .pk-detail .header .back  {
+    position: absolute;
+    top: 0.7rem;
+    left: 1.1rem;
+}
+
+.source-pk .header img, .pk-detail .header img {
+    width: 9px;
+    height: 18px;
+}
+
+.source-pk .header h1, .pk-detail .header h1 {
+    text-align: center;
+    font-size: .8rem;
+    line-height: 2.2rem;
+}
+
+.source-pk .content {
+    background: #F5F5F5;
+    height: 100%;
+    padding: 3px .5rem;
+}
+
+.source-pk .weui-cells {
+    background: #F5F5F5;
+    margin: 0;
+}
+
+.source-pk .weui-cell {
+    padding: 0;
+    height: 2.3rem;
+    line-height: 2.3rem;
+}
+.source-pk .weui-cells_checkbox .weui-check:checked + .weui-icon-checked:before {
+    color: #8FD026;
+}
+
+.source-pk label {
+    margin-top: 6px;
+    background: #FFF;
+}
+
+.source-pk .cancel {
+    color: #FFF;
+    background: #FF4040;
+    height: 100%;
+    width: 3rem;
+    text-align: center;
+    position: absolute;
+    right: -3rem;
+    pointer-events: auto;
+}
+
+.source-pk .add {
+    margin-top: 1.5rem;
+    font-size: .7rem;
+    text-align: center;
+}
+
+.source-pk .add .text {
+    color: #333;
+}
+
+.source-pk .add .icon {
+    background: #8FD026;
+    color: #FFF;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.source-pk .foot a {
+    color: #FFF;
+}
+
+.pk-detail a {
+    color: #FFF;
+}
+
+.source-pk .foot, .pk-detail .foot{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    color: #FFF;
+    background: #8FD026;
+    width: 100%;
+    text-align: center;
+}
+
+#controlShow .hide {
+    display: none;
+}
+
+.pk-detail .content{
+    padding-top: .5rem;
+    overflow-y: scroll;
+    background: #F5F5F5;
+    margin-bottom: 4rem;
+}
+
+table{
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    background: #FFF;
+    /*border-left: none;*/
+    /*border-right: none;*/
+    /*border-top: none;*/
+    /*border: 1px solid #DADADA;*/
+}
+
+table th {
+    height: 3.5rem;
+    font-size: .7rem;
+    font-weight: 400;
+}
+
+.no-border, .no-border td {
+    border: none;
+}
+
+.no-border .title {
+    color: #8FD026;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+table tr {
+    height: 2rem;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #000;
+    display: inline-block;
+}
+
+div.title {
+    background: #FFF;
+    height: 2rem;
+    line-height: 2rem;
+    padding-left: 1rem;
+    color: #8FD026;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.title span.tip {
+    color: #000;
+    font-weight: 400;
+    padding-left: 1rem;
+}
+
+.third td {
+    width: 33%;
+}

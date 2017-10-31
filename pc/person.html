@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/weui.css">
+    <link rel="stylesheet" href="assets/css/jquery-weui.css">
+    <link rel="stylesheet" href="assets/css/person.css" />
+</head>
+<body>
+<div class="container-fluid home-container">
+    <div class="side">
+        <ul>
+            <li>
+                <a href="">
+                    <img src="assets/images/pre.png" alt="">
+                    <p>我的预约</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/order.png" alt="">
+                    <p>我的订单</p>
+                </a>
+            </li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+            </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+            </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+            </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+            </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+            </a></li>
+            <li><a href=""><img src="" alt="">
+                <p></p>
+            </a></li>
+        </ul>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="col-md-3">
+                <img src="assets/images/logo.png" alt="">
+                <img src="assets/images/area.png" alt="" class="gps">
+                <span class="location">深圳</span>
+                <a href="" class="changecity">切换城市</a>
+            </div>
+            <div class="col-md-3">
+                <div class="tab">
+                    <ul>
+                        <li>
+                            <a href="" class="active">首页</a>
+                        </li>
+                        <li>
+                            <a href="">品牌公寓</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="">登录/注册</a>
+                        </li>
+                        <li>
+                            <a href="">个人中心</a>
+                        </li>
+                        <li ><a href="" >企业用户</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="person-container container">
+        <div class="col-md-2 sidenav">
+            <div class="title">
+                个人中心
+            </div>
+            <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">个人资料</a>
+                </li>
+                <li role="presentation">
+                    <a href="#message" aria-controls="home" role="tab" data-toggle="tab">我的消息</a>
+                </li>
+                <li role="presentation">
+                    <a href="#order" aria-controls="home" role="tab" data-toggle="tab">我的订单</a>
+                </li>
+                <li role="presentation">
+                    <a href="#pre" aria-controls="home" role="tab" data-toggle="tab">我的预约</a>
+                </li>
+                <li role="presentation">
+                    <a href="#collect" aria-controls="home" role="tab" data-toggle="tab">我的收藏</a>
+                </li>
+                <li role="presentation">
+                    <a href="#attention" aria-controls="home" role="tab" data-toggle="tab">关注</a>
+                </li>
+                <li role="presentation">
+                    <a href="#coupon" aria-controls="home" role="tab" data-toggle="tab">我的优惠券</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main col-md-10">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="profile">
+                    <div class="upload clearfix">
+                        <div class="weui-uploader__input-box">
+                            <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                        </div>
+                        <div>上传头像</div>
+                    </div>
+                    <div class="tab-title">
+                        <span></span>修改个人资料
+                    </div>
+                    <div class="person-info">
+                        <div class="name">
+                            昵称：张三
+                        </div>
+                        <div class="tel">
+                            <span>手机号码：13410202020</span>
+                            <div class="btn">修改</div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="message">message</div>
+                <div role="tabpanel" class="tab-pane" id="order">
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="pre">
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="collect">
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="attention">
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="coupon">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="info-item col-md-4">
+                <ul>
+                    <li>关于我们</li>
+                    <li>联系我们</li>
+                    <li>注册登录</li>
+                </ul>
+            </div>
+            <div class="info-item col-md-4">
+                <div class="tel">服务热线：400-222-222</div>
+            </div>
+            <div class="code-item col-md-4">
+                <img src="assets/images/code.png" alt="">
+                <p>公众号</p>
+            </div>
+            <div class="copyright">Copyright © 2017 qfang.com All Rights Reserved ICP备案号：粤ICP备05067219号-3</div>
+            <div class="copyright">
+                深圳市xxxxx有限公司
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/lazyload.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#myTabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+  });
+</script>
+</body>
+</html>

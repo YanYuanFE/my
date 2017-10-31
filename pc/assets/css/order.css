@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    box-sizing: border-box;
+    background-color: #FFF;
+    color: #333;
+}
+
+.order-container .header {
+    height: 2.2rem;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 16px;
+    position: relative;
+}
+
+.order-container .header .back {
+    position: absolute;
+    top: 0.7rem;
+    left: 1.1rem;
+}
+
+.order-container .header img {
+    width: 9px;
+    height: 18px;
+}
+
+.order-container .header h1 {
+    text-align: center;
+    font-size: .8rem;
+    line-height: 2.2rem;
+}
+
+.order-container .order-content {
+    background: #F5F5F5;
+}
+
+.order-content .order-item {
+    margin-top: 0.55rem;
+    background: #FFF;
+}
+
+.order-content .order-item .hotel-tel {
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: 12px;
+    color: #333;
+    padding-left: 1rem;
+}
+
+.order-content .order-item .weui-media-box {
+    background: #F9F9F9;
+
+}
+
+.order-content .order-item .weui-media-box .weui-media-box__hd {
+    width: 5.4rem;
+    height: 4.1rem;
+}
+
+.order-content .order-item .weui-media-box img {
+    height: 100%;
+}
+
+.order-content .order-item .hotel-house {
+    font-size: .6rem;
+    color: #6F6F6F;
+    margin-top: .2rem;
+}
+
+.order-content .order-item .hotel-time {
+    font-size: .6rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.order-content .weui-media-box__bd {
+    /*margin-top: -1rem;*/
+}
+
+.order-content .order-pay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+}
+
+.order-pay .order-action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-pay .order-action .action{
+    padding: 0 .7rem;
+    border: 1px solid #DADADA;
+    color: #6F6F6F;
+    font-size: .8rem;
+    margin-right: .5rem;
+}
+
+.order-pay .order-action .action.pay {
+    border: 1px solid #FF4040;
+    color: #FFF;
+    background: #FF4040;
+}
+
+.order-pay .order-action .action.sure {
+    border: 1px solid #8FD026;
+    color: #FFF;
+    background: #8FD026;
+}
+
+.order-content .hotel-price {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .7rem;
+    color: #333;
+}
+
+.order-content .hotel-price.unpay {
+   color: #FF4040;
+}
+
+.order-content .weui-media-box:before {
+    left: 0;
+}
+
+.order-container .order-img {
+    height: 7rem;
+    padding-top: .7rem;
+    background: #E5E5E5;
+}
+
+.order-container .order-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.order-container .order-box {
+    background: #fff;
+}
+
+.order-container .hotel-title {
+    padding: .8rem 1.5rem 1rem .9rem;
+}
+
+.order-container .hotel-title h1{
+    font-size: 16px;
+    color: #333;
+}
+
+.order-container .order-detail {
+    background: #F9F9F9;
+    margin: 0 .5rem 0 .5rem;
+    padding: .5rem;
+}
+
+.order-container .order-detail .list-item {
+    margin-top: .5rem;
+}
+
+.order-container .order-detail .list-item span {
+    color: #6F6F6F;
+}
+
+.order-container .order-status {
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pre-detail .order-status {
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.order-container .order-status .order-price {
+    color: #FF4040;
+}
+
+.order-container .order-discount {
+    background: #E5E5E5;
+    padding: .9rem .9rem;
+    height: 6rem;
+    color: #FF4040;
+}
+
+.order-container .footer {
+    position: fixed;
+    bottom: 0;
+    background: #FFF;
+    height: 2.5rem;
+    padding-top: 0.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.order-container .footer .footer-btn {
+    padding: 0 .5rem;
+    text-align: center;
+    height: 1.8rem;
+    color: #FFF;
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+}
+
+.order-container .footer .footer-btn.change {
+    background: #FF9639;
+}
+
+.order-container .footer .footer-btn.cancel {
+    background: #FF4040;
+}
+
+.order-container .footer .footer-btn.agree {
+    background: #8FD026;
+}
+
+.message-detail .order-box{
+    padding: .3rem 1rem;
+}
+
+.message-detail .hotel-title .title {
+    color: #333;
+    font-size: .7rem;
+    text-align: center;
+}
+
+.message-detail .hotel-title p {
+    color: #9C9C9C;
+    font-size: .6rem;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.message-detail .message {
+    margin-top: 1rem;
+    text-indent: 1rem;
+}
