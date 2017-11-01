@@ -242,9 +242,12 @@ body, html {
 .side.weui-navbar a {
     display: block;
     height: 80px;
+    line-height: 80px;
     width: 190px;
     position: relative;
     text-decoration: none;
+    color: #333;
+    padding: 0;
 }
 
 .side.weui-navbar a .vline {
@@ -252,8 +255,9 @@ body, html {
     width: 1px;
     background-color: #ccc;
     position: absolute;
-    right: 40px;
-    top: 40px;
+    right: 54px;
+    top: 51px;
+    z-index: 999;
 }
 
 .side.weui-navbar a img {
@@ -332,7 +336,7 @@ body, html {
 .tab-container .network-tab .tab-content {
     max-width: 1200px;
     border: 1px solid #b8b8b8;
-    margin-bottom: 50px;
+    margin: 30px 0 0 50px;
 }
 
 .tab-container .tab-content .tab-header {
@@ -340,6 +344,11 @@ body, html {
     line-height: 60px;
     padding: 0 20px;
     border-bottom: 1px solid #b8b8b8;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.tab-container .tab-content .tab-main {
+    margin-top: 2px;
 }
 
 .tab-container .tab-content .tab-item {
@@ -441,12 +450,25 @@ body, html {
 }
 
 .standard .data-list {
-    margin-top: 65px;
+    margin: 30px 0 50px 0;
 }
 
 .standard  .list-item {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 24px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -2px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.standard  .list-item p {
+    font-size: 20px;
+    color: #9c9c9c;
+}
+
+.standard  .list-item p.list-title {
+    font-size: 24px;
+    color: #000;
 }
 .standard  .list-item span.list-icon {
     width: 10px;
@@ -533,6 +555,12 @@ p.indent {
 
 .ad-container .adimg-item :not(nth-last-child) {
     margin-right: 16px;
+}
+
+.ad-container .ad-text {
+    position: absolute;
+    z-index: 999;
+    color: #FFF;
 }
 
 .ad-tips {
