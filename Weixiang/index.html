@@ -42,21 +42,20 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="./about.html">关于我们<img src="assets/images/arrow.png" alt=""></a>
-                            <a href="">
+                            <a href="./about.html">
                                 关于我们<img src="assets/images/arrow.png" alt="">
-                                <ul class="drop-menu">
-                                    <li>
-                                        <a href="./about.html#tab1">精准数据</a>
-                                    </li>
-                                    <li>
-                                        <a href="./about.html#tab2">标准化服务</a>
-                                    </li>
-                                    <li>
-                                        <a href="./about.html#tab3">全国网络</a>
-                                    </li>
-                                </ul>
                             </a>
+                            <ul class="drop-menu">
+                                <li>
+                                    <a href="./about.html#tab1">公司简历</a>
+                                </li>
+                                <li>
+                                    <a href="./about.html#tab2">业务合作</a>
+                                </li>
+                                <li>
+                                    <a href="./about.html#tab3">联系我们</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="shop"><a href="" >商城</a></li>
                     </ul>
@@ -174,7 +173,7 @@
     });
 
     $('#nav li').hover(function() {
-//      $('ul', this).slideDown(200);
+      $('ul', this).slideDown(200);
       $(this).children('a:first').addClass("hov");
     }, function() {
       $('ul', this).slideUp(100);

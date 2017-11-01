@@ -131,11 +131,13 @@ body, html {
     overflow: hidden;
     margin-top: 50px;
     padding: 0 7%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .img-wrapper {
-    float: left;
     position: relative;
+    overflow: hidden;
 }
 
 .img-wrapper:not(nth-last-child) {
@@ -145,6 +147,15 @@ body, html {
 .img-wrapper img {
     width: 395px;
     height: 300px;
+    transition-duration:0.5s;
+}
+
+.img-wrapper img:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2); /*Safari 和 Chrome*/
+     -moz-transform: scale(1.2); /*Firefox*/
+    -ms-transform: scale(1.2); /*IE9*/
+    -o-transform: scale(1.2); /*Opera*/
 }
 
 .img-wrapper .img-title {
