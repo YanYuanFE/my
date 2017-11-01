@@ -1,0 +1,219 @@
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    background-color: #FFF;
+    color: #333;
+    height: 100%;
+}
+
+.login-container .bg {
+    height: 297px;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 16px;
+    position: relative;
+    z-index: -1;
+}
+
+.login-container a {
+    text-decoration: none;
+}
+.weui-navbar__item:after {
+    border:none;
+}
+
+.login-container .weui-navbar__item {
+    color: #333;
+    background: #FFF;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.login-container .weui-navbar__item.weui-bar__item--on {
+    color: #8FD026;
+    background-color: #FFF;
+    border-bottom: 1px solid #8FD026;
+}
+
+.login-container .form {
+    width: 700px;
+    max-height: 464px;
+    margin: -200px auto;
+    background: #FFF;
+    z-index: 10;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.login-select, .operation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 315px;
+    margin:35px auto 0;
+}
+
+
+
+.login-item.psw {
+    text-align: right;
+    /*margin-left: 90px;*/
+}
+
+.login-item.phone {
+    text-align: left;
+    /*margin-right: 50px;*/
+}
+
+.login-container .form-item {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.login-container .form-item input {
+    height: 41px;
+    font-size: 14px;
+    color: #9C9C9C;
+    background: #FFF;
+    padding-left: 20px;
+    border: 1px solid #DADADA;
+    width: 315px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+
+.login-container .form-item input.code-input {
+    width: 193px;
+    margin: 0;
+}
+
+.login-container .code-form {
+    display: flex;
+    width: 315px;
+    margin: 0 auto;
+}
+
+.login-container .code-form .code {
+    background: #8FD026;
+    display: inline-block;
+    padding: 0 12px;
+    color: #FFF;
+    line-height: 40px;
+    height: 40px;
+    margin-left: 17px;
+}
+
+#phone-login {
+    display: none;
+}
+
+.login-item input, .check {
+    display: none;
+}
+
+.login-item span {
+    display: inline-block;
+    padding-bottom: 12px;
+    vertical-align: middle;
+}
+
+.check + label {
+    background-color: #FFF;
+    border: 1px solid #8FD026;
+    padding: 9px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+
+.check:checked + label {
+    background-color: #8FD026;
+    border: 1px solid #8FD026;
+    color: #FFF;
+}
+
+.check:checked + label:after {
+    content: '\2714';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.record {
+    vertical-align: middle;
+}
+
+.record span {
+    display: inline-block;
+    padding-bottom: 12px;
+    vertical-align: middle;
+}
+
+
+.login-container .forget .text {
+    color: #8FD026;
+    font-size: .7rem;
+    float: right;
+}
+.login-container .login-btn {
+    width: 315px;
+    height: 41px;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    margin-top: 20px;
+    background: #8FD026;
+    border-radius: 0;
+}
+
+.wx-login a {
+    color: #333;
+}
+
+.wx-login {
+    border-top:1px solid #E6E6E6;
+    padding: 0 3px;
+    text-align: center;
+    height: 75px;
+    line-height: 75px;
+    margin-top: 36px;
+}
+
+.register-form {
+    padding: 64px 0 42px 0;
+}
+.register-form .code-form {
+    margin-bottom: 12px;
+}
+
+.register-form .record a {
+    color: #8FD026;
+}
+.forget .form, .reset .form{
+    padding-top: 1.5rem;
+}
+
+.forget .form-item.code-form {
+    position: relative;
+}
+
+.forget .form-item .code {
+    position: absolute;
+    top: .6rem;
+    right: .5rem;
+    color: #8FD026;
+}
+
+.forget .login-btn, .reset .login-btn {
+    margin-top: 2.3rem;
+}
+
