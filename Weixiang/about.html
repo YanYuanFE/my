@@ -20,18 +20,31 @@
 <div class="container-fluid home-container">
     <div class="header">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <img src="assets/images/logo.png" alt="" class="logo">
                 <img src="assets/images/ZI.png" alt="" class="title">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="menu">
-                    <ul>
+                    <ul id="nav">
                         <li>
                             <a href="./index.html">首页</a>
                         </li>
                         <li>
-                            <a href="./service.html">产品与服务<i class="fa fa-angle-down"></i></a>
+                            <a href="./service.html">
+                                产品与服务<i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="drop-menu">
+                                <li>
+                                    <a href="./service.html#tab1">精准数据</a>
+                                </li>
+                                <li>
+                                    <a href="./service.html#tab2">标准化服务</a>
+                                </li>
+                                <li>
+                                    <a href="./service.html#tab3">全国网络</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="./about.html" class="active">关于我们</a>
@@ -241,7 +254,14 @@
     $('#myTabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
-    })
+    });
+    $('#nav li').hover(function() {
+      $('ul', this).slideDown(200);
+      $(this).children('a:first').addClass("hov");
+    }, function() {
+      $('ul', this).slideUp(100);
+      $(this).children('a:first').removeClass("hov");
+    });
     $('.navbar__item').click(function() {
       var index = $(this).index();
       $(this).addClass('bar__item--on').siblings('.navbar__item').removeClass('bar__item--on');

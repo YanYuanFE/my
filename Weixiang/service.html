@@ -20,13 +20,13 @@
 <div class="container-fluid home-container">
     <div class="header">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <img src="assets/images/logo.png" alt="" class="logo">
                 <img src="assets/images/ZI.png" alt="" class="title">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="menu">
-                    <ul>
+                    <ul id="nav">
                         <li>
                             <a href="./index.html">首页</a>
                         </li>
@@ -34,7 +34,20 @@
                             <a href="./service.html" class="active">产品与服务</a>
                         </li>
                         <li>
-                            <a href="./about.html">关于我们<i class="fa fa-angle-down"></i></a>
+                            <a href="./about.html">
+                                关于我们<i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="drop-menu">
+                                <li>
+                                    <a href="./about.html#tab1">公司简历</a>
+                                </li>
+                                <li>
+                                    <a href="./about.html#tab2">业务合作</a>
+                                </li>
+                                <li>
+                                    <a href="./about.html#tab3">联系我们</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="shop"><a href="" >商城</a></li>
                     </ul>
@@ -77,12 +90,12 @@
         <div class="col-md-9 tab-container tab-content">
             <div id="tab1" class="tab-pane fade in active data">
                 <div class="data-container">
-                    <div class="data-left animated fadeInLeft">
+                    <div class="data-left animated fadeInLeft col-md-6">
                         <img class="mac" src="assets/images/iMac.png" alt="">
                         <img class="ipad" src="assets/images/iPad-Air.png" alt="">
                         <img class="iphone" src="assets/images/iPhone-5S.png" alt="">
                     </div>
-                    <div class="data-right animated fadeInRight">
+                    <div class="data-right animated fadeInRight col-md-6">
                         <div class="data-title">
                             <img src="assets/images/data.png" alt="">
                             精准数据
@@ -196,10 +209,56 @@
                       </div>
                     </div>
                     <div id="sh" class="tab-item">
-                      <h1>页面二</h1>
+                        <div class="network">
+                            <div class="tab-header">
+                                <div class="left">
+                                    <span><span class="num">400</span>个小区</span>
+                                    <span><span class="num">500</span>个电梯</span>
+                                    <span><span class="num">600</span>个单元数量</span>
+                                    <span><span class="num">1000</span>个单元数量</span>
+                                </div>
+                                <div class="right">
+                                    <a href="">
+                                        <img src="assets/images/leibiao.png" alt="">列表
+                                    </a>
+                                    <a href="">
+                                        <img src="assets/images/down.png" alt="">点位表下载
+                                    </a>
+                                    <a href="">
+                                        <img src="assets/images/biaoge-.png" alt="">空置表显示
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-main">
+                                <img src="assets/images/service.png" alt="">
+                            </div>
+                        </div>
                     </div>
                     <div id="hz" class="tab-item">
-                      <h1>页面二</h1>
+                        <div class="network">
+                            <div class="tab-header">
+                                <div class="left">
+                                    <span><span class="num">400</span>个小区</span>
+                                    <span><span class="num">500</span>个电梯</span>
+                                    <span><span class="num">600</span>个单元数量</span>
+                                    <span><span class="num">1000</span>个单元数量</span>
+                                </div>
+                                <div class="right">
+                                    <a href="">
+                                        <img src="assets/images/leibiao.png" alt="">列表
+                                    </a>
+                                    <a href="">
+                                        <img src="assets/images/down.png" alt="">点位表下载
+                                    </a>
+                                    <a href="">
+                                        <img src="assets/images/biaoge-.png" alt="">空置表显示
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tab-main">
+                                <img src="assets/images/service.png" alt="">
+                            </div>
+                        </div>
                     </div>
                   </div>
               </div>
@@ -261,7 +320,14 @@
     $('#myTabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
-    })
+    });
+    $('#nav li').hover(function() {
+      $('ul', this).slideDown(200);
+      $(this).children('a:first').addClass("hov");
+    }, function() {
+      $('ul', this).slideUp(100);
+      $(this).children('a:first').removeClass("hov");
+    });
     $('.navbar__item').click(function() {
         var index = $(this).index();
         $(this).addClass('bar__item--on').siblings('.navbar__item').removeClass('bar__item--on');
