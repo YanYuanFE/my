@@ -262,6 +262,10 @@ body, html {
     margin-top: 50px;
 }
 
+.banner img {
+    width: 100%;
+}
+
 .side {
     padding-left: 160px;
 }

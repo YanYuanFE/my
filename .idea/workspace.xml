@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5455f28-9515-4bf1-8f54-2574aad3f048" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Weixiang/assets/images/ZI.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Weixiang/assets/images/banner-.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Weixiang/assets/images/矩形-42-拷贝-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Weixiang/assets/images/矩形-42-拷贝-4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Weixiang/assets/images/矩形-42.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/assets/images/banner2.png" afterPath="$PROJECT_DIR$/Weixiang/assets/images/banner2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/about.html" afterPath="$PROJECT_DIR$/Weixiang/about.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/assets/css/index.css" afterPath="$PROJECT_DIR$/Weixiang/assets/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/index.html" afterPath="$PROJECT_DIR$/Weixiang/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -98,8 +90,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Weixiang/assets/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="365" column="25" lean-forward="false" selection-start-line="365" selection-start-column="25" selection-end-line="365" selection-end-column="25" />
+            <state relative-caret-position="345">
+              <caret line="264" column="5" lean-forward="true" selection-start-line="264" selection-start-column="5" selection-end-line="264" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -263,12 +255,12 @@
       <workItem from="1509066233025" duration="390000" />
       <workItem from="1509424916600" duration="5669000" />
       <workItem from="1509537916518" duration="5736000" />
-      <workItem from="1509624497925" duration="3810000" />
+      <workItem from="1509624497925" duration="4038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20932000" />
+    <option name="totallyTimeSpent" value="21160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1046" extended-state="6" />
@@ -735,8 +727,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Weixiang/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="365" column="25" lean-forward="false" selection-start-line="365" selection-start-column="25" selection-end-line="365" selection-end-column="25" />
+        <state relative-caret-position="345">
+          <caret line="264" column="5" lean-forward="true" selection-start-line="264" selection-start-column="5" selection-end-line="264" selection-end-column="5" />
           <folding />
         </state>
       </provider>
