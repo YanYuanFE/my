@@ -66,7 +66,7 @@ body {
 
 .source-detail .pk {
     bottom: .6rem;
-    right: 2.7rem;
+    right: 4.7rem;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
@@ -81,16 +81,21 @@ body {
 }
 
 .source-detail .heart {
+    bottom: .4rem;
+    right: 2.7rem;
+}
+
+.source-detail .attention {
     bottom: .45rem;
     right: .75rem;
 }
 
-.source-detail .heart img{
+.source-detail .heart img, .source-detail .attention img{
     width: 1.25rem;
     height: 1.25rem;
 }
 
-.source-detail .heart img.collected{
+.source-detail .heart img.collected,.source-detail .attention img.attentioned{
     display: none;
 }
 
@@ -270,7 +275,7 @@ body {
 .source-detail .detail-box img {
     height: .75rem;
     width:auto;
-    margin-right: .5rem;
+    /*margin-right: .5rem;*/
 }
 
 .source-detail .euip-item {
@@ -460,9 +465,9 @@ body {
     z-index: 999;
     display: none;
     bottom: 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     padding-top: 1rem;
+    -webkit-overflow-scrolling : touch;
 }
 
 .source-detail .rent-modal .rent-wrapper {
@@ -548,7 +553,7 @@ body {
     background: #FFF;
     border:1px solid #8FD026;
     color: #8FD026;
-    padding: .2rem 1rem;
+    padding: .2rem .8rem;
     margin-right: .5rem;
     margin-top: .45rem;
 }

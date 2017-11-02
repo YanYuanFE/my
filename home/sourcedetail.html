@@ -33,6 +33,10 @@
                     <img src="assets/images/yellow-heart.png" alt="" id="collected" class="colaction collected">
                     <img src="assets/images/uncollect.png" alt="" id="uncollect" class="colaction uncollect">
                 </div>
+                <div class="attention absolute" id="attention">
+                    <img src="assets/images/yellow-collect.png" alt="" id="attentioned" class="colaction attentioned">
+                    <img src="assets/images/collected.png" alt="" id="unattention" class="colaction unattention">
+                </div>
             </div>
         </div>
         <div class="source-box">
@@ -287,9 +291,9 @@
                     一次性付款6个月享受9折优惠，付款12个月享受8.5折优惠
                 </div>
             </div>
-            <div class="rent-btn" id="selectOk">
-                确定
-            </div>
+        </div>
+        <div class="rent-btn" id="selectOk">
+            确定
         </div>
     </div>
 </div>
@@ -301,6 +305,7 @@
 <script type='text/javascript' src='assets/js/swiper.js' charset='utf-8'></script>
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/layer.js"></script>
+<script src="assets/js/iscroll.js"></script>
 <script>
   $(document).ready(function() {
       var map = new BMap.Map("map");
@@ -355,12 +360,13 @@
     })
     $('#sourceSelect').click(function(e) {
           $('.mask').css('display', 'block');
-          $('#selectModal').css('display', 'block');
+      $('#selectModal').show();
     //      $('.content').css('overflow', 'hidden');
     //      $('.rent-modal').css('overflow', 'auto');
-          $('.content,.mask').bind("touchmove",function(e){
-              e.preventDefault();
-          });
+      $('.mask').bind("touchmove",function(e){
+        e.preventDefault();
+      }, false);
+      new IScroll('#selectModal');
           $(".add").click(function(){
               var n=$(this).prev().val();
               var num=parseInt(n)+1;
@@ -395,6 +401,13 @@
       e.stopPropagation();
       $('#uncollect').toggle();
       $('#collected').toggle();
+      return false
+    })
+    $("#attention").on('click', function(e) {
+      console.log(e)
+      e.stopPropagation();
+      $('#unattention').toggle();
+      $('#attentioned').toggle();
       return false
     })
 

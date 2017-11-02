@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5455f28-9515-4bf1-8f54-2574aad3f048" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/my.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/about.html" afterPath="$PROJECT_DIR$/Weixiang/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/assets/css/index.css" afterPath="$PROJECT_DIR$/Weixiang/assets/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/service.html" afterPath="$PROJECT_DIR$/Weixiang/service.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/assets/stylesheets/source.css" afterPath="$PROJECT_DIR$/home/assets/stylesheets/source.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/sourcedetail.html" afterPath="$PROJECT_DIR$/home/sourcedetail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/sourcedetailrent.html" afterPath="$PROJECT_DIR$/home/sourcedetailrent.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +23,7 @@
       <file leaf-file-name="vrhotel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/vrhotel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="1743">
               <caret line="83" column="25" lean-forward="false" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
               <folding />
             </state>
@@ -34,50 +33,32 @@
       <file leaf-file-name="sourcedetailrent.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home/sourcedetailrent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3818">
-              <caret line="166" column="60" lean-forward="false" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sourcedetail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home/sourcedetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3772">
-              <caret line="164" column="63" lean-forward="false" selection-start-line="164" selection-start-column="54" selection-end-line="164" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myhousesource.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company/myhousesource.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9936">
-              <caret line="432" column="105" lean-forward="false" selection-start-line="432" selection-start-column="105" selection-end-line="432" selection-end-column="105" />
+            <state relative-caret-position="355">
+              <caret line="400" column="0" lean-forward="false" selection-start-line="400" selection-start-column="0" selection-end-line="400" selection-end-column="44" />
               <folding>
-                <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="service.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Weixiang/service.html">
+      <file leaf-file-name="sourcedetail.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/home/sourcedetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1610">
-              <caret line="118" column="43" lean-forward="false" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+            <state relative-caret-position="361">
+              <caret line="296" column="14" lean-forward="false" selection-start-line="296" selection-start-column="14" selection-end-line="296" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Weixiang/index.html">
+      <file leaf-file-name="source.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/assets/stylesheets/source.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="44" column="49" lean-forward="false" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+            <state relative-caret-position="504">
+              <caret line="555" column="23" lean-forward="false" selection-start-line="555" selection-start-column="23" selection-end-line="555" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -86,19 +67,11 @@
       <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Weixiang/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="106" column="55" lean-forward="false" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Weixiang/assets/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="562" column="16" lean-forward="false" selection-start-line="562" selection-start-column="16" selection-end-line="562" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="1029">
+              <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+              <folding>
+                <marker date="1509582034934" expanded="true" signature="8848:8885" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,8 +101,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/home/vrhotel.html" />
-        <option value="$PROJECT_DIR$/home/sourcedetailrent.html" />
-        <option value="$PROJECT_DIR$/home/sourcedetail.html" />
         <option value="$PROJECT_DIR$/company/myhousesource.html" />
         <option value="$PROJECT_DIR$/company/housemap.html" />
         <option value="$PROJECT_DIR$/company/housemap2.html" />
@@ -137,6 +108,9 @@
         <option value="$PROJECT_DIR$/Weixiang/service.html" />
         <option value="$PROJECT_DIR$/Weixiang/about.html" />
         <option value="$PROJECT_DIR$/Weixiang/assets/css/index.css" />
+        <option value="$PROJECT_DIR$/home/sourcedetailrent.html" />
+        <option value="$PROJECT_DIR$/home/assets/stylesheets/source.css" />
+        <option value="$PROJECT_DIR$/home/sourcedetail.html" />
       </list>
     </option>
   </component>
@@ -147,10 +121,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1863" />
-    <option name="y" value="171" />
-    <option name="width" value="1858" />
-    <option name="height" value="1093" />
+    <option name="y" value="-4" />
+    <option name="width" value="1602" />
+    <option name="height" value="912" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -170,8 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,32 +153,32 @@
             <path>
               <item name="my" type="b2602c69:ProjectViewProjectNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="Weixiang" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my" type="b2602c69:ProjectViewProjectNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="Weixiang" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my" type="b2602c69:ProjectViewProjectNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="Weixiang" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my" type="b2602c69:ProjectViewProjectNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
               <item name="Weixiang" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,24 +222,26 @@
       <workItem from="1509066233025" duration="390000" />
       <workItem from="1509424916600" duration="5669000" />
       <workItem from="1509537916518" duration="5102000" />
+      <workItem from="1509582061661" duration="4569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16488000" />
+    <option name="totallyTimeSpent" value="21067000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1046" extended-state="6" />
+    <frame x="-1" y="-11" width="1602" height="912" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2897787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28942367" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2631579" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2631579" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -291,6 +264,101 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/home/vrhotel.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1743">
+          <caret line="83" column="25" lean-forward="false" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/sourcedetailrent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3486">
+          <caret line="166" column="60" lean-forward="false" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/sourcedetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3444">
+          <caret line="164" column="63" lean-forward="false" selection-start-line="164" selection-start-column="54" selection-end-line="164" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company/myhousesource.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9072">
+          <caret line="432" column="105" lean-forward="false" selection-start-line="432" selection-start-column="105" selection-end-line="432" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company/housemap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company/housemap2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weixiang/assets/css/jquery-weui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weixiang/assets/js/planetaryjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="200" column="46" lean-forward="false" selection-start-line="200" selection-start-column="46" selection-end-line="200" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weixiang/service.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="66" column="34" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="34" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weixiang/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3696">
+          <caret line="176" column="34" lean-forward="false" selection-start-line="176" selection-start-column="34" selection-end-line="176" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weixiang/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="48" column="33" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+          <folding>
+            <marker date="1509582034934" expanded="true" signature="8848:8885" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weixiang/assets/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="137" column="14" lean-forward="false" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/vrhotel.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1909">
           <caret line="83" column="25" lean-forward="false" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
           <folding />
@@ -301,7 +369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3818">
           <caret line="166" column="60" lean-forward="false" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -309,7 +376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3772">
           <caret line="164" column="63" lean-forward="false" selection-start-line="164" selection-start-column="54" selection-end-line="164" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -317,9 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9936">
           <caret line="432" column="105" lean-forward="false" selection-start-line="432" selection-start-column="105" selection-end-line="432" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -327,7 +390,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -335,7 +401,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="49" />
-          <folding />
+          <folding>
+            <marker date="1509582034934" expanded="true" signature="8848:8885" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -367,7 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3818">
           <caret line="166" column="60" lean-forward="false" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -375,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3772">
           <caret line="164" column="63" lean-forward="false" selection-start-line="164" selection-start-column="54" selection-end-line="164" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -383,9 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9936">
           <caret line="432" column="105" lean-forward="false" selection-start-line="432" selection-start-column="105" selection-end-line="432" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -415,7 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="166" column="60" lean-forward="false" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -423,7 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="164" column="63" lean-forward="false" selection-start-line="164" selection-start-column="54" selection-end-line="164" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -431,9 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6717">
           <caret line="432" column="105" lean-forward="false" selection-start-line="432" selection-start-column="105" selection-end-line="432" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -463,7 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3486">
           <caret line="166" column="60" lean-forward="false" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -471,7 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3444">
           <caret line="164" column="63" lean-forward="false" selection-start-line="164" selection-start-column="54" selection-end-line="164" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -479,9 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9072">
           <caret line="432" column="105" lean-forward="false" selection-start-line="432" selection-start-column="105" selection-end-line="432" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -501,24 +554,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home/vrhotel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
+        <state relative-caret-position="1743">
           <caret line="83" column="25" lean-forward="false" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home/sourcedetailrent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3818">
-          <caret line="166" column="60" lean-forward="false" selection-start-line="166" selection-start-column="60" selection-end-line="166" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home/sourcedetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3772">
-          <caret line="164" column="63" lean-forward="false" selection-start-line="164" selection-start-column="54" selection-end-line="164" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -534,6 +571,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -541,7 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -549,20 +586,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="200" column="46" lean-forward="false" selection-start-line="200" selection-start-column="46" selection-end-line="200" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#2751#2832#0" expanded="false" />
-            <element signature="e#2868#2903#0" expanded="false" />
-            <element signature="e#2929#4115#0" expanded="false" />
-            <element signature="e#4276#4713#0" expanded="false" />
-            <element signature="e#4777#5096#0" expanded="false" />
-            <element signature="e#5145#5881#0" expanded="false" />
-            <element signature="e#5933#6855#0" expanded="false" />
-            <element signature="e#6905#7385#0" expanded="false" />
-            <element signature="e#7435#9152#0" expanded="false" />
-            <element signature="e#9203#10234#0" expanded="false" />
-            <element signature="e#10284#11578#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -570,40 +593,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9936">
           <caret line="432" column="105" lean-forward="false" selection-start-line="432" selection-start-column="105" selection-end-line="432" selection-end-column="105" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Weixiang/service.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1610">
-          <caret line="118" column="43" lean-forward="false" selection-start-line="118" selection-start-column="43" selection-end-line="118" selection-end-column="43" />
+        <state relative-caret-position="1386">
+          <caret line="66" column="34" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="34" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weixiang/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+          <folding>
+            <marker date="1509582034934" expanded="true" signature="8848:8885" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weixiang/assets/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="137" column="14" lean-forward="false" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Weixiang/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="44" column="49" lean-forward="false" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+        <state relative-caret-position="655">
+          <caret line="176" column="34" lean-forward="false" selection-start-line="176" selection-start-column="34" selection-end-line="176" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Weixiang/about.html">
+    <entry file="file://$PROJECT_DIR$/home/assets/stylesheets/source.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="106" column="55" lean-forward="false" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="55" />
+        <state relative-caret-position="504">
+          <caret line="555" column="23" lean-forward="false" selection-start-line="555" selection-start-column="23" selection-end-line="555" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Weixiang/assets/css/index.css">
+    <entry file="file://$PROJECT_DIR$/home/sourcedetailrent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="562" column="16" lean-forward="false" selection-start-line="562" selection-start-column="16" selection-end-line="562" selection-end-column="16" />
+        <state relative-caret-position="355">
+          <caret line="400" column="0" lean-forward="false" selection-start-line="400" selection-start-column="0" selection-end-line="400" selection-end-column="44" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#6;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/sourcedetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="296" column="14" lean-forward="false" selection-start-line="296" selection-start-column="14" selection-end-line="296" selection-end-column="14" />
           <folding />
         </state>
       </provider>
