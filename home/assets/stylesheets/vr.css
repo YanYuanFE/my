@@ -171,12 +171,21 @@ body, html {
 }
 
 .vr-hotel .source .img-item img{
-    width: 8rem;
+    width: 100%;
     height: 6.5rem;
 }
 
-.vr-hotel .source .img-item {
+.vr-hotel .source .img-list-item {
+    display: flex;
     margin-bottom: .8rem;
+}
+
+.vr-hotel .source .img-item {
+    flex: 1;
+}
+
+.vr-hotel .source .img-item:first-child {
+    margin-right: .5rem;
 }
 
 .vr-hotel .source a {
