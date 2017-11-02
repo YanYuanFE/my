@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     font-size: 16px;
-    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    font-family: "Hiragino Sans GB";
     box-sizing: border-box;
     background-color: #FFF;
     color: #333;
@@ -12,10 +12,26 @@ body, html {
     padding: 0;
 }
 
-.banner img {
+.banner .bannerImg {
     width: 100%;
     height: auto;
 }
+
+.banner .bannertext {
+    z-index: 999;
+    margin: -600px auto 0;
+    width: 50%;
+    text-align: center;
+}
+
+.banner .bannertext.bottomText {
+    margin: -375px auto 0;
+}
+
+.banner .bannertext .subText {
+    margin-top: 50px;
+}
+
 .header {
     height: 80px;
     line-height: 80px;
@@ -32,6 +48,7 @@ body, html {
 
 .header .row {
     padding: 0 110px;
+    margin: 0;
 }
 .header .menu ul {
     overflow: hidden;
@@ -61,10 +78,14 @@ body, html {
     color: #111111;
     font-size: 20px;
     display: inline-block;
-    padding-left: 20px;
+    padding:0 20px;
     text-decoration: none;
     width: 100%;
     height: 100%;
+}
+
+.header .menu .drop-menu > li a {
+    padding:0 40px 0 20px;
 }
 
 .header .menu .arrow-icon {
@@ -93,6 +114,7 @@ body, html {
 
 .header .menu ul li.shop a {
     color: #FFF;
+    padding: 0;
 }
 
 .swiper-container {
@@ -341,7 +363,7 @@ body, html {
 .tab-container .network-tab .tab-content {
     max-width: 1200px;
     border: 1px solid #b8b8b8;
-    margin: 30px 0 0 50px;
+    margin: 30px 0 80px 50px;
 }
 
 .tab-container .tab-content .tab-header {
@@ -560,19 +582,32 @@ p.indent {
 .ad-container .adimg-list img {
     width: 380px;
     height: 380px;
+    z-index: -1;
+}
+
+.ad-container .adimg-item {
+    position: relative;
+    width: 396px;
+    height: 380px;
 }
 
 .ad-container .adimg-item :not(nth-last-child) {
     margin-right: 16px;
 }
 
-.ad-container .ad-text {
+.ad-container .adimg-text {
     position: absolute;
     z-index: 999;
     color: #FFF;
+    left: 36%;
+    top: 40%;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .ad-tips {
+    max-width: 1200px;
     font-size: 24px;
     text-align: center;
     margin-bottom: 40px;
@@ -583,6 +618,7 @@ p.indent {
 }
 
 .ad-join{
+    max-width: 1200px;
     width: 400px;
     height: 60px;
     background: #E50112;
@@ -592,6 +628,9 @@ p.indent {
     margin: 0 auto;
     margin-bottom: 100px;
     font-size: 28px;
+}
+.ad-container .tab-content {
+    max-width: 1200px;
 }
 
 

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/swiper.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
 </head>
 <body>
 <div class="container-fluid home-container">
@@ -67,10 +68,19 @@
     <div class="banner swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="assets/images/banner-.png" alt="">
+                <img src="assets/images/banner1.png" alt="" class="bannerImg">
+                <div class="bannertext animated fadeInLeft">
+                    <img src="assets/images/banner2text.png" alt="">
+                    <img src="assets/images/banner1text.png" alt="" class="subText">
+                </div>
+
             </div>
             <div class="swiper-slide">
-                <img src="assets/images/banner2.png" alt="">
+                <img src="assets/images/banner2.png" alt="" class="bannerImg">
+                <div class="bannertext bottomText animated fadeInRight">
+                    <img src="assets/images/banner2text.png" alt="">
+                    <img src="assets/images/banner1text.png" alt="" class="subText">
+                </div>
                 <canvas id="rotatingGlobe" width="1500" height="624"></canvas>
             </div>
         </div>
