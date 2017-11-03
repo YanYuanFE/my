@@ -44,6 +44,12 @@ body,html,.rent-container {
     padding-top: .75rem;
     background: #F5F5F5;
 }
+.pre-source .content {
+    padding-bottom: 2.5rem;
+    background: #F5F5F5;
+    overflow-y: scroll;
+    height: 100%;
+}
 
 
 .rent-container .form {
@@ -177,7 +183,7 @@ body,html,.rent-container {
     display: flex;
     border: 1px solid #E6E6E6;
     margin-right: .5rem;
-    height: 1.7rem;
+    height: 1.8rem;
     width: 7.5rem;
     appearance:none;
     -moz-appearance: none;
@@ -195,11 +201,12 @@ body,html,.rent-container {
     border: 1px solid #E6E6E6;
     height: 1.7rem;
     margin-right: .5rem;
+    font-size: .7rem;
 }
 
 .time .time-picker {
     flex: 1;
-    height: 1.7rem;
+    height: 1.8rem;
 }
 
 .time .time-picker input {
