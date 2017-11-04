@@ -16,6 +16,11 @@ body, html {
     height: 100%;
 }
 
+.vr-hotel .video_1-dimensions {
+    width: 100%;
+    height: 164px;
+}
+
 .vr-hotel .header {
     height: 2.2rem;
     background: #8FD026;
@@ -194,6 +199,8 @@ body, html {
 
 .vr-hotel .video-js {
     margin-bottom: .5rem;
+    width: 100%;
+    height: 164px;
 }
 
 .vr-hotel .vjs-poster {
