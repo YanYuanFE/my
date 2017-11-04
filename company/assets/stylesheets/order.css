@@ -168,6 +168,10 @@ body,html,.pre-detail,.order-container {
     height: 6rem;
 }
 
+.order-container .order-discount.min {
+    height: 2rem;
+}
+
 .order-container .footer {
     position: fixed;
     bottom: 0;
@@ -178,6 +182,10 @@ body,html,.pre-detail,.order-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.order-container .footer.around {
+    justify-content: space-around;
 }
 
 .order-container .footer .footer-btn {

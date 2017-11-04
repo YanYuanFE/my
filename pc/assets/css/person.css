@@ -154,6 +154,43 @@ li {
     background: #8FD026;
 }
 
+#message .tab-title {
+    margin: 20px 0;
+}
+
+.message-select {
+    margin-bottom: 20px;
+}
+
+.message-select select {
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    border-radius: 0px;
+    margin-right: 20px;
+}
+
+#message .delete {
+    border: 1px solid #FF4040;
+    color: #FF4040;
+    border-radius: 0;
+    background: #FFF;
+    padding: 6px 10px;
+}
+
+#message .read {
+    border: 1px solid #8FD026;
+    color: #8FD026;
+    border-radius: 0;
+    background: #FFF;
+    padding: 6px 10px;
+}
+
+#order table thead {
+    background: #8FD026;
+    color: #FFF;
+}
+
 .footer {
     background: #8FD026;
     font-size: 16px;
