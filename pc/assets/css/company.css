@@ -172,32 +172,11 @@ li {
     margin-right: 20px;
 }
 
-#message .delete {
-    border: 1px solid #FF4040;
-    color: #FF4040;
-    border-radius: 0;
-    background: #FFF;
-    padding: 6px 10px;
-}
-
-#message .read {
-    border: 1px solid #8FD026;
-    color: #8FD026;
-    border-radius: 0;
-    background: #FFF;
-    padding: 6px 10px;
-}
-
-#message table, #order table, #pre table {
+#housesource table, #order table, #prelist table {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
-#message table thead {
-    background: #F9F9F9;
-    color: #6F6F6F;
-}
-
-.person-container table thead th {
+.company-container table thead th {
     font-weight: 500;
     border-bottom: none;
 }
@@ -205,15 +184,15 @@ li {
 #message table tbody td {
     border: none;
 }
-.person-container{
+.company-container{
     margin-bottom: 147px;
 }
 
-.person-container table tbody td {
+.company-container table tbody td {
     vertical-align: middle;
 }
 
-#order table thead,#pre table thead {
+#order table thead,#prelist table thead {
     background: #8FD026;
     color: #FFF;
 }
@@ -306,118 +285,46 @@ table .btn {
     top:0;
     right:0;
 }
+.source-select {
+    padding: 20px;
+    border-bottom: 1px solid #DADADA;
+}
 
-.person-container .pagination li a {
+.source-item .weui-btn {
     border-radius: 0;
-    margin-left: 2px;
+    border: 1px solid #737373;
+    background: #FFF;
+    margin-right: 8px;
+    width: 70px;
+    height: 35px;
 }
 
-.person-container .pagination>li>span:focus, .pagination>li>span:hover {
-    z-index: 2;
+.source-item .weui-btn:after {
+    border: none;
+}
+
+.source-item .weui-btn.btn-disable {
+    background: #D4D4D4;
+    color: #333;
+}
+
+.source-item .weui-btn.btn-select {
+    background: #FF4040;
     color: #FFF;
-    background-color: #8FD026;
-    border-color: #dadada;
+    border-color: #FF4040;
 }
 
-.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
-    z-index: 2;
-    color: #FFF;
-    background-color: #8FD026;
-    border-color: #dadada;
+.setrent {
+    margin-top: 20px;
 }
 
-.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
-    z-index: 3;
-    color: #fff;
-    cursor: default;
-    background-color: #8FD026;
-    border-color: #8FD026;
+.setrent button{
+    border-radius: 0;
 }
-
-.pagination>li>a, .pagination>li>span {
-    position: relative;
-    float: left;
-    padding: 6px 12px;
-    margin-left: -1px;
-    margin-right: 14px;
-    line-height: 1.42857143;
-    color: #9C9C9C;
-    text-decoration: none;
-    background-color: #fff;
-    border: 1px solid #dadada;
-}
-
-.attention-content .attention-row{
-    display: flex;
-    margin-bottom: 36px;
-}
-
-.attention-item {
-    position: relative;
-    width: 450px;
-    height: 340px;
-    margin-right: 20px;
-}
-
-.attention-item img {
-    width: 450px;
-    height: 340px;
-}
-
-.attention-name {
-    position: absolute;
-    left: 0;
-    top: 28px;
-    background: #8FD026;
-    color: #FFF;
-    font-size: 24px;
-    padding: 5px 28px;
-}
-
-.remove {
-    width: 40px;
-    height: 40px;
-    color: #FFF;
-    border-radius: 50%;
-    background: #93989D;
-    transform: rotate(45deg);
-    text-align: center;
-    line-height: 40px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
-
-.remove span {
-    font-size: 30px;
-}
-
-.coupon-box .coupon-item {
-    margin-bottom: 18px;
-    background-color: #FFF;
-    background-image: url("../images/coupon1.png");
-    background-size: 100% 100%;
-    background-position: center center;
-    height: 98px;
-    width: 345px;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
-    border-radius: 3px;
-    border: 1px solid #E6E6E6;
-}
-
-.coupon-box .coupon-item.bg2 {
-    background-image: url("../images/coupon2.png");
-}
-
-.coupon-box .coupon-item .coupon-price {
-    margin-top: 10px;
-}
-
-.coupon-box .coupon-item .coupon-price span {
-    font-size: 2.1rem;
-    font-weight: 500;
+.tips {
+    margin-top: 44px;
+    color: #8FD026;
+    font-size: 14px;
 }
 
 .footer {
