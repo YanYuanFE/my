@@ -181,7 +181,7 @@
             </div>
         </div>
 
-        <div class="weui-loadmore">
+        <div class="weui-loadmore" style="padding-bottom:2rem">
             <i class="weui-loading"></i>
             <span class="weui-loadmore__tips">正在加载</span>
         </div>
@@ -223,7 +223,7 @@
     });
     $('.weui-loadmore').css('display', 'none');
     var loading = false;
-    $("#list").infinite(100).on("infinite", function() {
+    $("#list").infinite(0).on("infinite", function() {
       $('.weui-loadmore').css('display', 'block');
       if(loading) return;
       loading = true;

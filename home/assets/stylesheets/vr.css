@@ -145,7 +145,7 @@ body, html {
 }
 
 .vr-hotel .img-list {
-    padding: .5rem .5rem 0 .5rem;
+    /* padding: .5rem .5rem 0 .5rem; */
 }
 
 .vr-hotel .recommend .img-item {
@@ -194,6 +194,7 @@ body, html {
 .vr-hotel .source .img-list-item {
     display: flex;
     margin-bottom: .8rem;
+    padding: 0 .5rem;
 }
 
 .vr-hotel .source .img-item {
