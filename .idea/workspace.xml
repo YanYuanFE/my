@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a2193a5-724d-4fcf-a913-ec56589aa4ef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/about.html" afterPath="$PROJECT_DIR$/Weixiang/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/assets/css/index.css" afterPath="$PROJECT_DIR$/Weixiang/assets/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weixiang/service.html" afterPath="$PROJECT_DIR$/Weixiang/service.html" />
-    </list>
+    <list default="true" id="5a2193a5-724d-4fcf-a913-ec56589aa4ef" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -155,7 +151,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1863" />
     <option name="y" value="171" />
     <option name="width" value="1858" />
@@ -243,15 +239,15 @@
       <option name="presentableId" value="Default" />
       <updated>1509852588258</updated>
       <workItem from="1509852607020" duration="16486000" />
-      <workItem from="1509929872393" duration="238000" />
+      <workItem from="1509929872393" duration="712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16724000" />
+    <option name="totallyTimeSpent" value="17198000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1863" y="171" width="1602" height="912" extended-state="7" />
+    <frame x="-1863" y="171" width="1602" height="912" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24952501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

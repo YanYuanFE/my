@@ -77,10 +77,15 @@ body,html {
     background: #FFF;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+.order-container .order-content .house-search select {
+    margin-right: .5rem;
 }
 
 .order-container .order-content .select select{
-    width: 14.2rem;
+    width: 13.2rem;
     height: 1.7rem;
     color: #9C9C9C;
     border: 1px solid #DADADA;
