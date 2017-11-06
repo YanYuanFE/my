@@ -45,7 +45,7 @@ body,html,.rent-container {
     background: #F5F5F5;
 }
 .pre-source .content {
-    /*padding-bottom: 2.5rem;*/
+    /* padding-bottom: 2.5rem; */
     background: #F5F5F5;
     overflow-y: scroll;
     height: 100%;
@@ -147,6 +147,7 @@ body,html,.rent-container {
     padding-left: .85rem;
     margin-top: .5rem;
     background: #FFF;
+    padding-bottom: 2.5rem;
 }
 
 .source-box {
