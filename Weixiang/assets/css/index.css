@@ -5,7 +5,8 @@ body, html {
     box-sizing: border-box;
     background-color: #FFF;
     color: #333;
-    height: 100%;
+    width:100%;
+    overflow-x:hidden;
 }
 
 .home-container {
@@ -43,6 +44,8 @@ body, html {
     left: 0;
     background: #FFF;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
@@ -54,14 +57,18 @@ body, html {
     margin-left: 27px;
 }
 
-.header .row {
-    padding-left: 110px;
+.header .head-logo{
+    padding-left: 8.3%;
     margin: 0;
+}
+
+.header .head-menu{
+    padding-right: 8.3%;
 }
 .header .menu ul {
     overflow: hidden;
     line-height: 80px;
-    margin: 0;
+    margin-top: -2px;
     padding: 0;
 }
 .header .menu .drop-menu {
@@ -118,6 +125,7 @@ body, html {
     height: 40px;
     line-height: 40px;
     margin-top: 20px;
+    margin-right: 0;
 }
 
 .header .menu ul li.shop a {
@@ -168,7 +176,7 @@ body, html {
 .img-section{
     overflow: hidden;
     margin-top: 60px;
-    padding: 0 7%;
+    padding: 0 8.3%;
     display: flex;
     justify-content: flex-start;
     padding-bottom: 30px;
@@ -206,7 +214,7 @@ body, html {
 }
 
 .info-section {
-    margin-top: 50px;
+    margin-top: 110px;
     overflow: hidden;
     padding: 0 10%;
     display: flex;
@@ -259,8 +267,8 @@ body, html {
 .info-item li {
     list-style: none;
     margin: 0;
-    text-indent: 2;
     font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .info-item .code {
@@ -283,6 +291,14 @@ body, html {
 
 .content {
     margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.content > .tab-content {
+    padding-left: 6.6%;
+    flex: 1;
 }
 
 .banner {
@@ -294,7 +310,7 @@ body, html {
 }
 
 .side {
-    padding-left: 160px;
+    padding-left: 8.3%;
 }
 
 .side.weui-navbar a {
@@ -351,7 +367,7 @@ body, html {
 }
 
 .tab-container .tab {
-    padding-left: 180px;
+    /* padding-left: 180px; */
 }
 
 .tab-container .navbar {
@@ -398,7 +414,7 @@ body, html {
 .tab-container .network-tab .tab-content {
     max-width: 1200px;
     border: 1px solid #b8b8b8;
-    margin: 30px 0 80px 0;
+    margin: 30px 0 0px 0;
 }
 
 .tab-container .tab-content .tab-header {
@@ -453,17 +469,14 @@ body, html {
 
 .data-container {
     margin-top: 130px;
-    overflow: hidden;
-    padding-left: 120px;
-}
-
-.data-container .data-left,.data-container .data-right {
-    float: left;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .data-container .data-left .data-left-img {
     position: relative;
     height: 400px;
+    width: 549px;
 }
 
 .data-container .data-left {
@@ -487,7 +500,7 @@ body, html {
 }
 
 .data-container .data-right {
-    /* padding-left: 80px; */
+    padding-left: 8%;
 }
 
 .data-container .data-right .data-title {
@@ -519,7 +532,7 @@ body, html {
 }
 
 .data-container {
-    margin-bottom: 110px;
+    /* margin-bottom: 110px; */
 }
 
 .standard .data-list {
@@ -572,8 +585,8 @@ p.indent {
     padding-left: 113px;
 }
 .connect-container {
-    margin-bottom: 52px;
     overflow: hidden;
+    width: 100%;
 }
 
 .connect-container .connect-item {
@@ -582,8 +595,8 @@ p.indent {
     border: 1px solid #CCC;
     height: 400px;
     padding: 10px;
-    max-width: 1200px;
-    margin-bottom: 32px;
+    width: 84%;
+    /* margin-bottom: 32px; */
 }
 
 .connect-left, .connect-right {
@@ -596,7 +609,7 @@ p.indent {
 }
 
 .connect-right {
-    padding: 70px 18px;
+    padding: 5% 8.3% 6.6% 8.3%;
 }
 
 .connect-right .connect-city {
@@ -694,7 +707,6 @@ p.indent {
 .company-container {
     max-width: 1200px;
     text-align: center;
-    margin-bottom: 80px;
 }
 
 .company-container h1 {
