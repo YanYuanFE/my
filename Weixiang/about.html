@@ -4,8 +4,6 @@
     <html lang="zh-CN">
     <head>
         <meta charset="UTF-8">
-        <meta content="yes" name="apple-mobile-web-app-capable">
-        <meta content="yes" name="apple-touch-fullscreen">
         <meta name="theme-color" content="#91D4DA">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>产品与服务</title>
@@ -20,12 +18,12 @@
 <div class="container-fluid home-container">
     <div class="header">
         <div class="row">
-            <div class="col-md-3  col-sm-3 col-xs-3">
+            <div class="col-md-4  col-sm-4 col-xs-4">
                 <img src="assets/images/logo.png" alt="" class="logo">
                 <img src="assets/images/ZI.png" alt="" class="title">
             </div>
-            <div class="col-md-6 col-md-offset-3 col-sm-8 col-xs-8">
-                <div class="menu">
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <div class="menu pull-right">
                     <ul id="nav">
                         <li>
                             <a href="./index.html">首页</a>
@@ -115,24 +113,24 @@
                     </div>
                     <div class="tab-content">
                         <div id="sz" class="tab-item tab-item-active ad-company">
-                            <div class="adimg-list">
-                                <div class="adimg-item">
-                                    <img src="assets/images/service1.png" alt="" class="animated fadeInLeft">
+                            <div class="adimg-list row">
+                                <div class="adimg-item marginr col-md-4 col-sm-4 col-xs-4">
+                                    <img src="assets/images/service1.png" alt="" class="thumbnail animated fadeInLeft">
                                     <div class="adimg-text animated fadeInLeft">
                                         <p>低门槛</p>
                                         <p>1个小区起投</p>
                                     </div>
                                     <div class="mask"></div>
                                 </div>
-                                <div class="adimg-item">
-                                    <img src="assets/images/service2.png" alt="">
+                                <div class="adimg-item marginr col-md-4 col-sm-4 col-xs-4">
+                                    <img src="assets/images/service2.png" alt="" class="thumbnail">
                                     <div class="adimg-text">
                                         <p>标准化服务</p>
                                     </div>
                                     <div class="mask"></div>
                                 </div>
-                                <div class="adimg-item">
-                                    <img src="assets/images/service3.png" alt="" class="animated fadeInRight">
+                                <div class="adimg-item col-md-4 col-sm-4 col-xs-4">
+                                    <img src="assets/images/service3.png" alt="" class="thumbnail animated fadeInRight">
                                     <div class="adimg-text animated fadeInRight">
                                         <p>全城低价</p>
                                     </div>
@@ -251,6 +249,14 @@
 <script src="assets/js/jquery-weui.js"></script>
 <script>
   $(document).ready(function(){
+    var thisId = window.location.hash;       
+    var mao = $(thisId); //获得锚点       
+    console.log(mao)
+    mao.addClass('active')
+    if (thisId) {//判断对象是否存在       
+        var pos = mao.offset().top;       
+        $("html,body").animate({ scrollTop: pos}, 3000);       
+    }   
     $('#myTabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')

@@ -454,10 +454,16 @@ body, html {
 .data-container {
     margin-top: 130px;
     overflow: hidden;
+    padding-left: 120px;
 }
 
 .data-container .data-left,.data-container .data-right {
     float: left;
+}
+
+.data-container .data-left .data-left-img {
+    position: relative;
+    height: 400px;
 }
 
 .data-container .data-left {
@@ -590,7 +596,7 @@ p.indent {
 }
 
 .connect-right {
-    padding: 70px 100px;
+    padding: 70px 18px;
 }
 
 .connect-right .connect-city {
@@ -618,26 +624,30 @@ p.indent {
 
 .ad-container .adimg-list {
     display: flex;
-    padding: 16px;
+    padding: 16px ;
     border: 1px solid #ccc;
     max-width: 1200px;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin: 30px 0 60px 0;
 }
 
 .ad-container .adimg-list img {
-    width: 380px;
-    height: 380px;
+    width: 100%;
+    max-width: 380px;
+    max-height: 380px;
     z-index: -1;
+    margin-bottom: 0;
+    border: none;
 }
 
 .ad-container .adimg-item {
     position: relative;
-    width: 396px;
-    height: 380px;
+    max-width: 396px;
+    max-height: 380px;
+    flex: 1;
+    padding: 0;
 }
 
-.ad-container .adimg-item :not(nth-last-child) {
+.ad-container .adimg-item.marginr {
     margin-right: 16px;
 }
 

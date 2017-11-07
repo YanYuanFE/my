@@ -333,6 +333,11 @@
         $(function() {
             FastClick.attach(document.body);
         });
+        $('.tab-item').on('click', function(e) {
+            if($(this).hasClass('weui-bar__item--on')) {
+                e.preventDefault(); 
+            }
+        })
         $('.house-btn').click(function(e) {
             console.log($(this))
             if($(this).hasClass("rent")){
