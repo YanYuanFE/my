@@ -316,6 +316,14 @@
 <script src="assets/js/jquery-weui.js"></script>
 <script>
   $(document).ready(function(){
+    var thisId = window.location.hash;       
+    var mao = $(thisId); //获得锚点  
+    mao.siblings().removeClass('active in');
+    var index = mao.index();
+    console.log($('#myTab').find('li'))
+    mao.addClass('active in');
+    $('#myTab').find('li').eq(index).addClass('active').siblings().removeClass('active');
+    
     $('#myTabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')

@@ -177,7 +177,7 @@
                             <img src="assets/images/sz.png" alt="" class="animated fadeInRight">
                         </div>
                     </div>
-                    <div class="connect-item">
+                    <div class="connect-item last">
                         <div class="connect-left">
                             <img src="assets/images/hz.png" alt="" class="animated fadeInLeft">
                         </div>
@@ -248,13 +248,13 @@
 <script>
   $(document).ready(function(){
     var thisId = window.location.hash;       
-    var mao = $(thisId); //获得锚点       
-    console.log(mao)
-    mao.addClass('active')
-    if (thisId) {//判断对象是否存在       
-        var pos = mao.offset().top;       
-        $("html,body").animate({ scrollTop: pos}, 3000);       
-    }   
+    var mao = $(thisId); //获得锚点  
+    mao.siblings().removeClass('active in');
+    var index = mao.index();
+    console.log($('#myTab').find('li'))
+    mao.addClass('active in');
+    $('#myTab').find('li').eq(index).addClass('active').siblings().removeClass('active');
+      
     $('#myTabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
