@@ -6,7 +6,6 @@ body, html {
     background-color: #FFF;
     color: #333;
     width:100%;
-    overflow-x:hidden;
 }
 
 .home-container {
@@ -662,7 +661,6 @@ p.indent {
     width: 100%;
     max-width: 380px;
     max-height: 380px;
-    z-index: -1;
     margin-bottom: 0;
     border: none;
 }
