@@ -210,6 +210,14 @@ li {
     height: 217px;
 }
 
+.order-detail .media-middle {
+     vertical-align: baseline;
+}
+
+.order-detail .media-left, .media>.pull-left {
+    padding-right: 35px;
+}
+
 .order-detail h4.media-heading {
     font-size: 20px;
 }
@@ -221,7 +229,16 @@ li {
 }
 
 .order-detail p {
-    font-size: 14
+    font-size: 14px;
+}
+
+.price-detail {
+    margin: 18px 0;
+}
+
+#order .tip {
+    font-size: 14px;
+    color: #8FD026;
 }
 
 table .btn {
