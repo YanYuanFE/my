@@ -241,6 +241,11 @@ li {
     color: #8FD026;
 }
 
+#prelist table thead{
+    background: #F5F5F5;
+    color: #6F6F6F;
+}
+
 table .btn {
     padding: 0;
     display: block;
