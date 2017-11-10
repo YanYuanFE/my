@@ -28,24 +28,42 @@
                     <p>我的订单</p>
                 </a>
             </li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
+            <li>
+                <a href="">
+                    <img src="assets/images/pkicon.png" alt="">
+                    <p>房源对比</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/gz.png" alt="">
+                    <p>关注</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/sc.png" alt="">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/zj.png" alt="">
+                    <p>我的足迹</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/fk.png" alt="">
+                    <p>反馈我们</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/kf.png" alt="">
+                    <p>客服</p>
+                </a>
+            </li>
         </ul>
     </div>
     <div class="header container">
@@ -106,7 +124,7 @@
                 <span class="kind-item">坪山新区</span>
                 <span class="kind-item">大鹏新区</span>
             </div>
-            <div class="kind-list">
+            <div class="kind-list brand-list">
                 <span class="kind-title">品牌</span>
                 <span class="kind-item active">万科</span>
                 <span class="kind-item">惠新公寓</span>
@@ -118,9 +136,20 @@
                 <span class="kind-item">惠新公寓</span>
                 <span class="kind-item">万科</span>
                 <span class="kind-item">惠新公寓</span>
-                <span class="kind-title">展开更多</span>
+                <a class="kind-title" data-toggle="collapse" href="#showMore" aria-expanded="false" aria-controls="showMore">
+                    展开更多
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                </a>
+                
             </div>
-            <div class="kind-list">
+            <div class="brand-more collapse" id="showMore">
+                <span class="kind-item">惠新公寓</span>
+                <span class="kind-item">万科 </span>
+                <span class="kind-item">惠新公寓 </span>
+                <span class="kind-item">万科 </span>
+                <span class="kind-item"> 惠新公寓 </span>
+            </div>
+            <div class="kind-list price">
                 <span class="kind-title">价格</span>
                 <span class="kind-item active">0-2000</span>
                 <span class="kind-item"> 2000-4000</span>
@@ -291,7 +320,7 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/swiper.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
-<script src="assets/js/lazyload.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function(){
     var swiper = new Swiper('.swiper-container', {
