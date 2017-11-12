@@ -77,6 +77,34 @@ li {
     background: #8FD026;
 }
 
+.city-container {
+    position: absolute;
+    top: 60px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background: #FFF;
+    display: none;
+}
+
+.city-select {
+    display: flex;
+    align-items: center;
+}
+
+.city-select select {
+    width: 100px;
+    margin: 0 10px;
+}
+
+.city-container .title {
+  font-size: 20px;
+}
+
+.city-select .title.search-city {
+    margin: 0 10px;
+}
+
 .search-container {
     height: 87px;
     background: #F9F9F9;
@@ -251,10 +279,94 @@ li {
     text-align: center;
 }
 
-.side a {
+.side li {
     color: #FFF;
-    display: inline-block;
     height: 90px;
     padding: 20px 4px;
     border-bottom: 1px solid #FFF;
+}
+
+.side li a {
+    color: #FFF;
+}
+
+.modal .modal-content {
+    border-radius: 0;
+}
+
+.modal .modal-content .close {
+    position: absolute;
+    top:0;
+    right: -24px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #FFF;
+    opacity: 1;
+}
+
+#serviceModal .modal .modal-header,#serviceModal  .modal .modal-footer {
+    border: none;
+}
+
+.modal .modal-body p {
+    color: #9C9C9C;
+    font-size: 14px;
+}
+
+.modal .modal-body .advice-box {
+    margin-top: 30px;
+}
+
+.modal .modal-body .btn {
+    border-radius: 0;
+}
+
+.modal .modal-body .btn.btn-primary {
+    background: #8FD026;
+    color: #FFF;
+    border-color: #8FD026;
+}
+
+.advice-box .phone {
+    color: #8FD026;
+}
+
+.advice-box .time {
+    color: #9C9C9C;
+}
+
+@media (min-width: 768px) {
+    #suggestModal .modal-dialog {
+        width: 502px;
+    }
+}
+
+#suggestModal .modal-title {
+    text-align: center;
+}
+
+#suggestModal .title {
+    margin: 22px 0 13px 0;
+}
+.modal .tip {
+    font-size: 12px;
+    color: #8FD026;
+}
+
+.modal .modal-body .weui-textarea {
+    padding: 14px 20px;
+    border: 1px solid #E6E6E6;
+    background: #F9F9F9;
+    font-size: 14px;
+}
+
+.modal .submit .submit-btn {
+    width: 137px;
+    margin: 22px auto 37px;
+    text-align: center;
+    height: 43px;
+    background: #8FD026;
+    color: #FFF;
+    line-height: 43px;
+    cursor: pointer;
 }

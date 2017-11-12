@@ -311,7 +311,7 @@
                             <td>预约中</td>
                             <td>
                                 <button class="btn btn-default green">同意预约</button>
-                                <button class="btn btn-default">更改时间</button>
+                                <button class="btn btn-default" data-toggle="modal" data-target="#changeTime">更改时间</button>
                                 <button class="btn btn-default">取消预约</button>
                             </td>
                         </tr>
@@ -472,11 +472,37 @@
     </div>
 
 </div>
-<script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
+<div class="modal fade" id="changeTime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">更改预约时间</h4>
+            </div>
+            <div class="modal-body">
+                <div class="time">
+                    <input class="weui-input" type="date" value="">
+                    <div class="time-picker">
+                        <select name="">
+                            <option>13:00-15:00</option>
+                            <option>15:00-17:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-area">
+                    <textarea class="weui-textarea" placeholder="请填写更改理由" rows="6"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="submit">
+                    <div class="submit-btn">确定修改</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
-<script src="assets/js/lazyload.min.js"></script>
 <script>
   $(document).ready(function(){
     $('#myTabs a').click(function (e) {

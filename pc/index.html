@@ -53,16 +53,12 @@
                 </a>
             </li>
             <li>
-                <a href="">
-                    <img src="assets/images/fk.png" alt="">
-                    <p>反馈我们</p>
-                </a>
+                <img src="assets/images/fk.png" alt="">
+                <p data-toggle="modal" data-target="#suggestModal">反馈我们</p>
             </li>
             <li>
-                <a href="">
-                    <img src="assets/images/kf.png" alt="">
-                    <p>客服</p>
-                </a>
+                <img src="assets/images/kf.png" alt="">
+                <p data-toggle="modal" data-target="#serviceModal">客服</p>
             </li>
         </ul>
     </div>
@@ -72,7 +68,7 @@
                 <img src="assets/images/logo.png" alt="">
                 <img src="assets/images/area.png" alt="" class="gps">
                 <span class="location">深圳</span>
-                <a href="" class="changecity">切换城市</a>
+                <span class="changecity">切换城市</span>
             </div>
             <div class="col-md-3">
                 <div class="tab">
@@ -99,6 +95,109 @@
                     </ul>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="city-container container">
+        <div class="hot-city">
+            <span class="title">热门城市</span>
+            <span class="city-item">北京</span>
+        </div>
+        <div class="city-select">
+            <div class="title">城市选择</div>
+            <select class="form-control">
+                <option>省份</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <select class="form-control">
+                <option>城市</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <div class="title search-city">直接搜索</div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="searchInput" placeholder="">
+                        <div class="input-group-addon">搜索</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="city-content">
+            <div class="title">按省份首字母选择</div>
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td>
+                        A
+                    </td>
+                    <td> 安徽 </td>
+                    <td>
+                        <span class="city-item">合肥</span>
+                        <span class="city-item">芜湖</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        F
+                    </td>
+                    <td> 福建 </td>
+                    <td>
+                        <span class="city-item">福州</span>
+                        <span class="city-item">厦门</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        G
+                    </td>
+                    <td>
+                        <div class="provice-item">广东</div>
+                        <div class="provice-item">广西</div>
+                        <div class="provice-item">贵州</div>
+                    </td>
+                    <td>
+                        <div class="city-list">
+                            <span class="city-item">深圳</span>
+                            <span class="city-item">广州</span>
+                        </div>
+                        <div class="city-list">
+                            <span class="city-item">南宁</span>
+                            <span class="city-item">柳州</span>
+                        </div>
+                        <div class="city-list">
+                            <span class="city-item">贵阳</span>
+                            <span class="city-item">遵义</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        A
+                    </td>
+                    <td> 安徽 </td>
+                    <td>
+                        <span class="city-item">合肥</span>
+                        <span class="city-item">芜湖</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        H
+                    </td>
+                    <td> 黑龙江 </td>
+                    <td>
+                        <span class="city-item">郑州</span>
+                        <span class="city-item">洛阳</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -315,7 +414,50 @@
         </div>
 
     </div>
+</div>
+<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">官方客服</h4>
+            </div>
+            <div class="modal-body">
+                <p>您可以与在线顾问进行实时沟通或者拨打客服热线获得帮助</p>
+                <div class="advice-box">
+                    <span class="title">在线咨询</span>
+                    <button class="btn btn-primary">立即咨询</button>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+                <div class="advice-box">
+                    <span class="title">客服热线</span>
+                    <span class="phone">400-222-200</span>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="suggestModal" tabindex="-1" role="dialog" aria-labelledby="suggestModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="suggestModalLabel">意见反馈</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tip">您对阔壹有任何意见和建议，或使用中遇到的问题，请在本页面反馈。我们会每天关 注并不断优化产品，为您提供更好的服务！</div>
+                <div class="title">反馈内容</div>
 
+                <div class="input-area">
+                    <textarea class="weui-textarea" placeholder="我们非常乐意收到您的意见或建议" rows="5"></textarea>
+                </div>
+                <div class="submit">
+                    <div class="submit-btn">提交</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/swiper.js"></script>
@@ -329,6 +471,14 @@
         loop: true,
         // autoplay: 5000,
     });
+    $('.changecity').click(function (e) {
+      $('.city-container').toggle();
+    })
+    $('.city-item').click(function (e) {
+      var city = $(this).text();
+      $('.changecity').html(city);
+      $('.city-container').hide();
+    })
   });
 </script>
 </body>

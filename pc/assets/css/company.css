@@ -378,3 +378,88 @@ table .btn {
     border-bottom: 1px solid #FFF;
 }
 
+
+.modal .modal-content {
+    border-radius: 0;
+
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 387px;
+    }
+}
+
+
+.modal .modal-content .close {
+    position: absolute;
+    top:0;
+    right: -24px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #FFF;
+    opacity: 1;
+}
+
+.modal .modal-header, .modal .modal-footer {
+    border: none;
+}
+
+.modal .modal-body p {
+    color: #9C9C9C;
+    font-size: 14px;
+}
+
+.modal .modal-header h4 {
+    text-align: center;
+}
+.modal .modal-body .btn {
+    border-radius: 0;
+}
+
+
+.modal .modal-body .time {
+    height: 39px;
+    display: flex;
+    justify-content: space-between;
+    background: #FFF;
+}
+
+.modal .modal-body .time input {
+    width: 171px;
+    background: #F9F9F9;
+    color: #333;
+    border: 1px solid #E6E6E6;
+    height: 39px;
+}
+
+.modal .submit .submit-btn {
+    width: 137px;
+    margin: 0 auto;
+    text-align: center;
+    height: 43px;
+    background: #8FD026;
+    color: #FFF;
+    line-height: 43px;
+    cursor: pointer;
+}
+
+.modal .modal-body .input-area {
+    margin-top: 10px;
+    color: #9C9C9C;
+}
+
+.modal .modal-body .weui-textarea {
+    padding: 14px 20px;
+    border: 1px solid #E6E6E6;
+    background: #F9F9F9;
+}
+
+.time-picker select{
+    padding: 0 10px;
+    display: flex;
+    border: 1px solid #E6E6E6;
+    height: 39px;
+    width: 137px;
+    background-color: #F9F9F9;
+}

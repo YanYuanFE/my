@@ -289,7 +289,7 @@
                                 <td>已付款</td>
                                 <td>
                                     <button class="btn btn-success" type="button">确认收货</button>
-                                    <button class="btn btn-default" type="button">退款</button>
+                                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#refund">退款</button>
                                     <button class="btn btn-default" type="button">删除</button>
                                 </td>
                             </tr>
@@ -728,6 +728,32 @@
 
     </div>
 
+</div>
+<div class="modal fade" id="refund" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">退款</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-area cancel-area">
+                    <textarea class="weui-textarea" placeholder="请输入退款理由" rows="6"></textarea>
+                </div>
+                <div class="weui-uploader__input-box">
+                    <input id="uploadImage" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-footer">
+                    <div class="refund-price">退款总价：<span>￥9999</span></div>
+                    <div class="submit">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
 <script src="assets/js/jquery.js"></script>

@@ -471,3 +471,81 @@ table .btn {
     border-bottom: 1px solid #FFF;
 }
 
+
+.modal .modal-content {
+    border-radius: 0;
+
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 704px;
+    }
+}
+
+.modal .modal-header, .modal .modal-footer {
+    /*border: none;*/
+}
+
+.modal .modal-body p {
+    color: #9C9C9C;
+    font-size: 14px;
+}
+
+.modal .modal-header h4 {
+    text-align: center;
+}
+.modal .modal-footer .btn {
+    border-radius: 0;
+}
+
+.modal .submit .btn {
+    width: 137px;
+    margin: 0 auto;
+    text-align: center;
+    height: 43px;
+    line-height: 43px;
+    cursor: pointer;
+    border: 1px solid #DADADA;
+    color: #DADADA;
+    padding: 0;
+}
+
+.modal .submit .btn.btn-primary {
+    background: #8FD026;
+    color: #FFF;
+    border: 1px solid #8FD026;
+}
+
+.modal .modal-body .input-area {
+    margin-top: 10px;
+    color: #9C9C9C;
+}
+
+.modal .modal-body .weui-textarea {
+    padding: 14px 20px;
+    border: 1px solid #E6E6E6;
+    background: #F9F9F9;
+}
+
+.modal .weui-uploader__input-box {
+    float: none;
+    margin-top: 10px;
+    background: #FFFFFF;
+    border: 1px dashed #D9D9D9;
+}
+
+.modal .btn-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weui-uploader__input-box:before, .weui-uploader__input-box:after {
+    background: #9C9C9C;
+}
+
+.modal .refund-price span{
+    color: #FA2F2F;
+}
+
