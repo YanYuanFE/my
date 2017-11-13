@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/weui.css">
+    <link rel="stylesheet" href="assets/css/jquery-weui.css">
+    <link rel="stylesheet" href="assets/css/pk.css" />
+</head>
+<body>
+<div class="container-fluid home-container">
+    <div class="side">
+        <ul>
+            <li>
+                <a href="">
+                    <img src="assets/images/pre.png" alt="">
+                    <p>我的预约</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/order.png" alt="">
+                    <p>我的订单</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/pkicon.png" alt="">
+                    <p>房源对比</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/gz.png" alt="">
+                    <p>关注</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/sc.png" alt="">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/zj.png" alt="">
+                    <p>我的足迹</p>
+                </a>
+            </li>
+            <li>
+                <img src="assets/images/fk.png" alt="">
+                <p data-toggle="modal" data-target="#suggestModal">反馈我们</p>
+            </li>
+            <li>
+                <img src="assets/images/kf.png" alt="">
+                <p data-toggle="modal" data-target="#serviceModal">客服</p>
+            </li>
+        </ul>
+    </div>
+    <div class="header-wrapper">
+        <div class="header container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="assets/images/logo.png" alt="">
+                    <img src="assets/images/area.png" alt="" class="gps">
+                    <span class="location">深圳</span>
+                    <span class="changecity">切换城市</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="tab">
+                        <ul>
+                            <li>
+                                <a href="index.html" class="active">首页</a>
+                            </li>
+                            <li>
+                                <a href="hotel.html">品牌公寓</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="login.html">登录</a>/<a href="login.html">注册</a>
+                            </li>
+                            <li>
+                                <a href="person.html">个人中心</a>
+                            </li>
+                            <li ><a href="company.html" >企业用户</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pk-container container">
+        <div class="pk-header">
+          <p>对比房源</p>
+            <button type="button" class="btn btn-primary">添加房源</button>
+        </div>
+        <div class="img-container">
+            <div class="img-wrapper">
+                <a href="housedetail.html">
+                    <img src="assets/images/web1.png" alt="">
+                    <div class="re-text">
+                        <div class="price">￥4000</div>
+                    </div>
+                </a>
+            </div>
+            <div class="img-wrapper">
+                <a href="housedetail.html">
+                    <img src="assets/images/web2.png" alt="">
+                    <div class="re-text">
+                        <div class="price">￥4000</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <table border="1" cellspacing="0" cellpadding="0" borderColor="#DADADA" class="table">
+                <tr>
+                    <th id="controlShow" width="141px">
+                        <img class="img-show" src="assets/images/show.png" alt="" width="27" height="20">
+                        <img class="img-hide" src="assets/images/hide.png" alt="" width="27" height="20">
+                        <p>隐藏相同</p>
+                    </th>
+                    <th width="230px">自如公寓506房</th>
+                    <th width="230px">魔方公寓708房</th>
+                </tr>
+                <tr class="no-border">
+                    <td class="title">基础信息</td>
+                    <td> <span class="dot"></span>标配</td>
+                    <td>——无</td>
+                </tr>
+                <tr>
+                    <td>房租</td>
+                    <td>2300</td>
+                    <td>2450</td>
+                </tr>
+                <tr>
+                    <td>押付</td>
+                    <td>押1付1</td>
+                    <td>押2付1</td>
+                </tr>
+                <tr>
+                    <td>房型</td>
+                    <td>单间</td>
+                    <td>单间</td>
+                </tr>
+                <tr>
+                    <td>面积</td>
+                    <td>15㎡</td>
+                    <td>18㎡</td>
+                </tr>
+                <tr>
+                    <td>朝向</td>
+                    <td>南</td>
+                    <td>北</td>
+                </tr>
+                <tr>
+                    <td>楼层</td>
+                    <td>3/6</td>
+                    <td>7/9</td>
+                </tr>
+                <tr>
+                    <td>类型</td>
+                    <td>公寓</td>
+                    <td>小区</td>
+                </tr>
+                <tr>
+                    <td>租期</td>
+                    <td>半年</td>
+                    <td>1年</td>
+                </tr>
+                <tr>
+                    <td>装修标准</td>
+                    <td>标配</td>
+                    <td>精装修</td>
+                </tr>
+                <tr>
+                    <td>空调</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>洗衣机</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>热水器</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>冰箱</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>抽油烟机</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>沙发</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>座椅</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>门禁</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>24h监控</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>天台</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot">-</span></td>
+                </tr>
+                <tr>
+                    <td>WIFI</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>专业维修</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>代收快递</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+                <tr>
+                    <td>保洁</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+            </table>
+            <div class="title">公共空间</div>
+            <table border="1" cellspacing="0" cellpadding="0" borderColor="#DADADA" class="third table">
+                <tr>
+                    <td width="141px">公共厨房</td>
+                    <td width="230px"><span class="dot"></span></td>
+                    <td width="230px"><span class="line">-</span></td>
+                </tr>
+                <tr>
+                    <td>健身房</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="line">-</span></td>
+                </tr>
+                <tr>
+                    <td>影像室</td>
+                    <td><span class="line">-</span></td>
+                    <td><span class="dot"></span></td>
+                </tr>
+            </table>
+            <div class="title">公共交通 <span class="dot"></span> <span class="tip">代表1公里以内</span></div>
+            <table border="1" cellspacing="0" cellpadding="0" borderColor="#DADADA" class="third table">
+                <tr>
+                    <td width="141px">公交</td>
+                    <td width="230px"><span class="dot"></span></td>
+                    <td width="230px"><span class="line">-</span></td>
+                </tr>
+                <tr>
+                    <td>地铁</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="line">-</span></td>
+                </tr>
+            </table>
+            <div class="title">周边配套</div>
+            <table border="1" cellspacing="0" cellpadding="0" borderColor="#DADADA" class="third table">
+                <tr>
+                    <td width="141px">超市</td>
+                    <td width="230px"><span class="dot"></span></td>
+                    <td width="230px"><span class="line">-</span></td>
+                </tr>
+                <tr>
+                    <td>医院</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="line">-</span></td>
+                </tr>
+                <tr>
+                    <td>银行</td>
+                    <td><span class="dot"></span></td>
+                    <td><span class="line">-</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="info-item col-md-4">
+                <ul>
+                    <li>关于我们</li>
+                    <li>联系我们</li>
+                    <li>注册登录</li>
+                </ul>
+            </div>
+            <div class="info-item col-md-4">
+                <div class="tel">服务热线：400-222-222</div>
+            </div>
+            <div class="code-item col-md-4">
+                <img src="assets/images/code.png" alt="">
+                <p>公众号</p>
+            </div>
+            <div class="copyright">Copyright © 2017 qfang.com All Rights Reserved ICP备案号：粤ICP备05067219号-3</div>
+            <div class="copyright">
+                深圳市xxxxx有限公司
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">官方客服</h4>
+            </div>
+            <div class="modal-body">
+                <p>您可以与在线顾问进行实时沟通或者拨打客服热线获得帮助</p>
+                <div class="advice-box">
+                    <span class="title">在线咨询</span>
+                    <button class="btn btn-primary">立即咨询</button>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+                <div class="advice-box">
+                    <span class="title">客服热线</span>
+                    <span class="phone">400-222-200</span>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="suggestModal" tabindex="-1" role="dialog" aria-labelledby="suggestModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="suggestModalLabel">意见反馈</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tip">您对阔壹有任何意见和建议，或使用中遇到的问题，请在本页面反馈。我们会每天关 注并不断优化产品，为您提供更好的服务！</div>
+                <div class="title">反馈内容</div>
+
+                <div class="input-area">
+                    <textarea class="weui-textarea" placeholder="我们非常乐意收到您的意见或建议" rows="5"></textarea>
+                </div>
+                <div class="submit">
+                    <div class="submit-btn">提交</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/swiper.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+  });
+</script>
+</body>
+</html>

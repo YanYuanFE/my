@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/weui.css">
+    <link rel="stylesheet" href="assets/css/jquery-weui.css">
+    <link rel="stylesheet" href="assets/css/myfoot.css" />
+</head>
+<body>
+<div class="container-fluid home-container">
+    <div class="side">
+        <ul>
+            <li>
+                <a href="">
+                    <img src="assets/images/pre.png" alt="">
+                    <p>我的预约</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/order.png" alt="">
+                    <p>我的订单</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/pkicon.png" alt="">
+                    <p>房源对比</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/gz.png" alt="">
+                    <p>关注</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/sc.png" alt="">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/zj.png" alt="">
+                    <p>我的足迹</p>
+                </a>
+            </li>
+            <li>
+                <img src="assets/images/fk.png" alt="">
+                <p data-toggle="modal" data-target="#suggestModal">反馈我们</p>
+            </li>
+            <li>
+                <img src="assets/images/kf.png" alt="">
+                <p data-toggle="modal" data-target="#serviceModal">客服</p>
+            </li>
+        </ul>
+    </div>
+    <div class="header-wrapper">
+        <div class="header container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="assets/images/logo.png" alt="">
+                    <img src="assets/images/area.png" alt="" class="gps">
+                    <span class="location">深圳</span>
+                    <span class="changecity">切换城市</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="tab">
+                        <ul>
+                            <li>
+                                <a href="index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="hotel.html">品牌公寓</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="login.html">登录</a>/<a href="login.html">注册</a>
+                            </li>
+                            <li>
+                                <a href="person.html">个人中心</a>
+                            </li>
+                            <li ><a href="company.html" >企业用户</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="city-container container">
+        <div class="hot-city">
+            <span class="title">热门城市</span>
+            <span class="city-item">北京</span>
+        </div>
+        <div class="city-select">
+            <div class="title">城市选择</div>
+            <select class="form-control">
+                <option>省份</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <select class="form-control">
+                <option>城市</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <div class="title search-city">直接搜索</div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="searchInput" placeholder="">
+                        <div class="input-group-addon">搜索</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="city-content">
+            <div class="title">按省份首字母选择</div>
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <td>
+                        A
+                    </td>
+                    <td> 安徽 </td>
+                    <td>
+                        <span class="city-item">合肥</span>
+                        <span class="city-item">芜湖</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        F
+                    </td>
+                    <td> 福建 </td>
+                    <td>
+                        <span class="city-item">福州</span>
+                        <span class="city-item">厦门</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        G
+                    </td>
+                    <td>
+                        <div class="provice-item">广东</div>
+                        <div class="provice-item">广西</div>
+                        <div class="provice-item">贵州</div>
+                    </td>
+                    <td>
+                        <div class="city-list">
+                            <span class="city-item">深圳</span>
+                            <span class="city-item">广州</span>
+                        </div>
+                        <div class="city-list">
+                            <span class="city-item">南宁</span>
+                            <span class="city-item">柳州</span>
+                        </div>
+                        <div class="city-list">
+                            <span class="city-item">贵阳</span>
+                            <span class="city-item">遵义</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        A
+                    </td>
+                    <td> 安徽 </td>
+                    <td>
+                        <span class="city-item">合肥</span>
+                        <span class="city-item">芜湖</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        H
+                    </td>
+                    <td> 黑龙江 </td>
+                    <td>
+                        <span class="city-item">郑州</span>
+                        <span class="city-item">洛阳</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="section container">
+        <div class="result-text">我的足迹</div>
+        <div class="result-list">
+            <div id="content">
+                <div class="order-item weui-panel weui-panel_access">
+                    <div class="weui-panel__bd">
+                        <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
+                                <div class="hotel-house">
+                                    <img src="assets/images/house-s.png" alt="">
+                                    1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
+                                </div>
+                                <div class="hotel-house">
+                                    <img src="assets/images/area-s.png" alt="">
+                                    南山-南油租房-深意公寓
+                                </div>
+                            </div>
+                            <div class="weui-panel__ft">
+                                <div class="price-time">
+                                    <div class="hotel-price">3300元/月</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="order-item weui-panel weui-panel_access">
+                    <div class="weui-panel__bd">
+                        <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="lazy weui-media-box__thumb" src="assets/images/house4.png">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
+                                <h5 class="hotel-house">3室2厅2卫/朝南/120㎡</h5>
+                            </div>
+                            <div class="weui-panel__ft">
+                                <div class="price-time">
+                                    <div class="hotel-price">3300元/月</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="order-item weui-panel weui-panel_access">
+                    <div class="weui-panel__bd">
+                        <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="lazy weui-media-box__thumb" src="assets/images/house5.png">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
+                                <h5 class="hotel-house">3室2厅2卫/朝南/120㎡</h5>
+                            </div>
+                            <div class="weui-panel__ft">
+                                <div class="price-time">
+                                    <div class="hotel-price">3300元/月</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="order-item weui-panel weui-panel_access">
+                    <div class="weui-panel__bd">
+                        <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="lazy weui-media-box__thumb" src="assets/images/house3.png">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
+                                <h5 class="hotel-house">3室2厅2卫/朝南/120㎡</h5>
+                            </div>
+                            <div class="weui-panel__ft">
+                                <div class="price-time">
+                                    <div class="hotel-price">3300元/月</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="order-item weui-panel weui-panel_access">
+                    <div class="weui-panel__bd">
+                        <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                            <div class="weui-media-box__hd">
+                                <img class="lazy weui-media-box__thumb" src="assets/images/house5.png">
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
+                                <h5 class="hotel-house">3室2厅2卫/朝南/120㎡</h5>
+                            </div>
+                            <div class="weui-panel__ft">
+                                <div class="price-time">
+                                    <div class="hotel-price">3300元/月</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination pull-right">
+            <nav aria-label="Page navigation ">
+                <ul class="pagination">
+                    <li class="active">
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">上一页</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">下一页</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="info-item col-md-4">
+                <ul>
+                    <li>关于我们</li>
+                    <li>联系我们</li>
+                    <li>注册登录</li>
+                </ul>
+            </div>
+            <div class="info-item col-md-4">
+                <div class="tel">服务热线：400-222-222</div>
+            </div>
+            <div class="code-item col-md-4">
+                <img src="assets/images/code.png" alt="">
+                <p>公众号</p>
+            </div>
+            <div class="copyright">Copyright © 2017 qfang.com All Rights Reserved ICP备案号：粤ICP备05067219号-3</div>
+            <div class="copyright">
+                深圳市xxxxx有限公司
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">官方客服</h4>
+            </div>
+            <div class="modal-body">
+                <p>您可以与在线顾问进行实时沟通或者拨打客服热线获得帮助</p>
+                <div class="advice-box">
+                    <span class="title">在线咨询</span>
+                    <button class="btn btn-primary">立即咨询</button>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+                <div class="advice-box">
+                    <span class="title">客服热线</span>
+                    <span class="phone">400-222-200</span>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="suggestModal" tabindex="-1" role="dialog" aria-labelledby="suggestModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="suggestModalLabel">意见反馈</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tip">您对阔壹有任何意见和建议，或使用中遇到的问题，请在本页面反馈。我们会每天关 注并不断优化产品，为您提供更好的服务！</div>
+                <div class="title">反馈内容</div>
+
+                <div class="input-area">
+                    <textarea class="weui-textarea" placeholder="我们非常乐意收到您的意见或建议" rows="5"></textarea>
+                </div>
+                <div class="submit">
+                    <div class="submit-btn">提交</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/swiper.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function(){
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      loop: true,
+      // autoplay: 5000,
+    });
+    $('.changecity').click(function (e) {
+      $('.city-container').toggle();
+    })
+    $('.city-item').click(function (e) {
+      var city = $(this).text();
+      $('.changecity').html(city);
+      $('.city-container').hide();
+    })
+  });
+</script>
+</body>
+</html>
