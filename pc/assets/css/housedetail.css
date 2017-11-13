@@ -569,3 +569,115 @@ h2 span {
     padding: 20px 4px;
     border-bottom: 1px solid #FFF;
 }
+
+
+.modal .modal-content {
+    border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    #preModal .modal-dialog {
+        width: 704px;
+    }
+}
+
+.modal .modal-content .close {
+    position: absolute;
+    top:0;
+    right: -24px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #FFF;
+    opacity: 1;
+}
+
+.modal .modal-header,.modal .modal-footer {
+    border: none;
+}
+
+.modal .modal-body p {
+    color: #9C9C9C;
+    font-size: 14px;
+}
+
+
+.modal .submit .submit-btn {
+    width: 100%;
+    margin: 22px auto 37px;
+    text-align: center;
+    height: 43px;
+    background: #8FD026;
+    color: #FFF;
+    line-height: 43px;
+    cursor: pointer;
+}
+
+.form-item {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.form-item input {
+    height: 41px;
+    font-size: 14px;
+    color: #9C9C9C;
+    background: #FFF;
+    padding-left: 20px;
+    border: 1px solid #DADADA;
+    width: 367px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+
+.form-item input.code-input {
+    width: 232px;
+    margin: 0;
+}
+
+.code-form {
+    display: flex;
+    width: 367px;
+}
+
+.code-form .code {
+    background: #8FD026;
+    display: inline-block;
+    padding: 0 12px;
+    color: #FFF;
+    line-height: 40px;
+    height: 40px;
+    margin-left: 17px;
+    width: 121px;
+}
+
+
+.modal .modal-body .time {
+    height: 41px;
+    display: flex;
+    justify-content: space-between;
+    background: #FFF;
+}
+
+.modal .pre-container, .modal .submit {
+    width: 367px;
+    margin: 0 auto;
+}
+
+.modal .modal-body .time input {
+    width: 173px;
+    background: #F9F9F9;
+    color: #333;
+    border: 1px solid #E6E6E6;
+    height: 41px;
+}
+
+
+.time-picker select{
+    padding: 0 10px;
+    display: flex;
+    border: 1px solid #E6E6E6;
+    height: 41px;
+    width: 173px;
+    background-color: #F9F9F9;
+}

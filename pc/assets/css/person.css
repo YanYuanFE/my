@@ -128,13 +128,18 @@ li {
     line-height: 30px;
 }
 
-.tab-title span{
+.tab-title .pull-left span{
     display: inline-block;
     width: 6px ;
     height: 18px;
     background: #8FD026;
     vertical-align: middle;
     margin-right: 10px;
+}
+
+.tab-title .back {
+    color: #8FD026;
+    padding: 0 20px 0 20px;
 }
 
 .person-info .btn {
@@ -449,6 +454,30 @@ table .btn {
 
 .footer .copyright {
     text-align: center;
+}
+.message-detail .message-title {
+    position: relative;
+    border-bottom: 1px solid #DADADA;
+    margin-top: 50px;
+}
+
+.message-detail .message-title h3 {
+    text-align: center;
+}
+
+.message-detail .message-title span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #9C9C9C;
+    font-size: 14px;
+}
+
+.message-detail .content {
+    color: #6f6f6f;
+    font-size: 14px;
+    text-indent: 2em;
+    padding-top: 40px;
 }
 
 .side {

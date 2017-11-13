@@ -215,7 +215,7 @@
                 </ul>
             </div>
             <div class="footer-flex">
-                <div class="footer-btn pre"><a href="pre.html">预约看房</a></div>
+                <div class="footer-btn pre" data-toggle="modal" data-target="#preModal">预约看房</div>
                 <div class="footer-btn rent">立即租赁</div>
             </div>
         </div>
@@ -366,11 +366,47 @@
     </div>
 
 </div>
+<div class="modal fade" id="preModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-body">
+                <div class="pre-container">
+                    <div class="form-item">
+                        <input type="text" class="weui-input"  placeholder="您的称呼" required>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" class="weui-input"  placeholder="您的手机号" required>
+                    </div>
+                    <div class="form-item code-form">
+                        <input type="text" class="weui-input code-input"  placeholder="短信验证码" required>
+                        <span class="code">获取验证码</span>
+                    </div>
+                    <div class="title">看房日期</div>
+                    <div class="time">
+                        <input class="weui-input" type="date" value="">
+                        <div class="time-picker">
+                            <select name="">
+                                <option>13:00-15:00</option>
+                                <option>15:00-17:00</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="submit">
+                    <div class="submit-btn">提交预约</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/carousel.min.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
-<script src="assets/js/lazyload.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function(){
     var map = new BMap.Map("map");
