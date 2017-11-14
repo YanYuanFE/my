@@ -35,8 +35,9 @@ body {
 }
 
 .login-container .form-item {
-    width: 100%;
-    margin-bottom: 12px;
+    width: 315px;
+    margin: 0 auto;
+    padding-bottom: 12px;
 }
 
 .login-container .form-item input {
@@ -58,9 +59,13 @@ body {
 }
 
 .login-container .code-form {
-    display: flex;
+    /*display: flex;*/
     width: 315px;
     margin: 0 auto;
+}
+
+.login-container .code-form input {
+    display: inline-block;
 }
 
 .login-container .code-form .code {
@@ -144,6 +149,10 @@ form {
 }
 
 
-#reset,.reset-btn{
+#resetForm,.reset-btn{
     display: none;
+}
+
+.error{
+    color:red;
 }

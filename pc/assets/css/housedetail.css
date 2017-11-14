@@ -294,10 +294,17 @@ li {
     margin: 0 10px 10px 0;
 }
 
+.select-box .select-item.selected {
+    color: #FFF;
+    background: #8FD026;
+    border: 1px solid #FFF;
+}
+
 .gw_num {
     width: 110px;
     line-height: 26px;
     overflow: hidden;
+    margin-right: 10px;
 }
 
 .gw_num span {
@@ -384,7 +391,7 @@ li {
 .footer-flex .footer-btn {
     color: #FFF;
     background: #8FD026;
-    padding: 10px 64px;
+    padding: 8px 64px;
     line-height: 48px;
 }
 
@@ -680,4 +687,25 @@ h2 span {
     height: 41px;
     width: 173px;
     background-color: #F9F9F9;
+}
+
+.price-title p {
+    margin-bottom: 57px;
+}
+
+.modal .price-box {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 27px;
+}
+
+.modal .price-box span {
+    margin-left: 37px;
+}
+
+.modal .price-box .title {
+    color: #8FD026;
+    width: 105px;
+    display: inline-block;
+    margin: 0;
 }

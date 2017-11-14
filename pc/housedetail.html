@@ -159,7 +159,7 @@
         <div class="flex-item img-house">
             <div class="house-price">
                 <div class="hotel-price">3800元/月</div>
-                <div class="price-btn"><span class="money-icon">￥</span>查看费用详情</div>
+                <div class="price-btn" data-toggle="modal" data-target="#priceModal"><span class="money-icon">￥</span>查看费用详情</div>
             </div>
             <div class="house-select list-group">
                 <dic class="title">房源选择</dic>
@@ -402,6 +402,32 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="priceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">费用详情</h4>
+            </div>
+            <div class="modal-body">
+                <p class="price-title">相同户型房源因楼层采光等原因存在价格差异具体费用请以实际房源为准</p>
+                <div class="price-box">
+                    <span class="title">房租区间/月</span>
+                    <span>最低：2206</span>
+                    <span>最高：2398</span>
+                </div>
+                <div class="price-box">
+                    <span class="title">管理费/月</span>
+                    <span>180</span>
+                </div>
+                <div class="price-box">
+                    <span class="title">其他费用说明</span>
+                    <span>水费7元/方、电费1.5元/度、网费50/月</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/carousel.min.js"></script>
@@ -423,6 +449,24 @@
       left_btn: ".left_btn",
       right_btn: ".right_btn"
     });
+    $(".add").click(function(){
+      var n=$(this).prev().val();
+      var num=parseInt(n)+1;
+      if(num==0){ return;}
+      $(this).prev().val(num);
+    });
+    $(".jian").click(function(){
+      var n=$(this).next().val();
+      var num=parseInt(n)-1;
+      if(num==0){ return}
+      $(this).next().val(num);
+    });
+    $('.select-item').click(function(e) {
+      if ($(this).parent().children().hasClass('selected')) {
+        $(this).parent().children().removeClass('selected')
+      }
+      $(this).toggleClass("selected")
+    })
   });
 </script>
 </body>

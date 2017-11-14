@@ -44,10 +44,10 @@
                     <form action="" id="loginForm">
                         <div id="psw-login">
                             <div class="form-item">
-                                <input type="text" class="weui-input"  placeholder="请输入手机号码" required>
+                                <input type="text" name="mobile" id="mobile" class="weui-input"  placeholder="请输入手机号码" required>
                             </div>
                             <div class="form-item">
-                                <input type="password" class="weui-input"  placeholder="请输入密码" required>
+                                <input type="password" name="password" id="password" class="weui-input"  placeholder="请输入密码" required>
                             </div>
                             <div class="operation">
                                 <div class="record">
@@ -64,14 +64,14 @@
                         </div>
                         <div id="phone-login">
                             <div class="form-item">
-                                <input type="text" class="weui-input"  placeholder="请输入手机号码" required>
+                                <input type="text" id="phone" name="phone" class="weui-input"  placeholder="请输入手机号码" required>
                             </div>
                             <div class="form-item code-form">
-                                <input type="text" class="weui-input code-input"  placeholder="请输入验证码" required>
+                                <input type="text" id="code" name="code" class="weui-input code-input"  placeholder="请输入验证码" required>
                                 <span class="code">获取验证码</span>
                             </div>
                         </div>
-                        <a href="index.html" class="login-btn weui-btn weui-btn_primary">立即登录</a>
+                        <button type="submit" class="login-btn weui-btn weui-btn_primary">立即登录</button>
                     </form>
                     <div class="wx-login">
                         <a href="">
@@ -80,26 +80,28 @@
                     </div>
                 </div>
                 <div id="register" class="weui-tab__bd-item">
-                    <div class="register-form">
-                        <div class="form-item">
-                            <input type="text" class="weui-input"  placeholder="请输入手机号码" required>
-                        </div>
-                        <div class="form-item code-form">
-                            <input type="text" class="weui-input code-input"  placeholder="请输入验证码" required>
-                            <span class="code">获取验证码</span>
-                        </div>
-                        <div class="form-item">
-                            <input type="text" class="weui-input"  placeholder="请设置密码" required>
-                        </div>
-                        <div class="operation">
-                            <div class="record">
-                                <input type="checkbox" id="agree" class="label-phone check" />
-                                <label for="agree"></label>
-                                <span>我同意<a href="">《阔壹租房协议》</a></span>
+                    <form action="" id="registerForm">
+                        <div class="register-form">
+                            <div class="form-item">
+                                <input type="text" class="weui-input" id="loginPhone" name="loginPhone"  placeholder="请输入手机号码" required>
                             </div>
+                            <div class="form-item code-form">
+                                <input type="text" class="weui-input code-input" id="loginCode" name="loginCode" placeholder="请输入验证码" required>
+                                <span class="code pull-right">获取验证码</span>
+                            </div>
+                            <div class="form-item">
+                                <input type="text" class="weui-input" id="loginPsw" name="loginPsw"  placeholder="请设置密码" required>
+                            </div>
+                            <div class="operation">
+                                <div class="record">
+                                    <input type="checkbox" id="agree" class="label-phone check" />
+                                    <label for="agree"></label>
+                                    <span>我同意<a href="">《阔壹租房协议》</a></span>
+                                </div>
+                            </div>
+                            <button type="submit" class="login-btn weui-btn weui-btn_primary">立即注册</button>
                         </div>
-                        <a href="index.html" class="login-btn weui-btn weui-btn_primary">立即注册</a>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -110,9 +112,9 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
-<!--<script src="assets/js/jquery.validate.js"></script>-->
-<!--<script src="assets/js/messages_zh.js"></script>-->
-<!--<script src="assets/js/form.js"></script>-->
+<script src="assets/js/jquery.validate.js"></script>
+<script src="assets/js/messages_zh.js"></script>
+<script src="assets/js/form.js"></script>
 <script>
   $(document).ready(function(){
     $('.login-item').children('input[type=checkbox]').click(function() {
