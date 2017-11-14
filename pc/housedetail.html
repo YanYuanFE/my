@@ -216,7 +216,7 @@
             </div>
             <div class="footer-flex">
                 <div class="footer-btn pre" data-toggle="modal" data-target="#preModal">预约看房</div>
-                <div class="footer-btn rent">立即租赁</div>
+                <div class="footer-btn rent" data-toggle="modal" data-target="#rentModal">立即租赁</div>
             </div>
         </div>
     </div>
@@ -423,6 +423,52 @@
                 <div class="price-box">
                     <span class="title">其他费用说明</span>
                     <span>水费7元/方、电费1.5元/度、网费50/月</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="rentModal" tabindex="-1" role="dialog" aria-labelledby="rentModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="rentModalLabel">确认订单信息</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>房号</th>
+                        <th>租期</th>
+                        <th>租赁方式</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>深意公寓A栋A户型</td>
+                        <td>301</td>
+                        <td>6个月</td>
+                        <td>押一付一</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="person-info">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="exampleInputName2">Name</label>
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-footer">
+                    <div class="refund-price">退款总价：<span>￥9999</span></div>
+                    <div class="submit">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary">确定</button>
+                    </div>
                 </div>
             </div>
         </div>

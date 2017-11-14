@@ -42,11 +42,11 @@ li {
 }
 
 .gps {
-    margin-left: 30px;
+    padding-left: 20px;
 }
 
 .changecity {
-    margin-left: 24px;
+    padding-left: 14px;
 }
 
 .header .menu ul {
@@ -189,6 +189,13 @@ li {
     margin-top: 19px;
 }
 
+.section {
+    padding-right: 4%;
+}
+
+#content {
+    padding-right: 20px;
+}
 
 .hotel-price {
     color: #FA2F2F;
@@ -268,7 +275,7 @@ li {
 }
 
 .side {
-    width: 150px;
+    width: 7.8%;
     height: 775px;
     background: #8FD026;
     position: absolute;

@@ -46,11 +46,11 @@ li {
 }
 
 .gps {
-    margin-left: 30px;
+    padding-left: 20px;
 }
 
 .changecity {
-    margin-left: 24px;
+    padding-left: 14px;
 }
 
 .header {
@@ -128,7 +128,7 @@ li {
     line-height: 30px;
 }
 
-.tab-title .pull-left span{
+.tab-title span{
     display: inline-block;
     width: 6px ;
     height: 18px;
@@ -359,14 +359,16 @@ table .btn {
 
 .attention-item {
     position: relative;
-    width: 450px;
-    height: 340px;
+    /*width: 450px;*/
+    /*height: 340px;*/
     margin-right: 20px;
+    border: none;
+    padding: 0;
 }
 
 .attention-item img {
-    width: 450px;
-    height: 340px;
+    /*width: 450px;*/
+    /*height: 340px;*/
 }
 
 .attention-name {
@@ -481,7 +483,7 @@ table .btn {
 }
 
 .side {
-    width: 150px;
+    width: 7.8%;
     height: 775px;
     background: #8FD026;
     position: absolute;

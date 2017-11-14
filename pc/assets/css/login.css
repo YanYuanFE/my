@@ -227,3 +227,28 @@ body {
 .error{
     color:red;
 }
+
+.form.wxlogin {
+    height: 416px;
+}
+
+.wxlogin .wx-title {
+    text-align: center;
+    height: 63px;
+    line-height: 63px;
+    border-bottom: 1px solid #E6E6E6;
+    font-size: 20px;
+    color: #333333;
+}
+
+.wxlogin .wx-content {
+    margin: 57px auto;
+    width: 168px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.wxlogin .wx-content p {
+    margin-top: 18px;
+}
