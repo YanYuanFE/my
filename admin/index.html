@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="assets/images/nav_logo.png" alt="">
+                    <span>欢迎登录中垦流通后台管理系统</span>
+                </div>
+                <div class="col-md-3 col-md-offset-5">
+                    <img src="assets/images/nav_touxiang.png" alt="">
+                    <span class="name">admin</span>
+                    <img src="assets/images/nav_tuichu.png" alt="">
+                    <span class="exit">退出</span>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="side col-md-2 col-sm-2 col-xs-2 ">
+                <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#list" aria-controls="list" role="tab" data-toggle="tab">分类管理</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#user" aria-controls="user" role="tab" data-toggle="tab">用户管理</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#supplier" aria-controls="supplier" role="tab" data-toggle="tab">供应商管理</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#seller" aria-controls="seller" role="tab" data-toggle="tab">档主管理</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#client" aria-controls="client" role="tab" data-toggle="tab">客户管理</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#driver" aria-controls="driver" role="tab" data-toggle="tab">司机管理</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#goods" aria-controls="goods" role="tab" data-toggle="tab">商品管理</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main col-md-9 col-sm-9 col-xs-9">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="list">
+                        <div class="tab-header">
+                            <div class="title">分类管理</div>
+                            <button type="button" class="btn btn-primary">添加大分类</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

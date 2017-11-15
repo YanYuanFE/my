@@ -171,7 +171,7 @@
                                 <td>系统消息  </td>
                                 <td><a href="messagedetail.html">公寓系统消息系统消息</a></td>
                                 <td>2017-08-20 13:00</td>
-                                <td><img src="assets/images/delete.png" alt="" width="10" height="14"></td>
+                                <td><img class="deleteMsg" src="assets/images/delete.png" alt="" width="10" height="14"></td>
                             </tr>
                             <tr>
                                 <td>
@@ -180,7 +180,7 @@
                                 <td>系统消息  </td>
                                 <td><a href="messagedetail.html">公寓系统消息系统消息</a></td>
                                 <td>2017-08-20 13:00</td>
-                                <td><img src="assets/images/delete.png" alt="" width="10" height="14"></td>
+                                <td><img class="deleteMsg" src="assets/images/delete.png" alt="" width="10" height="14"></td>
                             </tr>
                             <tr>
                                 <td>
@@ -189,7 +189,7 @@
                                 <td>系统消息  </td>
                                 <td><a href="messagedetail.html">公寓系统消息系统消息</a></td>
                                 <td>2017-08-20 13:00</td>
-                                <td><img src="assets/images/delete.png" alt="" width="10" height="14"></td>
+                                <td><img class="deleteMsg" src="assets/images/delete.png" alt="" width="10" height="14"></td>
                             </tr>
                             <tr>
                                 <td>
@@ -198,7 +198,7 @@
                                 <td>系统消息  </td>
                                 <td><a href="messagedetail.html">公寓系统消息系统消息</a></td>
                                 <td>2017-08-20 13:00</td>
-                                <td><img src="assets/images/delete.png" alt="" width="10" height="14"></td>
+                                <td><img class="deleteMsg" src="assets/images/delete.png" alt="" width="10" height="14"></td>
                             </tr>
                             <tr>
                                 <td>
@@ -207,7 +207,7 @@
                                 <td>系统消息  </td>
                                 <td><a href="messagedetail.html">公寓系统消息系统消息</a></td>
                                 <td>2017-08-20 13:00</td>
-                                <td><img src="assets/images/delete.png" alt="" width="10" height="14"></td>
+                                <td><img class="deleteMsg" src="assets/images/delete.png" alt="" width="10" height="14"></td>
                             </tr>
                         </tbody>
                         <tfoot>
@@ -218,7 +218,7 @@
                                     </label>
                                 </td>
                                 <td colspan="3">
-                                   <button class="delete">
+                                   <button class="delete" id="deleteChecked">
                                        删除选中项
                                    </button>
                                     <button class="read">
@@ -265,7 +265,7 @@
                                 <td>26000</td>
                                 <td>交易成功</td>
                                 <td>
-                                    <button class="btn btn-default" type="button">删除</button>
+                                    <button class="btn btn-default deleteOrder" type="button">删除</button>
                                 </td>
                             </tr>
                             <tr>
@@ -277,7 +277,7 @@
                                 <td>未付款</td>
                                 <td>
                                     <button class="btn btn-danger" type="button">付款</button>
-                                    <button class="btn btn-default" type="button">删除</button>
+                                    <button class="btn btn-default deleteOrder" type="button">删除</button>
                                 </td>
                             </tr>
                             <tr>
@@ -290,7 +290,7 @@
                                 <td>
                                     <button class="btn btn-success" type="button">确认收货</button>
                                     <button class="btn btn-default" type="button" data-toggle="modal" data-target="#refund">退款</button>
-                                    <button class="btn btn-default" type="button">删除</button>
+                                    <button class="btn btn-default deleteOrder" type="button">删除</button>
                                 </td>
                             </tr>
                             <tr>
@@ -301,7 +301,7 @@
                                 <td>26000</td>
                                 <td>交易失败</td>
                                 <td>
-                                    <button class="btn btn-default" type="button">删除</button>
+                                    <button class="btn btn-default deleteOrder" type="button">删除</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -396,7 +396,7 @@
                             <td>13410020202</td>
                             <td>预约结束</td>
                             <td>
-                                <button class="btn btn-default" type="button">删除</button>
+                                <button class="btn btn-default deletePre" type="button">删除</button>
                             </td>
                         </tr>
                         <tr>
@@ -410,7 +410,7 @@
                             <td>13410020202</td>
                             <td>预约失败 </td>
                             <td>
-                                <button class="btn btn-default green">重新预约</button>
+                                <button class="btn btn-default green deletePre">重新预约</button>
                             </td>
                         </tr>
                         </tbody>
@@ -469,7 +469,7 @@
                                         </div>
                                     </div>
                                     <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
                                     </div>
                                 </a>
                             </div>
@@ -500,7 +500,7 @@
                                         </div>
                                     </div>
                                     <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
                                     </div>
                                 </a>
                             </div>
@@ -531,7 +531,7 @@
                                         </div>
                                     </div>
                                     <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
                                     </div>
                                 </a>
                             </div>
@@ -562,7 +562,7 @@
                                         </div>
                                     </div>
                                     <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
                                     </div>
                                 </a>
                             </div>
@@ -593,7 +593,7 @@
                                         </div>
                                     </div>
                                     <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
                                     </div>
                                 </a>
                             </div>
@@ -632,14 +632,14 @@
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention1.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove"><span>+</span></div>
+                                    <div class="remove" class="deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                             <div class="col-xs-6 col-md-6">
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention2.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove"><span>+</span></div>
+                                    <div class="remove" class="deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                         </div>
@@ -648,14 +648,14 @@
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention1.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove"><span>+</span></div>
+                                    <div class="remove" class="deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                             <div class="col-xs-6 col-md-6">
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention2.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove"><span>+</span></div>
+                                    <div class="remove" class="deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                         </div>
@@ -664,14 +664,14 @@
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention1.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove"><span>+</span></div>
+                                    <div class="remove" class="deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                             <div class="col-xs-6 col-md-6">
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention2.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove"><span>+</span></div>
+                                    <div class="remove" class="deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                         </div>
@@ -811,6 +811,91 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="deleteMessage" tabindex="-1" role="dialog" aria-labelledby="deleteMessageModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="deleteMessageModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                <h3>确定要删除这条消息吗？</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteOrder" tabindex="-1" role="dialog" aria-labelledby="deleteOrderModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="deleteOrderModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                <h3>确定要删除这个订单吗？</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deletePre" tabindex="-1" role="dialog" aria-labelledby="deletePreModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="deletePreModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                <h3>确定要删除这个预约吗？</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteCollect" tabindex="-1" role="dialog" aria-labelledby="deleteCollectModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="deleteCollectModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                <h3>确定要删除这个收藏吗？</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deleteAttention" tabindex="-1" role="dialog" aria-labelledby="deleteAttentionModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="deleteAttentionModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                <h3>确定要删除这个关注吗？</h3>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -821,6 +906,25 @@
     $('#myTabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
+    })
+
+    $('.deleteMsg').click(function () {
+      $('#deleteMessage').modal('show')
+    })
+    $('.deleteOrder').click(function () {
+      $('#deleteOrder').modal('show')
+    })
+    $('.deletePre').click(function () {
+      $('#deletePre').modal('show')
+    })
+    $('#deleteChecked').click(function () {
+      $('#deleteMessage').modal('show')
+    })
+    $('.deleteCollect').click(function () {
+      $('#deleteCollect').modal('show')
+    })
+    $('.deleteAttention').click(function () {
+      $('#deleteAttention').modal('show')
     })
   });
 </script>

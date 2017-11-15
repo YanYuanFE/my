@@ -1,0 +1,158 @@
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    background-color: #FFF;
+    color: #333;
+    height: 100%;
+}
+
+.login-container .bg {
+    height: 297px;
+    background: #8FD026;
+    color: #FFF;
+    font-size: 16px;
+    position: relative;
+    z-index: -1;
+}
+
+.login-container a {
+    text-decoration: none;
+}
+
+.form {
+    width: 700px;
+    max-height: 464px;
+    margin: -200px auto;
+    background: #FFF;
+    z-index: 10;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.login-container .form-item {
+    width: 315px;
+    margin: 0 auto;
+    padding-bottom: 12px;
+}
+
+.login-container .form-item input {
+    height: 41px;
+    font-size: 14px;
+    color: #9C9C9C;
+    background: #FFF;
+    padding-left: 20px;
+    border: 1px solid #DADADA;
+    width: 315px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+
+.login-container .form-item input.code-input {
+    width: 193px;
+    margin: 0;
+}
+
+.login-container .code-form {
+    /*display: flex;*/
+    width: 315px;
+    margin: 0 auto;
+}
+
+.login-container .code-form input {
+    display: inline-block;
+}
+
+.login-container .code-form .code {
+    background: #8FD026;
+    display: inline-block;
+    padding: 0 12px;
+    color: #FFF;
+    line-height: 40px;
+    height: 40px;
+    margin-left: 17px;
+}
+
+.login-container .login-btn {
+    width: 315px;
+    height: 41px;
+    text-align: center;
+    color: #FFF;
+    font-size: 18px;
+    margin-top: 64px;
+    background: #8FD026;
+    border-radius: 0;
+}
+
+.title {
+    height: 63px;
+    line-height: 63px;
+    text-align: center;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.step-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin:15px auto 0;
+}
+
+.step {
+    text-align: center;
+}
+
+.step .circle{
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    color: #FFF;
+    background: #9C9C9C;
+    text-align: center;
+    line-height: 28px;
+    margin: 0 auto;
+}
+
+.step p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.line {
+    width: 100%;
+    flex: 1;
+    border-top: 1px dashed #DADADA;
+    height: 1px;
+    margin-top: -30px;
+}
+
+.line.line-green {
+    border-top: 1px dashed #8FD026;
+}
+
+.step.active .circle{
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    color: #FFF;
+    background: #8FD026;
+}
+
+form {
+    padding: 32px 0 64px;
+}
+
+
+#resetForm,.reset-btn{
+    display: none;
+}
+
+.error{
+    color:red;
+}
