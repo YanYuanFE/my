@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     font-size: 16px;
-    font-family: "STHeitiSC-Light", Helvetica, STHeiTi, sans-serif;
+    font-family: PingFang-SC-Medium;
     box-sizing: border-box;
     background-color: #FFF;
     color: #333;
@@ -31,193 +31,185 @@ li {
     list-style: none;
 }
 
-.weui-panel:before {
-    border-top: none;
-}
-
 .header {
-    height: 60px;
-    line-height: 60px;
+    height: 69px;
+    line-height: 69px;
     position: relative;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
-.gps {
-    padding-left: 20px;
+.head-left span {
+    margin-left: 16px;
 }
 
-.changecity {
-    padding-left: 14px;
-}
-
-.header .menu ul {
-    overflow: hidden;
-    line-height: 60px;
-    margin: 0;
-    padding: 0;
-}
-
-.header .menu ul li, .header .tab ul li {
-    float: left;
-    list-style: none;
-    color: #333;
-    margin-right: 10px;
-}
-
-.header ul li a {
-    color: #333;
-    font-size: 16px;
-    height: 100%;
-    display: inline-block;
-    padding: 0 20px;
-    text-decoration: none;
-}
-
-.header .tab ul li a.active {
-    color: #FFF;
-    background: #8FD026;
-}
-
-.city-container {
-    position: absolute;
-    top: 60px;
-    left:50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    background: #FFF;
-    display: none;
-}
-
-.city-select {
+.head-right {
     display: flex;
     align-items: center;
 }
 
-.city-select select {
-    width: 100px;
-    margin: 0 10px;
+.right-box {
+    margin-left: 40px;
 }
 
-.city-container .title {
-  font-size: 20px;
+.head-right img {
+    margin-right: 14px;
 }
 
-.city-select .title.search-city {
-    margin: 0 10px;
+.content {
+    display: flex;
 }
 
-.search-container {
-    height: 87px;
-    background: #F9F9F9;
-    line-height: 87px;
+.side {
+    width: 174px;
+    padding-top: 25px;
 }
 
-.search-input {
-    position: relative;
-}
-
-.search-input input{
-    height: 50px;
-    width: 624px;
-    background: #FFF;
-    padding-left:21px;
-    color: #9C9C9C;
-    font-size: 16px;
-    border: none;
-    position: relative;
-}
-
-.search-icon {
-    position: absolute;
-    top: 30px;
-    left: 600px;
-}
-
-.kind-list {
-    margin-top: 20px;
-}
-
-.brand-more {
-    
-}
-
-.brand-list {
+.side ul li {
+    height: 47px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.kind-list.price {
-    margin: 0;
-    padding-top: 20px;
+.main {
+    flex: 1;
+    background: #F4F4F4;
+    padding: 18px 15px;
 }
 
-.kind-title {
-    color: #333;
+.side .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #047835;
+    background-color: rgba(4,120,53, 0.1);
+    border-left:4px solid #047835;
+    border-radius: 0;
+}
+
+.main .tab-content {
+    background: #FFF;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 30px 0 15px;
+}
+
+.tab-header .title {
+    color:rgba(5,146,64,1);
+    font-size: 16px;
+    line-height: 56px;
     font-weight: 600;
-    margin-right: 28px;
 }
 
-.kind-item {
-    margin-right: 20px;
+.btn.btn-primary {
+    background:rgba(5,160,70,1);
+}
+
+
+.icon_div {
     display: inline-block;
-    padding: 0 10px;
+    /*height: 25px;*/
+    /*width: 35px;*/
 }
 
-.kind-item.active {
-    color: #FFF;
-    background: #8FD026;
-
+.icon_div a {
+    display: inline-block;
+    width: 27px;
+    height: 20px;
+    cursor: pointer;
 }
 
-.sort {
-    background: #8FD026;
-    color: #FFF;
-    margin-top: 32px;
-    padding-left: 15px;
+/*end--按钮*/
+
+/*ztree表格*/
+.ztree {
+    padding: 0;
+    border: 2px solid #CDD6D5;
 }
 
-.result-text {
-    margin: 20px 0;
+.ztree li a {
+    vertical-align: middle;
+    height: 30px;
 }
 
-.weui-media-box_appmsg .weui-media-box__hd {
-    width: 255px;
-    height: 182px;
+.ztree li > a {
+    width: 100%;
 }
 
-.hotel-house {
-    color: #6F6F6F;
+.ztree li > a,
+.ztree li a.curSelectedNode {
+    padding-top: 0px;
+    background: none;
+    height: auto;
+    border: none;
+    cursor: default;
+    opacity: 1;
+}
+
+.ztree li ul {
+    padding-left: 0px
+}
+
+.ztree div.diy span {
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.ztree div.diy {
+    height: 100%;
+    width: 25%;
+    line-height: 30px;
+    border-top: 1px dotted #ccc;
+    border-left: 1px solid #eeeeee;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    color: #6c6c6c;
+    font-family: "SimSun";
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.ztree div.diy:first-child {
+    text-align: left;
+    text-indent: 10px;
+    border-left: none;
+}
+
+.ztree .head {
+    background: #f4f4f4;
+    color: #333;
     font-size: 14px;
-    margin-top: 19px;
 }
 
-.section {
-    padding-right: 4%;
+.ztree .head div.diy {
+    border-top: none;
+    border-right: 1px solid #CDD2D4;
+    color: #333;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
 }
 
-#content {
-    padding-right: 20px;
-}
 
-.hotel-price {
-    color: #FA2F2F;
-    font-size: 30px;
-}
 
 .home-container .pagination li a {
     border-radius: 0;
     margin-left: 2px;
+    padding: 3px 9px;
 }
 
 .home-container .pagination>li>span:focus, .pagination>li>span:hover {
     z-index: 2;
     color: #FFF;
-    background-color: #8FD026;
+    background:rgba(101,193,92,1);
     border-color: #dadada;
 }
 
 .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
     z-index: 2;
     color: #FFF;
-    background-color: #8FD026;
+    background:rgba(101,193,92,1);
     border-color: #dadada;
 }
 
@@ -225,8 +217,8 @@ li {
     z-index: 3;
     color: #fff;
     cursor: default;
-    background-color: #8FD026;
-    border-color: #8FD026;
+    background:rgba(101,193,92,1);
+    border-color: rgba(101,193,92,1);
 }
 
 .pagination>li>a, .pagination>li>span {
@@ -240,6 +232,14 @@ li {
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #dadada;
+}
+
+.pagination input {
+    width:20px;
+    height:19px;
+    background:rgba(255,255,255,1);
+    border-radius: 2px ;
+    border: none;
 }
 
 
@@ -272,29 +272,6 @@ li {
 
 .footer .copyright {
     text-align: center;
-}
-
-.side {
-    width: 7.8%;
-    height: 775px;
-    background: #8FD026;
-    position: absolute;
-    right: 0;
-    top: 60px;
-    z-index: 999;
-    color: #FFF;
-    text-align: center;
-}
-
-.side li {
-    color: #FFF;
-    height: 90px;
-    padding: 20px 4px;
-    border-bottom: 1px solid #FFF;
-}
-
-.side li a {
-    color: #FFF;
 }
 
 .modal .modal-content {

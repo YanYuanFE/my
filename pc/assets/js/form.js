@@ -1,7 +1,7 @@
 $().ready(function() {
   jQuery.validator.addMethod("isMobile", function(value, element) {
     var length = value.length;
-    var mobile = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;
+    var mobile = /^1[3|4|5|7|8]{1}[0-9]{9}$/;
     return this.optional(element) || (length == 11 && mobile.test(value));
   }, "请正确填写您的手机号码");
 
@@ -29,7 +29,7 @@ $().ready(function() {
             }
         }
     });
-    $("#loginForm").validate({
+    $("#login1").validate({
         errorPlacement: function(error, element) {
           console.log(element)
           error.appendTo(element.parent());
@@ -42,13 +42,6 @@ $().ready(function() {
             password: {
                 required: true,
                 minlength: 6
-            },
-            code: {
-              required: true,
-            },
-            phone: {
-              required: true,
-              isMobile: true
             }
         },
         messages: {
@@ -59,16 +52,35 @@ $().ready(function() {
             password: {
                 required: "请输入密码",
                 minlength: "密码长度不能小于 6 个字符！"
+            }
+        }
+    });
+
+    $("#login2").validate({
+        errorPlacement: function(error, element) {
+          console.log(element)
+          error.appendTo(element.parent());
+        },
+        rules: {
+            code: {
+              required: true,
             },
+            phone: {
+              required: true,
+              isMobile: true
+            }
+        },
+        messages: {
             code: {
               required: "请输入验证码",
             },
             phone: {
               required: "请输入手机号",
               isMobile:"请输入正确的手机号！"
-            },
+            }
         }
     });
+
     $("#registerForm").validate({
         errorPlacement: function(error, element) {
           console.log(element)

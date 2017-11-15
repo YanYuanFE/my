@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <title>首页</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="home-container">
         <div class="header">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 head-left">
                     <img src="assets/images/nav_logo.png" alt="">
                     <span>欢迎登录中垦流通后台管理系统</span>
                 </div>
-                <div class="col-md-3 col-md-offset-5">
-                    <img src="assets/images/nav_touxiang.png" alt="">
-                    <span class="name">admin</span>
-                    <img src="assets/images/nav_tuichu.png" alt="">
-                    <span class="exit">退出</span>
+                <div class="col-md-3 col-md-offset-5 head-right">
+                    <div class="right-box">
+                        <img src="assets/images/nav_touxiang.png" alt="">
+                        <span class="name">admin</span>
+                    </div>
+                    <div class="right-box">
+                        <img src="assets/images/nav_tuichu.png" alt="">
+                        <span class="exit">退出登陆</span>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="content">
-            <div class="side col-md-2 col-sm-2 col-xs-2 ">
+            <div class="side">
                 <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">
                     <li role="presentation" class="active">
                         <a href="#list" aria-controls="list" role="tab" data-toggle="tab">分类管理</a>
@@ -47,12 +52,41 @@
                     </li>
                 </ul>
             </div>
-            <div class="main col-md-9 col-sm-9 col-xs-9">
+            <div class="main">
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="list">
                         <div class="tab-header">
-                            <div class="title">分类管理</div>
+                            <h2 class="title">分类管理</h2>
                             <button type="button" class="btn btn-primary">添加大分类</button>
+                        </div>
+                        <div class="layer">
+                            <div id="tableMain">
+                                <ul id="dataTree" class="ztree">
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li>
+                                        1/15页
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        到第
+                                        <input type="number">页
+                                    </li>
+                                    <li class="active">
+                                        前往
+                                    </li>
+                                </ul>
+                            </nav>
+
                         </div>
                     </div>
                 </div>
@@ -60,4 +94,207 @@
         </div>
     </div>
 </body>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/jquery.ztree.all.js"></script>
+<script>
+  var zTreeNodes;
+  var setting = {
+    view: {
+      showLine: false,
+      showIcon: false,
+      addDiyDom: addDiyDom
+    },
+    check: {
+      enable: true
+    },
+    edit: {
+      enable: true
+    },
+    data: {
+      simpleData: {
+        enable: true
+      }
+    }
+  };
+  /**
+   * 自定义DOM节点
+   */
+  function addDiyDom(treeId, treeNode) {
+    var spaceWidth = 15;
+    var liObj = $("#" + treeNode.tId);
+    var aObj = $("#" + treeNode.tId + "_a");
+    var switchObj = $("#" + treeNode.tId + "_switch");
+    var icoObj = $("#" + treeNode.tId + "_ico");
+    var spanObj = $("#" + treeNode.tId + "_span");
+    aObj.attr('title', '');
+    aObj.append('<div class="diy swich"></div>');
+    var div = $(liObj).find('div').eq(0);
+    switchObj.remove();
+    spanObj.remove();
+    icoObj.remove();
+    div.append(switchObj);
+    div.append(spanObj);
+    var spaceStr = "<span style='height:1px;display: inline-block;width:" + (spaceWidth * treeNode.level) + "px'></span>";
+    switchObj.before(spaceStr);
+    var editStr = '';
+//    editStr += '<div class="diy">' + (treeNode.name == null ? '&nbsp;' : treeNode.name) + '</div>';
+    editStr += '<div class="diy">' + (treeNode.keyword == '' ? '&nbsp;' : treeNode.keyword ) + '</div>';
+    editStr += '<div class="diy">' + (treeNode.order == null ? '&nbsp;' : treeNode.order ) + '</div>';
+    editStr += '<div class="diy">' + formatHandle(treeNode) + '</div>';
+    console.log(editStr)
+    aObj.append(editStr);
+  }
+  /**
+   * 查询数据
+   */
+  function query() {
+    var data = [{
+      "name":"果蔬",
+      "keyword":"水果，蔬菜",
+      "order":1,
+      "addFlag":true,
+      "ORG_ID":1,
+      "id":"s1",
+      "pId":"p0",
+      "open":true,
+      "modFlag":true,
+      "TYPE":"org",
+      "delFlag":true
+    },{
+      "name":"大白菜",
+      "keyword":"蔬菜",
+      "order":1,
+      "addFlag":true,
+      "SECTOR_ID":1,
+      "ORG_ID":1,
+      "id":"11",
+      "pId":"s1",
+      "modFlag":true,
+      "PARENT_ID":null,
+      "TYPE":"sector",
+      "delFlag":true
+    },{
+      "name":"苹果",
+      "keyword":"水果",
+      "order":2,
+      "addFlag":true,
+      "SECTOR_ID":2,
+      "ORG_ID":1,
+      "id":"12",
+      "pId":"s1",
+      "modFlag":true,
+      "PARENT_ID":1,
+      "TYPE":"sector",
+      "delFlag":true
+    }, {
+      "name":"红富士",
+      "keyword":"水果",
+      "order":2,
+      "addFlag":true,
+      "SECTOR_ID":3,
+      "ORG_ID":1,
+      "id":"13",
+      "pId":"s1",
+      "modFlag":true,
+      "PARENT_ID":1,
+      "TYPE":"sector",
+      "delFlag":true
+    }, {
+      "name":"红富士",
+      "keyword":"水果",
+      "order":2,
+      "addFlag":true,
+      "SECTOR_ID":4,
+      "ORG_ID":1,
+      "id":"14",
+      "pId":"s1",
+      "modFlag":true,
+      "PARENT_ID":2,
+      "TYPE":"sector",
+      "delFlag":true
+    },{
+      "name":"红富士",
+      "keyword":"水果",
+      "order":2,
+      "addFlag":true,
+      "SECTOR_ID":5,
+      "ORG_ID":1,
+      "id":"15",
+      "pId":"s1",
+      "modFlag":true,
+      "PARENT_ID":3,
+      "TYPE":"sector",
+      "delFlag":true
+    }, {
+      "name":"水产",
+      "keyword":"海洋，湖泊",
+      "order":2,
+      "addFlag":true,
+      "SECTOR_ID":8,
+      "ORG_ID":1,
+      "id":"s2",
+      "pId":"p0",
+      "modFlag":true,
+      "PARENT_ID":2,
+      "TYPE":"sector",
+      "delFlag":true
+    }, {
+      "name":"家禽",
+      "keyword":"野生，家养",
+      "order":3,
+      "addFlag":true,
+      "SECTOR_ID":9,
+      "ORG_ID":1,
+      "id":"s3",
+      "pId":"p0",
+      "modFlag":true,
+      "PARENT_ID":2,
+      "TYPE":"sector",
+      "delFlag":true
+    }, {
+      "name":"车辆",
+      "keyword":"运输工具",
+      "order":4,
+      "addFlag":true,
+      "ORG_ID":1,
+      "id":"s4",
+      "pId":"p0",
+      "modFlag":true,
+      "PARENT_ID":2,
+      "TYPE":"sector",
+      "delFlag":true
+    }];
+    //初始化列表
+    zTreeNodes = data;
+    //初始化树
+    $.fn.zTree.init($("#dataTree"), setting, zTreeNodes);
+    //添加表头
+    var li_head = ' <li class="head"><a><div class="diy">分类名称</div><div class="diy">关键字</div><div class="diy">排序</div>' +
+      '<div class="diy">操作</div></a></li>';
+    var rows = $("#dataTree").find('li');
+    if (rows.length > 0) {
+      rows.eq(0).before(li_head)
+    } else {
+      $("#dataTree").append(li_head);
+      $("#dataTree").append('<li ><div style="text-align: center;line-height: 30px;" >无符合条件数据</div></li>')
+    }
+  }
+  /**
+   * 根据权限展示功能按钮
+   * @param treeNode
+   * @returns {string}
+   */
+  function formatHandle(treeNode) {
+    var htmlStr = '';
+    htmlStr += '<div class="icon_div"><button class="icon_add btn btn-success" title="添加子分类"  href="javascript:addSector(\'' + treeNode.id + '\')">添加子分类</button></div>';
+    htmlStr += '<div class="icon_div"><button class="icon_edit btn btn-warning" title="修改" href="javascript:edit(\'' + treeNode.id + '\')">修改</button></div>';
+    htmlStr += '<div class="icon_div"><button class="icon_del btn btn-danger" title="删除" href="javascript:del(\'' + treeNode.id + '\')">删除</button></div>';
+    return htmlStr;
+  }
+
+  $(function () {
+    //初始化数据
+    query();
+  })
+</script>
 </html>
