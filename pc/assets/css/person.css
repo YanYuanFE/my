@@ -157,6 +157,19 @@ li {
     border: 1px dashed #8FD026;
 }
 
+.weui-uploader__input-box.hasImg{
+    border: 1px solid #8FD026;
+}
+
+.weui-uploader__input-box.hasImg:before, .weui-uploader__input-box.hasImg:after {
+    background: none;
+}
+
+.weui-uploader__input-box img {
+    width: 75px;
+    height: 75px;
+}
+
 .weui-uploader__input-box:before, .weui-uploader__input-box:after {
     background: #8FD026;
 }

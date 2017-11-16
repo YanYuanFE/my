@@ -119,6 +119,7 @@
                     <div class="upload clearfix">
                         <div class="weui-uploader__input-box">
                             <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                            <img src="" alt="" id="img">
                         </div>
                         <div>上传头像</div>
                     </div>
@@ -926,6 +927,24 @@
     $('.deleteAttention').click(function () {
       $('#deleteAttention').modal('show')
     })
+
+    $('#uploaderInput').change(function () {
+      console.log(111)
+      upload('#uploaderInput', '#img')
+    })
+
+    function upload(c, d){
+      var $c = $(c),
+        $d = $(d);
+      file = $c[0].files[0],
+        reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = function(e){
+        $c.hide();
+        $('.weui-uploader__input-box').addClass('hasImg')
+        $d.attr("src", e.target.result);
+      };
+    };
   });
 </script>
 </body>

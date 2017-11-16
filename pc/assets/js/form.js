@@ -42,7 +42,7 @@ $().ready(function() {
             password: {
                 required: true,
                 minlength: 6
-            }
+            },
         },
         messages: {
             mobile: {
@@ -98,6 +98,7 @@ $().ready(function() {
           loginCode: {
             required: true,
           },
+          agree: "required"
         },
         messages: {
           loginPhone: {
@@ -111,6 +112,7 @@ $().ready(function() {
           loginCode: {
             required: "请输入验证码",
           },
+          agree: "请同意阔壹租房协议"
         }
     });
 

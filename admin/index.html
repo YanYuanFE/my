@@ -121,7 +121,45 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="button" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-primary" id="addSubmit">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="editModalLabel">编辑分类</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="editName" class="col-sm-3 control-label">分类名称：</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="editName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editKeyword" class="col-sm-3 control-label">关 键 字：</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="editKeyword">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editOrder" class="col-sm-3 control-label">排	序：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="editOrder">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary" id="editSubmit">提交</button>
                                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                             </div>
                         </div>
@@ -137,6 +175,7 @@
 <script>
   var zTreeNodes;
   var zTree;
+  var currentNode;
   var setting = {
     view: {
       showLine: false,
@@ -188,117 +227,57 @@
       "name":"果蔬",
       "keyword":"水果，蔬菜",
       "order":1,
-      "ORG_ID":1,
       "id":"s1",
       "pId":"p0",
       "open":true,
-      "addFlag":true,
-      "modFlag":true,
-      "delFlag":true,
-      "TYPE":"org"
     },{
       "name":"大白菜",
       "keyword":"蔬菜",
       "order":1,
-      "addFlag":true,
-      "SECTOR_ID":1,
-      "ORG_ID":1,
       "id":"p1",
       "pId":"s1",
-      "modFlag":true,
-      "PARENT_ID":null,
-      "TYPE":"sector",
-      "delFlag":true
     },{
       "name":"苹果",
       "keyword":"水果",
       "order":2,
-      "addFlag":true,
-      "SECTOR_ID":2,
-      "ORG_ID":1,
-      "id":"12",
+      "id":"p2",
       "pId":"p1",
-      "modFlag":true,
-      "PARENT_ID":1,
-      "TYPE":"sector",
-      "delFlag":true
     }, {
       "name":"红富士",
       "keyword":"水果",
       "order":2,
-      "addFlag":true,
-      "SECTOR_ID":3,
-      "ORG_ID":1,
-      "id":"13",
+      "id":"p3",
       "pId":"s1",
-      "modFlag":true,
-      "PARENT_ID":1,
-      "TYPE":"sector",
-      "delFlag":true
     }, {
       "name":"红富士",
       "keyword":"水果",
       "order":2,
-      "addFlag":true,
-      "SECTOR_ID":4,
-      "ORG_ID":1,
-      "id":"14",
+      "id":"p4",
       "pId":"s1",
-      "modFlag":true,
-      "PARENT_ID":2,
-      "TYPE":"sector",
-      "delFlag":true
     },{
       "name":"红富士",
       "keyword":"水果",
       "order":2,
-      "addFlag":true,
-      "SECTOR_ID":5,
-      "ORG_ID":1,
-      "id":"15",
+      "id":"p5",
       "pId":"s1",
-      "modFlag":true,
-      "PARENT_ID":3,
-      "TYPE":"sector",
-      "delFlag":true
     }, {
       "name":"水产",
       "keyword":"海洋，湖泊",
       "order":2,
-      "addFlag":true,
-      "SECTOR_ID":8,
-      "ORG_ID":1,
       "id":"s2",
       "pId":"p0",
-      "modFlag":true,
-      "PARENT_ID":2,
-      "TYPE":"sector",
-      "delFlag":true
     }, {
       "name":"家禽",
       "keyword":"野生，家养",
       "order":3,
-      "addFlag":true,
-      "SECTOR_ID":9,
-      "ORG_ID":1,
       "id":"s3",
       "pId":"p0",
-      "modFlag":true,
-      "PARENT_ID":2,
-      "TYPE":"sector",
-      "delFlag":true
     }, {
       "name":"车辆",
       "keyword":"运输工具",
       "order":4,
-      "addFlag":true,
-      "ORG_ID":1,
       "id":"s4",
       "pId":"p0",
-      "modFlag":true,
-      "PARENT_ID":2,
-      "TYPE":"sector",
-      "delFlag":true
     }];
     //初始化列表
     zTreeNodes = data;
@@ -329,31 +308,75 @@
   }
 
   function addSector(treeNode) {
+    currentNode = treeNode;
     $('#addModal').modal('show');
-    console.log(treeNode.name)
-    var name = new Date().getTime();
+    console.log(treeNode)
+//    var name = new Date().getTime();
+//    var newNode = {
+//      name: '分类名称',
+//      keyword: '关键字',
+//      order: '1'
+//    };
+//    if (zTree.getSelectedNodes()[0]) {
+//      newNode.pid = treeNode.id;
+//      newNode.id = name;
+//      zTree.addNodes(treeNode, -1, newNode);
+//    } else {
+//      zTree.addNodes(null, newNode);
+//    }
+//    var node = zTree.getNodeByParam("id", name, null);
+//    zTree.selectNode(node);
+//    zTree.editName(node);
+  }
+  $('#addSubmit').bind('click', function (e) {
+    e.preventDefault();
+    addSubmit();
+  })
+  function addSubmit() {
+    var addNameVal = $('#addName').val();
+    var addKeywordVal = $('#addKeyword').val();
+    var addOrderVal = $('#addOrder').val();
+    var id = new Date().getTime();
     var newNode = {
-      name: '分类名称',
-      keyword: '关键字',
-      order: '1'
-    };
-    if (zTree.getSelectedNodes()[0]) {
-      newNode.pid = treeNode.id;
-      newNode.id = name;
-      zTree.addNodes(treeNode, -1, newNode);
-    } else {
-      zTree.addNodes(null, newNode);
+      name: addNameVal,
+      keyword: addKeywordVal,
+      order: addOrderVal,
+      pId: currentNode.id,
+      id: id,
+      isParent: currentNode.isParent
     }
-    var node = zTree.getNodeByParam("id", name, null);
-    zTree.selectNode(node);
-    zTree.editName(node);
+    console.log(currentNode)
+
+    zTree.addNodes(currentNode, -1, newNode);
   }
 
   function edit(treeNode) {
-    zTree.editName(treeNode);
+    currentNode = treeNode;
+    $('#editModal').modal('show');
+  }
+
+  $('#editSubmit').bind('click', function (e) {
+    e.preven0tDefault();
+    editSubmit();
+  })
+
+  function editSubmit() {
+    var editNameVal = $('#editName').val();
+    var editKeywordVal = $('#editKeyword').val();
+    var editOrderVal = $('#editOrder').val();
+    var newNode = {
+      name: addNameVal,
+      keyword: addKeywordVal,
+      order: addOrderVal,
+      pId: currentNode.pId,
+      id: currentNode.id,
+      isParent: currentNode.isParent
+    }
+    zTree.updateNode(newNode)
   }
 
   function del(treeNode) {
+    zTree.selectNode(treeNode)
     zTree.removeNode(treeNode)
   }
 
