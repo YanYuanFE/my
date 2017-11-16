@@ -410,8 +410,6 @@
 //          // Container
 //          container: div1
 //      });
-      new IScroll('#selectModal');
-      new IScroll('#rentModal');
       var map = new BMap.Map("map");
 //      map.centerAndZoom("深圳",15);
       map.centerAndZoom(new BMap.Point(114.126694,22.548281), 15);
@@ -472,7 +470,7 @@
       $('.mask').bind("touchmove",function(e){
         e.preventDefault();
       }, false);
-
+      new IScroll('#rentModal', { mouseWheel: true, click: true });
       $(".add").click(function(){
         var n=$(this).prev().val();
         var num=parseInt(n)+1;
@@ -500,6 +498,7 @@
       $('.mask').bind("touchmove",function(e){
         e.preventDefault();
       }, false);
+      new IScroll('#selectModal', { mouseWheel: true, click: true });
       $(".add").click(function(){
         var n=$(this).prev().val();
         var num=parseInt(n)+1;
