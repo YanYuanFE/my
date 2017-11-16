@@ -35,6 +35,10 @@ li {
     height: 69px;
     line-height: 69px;
     position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 38px 0 19px;
+    justify-content: space-between;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
@@ -102,6 +106,14 @@ li {
     font-weight: 600;
 }
 
+.btn {
+    padding: 0 5px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    margin-right: 18px;
+}
+
 .btn.btn-primary {
     background:rgba(5,160,70,1);
 }
@@ -125,7 +137,6 @@ li {
 /*ztree表格*/
 .ztree {
     padding: 0;
-    border: 2px solid #CDD6D5;
 }
 
 .ztree li a {
@@ -141,10 +152,12 @@ li {
 .ztree li a.curSelectedNode {
     padding-top: 0px;
     background: none;
-    height: auto;
+    height: 56px;
     border: none;
     cursor: default;
     opacity: 1;
+    display: inline-block;
+    border-bottom: 1px solid #e9e9e9;
 }
 
 .ztree li ul {
@@ -159,15 +172,14 @@ li {
 .ztree div.diy {
     height: 100%;
     width: 25%;
-    line-height: 30px;
-    border-top: 1px dotted #ccc;
-    border-left: 1px solid #eeeeee;
+    line-height: 56px;
+    /*border-top: 1px dotted #ccc;*/
+    /*border-left: 1px solid #eeeeee;*/
     text-align: center;
     display: inline-block;
     box-sizing: border-box;
     color: #6c6c6c;
-    font-family: "SimSun";
-    font-size: 12px;
+    font-size: 14px;
     overflow: hidden;
 }
 
@@ -181,22 +193,37 @@ li {
     background: #f4f4f4;
     color: #333;
     font-size: 14px;
+    border: 1px solid #e9e9e9;
 }
 
 .ztree .head div.diy {
-    border-top: none;
-    border-right: 1px solid #CDD2D4;
     color: #333;
-    font-family: "Microsoft YaHei";
+    font-family: "PingFang-SC-Bold";
     font-size: 14px;
+    font-weight: 600;
+    border: none;
 }
 
 
 
 .home-container .pagination li a {
     border-radius: 0;
-    margin-left: 2px;
-    padding: 3px 9px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.home-container .pagination>li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.home-container .pagination>li.num {
+    margin-right: 10px;
+}
+
+.home-container .pagination>li.go {
+    padding: 2px 6px;
 }
 
 .home-container .pagination>li>span:focus, .pagination>li>span:hover {
@@ -221,13 +248,22 @@ li {
     border-color: rgba(101,193,92,1);
 }
 
+.pagination li.active {
+    color: #fff;
+    cursor: default;
+    background:rgba(101,193,92,1);
+    border-color: rgba(101,193,92,1);
+}
+
 .pagination>li>a, .pagination>li>span {
+    width: 20px;
+    height: 19px;
+    font-size: 12px;
     position: relative;
     float: left;
-    padding: 6px 12px;
     margin-left: -1px;
     margin-right: 14px;
-    line-height: 1.42857143;
+    line-height: 19px;
     color: #9C9C9C;
     text-decoration: none;
     background-color: #fff;
@@ -274,8 +310,16 @@ li {
     text-align: center;
 }
 
+.modal label {
+    font-weight: 400;
+}
+
+.modal .modal-header {
+    background-color:rgba(245,245,245,1);
+}
+
 .modal .modal-content {
-    border-radius: 0;
+    overflow: hidden;
 }
 
 .modal .modal-content .close {
@@ -288,61 +332,34 @@ li {
     opacity: 1;
 }
 
-#serviceModal .modal .modal-header,#serviceModal  .modal .modal-footer {
-    border: none;
-}
 
 .modal .modal-body p {
     color: #9C9C9C;
     font-size: 14px;
 }
 
-.modal .modal-body .advice-box {
-    margin-top: 30px;
-}
 
 .modal .modal-body .btn {
-    border-radius: 0;
+    width:115px;
+    height:36px;
+    background:rgba(5,146,64,1);
+    border-color: rgba(5,146,64,1);
+    border-radius: 4px ;
 }
 
-.modal .modal-body .btn.btn-primary {
-    background: #8FD026;
-    color: #FFF;
-    border-color: #8FD026;
+.modal .modal-body .btn.btn-default {
+    background:rgba(224,224,224,1);
+    color: #666;
+    border-color: rgba(224,224,224,1);
 }
 
-.advice-box .phone {
-    color: #8FD026;
-}
-
-.advice-box .time {
-    color: #9C9C9C;
-}
 
 @media (min-width: 768px) {
-    #suggestModal .modal-dialog {
-        width: 502px;
+    .modal-dialog {
+        width: 510px;
     }
 }
 
-#suggestModal .modal-title {
-    text-align: center;
-}
-
-#suggestModal .title {
-    margin: 22px 0 13px 0;
-}
-.modal .tip {
-    font-size: 12px;
-    color: #8FD026;
-}
-
-.modal .modal-body .weui-textarea {
-    padding: 14px 20px;
-    border: 1px solid #E6E6E6;
-    background: #F9F9F9;
-    font-size: 14px;
-}
 
 .modal .submit .submit-btn {
     width: 137px;

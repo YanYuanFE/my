@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <title>首页</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrapStyle.css">
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
     <div class="home-container">
         <div class="header">
-            <div class="row">
-                <div class="col-md-4 head-left">
-                    <img src="assets/images/nav_logo.png" alt="">
-                    <span>欢迎登录中垦流通后台管理系统</span>
+            <div class="head-left">
+                <img src="assets/images/nav_logo.png" alt="">
+                <span>欢迎登录中垦流通后台管理系统</span>
+            </div>
+            <div class="head-right">
+                <div class="right-box">
+                    <img src="assets/images/nav_touxiang.png" alt="">
+                    <span class="name">admin</span>
                 </div>
-                <div class="col-md-3 col-md-offset-5 head-right">
-                    <div class="right-box">
-                        <img src="assets/images/nav_touxiang.png" alt="">
-                        <span class="name">admin</span>
-                    </div>
-                    <div class="right-box">
-                        <img src="assets/images/nav_tuichu.png" alt="">
-                        <span class="exit">退出登陆</span>
-                    </div>
+                <div class="right-box">
+                    <img src="assets/images/nav_tuichu.png" alt="">
+                    <span class="exit">退出登陆</span>
                 </div>
             </div>
         </div>
@@ -69,7 +68,7 @@
                         <div class="pagination pull-right">
                             <nav aria-label="Page navigation ">
                                 <ul class="pagination">
-                                    <li>
+                                    <li class="num">
                                         1/15页
                                     </li>
                                     <li class="active"><a href="#">1</a></li>
@@ -79,9 +78,9 @@
                                     <li><a href="#">5</a></li>
                                     <li>
                                         到第
-                                        <input type="number">页
+                                        <input type="text">页
                                     </li>
-                                    <li class="active">
+                                    <li class="active go">
                                         前往
                                     </li>
                                 </ul>
@@ -93,19 +92,56 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addModalLabel">添加分类</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="addName" class="col-sm-3 control-label">分类名称：</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="addName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="addKeyword" class="col-sm-3 control-label">关 键 字：</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="addKeyword">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="addOrder" class="col-sm-3 control-label">排	序：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="addOrder">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.ztree.all.js"></script>
 <script>
   var zTreeNodes;
+  var zTree;
   var setting = {
     view: {
       showLine: false,
       showIcon: false,
       addDiyDom: addDiyDom
-    },
-    check: {
-      enable: true
     },
     edit: {
       enable: true
@@ -152,14 +188,14 @@
       "name":"果蔬",
       "keyword":"水果，蔬菜",
       "order":1,
-      "addFlag":true,
       "ORG_ID":1,
       "id":"s1",
       "pId":"p0",
       "open":true,
+      "addFlag":true,
       "modFlag":true,
-      "TYPE":"org",
-      "delFlag":true
+      "delFlag":true,
+      "TYPE":"org"
     },{
       "name":"大白菜",
       "keyword":"蔬菜",
@@ -167,7 +203,7 @@
       "addFlag":true,
       "SECTOR_ID":1,
       "ORG_ID":1,
-      "id":"11",
+      "id":"p1",
       "pId":"s1",
       "modFlag":true,
       "PARENT_ID":null,
@@ -181,7 +217,7 @@
       "SECTOR_ID":2,
       "ORG_ID":1,
       "id":"12",
-      "pId":"s1",
+      "pId":"p1",
       "modFlag":true,
       "PARENT_ID":1,
       "TYPE":"sector",
@@ -286,15 +322,46 @@
    */
   function formatHandle(treeNode) {
     var htmlStr = '';
-    htmlStr += '<div class="icon_div"><button class="icon_add btn btn-success" title="添加子分类"  href="javascript:addSector(\'' + treeNode.id + '\')">添加子分类</button></div>';
-    htmlStr += '<div class="icon_div"><button class="icon_edit btn btn-warning" title="修改" href="javascript:edit(\'' + treeNode.id + '\')">修改</button></div>';
-    htmlStr += '<div class="icon_div"><button class="icon_del btn btn-danger" title="删除" href="javascript:del(\'' + treeNode.id + '\')">删除</button></div>';
+    htmlStr += '<div class="icon_div"><button class="icon_add btn btn-success" title="添加子分类"  onclick="addSector('+JSON.stringify(treeNode).replace(/\"/g,"'")+')">添加子分类</button></div>';
+    htmlStr += '<div class="icon_div"><button class="icon_edit btn btn-warning" title="修改" onclick="edit('+JSON.stringify(treeNode).replace(/\"/g,"'")+')">修改</button></div>';
+    htmlStr += '<div class="icon_div"><button class="icon_del btn btn-danger" title="删除" onclick="del('+JSON.stringify(treeNode).replace(/\"/g,"'")+')">删除</button></div>';
     return htmlStr;
+  }
+
+  function addSector(treeNode) {
+    $('#addModal').modal('show');
+    console.log(treeNode.name)
+    var name = new Date().getTime();
+    var newNode = {
+      name: '分类名称',
+      keyword: '关键字',
+      order: '1'
+    };
+    if (zTree.getSelectedNodes()[0]) {
+      newNode.pid = treeNode.id;
+      newNode.id = name;
+      zTree.addNodes(treeNode, -1, newNode);
+    } else {
+      zTree.addNodes(null, newNode);
+    }
+    var node = zTree.getNodeByParam("id", name, null);
+    zTree.selectNode(node);
+    zTree.editName(node);
+  }
+
+  function edit(treeNode) {
+    zTree.editName(treeNode);
+  }
+
+  function del(treeNode) {
+    zTree.removeNode(treeNode)
   }
 
   $(function () {
     //初始化数据
     query();
+    zTree = $.fn.zTree.getZTreeObj("dataTree");
+    console.log(zTree)
   })
 </script>
 </html>

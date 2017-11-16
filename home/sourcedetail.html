@@ -366,7 +366,7 @@
       $('.mask').bind("touchmove",function(e){
         e.preventDefault();
       }, false);
-      new IScroll('#selectModal');
+      new IScroll('#selectModal', { mouseWheel: true, click: true });
           $(".add").click(function(){
               var n=$(this).prev().val();
               var num=parseInt(n)+1;

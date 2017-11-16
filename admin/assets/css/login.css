@@ -13,45 +13,74 @@ body {
 }
 
 .login-container .bg {
-    height: 297px;
-    background: #8FD026;
+    height: 310px;
+    background-image: url("../images/login_bg.png");
     color: #FFF;
     font-size: 16px;
     position: relative;
     z-index: -1;
+    text-align: center;
 }
 
-.login-container a {
-    text-decoration: none;
-}
-.weui-navbar__item:after {
-    border:none;
-}
-
-/*#loginForm input{*/
-    /*display: inline-block;*/
-/*}*/
-
-
-.login-container .weui-navbar__item {
-    color: #333;
-    background: #FFF;
-    border-bottom: 1px solid #E6E6E6;
+.login-container .bg:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #FFF;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
 }
 
-.login-container .weui-navbar__item.weui-bar__item--on {
-    color: #8FD026;
-    background-color: #FFF;
-    border-bottom: 1px solid #8FD026;
+.login-container .bg img {
+    margin-top: 147px;
 }
+
 
 .login-container .form {
-    width: 700px;
-    min-height: 464px;
-    margin: -200px auto;
+    width: 308px;
+    margin: 45px auto;
     background: #FFF;
     z-index: 10;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.login-container .form .input-group {
+    height: 30px;
+}
+
+.login-container .form .input-group .input-group-addon {
+    padding: 0;
+    border: none;
+}
+
+.login-container .form .form-control {
+    height: 30px;
+    border-radius: 0;
+    color: #ccc;
+}
+
+.btn {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 0;
+    font-size: 14px;
+    padding: 0;
+}
+
+.btn.btn-primary {
+    background:rgba(5,146,64,1);
+    color: #FFF;
+    border-color: rgba(5,146,64,1);
+}
+
+.btn.btn-default {
+    background:rgba(224,224,224,1);
+    color: #666;
 }
 
 .login-select, .operation {
