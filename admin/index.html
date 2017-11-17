@@ -12,7 +12,7 @@
         <div class="header">
             <div class="head-left">
                 <img src="assets/images/nav_logo.png" alt="">
-                <span>欢迎登录中垦流通后台管理系统</span>
+                <span>欢迎登录中垦流通滁州国际农产品物流园后台管理系统</span>
             </div>
             <div class="head-right">
                 <div class="right-box">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="right-box">
                     <img src="assets/images/nav_tuichu.png" alt="">
-                    <span class="exit">退出登陆</span>
+                    <span class="exit"><a href="login.html">退出登陆</a></span>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
                     <div role="tabpanel" class="tab-pane active" id="list">
                         <div class="tab-header">
                             <h2 class="title">分类管理</h2>
-                            <button type="button" class="btn btn-primary">添加大分类</button>
+                            <button class="btn btn-primary" onclick="addSector()">添加大分类</button>
                         </div>
                         <div class="layer">
                             <div id="tableMain">
@@ -308,7 +308,7 @@
   }
 
   function addSector(treeNode) {
-    currentNode = treeNode;
+    currentNode = treeNode || null;
     $('#addModal').modal('show');
     console.log(treeNode)
 //    var name = new Date().getTime();
@@ -337,17 +337,25 @@
     var addKeywordVal = $('#addKeyword').val();
     var addOrderVal = $('#addOrder').val();
     var id = new Date().getTime();
+    if(currentNode) {
+      var pId = currentNode.id;
+    } else {
+      var pId = id;
+    }
     var newNode = {
       name: addNameVal,
       keyword: addKeywordVal,
       order: addOrderVal,
-      pId: currentNode.id,
-      id: id,
-      isParent: currentNode.isParent
+      pId: pId,
+      id: id
     }
     console.log(currentNode)
-
-    zTree.addNodes(currentNode, -1, newNode);
+    $('#addModal').modal('hide');
+    if (currentNode) {
+      zTree.addNodes(currentNode, -1, newNode);
+    } else {
+      zTree.addNodes(null, -1, newNode);
+    }
   }
 
   function edit(treeNode) {
@@ -356,7 +364,7 @@
   }
 
   $('#editSubmit').bind('click', function (e) {
-    e.preven0tDefault();
+    e.preventDefault();
     editSubmit();
   })
 
@@ -365,13 +373,14 @@
     var editKeywordVal = $('#editKeyword').val();
     var editOrderVal = $('#editOrder').val();
     var newNode = {
-      name: addNameVal,
-      keyword: addKeywordVal,
-      order: addOrderVal,
+      name: editNameVal,
+      keyword: editKeywordVal,
+      order: editOrderVal,
       pId: currentNode.pId,
       id: currentNode.id,
       isParent: currentNode.isParent
     }
+    $('#editModal').modal('hide');
     zTree.updateNode(newNode)
   }
 

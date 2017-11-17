@@ -72,6 +72,10 @@ body {
     padding: 0;
 }
 
+.btn a {
+    color: #FFF;
+}
+
 .btn.btn-primary {
     background:rgba(5,146,64,1);
     color: #FFF;

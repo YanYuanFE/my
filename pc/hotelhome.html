@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/weui.css">
+    <link rel="stylesheet" href="assets/css/jquery-weui.css">
+    <link href="assets/css/video-js.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/video.min.js"></script>
+    <link rel="stylesheet" href="assets/css/hotelhome.css" />
+</head>
+<body>
+<div class="container-fluid home-container">
+    <div class="side">
+        <ul>
+            <li>
+                <a href="">
+                    <img src="assets/images/pre.png" alt="">
+                    <p>我的预约</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/order.png" alt="">
+                    <p>我的订单</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/pkicon.png" alt="">
+                    <p>房源对比</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/gz.png" alt="">
+                    <p>关注</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/sc.png" alt="">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/zj.png" alt="">
+                    <p>我的足迹</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/fk.png" alt="">
+                    <p>反馈我们</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="assets/images/kf.png" alt="">
+                    <p>客服</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="header container">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="assets/images/logo.png" alt="">
+                <img src="assets/images/area.png" alt="" class="gps">
+                <span class="location">深圳</span>
+                <a href="" class="changecity">切换城市</a>
+            </div>
+            <div class="col-md-3">
+                <div class="tab">
+                    <ul>
+                        <li>
+                            <a href="index.html" >首页</a>
+                        </li>
+                        <li>
+                            <a href="hotel.html" class="active">品牌公寓</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="login.html">登录</a>/<a href="login.html">注册</a>
+                        </li>
+                        <li>
+                            <a href="person.html">个人中心</a>
+                        </li>
+                        <li ><a href="company.html" >企业用户</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-container">
+        <img src="assets/images/banner.png" alt="" class="banner">
+        <div class="filter"></div>
+        <div class="user-info">
+            <img src="assets/images/avatar.png" alt="">
+            <p>创新公寓</p>
+        </div>
+        <div class="attention">
+            <img src="assets/images/hasattention.png" alt="">
+            <p>已关注</p>
+        </div>
+        <div class="search-container">
+            <span class="btn-search">
+                <input type="text" class="inner-search-input" placeholder="搜索户型">
+                <span class="search-btn">
+                    <img src="assets/images/search-icon.png" alt="">
+                </span>
+            </span>
+        </div>
+    </div>
+    <div class="section container">
+        <div class="recommend">
+            <div class="title">
+                <div class="line-left"></div>
+                <div class="text">VR视频</div>
+                <div class="line-right"></div>
+            </div>
+            <div class="img-list">
+                <video id="video_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" width="375" height="164"
+                       poster="assets/images/house1.png"
+                       data-setup="{}">
+                    <source src="http://视频地址格式1.mp4" type='video/mp4' />
+                    <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                    <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                </video>
+                <video id="video_2" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" width="375" height="164"
+                       poster="assets/images/house2.png"
+                       data-setup="{}">
+                    <source src="http://视频地址格式1.mp4" type='video/mp4' />
+                    <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                    <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                </video>
+            </div>
+        </div>
+    </div>
+    <div class="brand-hotel container">
+        <div class="title">
+            <div class="line-left"></div>
+            <div class="text">推荐房源</div>
+            <div class="line-right"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <a href="#" class="thumbnail hotel-item">
+                    <img src="assets/images/attention1.png" alt="">
+                    <div class="hotel-name">创新公寓</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="info-item col-md-4">
+                <ul>
+                    <li>关于我们</li>
+                    <li>联系我们</li>
+                    <li>注册登录</li>
+                </ul>
+            </div>
+            <div class="info-item col-md-4">
+                <div class="tel">服务热线：400-222-222</div>
+            </div>
+            <div class="code-item col-md-4">
+                <img src="assets/images/code.png" alt="">
+                <p>公众号</p>
+            </div>
+            <div class="copyright">Copyright © 2017 qfang.com All Rights Reserved ICP备案号：粤ICP备05067219号-3</div>
+            <div class="copyright">
+                深圳市xxxxx有限公司
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script>
+    $(function () {
+      $('.btn-search').hover(function () {
+        $(this).toggleClass('btn-search-in')
+      })
+    })
+</script>
+</body>
+</html>

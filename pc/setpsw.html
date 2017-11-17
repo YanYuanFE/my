@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>我的</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/weui.css">
+    <link rel="stylesheet" href="assets/css/jquery-weui.css">
+    <link rel="stylesheet" href="assets/css/forget.css" />
+</head>
+<body>
+<div class="login-container">
+    <div class="bg">
+
+    </div>
+    <div class="form" >
+        <div class="title">
+            忘记密码
+        </div>
+        <div class="step-container">
+            <div class="step">
+                <div class="circle">1</div>
+                <p>手机验证</p>
+            </div>
+            <div class="line line-green"></div>
+            <div class="step active">
+                <div class="circle">2</div>
+                <p>设置密码</p>
+            </div>
+        </div>
+        <form action="" id="resetForm">
+            <div id="reset">
+                <div class="form-item">
+                    <input type="text" class="weui-input"  placeholder="请输入新密码" id="password" name="password">
+                </div>
+                <div class="form-item">
+                    <input type="text" class="weui-input"  placeholder="请再次输入新密码" id="confirm_password" name="confirm_password">
+                </div>
+            </div>
+            <button type="submit" class="login-btn weui-btn weui-btn_primary reset-btn" id="reset-btn">
+                重置密码
+            </button>
+        </form>
+
+    </div>
+
+</div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/jquery.validate.js"></script>
+<script src="assets/js/messages_zh.js"></script>
+<script src="assets/js/form.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#next').click(function (e) {
+
+      $(this).hide();
+      $('#regForm').hide();
+      $('#reset-btn').css('display','block');
+      $('#resetForm').css('display','block');
+      $('.step').addClass('active');
+      $('.line').addClass('line-green');
+      e.preventDefault();
+    })
+  })
+</script>
+</body>
+</html>

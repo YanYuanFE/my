@@ -149,9 +149,9 @@ form {
 }
 
 
-#resetForm,.reset-btn{
-    display: none;
-}
+/*#resetForm,.reset-btn{*/
+    /*display: none;*/
+/*}*/
 
 .error{
     color:red;
