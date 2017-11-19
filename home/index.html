@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/stylesheets/index.css" />
     <link rel="stylesheet" href="assets/stylesheets/weui.css">
     <link rel="stylesheet" href="assets/stylesheets/jquery-weui.css">
+    <script src="assets/js/picker.min.js"></script>
 </head>
 <body>
 <div class="search-container">
@@ -29,24 +30,16 @@
     </div>
     <div class="select-container">
         <div class="select">
-            <select name="">
-                <option>深圳</option>
-            </select>
+            <span id="city">深圳</span>
         </div>
         <div class="select">
-            <select name="">
-                <option>户型</option>
-            </select>
+            <span id="type">户型</span>
         </div>
         <div class="select">
-            <select name="" >
-                <option>价格</option>
-            </select>
+            <span id="price">价格</span>
         </div>
         <div class="select">
-            <select name="">
-                <option>品牌</option>
-            </select>
+            <span id="brand">品牌</span>
         </div>
     </div>
     <div class="order-content" id="list" style="overflow-y:auto; overflow-x:hidden;width:100%; height:100%;">
@@ -212,6 +205,7 @@
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
 <script src="assets/js/lazyload.min.js"></script>
+<script src="assets/js/iscroll.js"></script>
 <script>
   $(document).ready(function(){
     $(".lazy").lazyload();
@@ -221,6 +215,319 @@
     $("#search").focus(function(){
 //      window.location.pathname="/my/home/search.html"
     });
+    var cityLeftData = [{
+      text: '附近',
+      value: 'fj'
+    },{
+      text: '区域',
+      value: 'qy'
+    },{
+      text: '广东省',
+      value: 'gd'
+    },{
+      text: '福建省',
+      value: 'fj'
+    },{
+      text: '广西省',
+      value: 'gx'
+    },{
+      text: '福建省',
+      value: 'fj'
+    },{
+      text: '广西省',
+      value: 'gx'
+    }];
+    var cityData = [
+      [{
+        text: '不限',
+        value: 'bx'
+      },{
+        text: '1KM',
+        value: '1k'
+      },{
+        text: '1.5KM',
+        value: '1m'
+      },{
+        text: '2KM',
+        value: '2m'
+      }],
+      [{
+        text: '不限',
+        value: 'jn'
+      },{
+        text: '罗湖区',
+        value: 'sl'
+      },{
+        text: '南山区',
+        value: 'gx'
+      },{
+        text: '宝安区',
+        value: 'wh'
+      },{
+        text: '福田区',
+        value: 'xd'
+      }],
+      [{
+        text: '广州市',
+        value: 'gz'
+      }],
+      [{
+        text: '福州市',
+        value: 'fz'
+      }],
+      [{
+        text: '桂林市',
+        value: 'gl'
+      }],
+      [{
+        text: '福州市',
+        value: 'fz'
+      }],
+      [{
+        text: '桂林市',
+        value: 'gl'
+      }]
+    ];
+    var areaData = [
+      [[]],
+      [
+        [],
+        [{
+          text: '不限',
+          value: 'jn'
+        },{
+          text: '百仕达',
+          value: 'sl'
+        },{
+          text: '布心',
+          value: 'gx'
+        },{
+          text: '春风路',
+          value: 'wh'
+        },{
+          text: '翠竹',
+          value: 'xd'
+        }]
+      ],
+      [
+        [{
+          text: '广州市',
+          value: 'gz'
+        }]
+      ],
+      [
+        [{
+          text: '福州市',
+          value: 'fz'
+        }]
+      ],
+      [
+        [{
+          text: '桂林市',
+          value: 'gl'
+        }]
+      ],
+      [
+        [{
+          text: '福州市',
+          value: 'fz'
+        }]
+      ],
+      [
+        [{
+          text: '桂林市',
+          value: 'gl'
+        }]
+      ]
+    ];
+    var typeData = [{
+      text: '单间',
+      value: 'fj'
+    },{
+      text: '一室一厅',
+      value: 'qy'
+    },{
+      text: '二室一厅',
+      value: 'gd'
+    },{
+      text: '四室二厅',
+      value: 'fj'
+    },{
+      text: '五房',
+      value: 'gx'
+    },{
+      text: '别墅',
+      value: 'fj'
+    }];
+    var priceData = [{
+      text: '不限',
+      value: 'fj'
+    },{
+      text: '600元以下',
+      value: 'qy'
+    },{
+      text: '600-1000元',
+      value: 'gd'
+    },{
+      text: '1000-1500元',
+      value: 'fj'
+    },{
+      text: '1500-2000元',
+      value: 'gx'
+    }, {
+      text: '2000元以上',
+      value: 'gx'
+    }]
+    var brandData = [{
+      text: '阔以',
+      value: 'fj'
+    },{
+      text: '如家',
+      value: 'qy'
+    }]
+    function tPicker(options) {
+      this.data = options.data;
+      this.el = options.el;
+      this.value = '';
+      this.init();
+    }
+    tPicker.prototype = {
+      init: function () {
+        this.createDom();
+      },
+      createDom: function () {
+        var that = this;
+        this.picker = $('<div class="tpicker"></div>');
+        if(this.data.length) {
+          var leftData = this.data[0];
+
+          var leftBox = $('<ul class="left"></ul>');
+          this.left = leftBox;
+
+          $(leftData).each(function (i, obj) {
+            console.log(i)
+            var liLeft = $('<li></li>').html(obj.text).attr('val', i).appendTo(leftBox);
+            if(i == 0) {
+              liLeft.addClass('active');
+            }
+          })
+          leftBox.on('click', function (e) {
+            if(e.target.tagName.toUpperCase() === 'LI') {
+                $(e.target).addClass('active').siblings().removeClass('active');
+                var leftVal = $(e.target).html();
+                console.log(leftVal)
+              $(that.el).html(leftVal);
+              setTimeout(function () {
+                leftBox.unbind('click');
+                that.hide();
+              }, 300);
+            }
+          })
+          console.log(leftBox)
+          var leftScroll = $('<div id="leftScroll" class="scroll"></div>');
+          leftBox.appendTo(leftScroll);
+          leftScroll.appendTo(this.picker);
+        }
+      },
+      createMask: function () {
+        var that = this;
+        console.log($('.tpicker-mask').length)
+        if($('.tpicker-mask').length) {
+          $('.tpicker-mask').show();
+          this.mask = $('.tpicker-mask');
+          return;
+        };
+        this.mask = $('<div class="tpicker-mask"></div>');
+        $('#content').append(this.mask);
+        this.mask.on('click', function () {
+          that.hide();
+        })
+      },
+      updateRight: function(index) {
+        var that = this;
+        if(!index) index = 0;
+        var rightData = this.data[1][index];
+        $('.picker #rightScroll').remove();
+        var rightBox = $('<ul class="right"></ul>');
+        this.right = rightBox;
+        $(rightData).each(function (i, obj) {
+          console.log(i)
+          $('<li></li>').html(obj.text).attr('val', obj.value).appendTo(rightBox);
+        })
+        rightBox.on('click', function (e) {
+          console.log(e.target)
+          if(e.target.tagName.toUpperCase() === 'LI') {
+            $(e.target).addClass('active').siblings().removeClass('active');
+            var rightVal = $(e.target).attr('val');
+            var rightText = $(e.target).html();
+            that.value = rightVal;
+            console.log($(that.el))
+            $(that.el).html(rightText);
+            setTimeout(function () {
+              that.hide();
+            }, 300)
+          }
+        })
+        var rightScroll = $('<div id="rightScroll" class="scroll"></div>');
+        rightBox.appendTo(rightScroll);
+        rightScroll.appendTo(this.picker)
+      },
+      show: function () {
+        $(document.body).append(this.picker);
+        var leftscroll = new IScroll('#leftScroll', { mouseWheel: true, click: true, probeType: 2 });
+        this.createMask();
+      },
+      hide: function () {
+        this.picker.remove();
+        this.mask.hide();
+      }
+    }
+    var cityPicker = new Picker({
+      data: [cityLeftData, cityData[0], areaData[0][0]],
+    });
+
+    $("#city").click(function () {
+      cityPicker.show();
+    })
+    var currentOneIndex = 0;
+    var currentTwoIndex = 0;
+    cityPicker.on('picker.change', function (index, selectedIndex) {
+        //当一列滚动停止的时候，会派发picker.change事件，同时会传递列序号index及滚动停止的位置selectIndex。
+      console.log(index, selectedIndex)
+      if(index === 0) {
+        currentOneIndex = selectedIndex;
+        cityPicker.refillColumn(1, cityData[selectedIndex])
+        cityPicker.refillColumn(2, areaData[index][0])
+      } else if(index === 1){
+        currentTwoIndex = selectedIndex;
+        cityPicker.refillColumn(2, areaData[currentOneIndex][selectedIndex])
+      }
+
+    })
+    cityPicker.on('picker.select', function (selectedVal, selectedIndex) {
+      console.log(selectedVal, selectedIndex)
+    })
+    $("#type").click(function () {
+      var typePicker = new tPicker({
+        data: [typeData],
+        el: '#type',
+      })
+      typePicker.show();
+    })
+    $("#price").click(function () {
+      var pricePicker = new tPicker({
+        data: [priceData],
+        el: '#price',
+      })
+      pricePicker.show();
+    })
+    $("#brand").click(function () {
+      var brandPicker = new tPicker({
+        data: [brandData],
+        el: '#brand',
+      })
+      brandPicker.show();
+    })
     $('.weui-loadmore').css('display', 'none');
     var loading = false;
     $("#list").infinite(0).on("infinite", function() {

@@ -36,7 +36,19 @@ li {
     line-height: 69px;
     position: relative;
     display: flex;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     align-items: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
     padding: 0 38px 0 19px;
     justify-content: space-between;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 1px -1px rgba(0, 0, 0, 0.2);
@@ -48,6 +60,10 @@ li {
 
 .head-right {
     display: flex;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     align-items: center;
 }
 
@@ -61,11 +77,16 @@ li {
 
 .content {
     display: flex;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
 }
 
 .side {
     width: 174px;
     padding-top: 25px;
+    display: table-cell;
 }
 
 .side ul li {
@@ -76,6 +97,7 @@ li {
 
 .main {
     flex: 1;
+    -webkit-box-flex: 1;
     background: #F4F4F4;
     padding: 18px 15px;
 }
@@ -233,6 +255,68 @@ li {
     border-color: #dadada;
 }
 
+table thead {
+    height:46px;
+    background:rgba(244,244,244,1);
+    font-size:14px;
+    font-family:PingFang-SC-Bold;
+    color:rgba(51,51,51,1);
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.btn.btn-warning {
+    background: #FEAC40;
+    border-color: #FEAC40;
+}
+
+.btn.btn-danger {
+    background: #FF8586;
+    border-color: #FF8586;
+}
+
+.navbar {
+    margin: 0;
+}
+.navbar .navbar__item {
+    display: inline-block;
+    height: 100%;
+    line-height: 56px;
+    margin-right: 38px;
+    font-weight: 600;
+}
+
+.navbar .navbar__item.bar__item--on {
+    color: rgba(5,160,70,1);
+    border-bottom: 2px solid rgba(5,160,70,1);
+}
+
+.tab-item {
+    display: none;
+}
+
+.tab-item.tab-item-active {
+    display: block;
+}
+
+.table>thead>tr>th {
+    border-bottom: none;
+    text-align: center;
+}
+
+table tbody tr {
+    height: 56px;
+    border-bottom: 1px solid #e9e9e9;
+    line-height: 56px;
+    border-top: none;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border-top: none;
+    vertical-align: middle;
+    text-align: center;
+}
+
 .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
     z-index: 2;
     color: #FFF;
@@ -312,6 +396,84 @@ li {
 
 .modal label {
     font-weight: 400;
+    text-align: left;
+}
+
+.modal .form-inline {
+    margin-bottom: 20px;
+}
+
+.modal .no-padding {
+    padding: 0;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.modal select {
+    height: 30px;
+    vertical-align: middle;
+}
+
+.modal input {
+    border-radius: 0;
+    height: 30px;
+}
+.modal .list {
+    padding: 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.modal .list-last{
+    border-bottom: none;
+}
+.modal .list-item {
+    margin-bottom: 30px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .check-title {
+    color: rgba(5,146,64,1);
+    font-weight: 600;
+}
+.uploadLabel {
+    background: rgba(5,146,64,1);
+    border-color: rgba(5,146,64,1);
+    border-radius: 4px;
+    padding: 3px 6px;
+    color: #FFF;
+}
+
+.borderTop {
+    border-top: 1px solid #E6E6E6;
+    padding-top: 10px;
+}
+
+.check-btntitle .btn{
+    background:rgba(5,146,64,1);
+    padding: 3px 6px;
+    width: 65px;
+}
+
+.uploadImg {
+    visibility: hidden;
+}
+.flex-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    #addCheckModal .modal-dialog {
+         width: 638px;
+    }
 }
 
 .modal .modal-header {
@@ -323,13 +485,13 @@ li {
 }
 
 .modal .modal-content .close {
-    position: absolute;
-    top:0;
-    right: -24px;
+    /*position: absolute;*/
+    /*top:0;*/
+    /*right: -24px;*/
     font-size: 25px;
-    font-weight: 400;
-    color: #FFF;
-    opacity: 1;
+    /*font-weight: 400;*/
+    /*color: #FFF;*/
+    /*opacity: 1;*/
 }
 
 

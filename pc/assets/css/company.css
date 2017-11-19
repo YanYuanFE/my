@@ -114,10 +114,11 @@ li {
     border-left:2px solid #8FD026;
     border-radius: 0;
 }
+
 .upload {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -150,6 +151,18 @@ li {
     margin-top: .5rem;
     background: #FFFFFF;
     border: 1px dashed #8FD026;
+}
+
+.upload img {
+    width: 75px;
+    height: 75px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.change-tel {
+    margin-top: 20px;
+    display: none;
 }
 
 .weui-uploader__input-box:before, .weui-uploader__input-box:after {
@@ -297,6 +310,7 @@ table .btn {
     margin-right: 8px;
     width: 70px;
     height: 35px;
+    line-height: 35px;
 }
 
 .source-item .weui-btn:after {

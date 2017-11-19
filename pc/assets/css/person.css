@@ -14,8 +14,7 @@ a {
     text-decoration: none;
 }
 
-a:focus,
-a:hover {
+a:focus, a:hover {
     color: #333;
     text-decoration: none;
 }
@@ -53,7 +52,7 @@ li {
     padding-left: 14px;
 }
 
-.header {
+.header-wrapper {
     border-bottom: 1px solid #E6E6E6;
 }
 
@@ -87,7 +86,7 @@ li {
 }
 
 .sidenav .title {
-    width: 176px;
+    width: 100%;
     text-align: center;
     height: 90px;
     color: #FFF;
@@ -98,7 +97,7 @@ li {
 
 .sidenav ul {
     background: #F9F9F9;
-    width: 176px;
+    width: 100%;
     padding-bottom: 100px;
 }
 
@@ -117,7 +116,7 @@ li {
 .upload {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -165,13 +164,20 @@ li {
     background: none;
 }
 
-.weui-uploader__input-box img {
-    width: 75px;
-    height: 75px;
-}
-
 .weui-uploader__input-box:before, .weui-uploader__input-box:after {
     background: #8FD026;
+}
+
+.upload img {
+    width: 75px;
+    height: 75px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.change-tel {
+    margin-top: 20px;
+    display: none;
 }
 
 #message .tab-title {
@@ -229,6 +235,7 @@ li {
 
 .person-container table tbody td {
     vertical-align: middle;
+    text-align: center;
 }
 
 #order table thead,#pre table thead {
@@ -507,13 +514,17 @@ table .btn {
     text-align: center;
 }
 
-.side a {
+.side li {
     color: #FFF;
-    display: inline-block;
     height: 90px;
     padding: 20px 4px;
     border-bottom: 1px solid #FFF;
 }
+
+.side li a {
+    color: #FFF;
+}
+
 
 
 .modal .modal-content {
@@ -522,8 +533,12 @@ table .btn {
 }
 
 @media (min-width: 768px) {
-    .modal-dialog {
+    #refund .modal-dialog {
         width: 704px;
+    }
+    .modal-dialog.cancel {
+        width: 387px;
+        height: 213px;
     }
 }
 
@@ -533,6 +548,11 @@ table .btn {
     }
 }
 
+.modal-dialog.cancel .modal-body p {
+    color: #333;
+    text-align: center;
+}
+
 #deleteMessage .modal-body h3 {
     text-align: center;
 }
@@ -540,6 +560,10 @@ table .btn {
 .modal .modal-header, .modal .modal-footer {
     /*border: none;*/
     text-align: center;
+}
+
+.modal-footer.no-border {
+    border:none;
 }
 
 .modal .modal-body p {
@@ -564,9 +588,26 @@ table .btn {
     border: 1px solid #DADADA;
     color: #DADADA;
     padding: 0;
+    outline:none;
 }
 
 .modal .btn.btn-primary {
+    background: #8FD026;
+    color: #FFF;
+    border: 1px solid #8FD026;
+}
+
+.modal .cancel .modal-body {
+    padding: 60px 0;
+}
+
+.modal .cancel .btn.btn-primary {
+    background: #FFF;
+    color: #8FD026;
+    border: 1px solid #8FD026;
+}
+
+.modal .cancel .btn.btn-default {
     background: #8FD026;
     color: #FFF;
     border: 1px solid #8FD026;
@@ -608,5 +649,108 @@ table .btn {
 
 .modal .refund-price span{
     color: #FA2F2F;
+}
+
+
+
+.price-title p {
+    margin-bottom: 57px;
+}
+
+.modal .price-box {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 27px;
+}
+
+.modal .price-box span {
+    margin-left: 37px;
+}
+
+.modal .price-box .title {
+    color: #8FD026;
+    width: 105px;
+    display: inline-block;
+    margin: 0;
+}
+
+.modal table thead {
+    background: #8FD026;
+    color: #FFF;
+}
+
+.modal table thead tr th {
+    border-bottom: none;
+}
+
+.modal table {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+#payModal .btn-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#payModal .rent-submit {
+    display: flex;
+}
+.person-info input{
+    border-radius: 0;
+    background-color: #F9F9F9;
+}
+
+#payModal .modal-title {
+    text-align: center;
+}
+
+.person-info, .pay-list {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+
+.person-info form {
+    margin-right: 14px;
+}
+
+.pay-list .pay-item {
+    width: 139px;
+    height: 47px;
+    border: 1px solid #DADADA;
+    background: #FFF;
+    line-height: 47px;
+    margin-right: 18px;
+    margin-top: 33px;
+    text-align: center;
+}
+
+
+.tip {
+    font-size: 14px;
+    color: #8FD026;
+    line-height: 34px;
+}
+
+#payModal .btn {
+    width: 137px;
+    margin: 0 auto;
+    text-align: center;
+    height: 43px;
+    line-height: 43px;
+    cursor: pointer;
+    border: 1px solid #DADADA;
+    background: #FFF;
+    color: #DADADA;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 13px;
+}
+
+#payModal .btn.btn-primary {
+    background: #8FD026;
+    color: #FFF;
+    border: 1px solid #8FD026;
 }
 

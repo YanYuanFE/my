@@ -32,22 +32,16 @@
                         <a href="#list" aria-controls="list" role="tab" data-toggle="tab">分类管理</a>
                     </li>
                     <li role="presentation">
-                        <a href="#user" aria-controls="user" role="tab" data-toggle="tab">用户管理</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#supplier" aria-controls="supplier" role="tab" data-toggle="tab">供应商管理</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#seller" aria-controls="seller" role="tab" data-toggle="tab">档主管理</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#client" aria-controls="client" role="tab" data-toggle="tab">客户管理</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#driver" aria-controls="driver" role="tab" data-toggle="tab">司机管理</a>
-                    </li>
-                    <li role="presentation">
                         <a href="#goods" aria-controls="goods" role="tab" data-toggle="tab">商品管理</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#check" aria-controls="supplier" role="tab" data-toggle="tab">快检管理</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#entry" aria-controls="seller" role="tab" data-toggle="tab">入口管理</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#exit" aria-controls="client" role="tab" data-toggle="tab">出口管理</a>
                     </li>
                 </ul>
             </div>
@@ -63,6 +57,726 @@
                                 <ul id="dataTree" class="ztree">
 
                                 </ul>
+                            </div>
+                        </div>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li class="num">
+                                        1/15页
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        到第
+                                        <input type="text">页
+                                    </li>
+                                    <li class="active go">
+                                        前往
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="goods">
+                        <div class="tab-header">
+                            <h2 class="title">商品管理</h2>
+                            <button class="btn btn-primary" id="addGood">添加商品</button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>商品名称</th>
+                                        <th>商品类型</th>
+                                        <th>商品型号</th>
+                                        <th>单位</th>
+                                        <th>零售价</th>
+                                        <th>批发价</th>
+                                        <th>VIP价</th>
+                                        <th>折扣1</th>
+                                        <th>折扣2</th>
+                                        <th>采购价</th>
+                                        <th>备注</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>苹果</td>
+                                    <td>好苹果</td>
+                                    <td>PG-00200</td>
+                                    <td>千克</td>
+                                    <td>2.5</td>
+                                    <td>2.2</td>
+                                    <td>2.0</td>
+                                    <td>0.98</td>
+                                    <td>0.9</td>
+                                    <td>0.8</td>
+                                    <td>精品苹果</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-warning edit-goods" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>苹果</td>
+                                    <td>好苹果</td>
+                                    <td>PG-00200</td>
+                                    <td>千克</td>
+                                    <td>2.5</td>
+                                    <td>2.2</td>
+                                    <td>2.0</td>
+                                    <td>0.98</td>
+                                    <td>0.9</td>
+                                    <td>0.8</td>
+                                    <td>精品苹果</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-warning edit-goods" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>苹果</td>
+                                    <td>好苹果</td>
+                                    <td>PG-00200</td>
+                                    <td>千克</td>
+                                    <td>2.5</td>
+                                    <td>2.2</td>
+                                    <td>2.0</td>
+                                    <td>0.98</td>
+                                    <td>0.9</td>
+                                    <td>0.8</td>
+                                    <td>精品苹果</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-warning edit-goods" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>苹果</td>
+                                    <td>好苹果</td>
+                                    <td>PG-00200</td>
+                                    <td>千克</td>
+                                    <td>2.5</td>
+                                    <td>2.2</td>
+                                    <td>2.0</td>
+                                    <td>0.98</td>
+                                    <td>0.9</td>
+                                    <td>0.8</td>
+                                    <td>精品苹果</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-warning edit-goods" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>苹果</td>
+                                    <td>好苹果</td>
+                                    <td>PG-00200</td>
+                                    <td>千克</td>
+                                    <td>2.5</td>
+                                    <td>2.2</td>
+                                    <td>2.0</td>
+                                    <td>0.98</td>
+                                    <td>0.9</td>
+                                    <td>0.8</td>
+                                    <td>精品苹果</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-warning edit-goods" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>苹果</td>
+                                    <td>好苹果</td>
+                                    <td>PG-00200</td>
+                                    <td>千克</td>
+                                    <td>2.5</td>
+                                    <td>2.2</td>
+                                    <td>2.0</td>
+                                    <td>0.98</td>
+                                    <td>0.9</td>
+                                    <td>0.8</td>
+                                    <td>精品苹果</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-warning edit-goods" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>苹果</td>
+                                    <td>好苹果</td>
+                                    <td>PG-00200</td>
+                                    <td>千克</td>
+                                    <td>2.5</td>
+                                    <td>2.2</td>
+                                    <td>2.0</td>
+                                    <td>0.98</td>
+                                    <td>0.9</td>
+                                    <td>0.8</td>
+                                    <td>精品苹果</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-warning edit-goods" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li class="num">
+                                        1/15页
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        到第
+                                        <input type="text">页
+                                    </li>
+                                    <li class="active go">
+                                        前往
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="check">
+                        <div class="tab-header">
+                            <h2 class="title">快检管理</h2>
+                            <button class="btn btn-primary" id="addCheck">添加快检</button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>时间</th>
+                                    <th>司机</th>
+                                    <th>电话</th>
+                                    <th>车牌</th>
+                                    <th>车型</th>
+                                    <th>身份证</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>2017-11-17</td>
+                                    <td>张师傅</td>
+                                    <td>13212841258</td>
+                                    <td>湘A689WR</td>
+                                    <td>货柜车</td>
+                                    <td>415487198711234710</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-primary view-check" >查看快检单</button>
+                                        <button class="icon_edit btn btn-warning edit-check" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017-11-17</td>
+                                    <td>张师傅</td>
+                                    <td>13212841258</td>
+                                    <td>湘A689WR</td>
+                                    <td>货柜车</td>
+                                    <td>415487198711234710</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-primary view-check" >查看快检单</button>
+                                        <button class="icon_edit btn btn-warning edit-check" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>2017-11-17</td>
+                                    <td>张师傅</td>
+                                    <td>13212841258</td>
+                                    <td>湘A689WR</td>
+                                    <td>货柜车</td>
+                                    <td>415487198711234710</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-primary view-check" >查看快检单</button>
+                                        <button class="icon_edit btn btn-warning edit-check" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>2017-11-17</td>
+                                    <td>张师傅</td>
+                                    <td>13212841258</td>
+                                    <td>湘A689WR</td>
+                                    <td>货柜车</td>
+                                    <td>415487198711234710</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-primary view-check" >查看快检单</button>
+                                        <button class="icon_edit btn btn-warning edit-check" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>2017-11-17</td>
+                                    <td>张师傅</td>
+                                    <td>13212841258</td>
+                                    <td>湘A689WR</td>
+                                    <td>货柜车</td>
+                                    <td>415487198711234710</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-primary view-check" >查看快检单</button>
+                                        <button class="icon_edit btn btn-warning edit-check" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr><tr>
+                                    <td>2017-11-17</td>
+                                    <td>张师傅</td>
+                                    <td>13212841258</td>
+                                    <td>湘A689WR</td>
+                                    <td>货柜车</td>
+                                    <td>415487198711234710</td>
+                                    <td>
+                                        <button class="icon_edit btn btn-primary view-check" >查看快检单</button>
+                                        <button class="icon_edit btn btn-warning edit-check" >编辑</button>
+                                        <button class="icon_edit btn btn-danger" >删除</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li class="num">
+                                        1/15页
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        到第
+                                        <input type="text">页
+                                    </li>
+                                    <li class="active go">
+                                        前往
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane tab" id="entry">
+                        <div class="tab-header">
+                            <div class="navbar">
+                                <a class="navbar__item bar__item--on" href="#checked">
+                                    已快检车辆
+                                </a>
+                                <a class="navbar__item" href="#print">
+                                    可打送货单车辆
+                                </a>
+                            </div>
+                        </div>
+                        <div class="table-container" id="entryTabContent">
+                            <div class="tab-item tab-item-active" id="checked">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>时间</th>
+                                            <th>司机</th>
+                                            <th>车牌</th>
+                                            <th>快检单</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-entry" >添加入口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-entry" >添加入口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-entry" >添加入口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-entry" >添加入口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-entry" >添加入口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-entry" >添加入口信息</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-item" id="print">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>时间</th>
+                                        <th>司机</th>
+                                        <th>车牌</th>
+                                        <th>快检单</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-entry" >查看入口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-entry" >查看入口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-entry" >查看入口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-entry" >查看入口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-entry" >查看入口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-entry" >查看入口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li class="num">
+                                        1/15页
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        到第
+                                        <input type="text">页
+                                    </li>
+                                    <li class="active go">
+                                        前往
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane tab" id="exit">
+                        <div class="tab-header">
+                            <div class="navbar">
+                                <a class="navbar__item bar__item--on" href="#checked">
+                                    已快检车辆
+                                </a>
+                                <a class="navbar__item" href="#print">
+                                    可打送货单车辆
+                                </a>
+                            </div>
+                        </div>
+                        <div class="table-container" id="exitTabContent">
+                            <div class="tab-item tab-item-active">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>时间</th>
+                                        <th>司机</th>
+                                        <th>车牌</th>
+                                        <th>快检单</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-exit" >添加出口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-exit" >添加出口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-exit" >添加出口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-exit" >添加出口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-exit" >添加出口信息</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary add-exit" >添加出口信息</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-item">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>时间</th>
+                                        <th>司机</th>
+                                        <th>车牌</th>
+                                        <th>快检单</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-exit" >查看出口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-exit" >查看出口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-exit" >查看出口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-exit" >查看出口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-exit" >查看出口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017-11-17</td>
+                                        <td>张师傅</td>
+                                        <td>湘A689WR</td>
+                                        <td>
+                                            <img src="assets/images/order.png" alt="">
+                                            <img src="assets/images/order.png" alt="">
+                                        </td>
+                                        <td>
+                                            <button class="icon_edit btn btn-primary view-exit" >查看出口信息</button>
+                                            <button class="icon_edit btn btn-warning" >打印送货单</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div class="pagination pull-right">
@@ -164,6 +878,677 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addGoodModal" tabindex="-1" role="dialog" aria-labelledby="addGoodModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addGoodModalLabel">增加商品</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="goodName" class="col-sm-3 control-label">商品名称：</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="goodName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="goodStyle" class="col-sm-3 control-label">商品型号：</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="goodStyle">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">商品类型：</label>
+                            <div class="col-sm-7">
+                                <select name="" id="">
+                                    <option value="请选择">请选择</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="请选择">请选择</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="请选择">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">单     位：</label>
+                            <div class="col-sm-7">
+                                <select name="" id="">
+                                    <option value="请选择">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="price" class="col-sm-3 control-label">零 售 价：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="price">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tradePrice" class="col-sm-3 control-label">批 发 价：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="tradePrice">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="vipPrice" class="col-sm-3 control-label">VIP  价：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="vipPrice">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="discountOne" class="col-sm-3 control-label">折 扣 1：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="discountOne">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="discountTwo" class="col-sm-3 control-label">折 扣 2：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="discountTwo">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="supplyPrice" class="col-sm-3 control-label">采 购 价：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="supplyPrice">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="price" class="col-sm-3 control-label">备    注：</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="tip">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editGoodModal" tabindex="-1" role="dialog" aria-labelledby="editGoodModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="editGoodModalLabel">编辑商品</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="editgoodName" class="col-sm-3 control-label">商品名称：</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="editgoodName" value="苹果">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editgoodStyle" class="col-sm-3 control-label">商品型号：</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="editgoodStyle" value="PG-00200">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">商品类型：</label>
+                            <div class="col-sm-7">
+                                <select name="" id="">
+                                    <option value="苹果">苹果</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="红富士">红富士</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="好苹果">好苹果</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-sm-3 control-label">单     位：</label>
+                            <div class="col-sm-7">
+                                <select name="" id="">
+                                    <option value="千克">千克</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editprice" class="col-sm-3 control-label">零 售 价：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="editprice" value="2.5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="edittradePrice" class="col-sm-3 control-label">批 发 价：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="edittradePrice" value="2.2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editvipPrice" class="col-sm-3 control-label">VIP  价：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="editvipPrice" value="2.0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editdiscountOne" class="col-sm-3 control-label">折 扣 1：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="editdiscountOne" value="0.98">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editdiscountTwo" class="col-sm-3 control-label">折 扣 2：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="editdiscountTwo" value="0.9">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="editsupplyPrice" class="col-sm-3 control-label">采 购 价：</label>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="editsupplyPrice" value="0.8">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="edittip" class="col-sm-3 control-label">备    注：</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="edittip" value="精品苹果">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addCheckModal" tabindex="-1" role="dialog" aria-labelledby="addCheckModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addCheckModalLabel">添加快检</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="check-title">司机信息</div>
+                    <form class="form-horizontal">
+                        <div class="form-inline clearfix">
+                            <div class="col-md-6 form-group">
+                                <label for="driverName" class="control-label">司机姓名：</label>
+                                <input type="text" class="form-control" id="driverName">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="driverName" class="control-label">联系方式：</label>
+                                <input type="text" class="form-control" id="phone">
+                            </div>
+                        </div>
+                        <div class="form-inline clearfix">
+                            <div class="col-md-6 form-group">
+                                <label for="goodStyle" class="no-padding control-label">车牌号码：</label>
+                                <select name="" id="">
+                                    <option value="请选择">请选择</option>
+                                </select>
+                                <input type="text" class="form-control" id="cardId" style="width: 100px;">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="goodStyle" class="no-padding control-label">车     型：</label>
+                                <select name="" id="">
+                                    <option value="请选择">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-inline clearfix">
+                            <div class="form-group col-md-12">
+                                <label for="" class="control-label">身份证号：</label>
+                                <input type="text" class="form-control" id="ID">
+                            </div>
+                        </div>
+                        <div class="check-btntitle clearfix borderTop">
+                            <span class="check-title">快检单</span>
+                            <button type="button" class="btn btn-primary addCheckOrder pull-right" id="addCheckOrder">增加</button>
+                        </div>
+                        <div class="order-content" id="orderContent">
+                            <div class="check-order-item">
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-10">
+                                        <label for="" class="control-label">单&nbsp;&nbsp;号：</label>
+                                        <input type="text" class="form-control" id="">
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="price" class="control-label">品&nbsp;&nbsp;种：</label>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="suppely" class="control-label">供 应 商：</label>
+                                        <input type="text" class="form-control" id="suppely">
+                                    </div>
+                                </div>
+
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="chekResult" class="control-label">检验结果：</label>
+                                        <input type="text" class="form-control" id="chekResult">
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="discountOne" class="control-label">检 验 单：</label>
+                                        <label for="uploadImg" class="uploadLabel">上传图片</label>
+                                        <input type="file" class="form-control uploadImg" id="uploadImg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editCheckModal" tabindex="-1" role="dialog" aria-labelledby="addCheckModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="editCheckModalLabel">编辑快检</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="check-title">司机信息</div>
+                    <form class="form-horizontal">
+                        <div class="form-inline clearfix">
+                            <div class="col-md-7 form-group">
+                                <label for="driverName" class="control-label">司机姓名：</label>
+                                <input type="text" class="form-control" id="" value="张师傅">
+                            </div>
+                            <div class="col-md-5 form-group">
+                                <label for="driverName" class="control-label">联系方式：</label>
+                                <input type="text" class="form-control" value="1325874123">
+                            </div>
+                        </div>
+                        <div class="form-inline clearfix">
+                            <div class="col-md-7 form-group">
+                                <label for="goodStyle" class="no-padding control-label">车牌号码：</label>
+                                <select name="" id="">
+                                    <option value="粤">粤</option>
+                                </select>
+                                <input type="text" class="form-control" value="B6087" style="width: 75px;">
+                            </div>
+                            <div class="col-md-5 form-group">
+                                <label for="goodStyle" class="no-padding control-label">车     型：</label>
+                                <select name="" id="">
+                                    <option value="小型货车">小型货车</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-inline clearfix">
+                            <div class="form-group col-md-12">
+                                <label for="" class="control-label">身份证号：</label>
+                                <input type="text" class="form-control" value="454125784152145632">
+                            </div>
+                        </div>
+                        <div class="check-btntitle clearfix ">
+                            <span class="check-title">快检单</span>
+                            <button type="button" class="btn btn-primary addCheckOrder pull-right" id="editCheckOrder">增加</button>
+                        </div>
+                        <div class="order-content" id="editOrderContent">
+                            <div class="check-order-item">
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="" class="control-label">单&nbsp;&nbsp;号：</label>
+                                        <input type="text" class="form-control" id="" value="154784411236">
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="price" class="control-label">品&nbsp;&nbsp;种：</label>
+                                        <select name="" id="">
+                                            <option value="蔬菜">蔬菜</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="黄瓜">黄瓜</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="进口黄瓜">进口黄瓜</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="suppely" class="control-label">供 应 商：</label>
+                                        <input type="text" class="form-control" value="山东大集团">
+                                    </div>
+                                </div>
+
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="chekResult" class="control-label">检验结果：</label>
+                                        <input type="text" class="form-control" value="合格">
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="discountOne" class="control-label">检 验 单：</label>
+                                        <img src="assets/images/order.png" alt="">
+                                        <!--<label for="uploadImg" class="uploadLabel">上传图片</label>-->
+                                        <!--<input type="file" class="form-control uploadImg" id="uploadImg">-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viewCheckModal" tabindex="-1" role="dialog" aria-labelledby="viewCheckModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="viewCheckModalLabel">张师傅/快检信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="list">
+                        <div class="list-item">
+                            <span class="list-title">单     号：</span>
+                            <span class="list-value">154784411236</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">品     种：</span>
+                            <span class="list-value">蔬菜/黄瓜/进口黄瓜</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">供 应 商：</span>
+                            <span class="list-value">山东大集团</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">检验结果：</span>
+                            <span class="list-value">合格</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">检 验 单：</span>
+                            <img src="assets/images/order.png" alt="">
+                        </div>
+                    </div>
+                    <div class="list list-last">
+                        <div class="list-item">
+                            <span class="list-title">单     号：</span>
+                            <span class="list-value">154784411236</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">品     种：</span>
+                            <span class="list-value">蔬菜/黄瓜/进口黄瓜</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">供 应 商：</span>
+                            <span class="list-value">山东大集团</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">检验结果：</span>
+                            <span class="list-value">合格</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">检 验 单：</span>
+                            <img src="assets/images/order.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addEntryModal" tabindex="-1" role="dialog" aria-labelledby="addEntryModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addEntryModalLabel">添加入口信息</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="check-btntitle clearfix ">
+                            <span class="check-title">入口信息</span>
+                            <button type="button" class="btn btn-primary addCheckOrder pull-right" id="addEntryInfo">增加</button>
+                        </div>
+                        <div class="order-content" id="entryContent">
+                            <div class="check-order-item">
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-9">
+                                        <label for="" class="control-label">车身重量：</label>
+                                        <input type="text" class="form-control" id="">
+                                        <span>KG</span>
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="price" class="control-label">档     主：</label>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="suppely" class="control-label">商     品：</label>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="chekResult" class="control-label">数     量：</label>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="chekResult" class="control-label">售     价：</label>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="discountOne" class="control-label">产地证明：</label>
+                                        <label for="uploadAreaImg" class="uploadLabel">上传图片</label>
+                                        <input type="file" class="form-control uploadImg" id="uploadAreaImg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viewEntryModal" tabindex="-1" role="dialog" aria-labelledby="viewEntryModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="viewEntryModalLabel">查看入口信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="list list-last">
+                        <div class="list-item">
+                            <span class="list-title">车身重量：</span>
+                            <span class="list-value">20KG</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">档     主：</span>
+                            <span class="list-value">天天水果-5C-005</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">商     品：</span>
+                            <span class="list-value">苹果</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">数     量：</span>
+                            <span class="list-value">2.5</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">产地证明：</span>
+                            <img src="assets/images/print.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addExitModal" tabindex="-1" role="dialog" aria-labelledby="addEntryModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addExitModalLabel">添加出口信息</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="check-btntitle clearfix ">
+                            <span class="check-title">出口信息</span>
+                            <button type="button" class="btn btn-primary addCheckOrder pull-right" id="addExitInfo">增加</button>
+                        </div>
+                        <div class="order-content" id="exitContent">
+                            <div class="check-order-item">
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-9">
+                                        <label for="" class="control-label">车身重量：</label>
+                                        <input type="text" class="form-control" id="">
+                                        <span>KG</span>
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="price" class="control-label">档     主：</label>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="suppely" class="control-label">商     品：</label>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="chekResult" class="control-label">数     量：</label>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="chekResult" class="control-label">售     价：</label>
+                                        <select name="" id="">
+                                            <option value="请选择">请选择</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-inline clearfix">
+                                    <div class="form-group col-md-12">
+                                        <label for="discountOne" class="control-label">产地证明：</label>
+                                        <label for="uploadAreaImg" class="uploadLabel">上传图片</label>
+                                        <input type="file" class="form-control uploadImg" id="uploadAreaImg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="viewExitModal" tabindex="-1" role="dialog" aria-labelledby="viewExitModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="viewExitModalLabel">查看入口信息</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="list list-last">
+                        <div class="list-item">
+                            <span class="list-title">车身重量：</span>
+                            <span class="list-value">20KG</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">档     主：</span>
+                            <span class="list-value">天天水果-5C-005</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">商     品：</span>
+                            <span class="list-value">苹果</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">数     量：</span>
+                            <span class="list-value">2.5</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-title">产地证明：</span>
+                            <img src="assets/images/print.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -390,10 +1775,220 @@
   }
 
   $(function () {
+
     //初始化数据
     query();
     zTree = $.fn.zTree.getZTreeObj("dataTree");
     console.log(zTree)
+    $('.navbar__item').click(function() {
+      var index = $(this).index();
+      $(this).addClass('bar__item--on').siblings('.navbar__item').removeClass('bar__item--on');
+      console.log($(this).parents('.tab').find('.tab-item'))
+      $(this).parents('.tab').find('.tab-item').eq(index).addClass('tab-item-active').siblings('.tab-item').removeClass('tab-item-active');
+    })
+
+    $('#addGood').click(function () {
+        $('#addGoodModal').modal('show');
+    })
+    $('.edit-goods').click(function () {
+      $('#editGoodModal').modal('show');
+    })
+    $('#addCheck').click(function () {
+      $('#addCheckModal').modal('show');
+    })
+
+
+    $('#addCheckOrder').click(function () {
+      addCheckOrder('#orderContent')
+    })
+    $('#editCheckOrder').click(function () {
+      addCheckOrder('#editOrderContent')
+    })
+    function addCheckOrder(el) {
+      var orderItem = $('<div class="check-order-item">\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-8">\n' +
+        '                                        <label for="" class="control-label">单&nbsp;&nbsp;号：</label>\n' +
+        '                                        <input type="text" class="form-control" id="">\n' +
+        '                                    </div>\n' +
+        '                                    <button class="btn btn-primary delete-check" type="button">删除</button>\n' +
+        '                                </div>\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="price" class="control-label">品&nbsp;&nbsp;种：</label>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="suppely" class="control-label">供 应 商：</label>\n' +
+        '                                        <input type="text" class="form-control" id="suppely">\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="chekResult" class="control-label">检验结果：</label>\n' +
+        '                                        <input type="text" class="form-control" id="chekResult">\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="discountOne" class="control-label">检 验 单：</label>\n' +
+        '                                        <label for="uploadImg" class="uploadLabel">上传图片</label>\n' +
+        '                                        <input type="file" class="form-control uploadImg" id="uploadImg">\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                            </div>')
+      $(el).append(orderItem);
+    }
+    $('#orderContent').on('click', '.delete-check', function() {
+      $(this).parents('.check-order-item').remove();
+    })
+    $('#editOrderContent').on('click', '.delete-check', function() {
+      $(this).parents('.check-order-item').remove();
+    })
+    $('#entryContent').on('click', '.delete-entry', function() {
+      $(this).parents('.check-order-item').remove();
+    })
+    $('#exitContent').on('click', '.delete-entry', function() {
+      $(this).parents('.check-order-item').remove();
+    })
+    $('.view-check').click(function () {
+      $('#viewCheckModal').modal('show');
+    })
+    $('.edit-check').click(function () {
+      $('#editCheckModal').modal('show');
+    })
+    $('.add-entry').click(function () {
+      $('#addEntryModal').modal('show');
+    })
+    $('.view-entry').click(function () {
+      $('#viewEntryModal').modal('show');
+    })
+    $('.add-exit').click(function () {
+      $('#addExitModal').modal('show');
+    })
+    $('.view-exit').click(function () {
+      $('#viewExitModal').modal('show');
+    })
+    $('#addEntryInfo').click(function () {
+      var entryItem = $('<div class="check-order-item">\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-9">\n' +
+        '                                        <label for="" class="control-label">车身重量：</label>\n' +
+        '                                        <input type="text" class="form-control" id="">\n' +
+        '                                        <span>KG</span>\n' +
+        '                                    </div>\n' +
+        '                                    <button class="btn btn-primary delete-entry" type="button">删除</button>\n' +
+        '                                </div>\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="price" class="control-label">档     主：</label>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="suppely" class="control-label">商     品：</label>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="chekResult" class="control-label">数     量：</label>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="chekResult" class="control-label">售     价：</label>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="discountOne" class="control-label">产地证明：</label>\n' +
+        '                                        <label for="uploadAreaImg" class="uploadLabel">上传图片</label>\n' +
+        '                                        <input type="file" class="form-control uploadImg" id="uploadAreaImg">\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                            </div>');
+        $('#entryContent').append(entryItem);
+    })
+    $('#addExitInfo').click(function () {
+      var exitInfo = $('<div class="check-order-item">\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-9">\n' +
+        '                                        <label for="" class="control-label">车身重量：</label>\n' +
+        '                                        <input type="text" class="form-control" id="">\n' +
+        '                                        <span>KG</span>\n' +
+        '                                    </div>\n' +
+        '                                    <button class="btn btn-primary delete-entry" type="button">删除</button>\n' +
+        '                                </div>\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="price" class="control-label">档     主：</label>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="suppely" class="control-label">商     品：</label>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="chekResult" class="control-label">数     量：</label>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="chekResult" class="control-label">售     价：</label>\n' +
+        '                                        <select name="" id="">\n' +
+        '                                            <option value="请选择">请选择</option>\n' +
+        '                                        </select>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                                <div class="form-inline clearfix">\n' +
+        '                                    <div class="form-group col-md-12">\n' +
+        '                                        <label for="discountOne" class="control-label">产地证明：</label>\n' +
+        '                                        <label for="uploadAreaImg" class="uploadLabel">上传图片</label>\n' +
+        '                                        <input type="file" class="form-control uploadImg" id="uploadAreaImg">\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                            </div>');
+      $('#exitContent').append(exitInfo);
+    })
   })
 </script>
 </html>

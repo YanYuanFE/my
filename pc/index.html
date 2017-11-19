@@ -17,13 +17,13 @@
     <div class="side">
         <ul>
             <li>
-                <a href="">
+                <a href="./person.html#pre">
                     <img src="assets/images/pre.png" alt="">
                     <p>我的预约</p>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./person.html#order">
                     <img src="assets/images/order.png" alt="">
                     <p>我的订单</p>
                 </a>
@@ -33,19 +33,19 @@
                 <p id="pk">房源对比</p>
             </li>
             <li>
-                <a href="">
+                <a href="./person.html#attention">
                     <img src="assets/images/gz.png" alt="">
                     <p>关注</p>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./person.html#collect">
                     <img src="assets/images/sc.png" alt="">
                     <p>收藏</p>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./myfoot.html">
                     <img src="assets/images/zj.png" alt="">
                     <p>我的足迹</p>
                 </a>
@@ -66,7 +66,7 @@
                 <img src="assets/images/logo.png" alt="">
                 <img src="assets/images/area.png" alt="" class="gps">
                 <span class="location">深圳</span>
-                <span class="changecity">切换城市</span>
+                <span class="changecity" data-toggle="modal" data-target="#cityModal">切换城市</span>
             </div>
             <div class="col-md-3 col-xs-3 col-sm-3">
                 <div class="tab">
@@ -95,160 +95,12 @@
             </div>
         </div>
     </div>
-    <div class="city-container container">
-        <div class="hot-city">
-            <span class="title">热门城市</span>
-            <span class="city-item">北京</span>
-        </div>
-        <div class="city-select">
-            <div class="title">城市选择</div>
-            <select class="form-control">
-                <option>省份</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-            <select class="form-control">
-                <option>城市</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-            <div class="title search-city">直接搜索</div>
-            <form class="form-inline">
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="searchInput" placeholder="">
-                        <div class="input-group-addon">搜索</div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="city-content">
-            <div class="title">按省份首字母选择</div>
-            <table class="table table-bordered">
-                <tbody>
-                <tr>
-                    <td>
-                        A
-                    </td>
-                    <td> 安徽 </td>
-                    <td>
-                        <span class="city-item">合肥</span>
-                        <span class="city-item">芜湖</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        F
-                    </td>
-                    <td> 福建 </td>
-                    <td>
-                        <span class="city-item">福州</span>
-                        <span class="city-item">厦门</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        G
-                    </td>
-                    <td>
-                        <div class="provice-item">广东</div>
-                        <div class="provice-item">广西</div>
-                        <div class="provice-item">贵州</div>
-                    </td>
-                    <td>
-                        <div class="city-list">
-                            <span class="city-item">深圳</span>
-                            <span class="city-item">广州</span>
-                        </div>
-                        <div class="city-list">
-                            <span class="city-item">南宁</span>
-                            <span class="city-item">柳州</span>
-                        </div>
-                        <div class="city-list">
-                            <span class="city-item">贵阳</span>
-                            <span class="city-item">遵义</span>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        A
-                    </td>
-                    <td> 安徽 </td>
-                    <td>
-                        <span class="city-item">合肥</span>
-                        <span class="city-item">芜湖</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        H
-                    </td>
-                    <td> 黑龙江 </td>
-                    <td>
-                        <span class="city-item">郑州</span>
-                        <span class="city-item">洛阳</span>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
 
     <div class="search-container">
         <div class="search-input container">
             <input id="search" type="text" placeholder="请输入相关信息">
             <img src="assets/images/search.png" alt="" class="search-icon">
         </div>
-    </div>
-    <div class="media pk-media">
-        <div class="media-left">
-            <a href="#">
-                <div class="check-wrapper">
-                    <input type="checkbox" id="check1" class="check" />
-                    <label for="check1"></label>
-                </div>
-                <img class="media-object" src="assets/images/house1.png" alt="...">
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading">深意公寓A栋B户型</h4>
-            <p><span>1室1厅</span> <span>41.89平米</span></p>
-            <div class="media-foot">
-                <span class="price">￥2300</span>
-                <span class="delete-pk">
-                    <img src="assets/images/delete-btn.png" alt="">
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class="media pk-media">
-        <div class="media-left">
-            <a href="#">
-                <div class="check-wrapper">
-                    <input type="checkbox" id="check2" class="check" />
-                    <label for="check2"></label>
-                </div>
-                <img class="media-object" src="assets/images/house1.png" alt="...">
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading">深意公寓A栋B户型</h4>
-            <p><span>1室1厅</span> <span>41.89平米</span></p>
-            <div class="media-foot">
-                <span class="price">￥2300</span>
-                <span class="delete-pk">
-                    <img src="assets/images/delete-btn.png" alt="">
-                </span>
-            </div>
-        </div>
-    </div>
-    <div class="pk-foot">
-        <div class="pk-btn">立即对比</div>
     </div>
     <div class="section container">
         <div class="kind">
@@ -458,6 +310,114 @@
 
     </div>
 </div>
+
+<div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="city-container">
+                    <div class="city-select">
+                        <div class="select-title">选择城市</div>
+                        <select class="form-control">
+                            <option>省份</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <select class="form-control">
+                            <option>城市</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="hot-city">
+                        <span class="title">热门城市:</span>
+                        <span class="city-item">北京</span>
+                        <span class="city-item">上海</span>
+                        <span class="city-item">广州</span>
+                        <span class="city-item">深圳</span>
+                        <span class="city-item">成都</span>
+                        <span class="city-item">杭州</span>
+                        <span class="city-item">南京</span>
+                    </div>
+                    <div class="city-content">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td class="title">
+                                    A
+                                </td>
+                                <td> 安徽省 </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    F
+                                </td>
+                                <td> 福建省 </td>
+                                <td>
+                                    <span class="city-item">福州</span>
+                                    <span class="city-item">厦门</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    G
+                                </td>
+                                <td>
+                                    <div class="provice-item">广东省</div>
+                                    <div class="provice-item">广西省</div>
+                                    <div class="provice-item">贵州省</div>
+                                </td>
+                                <td>
+                                    <div class="city-list">
+                                        <span class="city-item">深圳</span>
+                                        <span class="city-item">广州</span>
+                                    </div>
+                                    <div class="city-list">
+                                        <span class="city-item">南宁</span>
+                                        <span class="city-item">柳州</span>
+                                    </div>
+                                    <div class="city-list">
+                                        <span class="city-item">贵阳</span>
+                                        <span class="city-item">遵义</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    A
+                                </td>
+                                <td> 安徽省 </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td> 黑龙江省 </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -508,19 +468,11 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function(){
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
-        loop: true,
-        // autoplay: 5000,
-    });
-    $('.changecity').click(function (e) {
-      $('.city-container').toggle();
-    })
+
     $('.city-item').click(function (e) {
       var city = $(this).text();
       $('.changecity').html(city);
-      $('.city-container').hide();
+      $('#cityModal').modal('hide');
     })
     $('#pk').popover({
       trigger: 'click',

@@ -108,6 +108,7 @@
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="profile">
                     <div class="upload clearfix">
+                        <img src="assets/images/avatar.png" alt="" id="img">
                         <div class="weui-uploader__input-box">
                             <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
                         </div>
@@ -122,7 +123,11 @@
                         </div>
                         <div class="tel">
                             <span>手机号码：13410202020</span>
-                            <div class="btn">修改</div>
+                            <div class="btn" id="changePhone">修改</div>
+                        </div>
+                        <div class="change-tel">
+                            <input type="text" id="new-tel">
+                            <div class="btn">确定</div>
                         </div>
                         <div class="name">
                             地址：深圳市南山区科发路1100号
@@ -257,7 +262,7 @@
                             </div>
                         </div>
                         <div class="setrent">
-                            <button class="btn btn-success" type="button">标记未租</button>
+                            <button class="btn btn-success" type="button" id="setUnrent">标记未租</button>
                             <button class="btn btn-rent" type="button">标记已租</button>
                         </div>
                         <div class="tips">
@@ -509,6 +514,38 @@
       e.preventDefault()
       $(this).tab('show')
     })
+    $('.weui-btn').click(function(e) {
+      console.log($(this))
+      if($(this).hasClass("btn-disable")){
+        return;
+      } else {
+        $(this).toggleClass("btn-select")
+      }
+    })
+    $('#uploaderInput').change(function () {
+      upload('#uploaderInput', '#img')
+    })
+    $('#changePhone').click(function () {
+      $('.change-tel').toggle();
+    })
+    $('#setUnrent').click(function () {
+      var arr = [];
+      $('.btn-select').each(function (i) {
+        arr.push($(this).html());
+      })
+      console.log(arr)
+    })
+
+    function upload(c, d){
+      var $c = $(c),
+        $d = $(d);
+      file = $c[0].files[0],
+        reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = function(e){
+        $d.attr("src", e.target.result);
+      };
+    };
   });
 </script>
 </body>

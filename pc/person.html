@@ -17,68 +17,82 @@
     <div class="side">
         <ul>
             <li>
-                <a href="">
+                <a href="./person.html#pre">
                     <img src="assets/images/pre.png" alt="">
                     <p>我的预约</p>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./person.html#order">
                     <img src="assets/images/order.png" alt="">
                     <p>我的订单</p>
                 </a>
             </li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
+            <li>
+                <img src="assets/images/pkicon.png" alt="">
+                <p id="pk">房源对比</p>
+            </li>
+            <li>
+                <a href="./person.html#attention">
+                    <img src="assets/images/gz.png" alt="">
+                    <p>关注</p>
+                </a>
+            </li>
+            <li>
+                <a href="./person.html#collect">
+                    <img src="assets/images/sc.png" alt="">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="./myfoot.html">
+                    <img src="assets/images/zj.png" alt="">
+                    <p>我的足迹</p>
+                </a>
+            </li>
+            <li>
+                <img src="assets/images/fk.png" alt="">
+                <p data-toggle="modal" data-target="#suggestModal">反馈我们</p>
+            </li>
+            <li>
+                <img src="assets/images/kf.png" alt="">
+                <p data-toggle="modal" data-target="#serviceModal">客服</p>
+            </li>
         </ul>
     </div>
-    <div class="header">
-        <div class="container">
-            <div class="col-md-3">
-                <img src="assets/images/logo.png" alt="">
-                <img src="assets/images/area.png" alt="" class="gps">
-                <span class="location">深圳</span>
-                <a href="" class="changecity">切换城市</a>
-            </div>
-            <div class="col-md-3">
-                <div class="tab">
-                    <ul>
-                        <li>
-                            <a href="index.html" class="active">首页</a>
-                        </li>
-                        <li>
-                            <a href="hotel.html">品牌公寓</a>
-                        </li>
-                    </ul>
+    <div class="header-wrapper">
+        <div class="header container">
+            <div class="row">
+                <div class="col-md-3 col-xs-3 col-sm-3">
+                    <img src="assets/images/logo.png" alt="">
+                    <img src="assets/images/area.png" alt="" class="gps">
+                    <span class="location">深圳</span>
+                    <span class="changecity">切换城市</span>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="login.html">登录</a>/<a href="login.html">注册</a>
-                        </li>
-                        <li>
-                            <a href="person.html">个人中心</a>
-                        </li>
-                        <li ><a href="company.html" >企业用户</a></li>
-                    </ul>
+                <div class="col-md-3 col-xs-3 col-sm-3">
+                    <div class="tab">
+                        <ul>
+                            <li>
+                                <a href="index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="hotel.html">品牌公寓</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="login.html">登录</a>/<a href="login.html">注册</a>
+                            </li>
+                            <li>
+                                <a href="person.html" class="active">个人中心</a>
+                            </li>
+                            <li ><a href="company.html" >企业用户</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,9 +131,9 @@
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="profile">
                     <div class="upload clearfix">
+                        <img src="assets/images/avatar.png" alt="" id="img">
                         <div class="weui-uploader__input-box">
                             <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
-                            <img src="" alt="" id="img">
                         </div>
                         <div>上传头像</div>
                     </div>
@@ -132,7 +146,11 @@
                         </div>
                         <div class="tel">
                             <span>手机号码：13410202020</span>
-                            <div class="btn">修改</div>
+                            <div class="btn" id="changePhone">修改</div>
+                        </div>
+                        <div class="change-tel">
+                            <input type="text" id="new-tel">
+                            <div class="btn">确定</div>
                         </div>
                     </div>
                 </div>
@@ -154,7 +172,7 @@
                             </div>
                         </div>
                     </div>
-                    <table class="table">
+                    <table class="table" id="messageList">
                         <thead>
                             <tr>
                                 <th></th>
@@ -215,7 +233,7 @@
                             <tr>
                                 <td colspan="2">
                                     <label>
-                                        <input type="checkbox">全选
+                                        <input type="checkbox" id="checkAll">全选
                                     </label>
                                 </td>
                                 <td colspan="3">
@@ -277,7 +295,7 @@
                                 <td>26000</td>
                                 <td>未付款</td>
                                 <td>
-                                    <button class="btn btn-danger" type="button">付款</button>
+                                    <button class="btn btn-danger payOrder" type="button">付款</button>
                                     <button class="btn btn-default deleteOrder" type="button">删除</button>
                                 </td>
                             </tr>
@@ -304,6 +322,9 @@
                                 <td>
                                     <button class="btn btn-default deleteOrder" type="button">删除</button>
                                 </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7">没有订单</td>
                             </tr>
                         </tbody>
                     </table>
@@ -369,7 +390,7 @@
                             <td>13410020202</td>
                             <td>预约中</td>
                             <td>
-                                <button class="btn btn-default red">取消预约</button>
+                                <button class="btn btn-default red cancelPre">取消预约</button>
                             </td>
                         </tr>
                         <tr>
@@ -383,7 +404,7 @@
                             <td>13410020202</td>
                             <td>预约成功</td>
                             <td>
-                                <button class="btn btn-default red">取消预约</button>
+                                <button class="btn btn-default red cancelPre">取消预约</button>
                             </td>
                         </tr>
                         <tr>
@@ -411,7 +432,7 @@
                             <td>13410020202</td>
                             <td>预约失败 </td>
                             <td>
-                                <button class="btn btn-default green deletePre">重新预约</button>
+                                <button class="btn btn-default green">重新预约</button>
                             </td>
                         </tr>
                         </tbody>
@@ -633,14 +654,14 @@
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention1.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove" class="deleteAttention"><span>+</span></div>
+                                    <div class="remove deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                             <div class="col-xs-6 col-md-6">
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention2.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove" class="deleteAttention"><span>+</span></div>
+                                    <div class="remove deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                         </div>
@@ -649,14 +670,14 @@
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention1.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove" class="deleteAttention"><span>+</span></div>
+                                    <div class="remove deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                             <div class="col-xs-6 col-md-6">
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention2.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove" class="deleteAttention"><span>+</span></div>
+                                    <div class="remove deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                         </div>
@@ -665,14 +686,14 @@
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention1.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove" class="deleteAttention"><span>+</span></div>
+                                    <div class="remove deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                             <div class="col-xs-6 col-md-6">
                                 <a href="#" class="thumbnail attention-item">
                                     <img src="assets/images/attention2.png" alt="">
                                     <div class="attention-name">创新公寓</div>
-                                    <div class="remove" class="deleteAttention"><span>+</span></div>
+                                    <div class="remove deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                         </div>
@@ -796,8 +817,11 @@
                 <div class="input-area cancel-area">
                     <textarea class="weui-textarea" placeholder="请输入退款理由" rows="6"></textarea>
                 </div>
-                <div class="weui-uploader__input-box">
-                    <input id="uploadImage" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                <div class="upload clearfix">
+                    <img src="" alt="" id="refundImg">
+                    <div class="weui-uploader__input-box">
+                        <input id="uploadImage" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -813,50 +837,38 @@
     </div>
 </div>
 <div class="modal fade" id="deleteMessage" tabindex="-1" role="dialog" aria-labelledby="deleteMessageModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog cancel" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="deleteMessageModalLabel">提示</h4>
-            </div>
             <div class="modal-body">
-                <h3>确定要删除这条消息吗？</h3>
+                <p>确定要删除这条消息吗？</p>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <div class="modal-footer no-border">
                 <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
             </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="deleteOrder" tabindex="-1" role="dialog" aria-labelledby="deleteOrderModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog cancel" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="deleteOrderModalLabel">提示</h4>
-            </div>
             <div class="modal-body">
-                <h3>确定要删除这个订单吗？</h3>
+                <p>确定要删除这个订单吗？</p>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <div class="modal-footer no-border">
                 <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
             </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="deletePre" tabindex="-1" role="dialog" aria-labelledby="deletePreModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog cancel" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="deletePreModalLabel">提示</h4>
-            </div>
             <div class="modal-body">
-                <h3>确定要删除这个预约吗？</h3>
+                <p>确定要删除这个预约吗？</p>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer no-border">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 <button type="button" class="btn btn-primary">确定</button>
             </div>
@@ -864,53 +876,143 @@
     </div>
 </div>
 <div class="modal fade" id="deleteCollect" tabindex="-1" role="dialog" aria-labelledby="deleteCollectModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog cancel" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="deleteCollectModalLabel">提示</h4>
-            </div>
             <div class="modal-body">
-                <h3>确定要删除这个收藏吗？</h3>
+                <p>确定要删除这个收藏吗？</p>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <div class="modal-footer no-border">
                 <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
             </div>
         </div>
     </div>
 </div>
 <div class="modal fade" id="deleteAttention" tabindex="-1" role="dialog" aria-labelledby="deleteAttentionModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog cancel" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="deleteAttentionModalLabel">提示</h4>
-            </div>
             <div class="modal-body">
-                <h3>确定要删除这个关注吗？</h3>
+                <p>确定要删除这个关注吗？</p>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <div class="modal-footer no-border">
                 <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
             </div>
         </div>
     </div>
 </div>
-<script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
+<div class="modal fade" id="cancelPre" tabindex="-1" role="dialog" aria-labelledby="cancelPreModalLabel">
+    <div class="modal-dialog cancel" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>确定取消预约？</p>
+            </div>
+            <div class="modal-footer no-border">
+                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="payModal" tabindex="-1" role="dialog" aria-labelledby="payModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="payModalLabel">确认订单信息</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>房号</th>
+                        <th>租期</th>
+                        <th>租赁方式</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>深意公寓A栋A户型</td>
+                        <td>301</td>
+                        <td>6个月</td>
+                        <td>押一付一</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="person-info">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="phone">联系方式：</label>
+                            <input type="text" class="form-control" id="phone" placeholder="">
+                        </div>
+                    </form>
+                    <div class="tip">温馨提示：付款后请联系该公寓，请尽快搬家</div>
+                </div>
+                <div class="pay-list">
+                    <div class="pay-item">
+                        <img src="assets/images/weixin.png" alt="" width="24" height="20">
+                        微信支付
+                    </div>
+                    <div class="pay-item">
+                        <img src="assets/images/zhifubao.png" alt="" width="23" height="23">
+                        支付宝
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-footer">
+                    <div class="refund-price">总价：<span>￥9999</span></div>
+                    <div class="rent-submit">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消支付</button>
+                        <button type="button" class="btn btn-primary">立即支付</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
-<script src="assets/js/lazyload.min.js"></script>
 <script>
   $(document).ready(function(){
+    var thisId = window.location.hash;
+    if(thisId) {
+      var mao = $(thisId); //获得锚点
+      mao.siblings().removeClass('active in');
+      var index = mao.index();
+      console.log(thisId)
+      mao.addClass('active in');
+      $('#myTab').find('li').eq(index).addClass('active').siblings().removeClass('active');
+    }
+
+    window.onhashchange = function () {
+      var thisId = window.location.hash;
+      var mao = $(thisId); //获得锚点
+      mao.siblings().removeClass('active in');
+      var index = mao.index();
+      console.log($('#myTab').find('li'))
+      mao.addClass('active in');
+      $('#myTab').find('li').eq(index).addClass('active').siblings().removeClass('active');
+    }
     $('#myTabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
     })
 
+    $("#checkAll").click(function(){
+      if(this.checked){
+        $("#messageList :checkbox").prop("checked", true);
+      }else{
+        $("#messageList :checkbox").prop("checked", false);
+      }
+    });
+
     $('.deleteMsg').click(function () {
       $('#deleteMessage').modal('show')
+    })
+    $('.payOrder').click(function () {
+      $('#payModal').modal('show')
     })
     $('.deleteOrder').click(function () {
       $('#deleteOrder').modal('show')
@@ -927,10 +1029,16 @@
     $('.deleteAttention').click(function () {
       $('#deleteAttention').modal('show')
     })
+    $('.cancelPre').click(function () {
+      $('#cancelPre').modal('show')
+    })
 
     $('#uploaderInput').change(function () {
-      console.log(111)
       upload('#uploaderInput', '#img')
+    })
+
+    $('#uploadImage').change(function () {
+      upload('#uploadImage', '#refundImg')
     })
 
     function upload(c, d){
@@ -940,11 +1048,13 @@
         reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = function(e){
-        $c.hide();
-        $('.weui-uploader__input-box').addClass('hasImg')
         $d.attr("src", e.target.result);
       };
     };
+
+    $('#changePhone').click(function () {
+      $('.change-tel').toggle();
+    })
   });
 </script>
 </body>
