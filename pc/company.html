@@ -17,67 +17,79 @@
     <div class="side">
         <ul>
             <li>
-                <a href="">
+                <a href="./person.html#pre">
                     <img src="assets/images/pre.png" alt="">
                     <p>我的预约</p>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./person.html#order">
                     <img src="assets/images/order.png" alt="">
                     <p>我的订单</p>
                 </a>
             </li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
+            <li id="pk">
+                <img src="assets/images/pkicon.png" alt="">
+                <p>房源对比</p>
+            </li>
+            <li>
+                <a href="./person.html#attention">
+                    <img src="assets/images/gz.png" alt="">
+                    <p>关注</p>
+                </a>
+            </li>
+            <li>
+                <a href="./person.html#collect">
+                    <img src="assets/images/sc.png" alt="">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="./myfoot.html">
+                    <img src="assets/images/zj.png" alt="">
+                    <p>我的足迹</p>
+                </a>
+            </li>
+            <li data-toggle="modal" data-target="#suggestModal">
+                <img src="assets/images/fk.png" alt="">
+                <p>反馈我们</p>
+            </li>
+            <li data-toggle="modal" data-target="#serviceModal">
+                <img src="assets/images/kf.png" alt="">
+                <p>客服</p>
+            </li>
         </ul>
     </div>
-    <div class="header">
-        <div class="container">
-            <div class="col-md-3">
+    <div class="header-wrapper">
+        <div class="header container">
+            <div class="col-md-4 col-xs-4 col-sm-4">
                 <img src="assets/images/logo.png" alt="">
                 <img src="assets/images/area.png" alt="" class="gps">
                 <span class="location">深圳</span>
-                <a href="" class="changecity">切换城市</a>
+                <span class="changecity">切换城市</span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-3 col-sm-3">
                 <div class="tab">
                     <ul>
                         <li>
-                            <a href="" class="active">首页</a>
+                            <a href="index.html">首页</a>
                         </li>
                         <li>
-                            <a href="">品牌公寓</a>
+                            <a href="hotel.html">品牌公寓</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5 col-xs-5 col-sm-5">
                 <div class="menu">
                     <ul>
                         <li>
-                            <a href="login.html">登录</a>/<a href="login.html">注册</a>   
+                            <a href="login.html">登录</a>/<a href="login.html">注册</a>
                         </li>
                         <li>
                             <a href="person.html">个人中心</a>
                         </li>
-                        <li ><a href="company.html" >企业用户</a></li>
+                        <li ><a href="company.html" class="active">企业用户</a></li>
                     </ul>
                 </div>
             </div>
@@ -500,6 +512,50 @@
             <div class="modal-footer">
                 <div class="submit">
                     <div class="submit-btn">确定修改</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">官方客服</h4>
+            </div>
+            <div class="modal-body">
+                <p>您可以与在线顾问进行实时沟通或者拨打客服热线获得帮助</p>
+                <div class="advice-box">
+                    <span class="title">在线咨询</span>
+                    <button class="btn btn-primary">立即咨询</button>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+                <div class="advice-box">
+                    <span class="title">客服热线</span>
+                    <span class="phone">400-222-200</span>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="suggestModal" tabindex="-1" role="dialog" aria-labelledby="suggestModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="suggestModalLabel">意见反馈</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tip">您对阔壹有任何意见和建议，或使用中遇到的问题，请在本页面反馈。我们会每天关 注并不断优化产品，为您提供更好的服务！</div>
+                <div class="title">反馈内容</div>
+
+                <div class="input-area">
+                    <textarea class="weui-textarea" placeholder="我们非常乐意收到您的意见或建议" rows="5"></textarea>
+                </div>
+                <div class="submit">
+                    <div class="submit-btn">提交</div>
                 </div>
             </div>
         </div>

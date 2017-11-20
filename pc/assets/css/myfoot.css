@@ -82,13 +82,12 @@ li {
 }
 
 .city-container {
-    position: absolute;
-    top: 60px;
-    left:50%;
-    transform: translateX(-50%);
-    z-index: 100;
     background: #FFF;
-    display: none;
+}
+
+.select-title {
+    font-size: 18px;
+    margin-right: 10px;
 }
 
 .city-select {
@@ -99,14 +98,29 @@ li {
 .city-select select {
     width: 100px;
     margin: 0 10px;
+    border-radius: 0;
 }
 
 .city-container .title {
-    font-size: 20px;
+    color: #8FD026;
 }
 
-.city-select .title.search-city {
-    margin: 0 10px;
+.hot-city {
+    padding: 19px 0 20px 0;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.hot-city .title {
+    margin-right: 10px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border: none;
+}
+
+.city-item {
+    font-size: 14px;
+    margin-right: 10px;
 }
 
 .result-text {
@@ -225,6 +239,7 @@ li {
     height: 90px;
     padding: 20px 4px;
     border-bottom: 1px solid #FFF;
+    cursor: pointer;
 }
 
 .side li a {

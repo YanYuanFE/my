@@ -28,9 +28,9 @@
                     <p>我的订单</p>
                 </a>
             </li>
-            <li>
+            <li id="pk">
                 <img src="assets/images/pkicon.png" alt="">
-                <p id="pk">房源对比</p>
+                <p>房源对比</p>
             </li>
             <li>
                 <a href="./person.html#attention">
@@ -50,49 +50,47 @@
                     <p>我的足迹</p>
                 </a>
             </li>
-            <li>
+            <li data-toggle="modal" data-target="#suggestModal">
                 <img src="assets/images/fk.png" alt="">
-                <p data-toggle="modal" data-target="#suggestModal">反馈我们</p>
+                <p>反馈我们</p>
             </li>
-            <li>
+            <li data-toggle="modal" data-target="#serviceModal">
                 <img src="assets/images/kf.png" alt="">
-                <p data-toggle="modal" data-target="#serviceModal">客服</p>
+                <p>客服</p>
             </li>
         </ul>
     </div>
     <div class="header-wrapper">
         <div class="header container">
-            <div class="row">
-                <div class="col-md-3 col-xs-3 col-sm-3">
-                    <img src="assets/images/logo.png" alt="">
-                    <img src="assets/images/area.png" alt="" class="gps">
-                    <span class="location">深圳</span>
-                    <span class="changecity">切换城市</span>
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <img src="assets/images/logo.png" alt="">
+                <img src="assets/images/area.png" alt="" class="gps">
+                <span class="location">深圳</span>
+                <span class="changecity">切换城市</span>
+            </div>
+            <div class="col-md-3 col-xs-3 col-sm-3">
+                <div class="tab">
+                    <ul>
+                        <li>
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li>
+                            <a href="hotel.html">品牌公寓</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-md-3 col-xs-3 col-sm-3">
-                    <div class="tab">
-                        <ul>
-                            <li>
-                                <a href="index.html">首页</a>
-                            </li>
-                            <li>
-                                <a href="hotel.html">品牌公寓</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-6 col-sm-6">
-                    <div class="menu">
-                        <ul>
-                            <li>
-                                <a href="login.html">登录</a>/<a href="login.html">注册</a>
-                            </li>
-                            <li>
-                                <a href="person.html" class="active">个人中心</a>
-                            </li>
-                            <li ><a href="company.html" >企业用户</a></li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="col-md-5 col-xs-5 col-sm-5">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="login.html">登录</a>/<a href="login.html">注册</a>
+                        </li>
+                        <li>
+                            <a href="person.html" class="active">个人中心</a>
+                        </li>
+                        <li ><a href="company.html" >企业用户</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -467,7 +465,7 @@
                     <div class="collect-content">
                         <div class="order-item weui-panel weui-panel_access">
                             <div class="weui-panel__bd">
-                                <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
                                     <div class="weui-media-box__hd">
                                         <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
                                     </div>
@@ -490,15 +488,15 @@
                                             <div class="hotel-price">3300元/月</div>
                                         </div>
                                     </div>
-                                    <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
-                                    </div>
                                 </a>
+                                <div class="delete-btn">
+                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
+                                </div>
                             </div>
                         </div>
                         <div class="order-item weui-panel weui-panel_access">
                             <div class="weui-panel__bd">
-                                <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
                                     <div class="weui-media-box__hd">
                                         <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
                                     </div>
@@ -521,15 +519,15 @@
                                             <div class="hotel-price">3300元/月</div>
                                         </div>
                                     </div>
-                                    <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
-                                    </div>
                                 </a>
+                                <div class="delete-btn">
+                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
+                                </div>
                             </div>
                         </div>
                         <div class="order-item weui-panel weui-panel_access">
                             <div class="weui-panel__bd">
-                                <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
                                     <div class="weui-media-box__hd">
                                         <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
                                     </div>
@@ -552,15 +550,15 @@
                                             <div class="hotel-price">3300元/月</div>
                                         </div>
                                     </div>
-                                    <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
-                                    </div>
                                 </a>
+                                <div class="delete-btn">
+                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
+                                </div>
                             </div>
                         </div>
                         <div class="order-item weui-panel weui-panel_access">
                             <div class="weui-panel__bd">
-                                <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
                                     <div class="weui-media-box__hd">
                                         <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
                                     </div>
@@ -583,15 +581,15 @@
                                             <div class="hotel-price">3300元/月</div>
                                         </div>
                                     </div>
-                                    <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
-                                    </div>
                                 </a>
+                                <div class="delete-btn">
+                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
+                                </div>
                             </div>
                         </div>
                         <div class="order-item weui-panel weui-panel_access">
                             <div class="weui-panel__bd">
-                                <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
                                     <div class="weui-media-box__hd">
                                         <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
                                     </div>
@@ -614,10 +612,10 @@
                                             <div class="hotel-price">3300元/月</div>
                                         </div>
                                     </div>
-                                    <div class="delete-btn">
-                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
-                                    </div>
                                 </a>
+                                <div class="delete-btn">
+                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -651,14 +649,14 @@
                     <div class="attention-content">
                         <div class="row attention-row">
                             <div class="col-xs-6 col-md-6">
-                                <a href="#" class="thumbnail attention-item">
+                                <a href="hotelhome.html" class="thumbnail attention-item">
                                     <img src="assets/images/attention1.png" alt="">
                                     <div class="attention-name">创新公寓</div>
                                     <div class="remove deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                             <div class="col-xs-6 col-md-6">
-                                <a href="#" class="thumbnail attention-item">
+                                <a href="hotelhome.html" class="thumbnail attention-item">
                                     <img src="assets/images/attention2.png" alt="">
                                     <div class="attention-name">创新公寓</div>
                                     <div class="remove deleteAttention"><span>+</span></div>
@@ -667,14 +665,14 @@
                         </div>
                         <div class="row attention-row">
                             <div class="col-xs-6 col-md-6">
-                                <a href="#" class="thumbnail attention-item">
+                                <a href="hotelhome.html" class="thumbnail attention-item">
                                     <img src="assets/images/attention1.png" alt="">
                                     <div class="attention-name">创新公寓</div>
                                     <div class="remove deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                             <div class="col-xs-6 col-md-6">
-                                <a href="#" class="thumbnail attention-item">
+                                <a href="hotelhome.html" class="thumbnail attention-item">
                                     <img src="assets/images/attention2.png" alt="">
                                     <div class="attention-name">创新公寓</div>
                                     <div class="remove deleteAttention"><span>+</span></div>
@@ -683,14 +681,14 @@
                         </div>
                         <div class="row attention-row">
                             <div class="col-xs-6 col-md-6">
-                                <a href="#" class="thumbnail attention-item">
+                                <a href="hotelhome.html" class="thumbnail attention-item">
                                     <img src="assets/images/attention1.png" alt="">
                                     <div class="attention-name">创新公寓</div>
                                     <div class="remove deleteAttention"><span>+</span></div>
                                 </a>
                             </div>
                             <div class="col-xs-6 col-md-6">
-                                <a href="#" class="thumbnail attention-item">
+                                <a href="hotelhome.html" class="thumbnail attention-item">
                                     <img src="assets/images/attention2.png" alt="">
                                     <div class="attention-name">创新公寓</div>
                                     <div class="remove deleteAttention"><span>+</span></div>
@@ -806,6 +804,50 @@
 
     </div>
 
+</div>
+<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">官方客服</h4>
+            </div>
+            <div class="modal-body">
+                <p>您可以与在线顾问进行实时沟通或者拨打客服热线获得帮助</p>
+                <div class="advice-box">
+                    <span class="title">在线咨询</span>
+                    <button class="btn btn-primary">立即咨询</button>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+                <div class="advice-box">
+                    <span class="title">客服热线</span>
+                    <span class="phone">400-222-200</span>
+                    <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="suggestModal" tabindex="-1" role="dialog" aria-labelledby="suggestModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="suggestModalLabel">意见反馈</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tip">您对阔壹有任何意见和建议，或使用中遇到的问题，请在本页面反馈。我们会每天关 注并不断优化产品，为您提供更好的服务！</div>
+                <div class="title">反馈内容</div>
+
+                <div class="input-area">
+                    <textarea class="weui-textarea" placeholder="我们非常乐意收到您的意见或建议" rows="5"></textarea>
+                </div>
+                <div class="submit">
+                    <div class="submit-btn">提交</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="modal fade" id="refund" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">

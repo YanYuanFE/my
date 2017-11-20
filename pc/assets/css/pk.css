@@ -249,6 +249,7 @@ table .dot {
     height: 90px;
     padding: 20px 4px;
     border-bottom: 1px solid #FFF;
+    cursor: pointer;
 }
 
 .side li a {
