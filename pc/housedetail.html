@@ -17,67 +17,79 @@
     <div class="side">
         <ul>
             <li>
-                <a href="">
+                <a href="./person.html#pre">
                     <img src="assets/images/pre.png" alt="">
                     <p>我的预约</p>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./person.html#order">
                     <img src="assets/images/order.png" alt="">
                     <p>我的订单</p>
                 </a>
             </li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
-            <li><a href=""><img src="" alt="">
-                <p></p>
-            </a></li>
+            <li id="pk">
+                <img src="assets/images/pkicon.png" alt="">
+                <p>房源对比</p>
+            </li>
+            <li>
+                <a href="./person.html#attention">
+                    <img src="assets/images/gz.png" alt="">
+                    <p>关注</p>
+                </a>
+            </li>
+            <li>
+                <a href="./person.html#collect">
+                    <img src="assets/images/sc.png" alt="">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="./myfoot.html">
+                    <img src="assets/images/zj.png" alt="">
+                    <p>我的足迹</p>
+                </a>
+            </li>
+            <li data-toggle="modal" data-target="#suggestModal">
+                <img src="assets/images/fk.png" alt="">
+                <p>反馈我们</p>
+            </li>
+            <li data-toggle="modal" data-target="#serviceModal">
+                <img src="assets/images/kf.png" alt="">
+                <p>客服</p>
+            </li>
         </ul>
     </div>
     <div class="header container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-3 col-sm-3">
                 <img src="assets/images/logo.png" alt="">
                 <img src="assets/images/area.png" alt="" class="gps">
                 <span class="location">深圳</span>
-                <a href="" class="changecity">切换城市</a>
+                <span class="changecity" data-toggle="modal" data-target="#cityModal">切换城市</span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-xs-3 col-sm-3">
                 <div class="tab">
                     <ul>
                         <li>
-                            <a href="" class="active">首页</a>
+                            <a href="index.html" class="active">首页</a>
                         </li>
                         <li>
-                            <a href="">品牌公寓</a>
+                            <a href="hotel.html">品牌公寓</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-xs-6 col-sm-6">
                 <div class="menu">
                     <ul>
-                        <li>
-                            <a href="">登录/注册</a>
+                        <li class="nickname">
+                            昵称
                         </li>
                         <li>
-                            <a href="">个人中心</a>
+                            <a href="person.html">个人中心</a>
                         </li>
-                        <li ><a href="" >企业用户</a></li>
+                        <li ><a href="company.html" >企业用户</a></li>
                     </ul>
                 </div>
             </div>
@@ -88,7 +100,7 @@
         <div class="title">
             <div class="title-text">深意公寓A栋A户型</div>
             <div class="op-btn">
-                <div class="btn-item pk">
+                <div class="btn-item pk" id="addPk">
                     <span class="pk">PK</span>加入对比
                 </div>
                 <div class="btn-item heart">
@@ -396,7 +408,9 @@
             </div>
             <div class="modal-footer">
                 <div class="submit">
-                    <div class="submit-btn">提交预约</div>
+                    <div class="submit-btn">
+                        <a href="presuccess.html">提交预约</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -464,10 +478,12 @@
                 </div>
                 <div class="pay-list">
                     <div class="pay-item">
+                        <i></i>
                         <img src="assets/images/weixin.png" alt="" width="24" height="20">
                         微信支付
                     </div>
                     <div class="pay-item">
+                        <i></i>
                         <img src="assets/images/zhifubao.png" alt="" width="23" height="23">
                         支付宝
                     </div>
@@ -478,7 +494,9 @@
                     <div class="refund-price">总价：<span>￥9999</span></div>
                     <div class="rent-submit">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消支付</button>
-                        <button type="button" class="btn btn-primary">立即支付</button>
+                        <button type="button" class="btn btn-primary">
+                            <a href="pay.html">立即支付</a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -506,6 +524,9 @@
       left_btn: ".left_btn",
       right_btn: ".right_btn"
     });
+    $('.pay-item').click(function () {
+      $(this).toggleClass('pay-select').siblings().removeClass('pay-select');
+    })
     $(".add").click(function(){
       var n=$(this).prev().val();
       var num=parseInt(n)+1;
@@ -524,6 +545,77 @@
       }
       $(this).toggleClass("selected")
     })
+
+    $('#pk').popover({
+      trigger: 'click',
+      placement: 'left',
+      html: true,      //实现对html可写
+      title: keywords_title(),   //标题函数
+      content: function() {
+        return keywords_content();   //内容函数
+      }
+    });
+    $('#addPk').popover({
+      trigger: 'click',
+      placement: 'left',
+      html: true,      //实现对html可写
+      title: keywords_title(),   //标题函数
+      content: function() {
+        return keywords_content();   //内容函数
+      }
+    });
+    function keywords_title() {
+      return '对比清单：';
+    }
+
+    function keywords_content() {
+      var data = $('<div style="width:428px;" ><div class="media pk-media">\n' +
+        '        <div class="media-left">\n' +
+        '            <a href="#">\n' +
+        '                <div class="check-wrapper">\n' +
+        '                    <input type="checkbox" id="check1" class="check" />\n' +
+        '                    <label for="check1"></label>\n' +
+        '                </div>\n' +
+        '                <img class="media-object" src="assets/images/house1.png" alt="...">\n' +
+        '            </a>\n' +
+        '        </div>\n' +
+        '        <div class="media-body">\n' +
+        '            <h4 class="media-heading">深意公寓A栋B户型</h4>\n' +
+        '            <p><span>1室1厅</span> <span>41.89平米</span></p>\n' +
+        '            <div class="media-foot">\n' +
+        '                <span class="price">￥2300</span>\n' +
+        '                <span class="delete-pk">\n' +
+        '                    <img src="assets/images/delete-btn.png" alt="">\n' +
+        '                </span>\n' +
+        '            </div>\n' +
+        '        </div>\n' +
+        '    </div>\n' +
+        '    <div class="media pk-media">\n' +
+        '        <div class="media-left">\n' +
+        '            <a href="#">\n' +
+        '                <div class="check-wrapper">\n' +
+        '                    <input type="checkbox" id="check2" class="check" />\n' +
+        '                    <label for="check2"></label>\n' +
+        '                </div>\n' +
+        '                <img class="media-object" src="assets/images/house1.png" alt="...">\n' +
+        '            </a>\n' +
+        '        </div>\n' +
+        '        <div class="media-body">\n' +
+        '            <h4 class="media-heading">深意公寓A栋B户型</h4>\n' +
+        '            <p><span>1室1厅</span> <span>41.89平米</span></p>\n' +
+        '            <div class="media-foot">\n' +
+        '                <span class="price">￥2300</span>\n' +
+        '                <span class="delete-pk">\n' +
+        '                    <img src="assets/images/delete-btn.png" alt="">\n' +
+        '                </span>\n' +
+        '            </div>\n' +
+        '        </div>\n' +
+        '    </div>\n' +
+        '    <div class="pk-foot">\n' +
+        '        <div class="pk-btn"><a href="./pk.html">立即对比</a></div>\n' +
+        '    </div></div>');
+      return data
+    }
   });
 </script>
 </body>

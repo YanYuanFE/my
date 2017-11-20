@@ -122,6 +122,58 @@ li {
     border-radius: 0;
 }
 
+
+.city-container {
+    background: #FFF;
+}
+
+.city-content {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.select-title {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.city-select {
+    display: flex;
+    align-items: center;
+}
+
+.city-select select {
+    width: 100px;
+    margin: 0 10px;
+    border-radius: 0;
+}
+
+.city-container .title {
+    color: #8FD026;
+}
+
+.hot-city {
+    padding: 19px 0 20px 0;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.hot-city .title {
+    margin-right: 10px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border: none;
+}
+
+.city-item {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#cityModal table {
+    box-shadow: none;
+}
+
 .upload {
     display: flex;
     justify-content: flex-start;
@@ -460,6 +512,9 @@ table .btn {
     #suggestModal .modal-dialog {
         width: 502px;
     }
+    #cityModal .modal-dialog {
+        width: 600px;
+    }
 }
 
 #suggestModal .modal-title {
@@ -474,11 +529,25 @@ table .btn {
     color: #8FD026;
 }
 
+.modal .modal-body .btn {
+    border-radius: 0;
+}
+
+.modal .modal-footer .btn.btn-primary {
+    background: #8FD026;
+    color: #FFF;
+    border-color: #8FD026;
+}
+
 .modal .modal-body .weui-textarea {
     padding: 14px 20px;
     border: 1px solid #E6E6E6;
     background: #F9F9F9;
     font-size: 14px;
+}
+
+.modal .submit {
+    text-align: center;
 }
 
 .modal .submit .submit-btn {
@@ -490,6 +559,8 @@ table .btn {
     color: #FFF;
     line-height: 43px;
     cursor: pointer;
+    padding: 0;
+    border-radius: 0;
 }
 
 
@@ -497,6 +568,42 @@ table .btn {
     .modal-dialog {
         width: 387px;
     }
+}
+
+#deletePre .modal-dialog.cancel .modal-body p {
+    color: #333;
+    text-align: center;
+}
+
+.modal .cancel .modal-body {
+    padding: 60px 0;
+}
+
+.modal .cancel .modal-footer {
+    /* border: none; */
+    text-align: center;
+}
+
+.modal .cancel .btn.btn-primary {
+    background: #FFF;
+    color: #8FD026;
+    border: 1px solid #8FD026;
+    width: 137px;
+    height: 43px;
+    line-height: 43px;
+    padding: 0;
+    border-radius: 0;
+}
+
+.modal .cancel .btn.btn-default {
+    background: #8FD026;
+    color: #FFF;
+    border: 1px solid #8FD026;
+    width: 137px;
+    height: 43px;
+    line-height: 43px;
+    padding: 0;
+    border-radius: 0;
 }
 
 

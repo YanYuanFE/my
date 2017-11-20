@@ -66,7 +66,7 @@
                 <img src="assets/images/logo.png" alt="">
                 <img src="assets/images/area.png" alt="" class="gps">
                 <span class="location">深圳</span>
-                <span class="changecity">切换城市</span>
+                <span class="changecity" data-toggle="modal" data-target="#cityModal">切换城市</span>
             </div>
             <div class="col-md-3 col-xs-3 col-sm-3">
                 <div class="tab">
@@ -84,7 +84,7 @@
                 <div class="menu">
                     <ul>
                         <li>
-                            <a href="login.html">登录</a>/<a href="login.html">注册</a>
+                            <a href="login.html">登录</a>/<a href="register.html">注册</a>
                         </li>
                         <li>
                             <a href="person.html" class="active">个人中心</a>
@@ -147,7 +147,7 @@
                             <div class="btn" id="changePhone">修改</div>
                         </div>
                         <div class="change-tel">
-                            <input type="text" id="new-tel">
+                            <input type="text" id="new-tel" class="form-control">
                             <div class="btn">确定</div>
                         </div>
                     </div>
@@ -305,8 +305,8 @@
                                 <td>26000</td>
                                 <td>已付款</td>
                                 <td>
-                                    <button class="btn btn-success" type="button">确认收货</button>
-                                    <button class="btn btn-default" type="button" data-toggle="modal" data-target="#refund">退款</button>
+                                    <button class="btn btn-success success" type="button">确认收货</button>
+                                    <button class="btn btn-default refund" type="button">退款</button>
                                     <button class="btn btn-default deleteOrder" type="button">删除</button>
                                 </td>
                             </tr>
@@ -805,6 +805,166 @@
     </div>
 
 </div>
+
+<div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="city-container">
+                    <div class="city-select">
+                        <div class="select-title">选择城市</div>
+                    </div>
+                    <div class="hot-city">
+                        <span class="title">热门城市:</span>
+                        <span class="city-item">北京</span>
+                        <span class="city-item">上海</span>
+                        <span class="city-item">广州</span>
+                        <span class="city-item">深圳</span>
+                        <span class="city-item">成都</span>
+                        <span class="city-item">杭州</span>
+                        <span class="city-item">南京</span>
+                    </div>
+                    <div class="city-content">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td class="title">
+                                    B
+                                </td>
+                                <td>
+                                    <span class="city-item">北京</span>
+                                </td>
+                                <td class="title">
+                                    L
+                                </td>
+                                <td>
+                                    <span class="city-item">北京</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    C
+                                </td>
+                                <td>
+                                    <span class="city-item">成都</span>
+                                    <span class="city-item">重庆</span>
+                                </td>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td>
+                                    <span class="city-item">成都</span>
+                                    <span class="city-item">重庆</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    D
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                                <td class="title">
+                                    Q
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    F
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                                <td class="title">
+                                    S
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                                <td class="title">
+                                    T
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    D
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                                <td class="title">
+                                    Q
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    F
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                                <td class="title">
+                                    S
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                                <td class="title">
+                                    T
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -1013,6 +1173,50 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="successModalLabel">确认收货</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>房号</th>
+                        <th>租期</th>
+                        <th>租赁方式</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>深意公寓A栋A户型</td>
+                        <td>301</td>
+                        <td>6个月</td>
+                        <td>押一付一</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="person-info">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <span>联系方式：</span>
+                            <span>13411002202</span>
+                        </div>
+                    </form>
+                    <div class="tip">温馨提示：付款后请联系该公寓，请尽快搬家</div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="refund-price">总价：<span>￥9999</span></div>
+                <div class="submit">
+                    <div class="submit-btn">确认收货</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
@@ -1052,6 +1256,12 @@
 
     $('.deleteMsg').click(function () {
       $('#deleteMessage').modal('show')
+    })
+    $('.success').click(function () {
+      $('#successModal').modal('show')
+    })
+    $('.refund').click(function () {
+      $('#refund').modal('show')
     })
     $('.payOrder').click(function () {
       $('#payModal').modal('show')

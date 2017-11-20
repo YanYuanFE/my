@@ -66,7 +66,7 @@
                 <img src="assets/images/logo.png" alt="">
                 <img src="assets/images/area.png" alt="" class="gps">
                 <span class="location">深圳</span>
-                <span class="changecity">切换城市</span>
+                <span class="changecity" data-toggle="modal" data-target="#cityModal">切换城市</span>
             </div>
             <div class="col-md-3 col-xs-3 col-sm-3">
                 <div class="tab">
@@ -84,7 +84,7 @@
                 <div class="menu">
                     <ul>
                         <li>
-                            <a href="login.html">登录</a>/<a href="login.html">注册</a>
+                            <a href="login.html">登录</a>/<a href="register.html">注册</a>
                         </li>
                         <li>
                             <a href="person.html">个人中心</a>
@@ -328,8 +328,8 @@
                             <td>预约中</td>
                             <td>
                                 <button class="btn btn-default green">同意预约</button>
-                                <button class="btn btn-default" data-toggle="modal" data-target="#changeTime">更改时间</button>
-                                <button class="btn btn-default">取消预约</button>
+                                <button class="btn btn-default changeTime">更改时间</button>
+                                <button class="btn btn-default cancelPre">取消预约</button>
                             </td>
                         </tr>
                         <tr>
@@ -356,7 +356,7 @@
                             <td>13410020202</td>
                             <td>预约结束</td>
                             <td>
-                                <button class="btn btn-default">删除</button>
+                                <button class="btn btn-default  deletePre">删除</button>
                             </td>
                         </tr>
                         <tr>
@@ -370,7 +370,7 @@
                             <td>13410020202</td>
                             <td>预约失败 </td>
                             <td>
-                                <button class="btn btn-default">删除</button>
+                                <button class="btn btn-default  deletePre">删除</button>
                             </td>
                         </tr>
                         </tbody>
@@ -489,6 +489,165 @@
     </div>
 
 </div>
+<div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="city-container">
+                    <div class="city-select">
+                        <div class="select-title">选择城市</div>
+                    </div>
+                    <div class="hot-city">
+                        <span class="title">热门城市:</span>
+                        <span class="city-item">北京</span>
+                        <span class="city-item">上海</span>
+                        <span class="city-item">广州</span>
+                        <span class="city-item">深圳</span>
+                        <span class="city-item">成都</span>
+                        <span class="city-item">杭州</span>
+                        <span class="city-item">南京</span>
+                    </div>
+                    <div class="city-content">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td class="title">
+                                    B
+                                </td>
+                                <td>
+                                    <span class="city-item">北京</span>
+                                </td>
+                                <td class="title">
+                                    L
+                                </td>
+                                <td>
+                                    <span class="city-item">北京</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    C
+                                </td>
+                                <td>
+                                    <span class="city-item">成都</span>
+                                    <span class="city-item">重庆</span>
+                                </td>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td>
+                                    <span class="city-item">成都</span>
+                                    <span class="city-item">重庆</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    D
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                                <td class="title">
+                                    Q
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    F
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                                <td class="title">
+                                    S
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                                <td class="title">
+                                    T
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    D
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                                <td class="title">
+                                    Q
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    F
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                                <td class="title">
+                                    S
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                                <td class="title">
+                                    T
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="changeTime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -513,6 +672,36 @@
                 <div class="submit">
                     <div class="submit-btn">确定修改</div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="cancelPre" tabindex="-1" role="dialog" aria-labelledby="cancelPreModalLabel">
+    <div class="modal-dialog cancel" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="cancelPreModalLabel">取消预约</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-area">
+                    <textarea class="weui-textarea" placeholder="请输入取消理由" rows="6"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer no-border submit">
+                <button type="button" class="btn btn-primary submit-btn">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="deletePre" tabindex="-1" role="dialog" aria-labelledby="deletePreModalLabel">
+    <div class="modal-dialog cancel" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>确定要删除这个预约吗？</p>
+            </div>
+            <div class="modal-footer no-border">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
             </div>
         </div>
     </div>
@@ -569,6 +758,15 @@
     $('#myTabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
+    })
+    $('.changeTime').click(function () {
+      $('#changeTime').modal('show')
+    })
+    $('.cancelPre').click(function () {
+      $('#cancelPre').modal('show')
+    })
+    $('.deletePre').click(function () {
+      $('#deletePre').modal('show')
     })
     $('.weui-btn').click(function(e) {
       console.log($(this))

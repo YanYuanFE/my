@@ -91,6 +91,11 @@ li {
     background: #FFF;
 }
 
+.city-content {
+    height: 200px;
+    overflow-y: scroll;
+}
+
 .select-title {
     font-size: 18px;
     margin-right: 10px;
@@ -402,6 +407,7 @@ li {
     line-height: 43px;
     cursor: pointer;
 }
+
 .popover {
     max-width: 428px;
     border: 1px solid #F0F0F0;

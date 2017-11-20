@@ -87,6 +87,58 @@ li {
     background: #8FD026;
 }
 
+
+.city-container {
+    background: #FFF;
+}
+
+.city-content {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.select-title {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.city-select {
+    display: flex;
+    align-items: center;
+}
+
+.city-select select {
+    width: 100px;
+    margin: 0 10px;
+    border-radius: 0;
+}
+
+.city-container .title {
+    color: #8FD026;
+}
+
+.hot-city {
+    padding: 19px 0 20px 0;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.hot-city .title {
+    margin-right: 10px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    border: none;
+}
+
+.city-item {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#cityModal table {
+    box-shadow: none;
+}
+
 .sidenav .title {
     width: 100%;
     text-align: center;
@@ -642,6 +694,14 @@ table .btn {
     text-align: center;
 }
 
+#successModal .modal-footer {
+    border: none;
+}
+
+#successModal .refund-price {
+    text-align: left;
+}
+
 .modal-footer.no-border {
     border:none;
 }
@@ -779,13 +839,15 @@ table .btn {
 .person-info input{
     border-radius: 0;
     background-color: #F9F9F9;
+    display: inline-block;
+    width: 150px;
 }
 
 #payModal .modal-title {
     text-align: center;
 }
 
-.person-info, .pay-list {
+.modal .person-info,.modal  .pay-list {
     display: flex;
     font-size: 14px;
     align-items: center;
