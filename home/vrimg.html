@@ -31,9 +31,10 @@
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/three.min.js"></script>
 <script src="assets/js/photo-sphere-viewer.min.js"></script>
+
 <script>
   $(document).ready(function() {
-      var PSV = new PhotoSphereViewer({
+      var viewer = new PhotoSphereViewer({
           // Path to the panorama
           panorama: 'http://o9qn9041y.bkt.clouddn.com/80788126.jpg',
 
@@ -44,8 +45,20 @@
           size: {
             width: '100%',
             height: '500px'
+          },
+          onready: function () {
+            viewer.toggleAutorotate();
           }
       });
+    console.log(viewer)
+
+
+//      viewer.on('ready', function() {
+//        viewer.rotate({
+//           x: 1500,
+//           y: 1000
+//        });
+//      });
 
 
   })

@@ -223,12 +223,16 @@ li {
     text-align: center;
 }
 
-.side a {
+.side li {
     color: #FFF;
     display: inline-block;
     height: 90px;
     padding: 20px 4px;
     border-bottom: 1px solid #FFF;
+}
+
+.side li a {
+    color: #FFF;
 }
 
 .brand-hotel p {

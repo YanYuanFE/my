@@ -756,7 +756,7 @@ h2 span {
 }
 
 
-.modal .modal-body .time {
+#preModal .modal .modal-body .time {
     height: 41px;
     display: flex;
     justify-content: space-between;
