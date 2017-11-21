@@ -7,6 +7,10 @@ body {
     color: #333;
 }
 
+#vr {
+    text-align: center;
+}
+
 .source-detail .header {
     height: 2.2rem;
     background: #8FD026;
