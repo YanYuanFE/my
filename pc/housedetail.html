@@ -103,8 +103,9 @@
                 <div class="btn-item pk" id="addPk">
                     <span class="pk">PK</span>加入对比
                 </div>
-                <div class="btn-item heart">
-                    <img src="assets/images/heart1.png" alt="">已收藏
+                <div class="btn-item heart" id="collect">
+                    <img src="assets/images/heart1.png" alt="">
+                    <span>已收藏</span>
                 </div>
             </div>
         </div>
@@ -524,6 +525,13 @@
       left_btn: ".left_btn",
       right_btn: ".right_btn"
     });
+    $('#collect').click(function () {
+      if($('span',this).text() === '收藏') {
+        $('span',this).text('已收藏');
+      } else {
+        $('span',this).text('收藏');
+      }
+    })
     $('.pay-item').click(function () {
       $(this).toggleClass('pay-select').siblings().removeClass('pay-select');
     })
@@ -555,14 +563,8 @@
         return keywords_content();   //内容函数
       }
     });
-    $('#addPk').popover({
-      trigger: 'click',
-      placement: 'left',
-      html: true,      //实现对html可写
-      title: keywords_title(),   //标题函数
-      content: function() {
-        return keywords_content();   //内容函数
-      }
+    $('#addPk').click(function () {
+      $('#pk').click()
     });
     function keywords_title() {
       return '对比清单：';

@@ -35,10 +35,16 @@
   $(document).ready(function() {
       var PSV = new PhotoSphereViewer({
           // Path to the panorama
-          panorama: 'http://yanyuanfe.cn/my/home/assets/images/360.jpg',
+          panorama: 'http://o9qn9041y.bkt.clouddn.com/80788126.jpg',
 
           // Container
-          container: vr
+          container: vr,
+          time_anim: false,
+          navbar: true,
+          size: {
+            width: '100%',
+            height: '500px'
+          }
       });
 
 
