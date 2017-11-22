@@ -521,11 +521,13 @@
 <script src="assets/js/iscroll.js"></script>
 <script>
   $(document).ready(function(){
-    new IScroll('#cityScroll', { mouseWheel: true, click: true, probeType: 2 });
     $('.city-item').click(function (e) {
       var city = $(this).text();
       $('.changecity').html(city);
       $('#cityModal').modal('hide');
+    })
+    $('.kind-item').click(function () {
+      $(this).toggleClass('active').siblings().removeClass('active');
     })
     $('#pk').popover({
       trigger: 'click',
