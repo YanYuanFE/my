@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/weui.css">
+    <link rel="stylesheet" href="assets/css/jquery-weui.css">
+    <link rel="stylesheet" href="assets/css/order.css" />
+</head>
+<body>
+<div class="container-fluid home-container">
+    <div class="side">
+        <ul>
+            <li>
+                <a href="./person.html#pre">
+                    <img src="assets/images/pre.png" alt="">
+                    <p>我的预约</p>
+                </a>
+            </li>
+            <li>
+                <a href="./person.html#order">
+                    <img src="assets/images/order.png" alt="">
+                    <p>我的订单</p>
+                </a>
+            </li>
+            <li id="pk">
+                <img src="assets/images/pkicon.png" alt="">
+                <p>房源对比</p>
+            </li>
+            <li>
+                <a href="./person.html#attention">
+                    <img src="assets/images/gz.png" alt="">
+                    <p>关注</p>
+                </a>
+            </li>
+            <li>
+                <a href="./person.html#collect">
+                    <img src="assets/images/sc.png" alt="">
+                    <p>收藏</p>
+                </a>
+            </li>
+            <li>
+                <a href="./myfoot.html">
+                    <img src="assets/images/zj.png" alt="">
+                    <p>我的足迹</p>
+                </a>
+            </li>
+            <li data-toggle="modal" data-target="#suggestModal">
+                <img src="assets/images/fk.png" alt="">
+                <p>反馈我们</p>
+            </li>
+            <li data-toggle="modal" data-target="#serviceModal">
+                <img src="assets/images/kf.png" alt="">
+                <p>客服</p>
+            </li>
+        </ul>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="col-md-3">
+                <img src="assets/images/logo.png" alt="">
+                <img src="assets/images/area.png" alt="" class="gps">
+                <span class="location">深圳</span>
+                <a href="" class="changecity">切换城市</a>
+            </div>
+            <div class="col-md-3">
+                <div class="tab">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="active">首页</a>
+                        </li>
+                        <li>
+                            <a href="hotel.html">品牌公寓</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="login.html">登录</a>/<a href="register.html">注册</a>
+                        </li>
+                        <li>
+                            <a href="person.html">个人中心</a>
+                        </li>
+                        <li ><a href="company.html">企业用户</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="company-container container">
+        <div class="col-md-2 sidenav">
+            <div class="title">
+                个人中心
+            </div>
+            <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="./person.html#profile">个人资料</a>
+                </li>
+                <li role="presentation">
+                    <a href="./person.html#message">我的消息</a>
+                </li>
+                <li role="presentation">
+                    <a href="./person.html#order">我的订单</a>
+                </li>
+                <li role="presentation">
+                    <a href="./person.html#pre">我的预约</a>
+                </li>
+                <li role="presentation">
+                    <a href="./person.html#collect">我的收藏</a>
+                </li>
+                <li role="presentation">
+                    <a href="./person.html#attention">关注</a>
+                </li>
+                <li role="presentation">
+                    <a href="./person.html#coupon">我的优惠券</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main col-md-10">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    <div class="upload clearfix">
+                        <div class="weui-uploader__input-box">
+                            <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                        </div>
+                        <div>上传头像</div>
+                    </div>
+                    <div class="tab-title">
+                        <span></span>修改企业资料
+                    </div>
+                    <div class="person-info">
+                        <div class="name">
+                            公寓名：创新公寓
+                        </div>
+                        <div class="tel">
+                            <span>手机号码：13410202020</span>
+                            <div class="btn">修改</div>
+                        </div>
+                        <div class="name">
+                            地址：深圳市南山区科发路1100号
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="housesource">
+                    <div class="source-content">
+                        <div class="message-select source-select clearfix">
+                            <select class="form-control pull-left">
+                                <option>全部户型</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <div class="pull-right">
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 已租
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 未租
+                                </label>
+                            </div>
+                        </div>
+                        <div class="source-content">
+                            <div class="source-item">
+                                <div class="source-title">A户型</div>
+                                <div class="source-list">
+                                    <div class="source-row">
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">201</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">301</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select rent">401</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">501</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">601</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">201</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">301</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select rent">401</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">501</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">601</a>
+                                    </div>
+                                    <div class="source-row">
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">701</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">801</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">901</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1001</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1011</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">701</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">801</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">901</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1001</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1011</a>
+                                    </div>
+                                    <div class="source-row">
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1012</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1013</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select rent">1014</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">1015</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1016</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1012</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1013</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select rent">1014</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">1015</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1016</a>
+                                    </div>
+                                    <div class="source-row">
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1017</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">1018</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1019</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1020</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1021</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1017</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">1018</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1019</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1020</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1021</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="source-item">
+                                <div class="source-title">B户型</div>
+                                <div class="source-list">
+                                    <div class="source-row">
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">201</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">301</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select rent">401</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">501</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">601</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">201</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">301</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select rent">401</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">501</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">601</a>
+                                    </div>
+                                    <div class="source-row">
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">701</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">801</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">901</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1001</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1011</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">701</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">801</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">901</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1001</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1011</a>
+                                    </div>
+                                    <div class="source-row">
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1012</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1013</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select rent">1014</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">1015</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1016</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1012</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1013</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-select rent">1014</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">1015</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1016</a>
+                                    </div>
+                                    <div class="source-row">
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1017</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">1018</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1019</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1020</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1021</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1017</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default btn-disable">1018</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1019</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1020</a>
+                                        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">1021</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setrent">
+                            <button class="btn btn-success" type="button">标记未租</button>
+                            <button class="btn btn-rent" type="button">标记已租</button>
+                        </div>
+                        <div class="tips">
+                            <p>提示： </p>
+                            <p>
+                                先选择房源（如变红色），点击标记未租（标记已租），即可把对应的房源标记对应状态
+                            </p>
+                            <p>
+                                白色为未租房源，灰色为已租房源
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="prelist">
+                    <div class="tab-title">
+                        <div class="pull-left">
+                            <span></span>预约详情
+                        </div>
+                        <div class="pull-right back">
+                            返回预约
+                        </div>
+                    </div>
+                    <div class="order-detail">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <a href="#">
+                                    <img class="media-object" src="assets/images/web2.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">深意公寓 A栋A户型 <span>押一付一</span></h4>
+                                <p><span>订单编号：</span>H123456789</p>
+                                <p><span>预约时间：</span>2017-02-20 13:00</p>
+                                <p><span>公寓地址：</span>深圳市南山区科发路1号</p>
+                                <p><span>联系方式：</span>13923265632</p>
+                                <p><span>成交时间：</span>2017-01-20 13:00</p>
+                                <p><span>租期：</span>6个月</p>
+                            </div>
+                        </div>
+                        <div class="price-detail clearfix">
+                            <div class="pull-right">
+                                <a href="">查看房间详情</a>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>户型</th>
+                            <th>面积</th>
+                            <th>入住时间</th>
+                            <th>朝向</th>
+                            <th>楼层</th>
+                            <th>入住人数</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2室   </td>
+                            <td>120㎡  </td>
+                            <td>2017-08-20 </td>
+                            <td>朝南</td>
+                            <td>10/18层</td>
+                            <td> 8人</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="order">
+                    <div class="tab-title">
+                        <span></span>订单管理
+                    </div>
+                    <div class="message-filter">
+                        <div class="message-select clearfix">
+                            <select class="form-control pull-left">
+                                <option>全部订单</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>公寓名称</th>
+                            <th>房号</th>
+                            <th>单价</th>
+                            <th>租房时长(月）</th>
+                            <th>实付款</th>
+                            <th>订单状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>深意公寓A栋A户型</td>
+                            <td>301  </td>
+                            <td>3800</td>
+                            <td>6</td>
+                            <td>26000</td>
+                            <td>交易成功</td>
+                            <td>
+                                <div class="delete-order">
+                                    <img src="assets/images/delete-btn.png" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>深意公寓A栋A户型</td>
+                            <td>301  </td>
+                            <td>3800</td>
+                            <td>6</td>
+                            <td>26000</td>
+                            <td>未付款</td>
+                            <td>
+                                <div class="delete-order">
+                                    <img src="assets/images/delete-btn.png" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>深意公寓A栋A户型</td>
+                            <td>301  </td>
+                            <td>3800</td>
+                            <td>6</td>
+                            <td>26000</td>
+                            <td>已付款</td>
+                            <td>
+                                <div class="delete-order">
+                                    <img src="assets/images/delete-btn.png" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>深意公寓A栋A户型</td>
+                            <td>301  </td>
+                            <td>3800</td>
+                            <td>6</td>
+                            <td>26000</td>
+                            <td>交易失败</td>
+                            <td>
+                                <div class="delete-order">
+                                    <img src="assets/images/delete-btn.png" alt="">
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="info-item col-md-4">
+                <ul>
+                    <li>关于我们</li>
+                    <li>联系我们</li>
+                    <li>注册登录</li>
+                </ul>
+            </div>
+            <div class="info-item col-md-4">
+                <div class="tel">服务热线：400-222-222</div>
+            </div>
+            <div class="code-item col-md-4">
+                <img src="assets/images/code.png" alt="">
+                <p>公众号</p>
+            </div>
+            <div class="copyright">Copyright © 2017 qfang.com All Rights Reserved ICP备案号：粤ICP备05067219号-3</div>
+            <div class="copyright">
+                深圳市xxxxx有限公司
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=Uy0O2Bh4S4paHQqv6Kn7iy0Y2kQECcsw"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/lazyload.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#myTabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    $('#pk').popover({
+      trigger: 'click',
+      placement: 'left',
+      html: true,      //实现对html可写
+      title: keywords_title(),   //标题函数
+      content: function() {
+        return keywords_content();   //内容函数
+      }
+    });
+    function keywords_title() {
+      return '对比清单：';
+    }
+
+    function keywords_content() {
+      var data = $('<div style="width:428px;" ><div class="media pk-media">\n' +
+        '        <div class="media-left">\n' +
+        '            <a href="#">\n' +
+        '                <div class="check-wrapper">\n' +
+        '                    <input type="checkbox" id="check1" class="check" />\n' +
+        '                    <label for="check1"></label>\n' +
+        '                </div>\n' +
+        '                <img class="media-object" src="assets/images/house1.png" alt="...">\n' +
+        '            </a>\n' +
+        '        </div>\n' +
+        '        <div class="media-body">\n' +
+        '            <h4 class="media-heading">深意公寓A栋B户型</h4>\n' +
+        '            <p><span>1室1厅</span> <span>41.89平米</span></p>\n' +
+        '            <div class="media-foot">\n' +
+        '                <span class="price">￥2300</span>\n' +
+        '                <span class="delete-pk">\n' +
+        '                    <img src="assets/images/delete-btn.png" alt="">\n' +
+        '                </span>\n' +
+        '            </div>\n' +
+        '        </div>\n' +
+        '    </div>\n' +
+        '    <div class="media pk-media">\n' +
+        '        <div class="media-left">\n' +
+        '            <a href="#">\n' +
+        '                <div class="check-wrapper">\n' +
+        '                    <input type="checkbox" id="check2" class="check" />\n' +
+        '                    <label for="check2"></label>\n' +
+        '                </div>\n' +
+        '                <img class="media-object" src="assets/images/house1.png" alt="...">\n' +
+        '            </a>\n' +
+        '        </div>\n' +
+        '        <div class="media-body">\n' +
+        '            <h4 class="media-heading">深意公寓A栋B户型</h4>\n' +
+        '            <p><span>1室1厅</span> <span>41.89平米</span></p>\n' +
+        '            <div class="media-foot">\n' +
+        '                <span class="price">￥2300</span>\n' +
+        '                <span class="delete-pk">\n' +
+        '                    <img src="assets/images/delete-btn.png" alt="">\n' +
+        '                </span>\n' +
+        '            </div>\n' +
+        '        </div>\n' +
+        '    </div>\n' +
+        '    <div class="pk-foot">\n' +
+        '        <div class="pk-btn"><a href="./pk.html">立即对比</a></div>\n' +
+        '    </div></div>');
+      return data
+    }
+  });
+</script>
+</body>
+</html>

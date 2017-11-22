@@ -375,6 +375,28 @@
                         </tr>
                         </tbody>
                     </table>
+                    <div class="pagination pull-right">
+                        <nav aria-label="Page navigation ">
+                            <ul class="pagination">
+                                <li class="active">
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">上一页</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">下一页</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="order">
                     <div class="tab-title">
@@ -412,7 +434,7 @@
                             <td>26000</td>
                             <td>交易成功</td>
                             <td>
-                                <div class="delete-order">
+                                <div class="delete-order deleteOrder">
                                     <img src="assets/images/delete-btn.png" alt="">
                                 </div>
                             </td>
@@ -425,7 +447,7 @@
                             <td>26000</td>
                             <td>未付款</td>
                             <td>
-                                <div class="delete-order">
+                                <div class="delete-order deleteOrder">
                                     <img src="assets/images/delete-btn.png" alt="">
                                 </div>
                             </td>
@@ -438,7 +460,7 @@
                             <td>26000</td>
                             <td>已付款</td>
                             <td>
-                                <div class="delete-order">
+                                <div class="delete-order deleteOrder">
                                     <img src="assets/images/delete-btn.png" alt="">
                                 </div>
                             </td>
@@ -451,13 +473,35 @@
                             <td>26000</td>
                             <td>交易失败</td>
                             <td>
-                                <div class="delete-order">
+                                <div class="delete-order deleteOrder">
                                     <img src="assets/images/delete-btn.png" alt="">
                                 </div>
                             </td>
                         </tr>
                         </tbody>
                     </table>
+                    <div class="pagination pull-right">
+                        <nav aria-label="Page navigation ">
+                            <ul class="pagination">
+                                <li class="active">
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">上一页</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">下一页</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -468,9 +512,9 @@
         <div class="container">
             <div class="info-item col-md-4">
                 <ul>
-                    <li>关于我们</li>
+                    <li><a href="about.html"></a>关于我们</li>
                     <li>联系我们</li>
-                    <li>注册登录</li>
+                    <li><a href="login.html"></a>注册登录</li>
                 </ul>
             </div>
             <div class="info-item col-md-4">
@@ -488,6 +532,19 @@
 
     </div>
 
+</div>
+<div class="modal fade" id="deleteOrder" tabindex="-1" role="dialog" aria-labelledby="deleteOrderModalLabel">
+    <div class="modal-dialog cancel" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>确定要删除这个订单吗？</p>
+            </div>
+            <div class="modal-footer no-border">
+                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel">
     <div class="modal-dialog" role="document">
@@ -755,6 +812,25 @@
 <script src="assets/js/jquery-weui.js"></script>
 <script>
   $(document).ready(function(){
+    var thisId = window.location.hash;
+    if(thisId) {
+      var mao = $(thisId); //获得锚点
+      mao.siblings().removeClass('active in');
+      var index = mao.index();
+      console.log(thisId)
+      mao.addClass('active in');
+      $('#myTab').find('li').eq(index).addClass('active').siblings().removeClass('active');
+    }
+
+    window.onhashchange = function () {
+      var thisId = window.location.hash;
+      var mao = $(thisId); //获得锚点
+      mao.siblings().removeClass('active in');
+      var index = mao.index();
+      console.log($('#myTab').find('li'))
+      mao.addClass('active in');
+      $('#myTab').find('li').eq(index).addClass('active').siblings().removeClass('active');
+    }
     $('#myTabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
@@ -767,6 +843,9 @@
     })
     $('.deletePre').click(function () {
       $('#deletePre').modal('show')
+    })
+    $('.deleteOrder').click(function () {
+      $('#deleteOrder').modal('show')
     })
     $('.weui-btn').click(function(e) {
       console.log($(this))

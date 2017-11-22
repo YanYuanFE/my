@@ -784,9 +784,9 @@
         <div class="container">
             <div class="info-item col-md-4">
                 <ul>
-                    <li>关于我们</li>
+                    <li><a href="about.html"></a>关于我们</li>
                     <li>联系我们</li>
-                    <li>注册登录</li>
+                    <li><a href="login.html"></a>注册登录</li>
                 </ul>
             </div>
             <div class="info-item col-md-4">
@@ -1152,10 +1152,12 @@
                 </div>
                 <div class="pay-list">
                     <div class="pay-item">
-                        <img src="assets/images/weixin.png" alt="" width="24" height="20">
+                        <span></span>
+                        <img src="assets/images/weixin.png" alt="" width="23" height="23">
                         微信支付
                     </div>
                     <div class="pay-item">
+                        <span></span>
                         <img src="assets/images/zhifubao.png" alt="" width="23" height="23">
                         支付宝
                     </div>
@@ -1291,6 +1293,9 @@
 
     $('#uploadImage').change(function () {
       upload('#uploadImage', '#refundImg')
+    })
+    $('.pay-item').click(function () {
+      $(this).toggleClass('pay-select').siblings().removeClass('pay-select');
     })
 
     function upload(c, d){

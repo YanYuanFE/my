@@ -456,6 +456,47 @@ table .btn {
 }
 
 
+.company-container .pagination li a {
+    border-radius: 0;
+    margin-left: 2px;
+}
+
+.company-container .pagination>li>span:focus, .pagination>li>span:hover {
+    z-index: 2;
+    color: #FFF;
+    background-color: #8FD026;
+    border-color: #dadada;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    z-index: 2;
+    color: #FFF;
+    background-color: #8FD026;
+    border-color: #dadada;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #8FD026;
+    border-color: #8FD026;
+}
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    margin-right: 14px;
+    line-height: 1.42857143;
+    color: #9C9C9C;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dadada;
+}
+
+
 .modal .modal-content {
     border-radius: 0;
 
@@ -571,6 +612,11 @@ table .btn {
 }
 
 #deletePre .modal-dialog.cancel .modal-body p {
+    color: #333;
+    text-align: center;
+}
+
+#deleteOrder .modal-dialog.cancel .modal-body p {
     color: #333;
     text-align: center;
 }

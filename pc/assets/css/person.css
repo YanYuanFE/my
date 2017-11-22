@@ -866,7 +866,40 @@ table .btn {
     margin-right: 18px;
     margin-top: 33px;
     text-align: center;
+    cursor: pointer;
+    position: relative;
 }
+
+.pay-item.pay-select:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-top: 23px solid #8FD026;
+    border-left: 23px solid transparent;
+}
+
+.pay-select span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 10px;
+}
+
+.pay-select span:before {
+    content: '\2714';
+    position: absolute;
+    top: -14px;
+    right: 0px;
+    color: #FFF;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    font-size: 14px;
+}
+
 
 
 .tip {
