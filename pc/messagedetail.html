@@ -723,6 +723,165 @@
     </div>
 
 </div>
+<div class="modal fade" id="cityModal" tabindex="-1" role="dialog" aria-labelledby="cityModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="city-container">
+                    <div class="city-select">
+                        <div class="select-title">选择城市</div>
+                    </div>
+                    <div class="hot-city">
+                        <span class="title">热门城市:</span>
+                        <span class="city-item">北京</span>
+                        <span class="city-item">上海</span>
+                        <span class="city-item">广州</span>
+                        <span class="city-item">深圳</span>
+                        <span class="city-item">成都</span>
+                        <span class="city-item">杭州</span>
+                        <span class="city-item">南京</span>
+                    </div>
+                    <div class="city-content">
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td class="title">
+                                    B
+                                </td>
+                                <td>
+                                    <span class="city-item">北京</span>
+                                </td>
+                                <td class="title">
+                                    L
+                                </td>
+                                <td>
+                                    <span class="city-item">北京</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    C
+                                </td>
+                                <td>
+                                    <span class="city-item">成都</span>
+                                    <span class="city-item">重庆</span>
+                                </td>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td>
+                                    <span class="city-item">成都</span>
+                                    <span class="city-item">重庆</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    D
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                                <td class="title">
+                                    Q
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    F
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                                <td class="title">
+                                    S
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                                <td class="title">
+                                    T
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    D
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                                <td class="title">
+                                    Q
+                                </td>
+                                <td>
+                                    <span class="city-item">大连</span>
+                                    <span class="city-item">东莞</span>
+                                    <span class="city-item">大理</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    F
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                                <td class="title">
+                                    S
+                                </td>
+                                <td>
+                                    <span class="city-item">合肥</span>
+                                    <span class="city-item">芜湖</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    H
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                                <td class="title">
+                                    T
+                                </td>
+                                <td>
+                                    <span class="city-item">郑州</span>
+                                    <span class="city-item">洛阳</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="modal fade" id="refund" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -806,6 +965,11 @@
     $('#pk').click(function () {
       $('#popover').toggle()
     });
+    $('.city-item').click(function (e) {
+      var city = $(this).text();
+      $('.changecity').html(city);
+      $('#cityModal').modal('hide');
+    })
   });
 </script>
 </body>

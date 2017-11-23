@@ -1368,6 +1368,11 @@
     $('#changePhone').click(function () {
       $('.change-tel').toggle();
     })
+    $('.city-item').click(function (e) {
+      var city = $(this).text();
+      $('.changecity').html(city);
+      $('#cityModal').modal('hide');
+    })
   });
 </script>
 </body>

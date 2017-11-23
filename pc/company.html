@@ -935,6 +935,11 @@
     $('#pk').click(function () {
       $('#popover').toggle()
     });
+    $('.city-item').click(function (e) {
+      var city = $(this).text();
+      $('.changecity').html(city);
+      $('#cityModal').modal('hide');
+    })
   });
 </script>
 </body>

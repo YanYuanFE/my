@@ -123,7 +123,7 @@ li {
     height: 500px;
 }
 
-.user-info, .attention, .search-container {
+.user-info, .attention, .search-container, .collect {
     position: absolute;
 }
 
@@ -138,14 +138,25 @@ li {
 
 .attention {
     top: 27px;
+    right: 20%;
+    color: #FFF;
+    text-align: center;
+}
+
+.collect {
+    top: 27px;
     right: 25%;
     color: #FFF;
     text-align: center;
 }
 
-.attention img {
+.attention img, .collect img {
     width: 28px;
     height: 28px;
+}
+
+.attention img.unattention, .collect img.uncollect {
+    display: none;
 }
 
 .user-info img {
