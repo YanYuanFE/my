@@ -469,12 +469,14 @@ li {
     display: inline-block;
     position: relative;
     margin-right:20px;
+    cursor: pointer;
 }
 
 .check:checked + label {
     background-color: #8FD026;
     border: 1px solid #8FD026;
     color: #FFF;
+    cursor: pointer;
 }
 
 .check:checked + label:after {

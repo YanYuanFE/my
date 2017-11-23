@@ -32,6 +32,59 @@
                 <img src="assets/images/pkicon.png" alt="">
                 <p>房源对比</p>
             </li>
+            <div class="popover fade left in" role="tooltip" id="popover" style="top: 9px; left: -428px; display: none;">
+                <div class="arrow" style="top: 50%;"></div>
+                <h3 class="popover-title">对比清单：</h3>
+                <div class="popover-content">
+                    <div style="width:428px;">
+                        <div class="media pk-media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <div class="check-wrapper">
+                                        <input type="checkbox" id="check1" class="check">
+                                        <label for="check1"></label>
+                                    </div>
+                                    <img class="media-object" src="assets/images/house1.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">深意公寓A栋B户型</h4>
+                                <p><span>1室1厅</span> <span>41.89平米</span></p>
+                                <div class="media-foot">
+                                    <span class="price">￥2300</span>
+                                    <span class="delete-pk">
+                                <img src="assets/images/delete-btn.png" alt="">
+                            </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media pk-media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <div class="check-wrapper">
+                                        <input type="checkbox" id="check2" class="check">
+                                        <label for="check2"></label>
+                                    </div>
+                                    <img class="media-object" src="assets/images/house1.png" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">深意公寓A栋B户型</h4>
+                                <p><span>1室1厅</span> <span>41.89平米</span></p>
+                                <div class="media-foot">
+                                    <span class="price">￥2300</span>
+                                    <span class="delete-pk">
+                            <img src="assets/images/delete-btn.png" alt="">
+                        </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pk-foot">
+                            <div class="pk-btn"><a href="./pk.html">立即对比</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <li>
                 <a href="./person.html#attention">
                     <img src="assets/images/gz.png" alt="">
@@ -462,67 +515,9 @@
       e.preventDefault()
       $(this).tab('show')
     })
-    $('#pk').popover({
-      trigger: 'click',
-      placement: 'left',
-      html: true,      //实现对html可写
-      title: keywords_title(),   //标题函数
-      content: function() {
-        return keywords_content();   //内容函数
-      }
+    $('#pk').click(function () {
+      $('#popover').toggle()
     });
-    function keywords_title() {
-      return '对比清单：';
-    }
-
-    function keywords_content() {
-      var data = $('<div style="width:428px;" ><div class="media pk-media">\n' +
-        '        <div class="media-left">\n' +
-        '            <a href="#">\n' +
-        '                <div class="check-wrapper">\n' +
-        '                    <input type="checkbox" id="check1" class="check" />\n' +
-        '                    <label for="check1"></label>\n' +
-        '                </div>\n' +
-        '                <img class="media-object" src="assets/images/house1.png" alt="...">\n' +
-        '            </a>\n' +
-        '        </div>\n' +
-        '        <div class="media-body">\n' +
-        '            <h4 class="media-heading">深意公寓A栋B户型</h4>\n' +
-        '            <p><span>1室1厅</span> <span>41.89平米</span></p>\n' +
-        '            <div class="media-foot">\n' +
-        '                <span class="price">￥2300</span>\n' +
-        '                <span class="delete-pk">\n' +
-        '                    <img src="assets/images/delete-btn.png" alt="">\n' +
-        '                </span>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="media pk-media">\n' +
-        '        <div class="media-left">\n' +
-        '            <a href="#">\n' +
-        '                <div class="check-wrapper">\n' +
-        '                    <input type="checkbox" id="check2" class="check" />\n' +
-        '                    <label for="check2"></label>\n' +
-        '                </div>\n' +
-        '                <img class="media-object" src="assets/images/house1.png" alt="...">\n' +
-        '            </a>\n' +
-        '        </div>\n' +
-        '        <div class="media-body">\n' +
-        '            <h4 class="media-heading">深意公寓A栋B户型</h4>\n' +
-        '            <p><span>1室1厅</span> <span>41.89平米</span></p>\n' +
-        '            <div class="media-foot">\n' +
-        '                <span class="price">￥2300</span>\n' +
-        '                <span class="delete-pk">\n' +
-        '                    <img src="assets/images/delete-btn.png" alt="">\n' +
-        '                </span>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="pk-foot">\n' +
-        '        <div class="pk-btn"><a href="./pk.html">立即对比</a></div>\n' +
-        '    </div></div>');
-      return data
-    }
   });
 </script>
 </body>
