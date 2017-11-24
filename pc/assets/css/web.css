@@ -90,6 +90,10 @@ li {
     margin-top: 10px;
 }
 
+.footer li a {
+    color: #FFF;
+}
+
 .footer .tel {
     height: 56px;
     border: 1px solid #FFF;
@@ -149,6 +153,10 @@ li {
     flex: 1;
     line-height: 50px;
     text-align: center;
+}
+
+.search-input .start a {
+    color: #FFF;
 }
 
 .slogan {
@@ -263,4 +271,116 @@ li {
     color: #FFF;
     font-size: 20px;
     padding: 5px 27px;
+}
+
+
+.popover {
+    max-width: 428px;
+    border: 1px solid #F0F0F0;
+    border-radius: 0;
+    top: 2.5px !important;
+    left: -417px !important;
+}
+
+
+.popover-title {
+    color: #333;
+    height: 47px;
+    line-height: 47px;
+    background-color: #FFF;
+    padding: 0;
+    padding-left: 27px;
+}
+
+.popover-content {
+    padding: 0;
+}
+
+.pk-media {
+    display: flex;
+    border-bottom: 1px solid #E6E6E6;
+    padding: 17px 24px 16px 20px;
+}
+
+.pk-media .media-left a{
+    display: flex;
+    align-items: center;
+}
+
+.pk-media .media-left img {
+    width: 142px;
+    height: 104px;
+}
+
+.pk-media .media-body p span {
+    font-size: 14px;
+    color: #6F6F6F;
+    margin-right: 20px;
+}
+
+.pk-media .media-body .price {
+    font-size: 20px;
+    color: #FF4040;
+}
+
+.check {
+    display: none;
+}
+
+.check + label {
+    background-color: #FFF;
+    border: 1px solid #8FD026;
+    padding: 6px;
+    display: inline-block;
+    position: relative;
+    margin-right:20px;
+    cursor: pointer;
+}
+
+.check:checked + label {
+    background-color: #8FD026;
+    border: 1px solid #8FD026;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.check:checked + label:after {
+    content: '\2714';
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2px;
+}
+
+
+.media-foot {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pk-foot {
+    height: 90px;
+    line-height: 90px;
+    border-top: 1px solid #E6E6E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pk-foot .pk-btn {
+    background-color: #8FD026;
+    width: 323px;
+    height: 53px;
+    line-height: 53px;
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+}
+
+.pk-foot .pk-btn a {
+    color: #FFF;
 }

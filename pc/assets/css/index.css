@@ -277,12 +277,16 @@ li {
     background: #8FD026;
     font-size: 16px;
     color: #FFF;
-    height: 205px;
+    height: 209px;
     padding-top: 33px;
 }
 
 .footer li {
     margin-top: 10px;
+}
+
+.footer li a {
+    color: #FFF;
 }
 
 .footer .tel {
@@ -514,4 +518,8 @@ li {
     color: #FFF;
     font-size: 18px;
     text-align: center;
+}
+
+.pk-foot .pk-btn a {
+    color: #FFF;
 }

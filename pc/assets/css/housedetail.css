@@ -544,6 +544,10 @@ h2 span {
     margin-top: 10px;
 }
 
+.footer li a {
+    color: #FFF;
+}
+
 .footer .tel {
     height: 56px;
     border: 1px solid #FFF;
@@ -1024,4 +1028,8 @@ h2 span {
     color: #FFF;
     font-size: 18px;
     text-align: center;
+}
+
+.pk-foot .pk-btn a {
+    color: #FFF;
 }

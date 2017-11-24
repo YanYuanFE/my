@@ -94,6 +94,10 @@ li {
     margin-top: 10px;
 }
 
+.footer li a {
+    color: #FFF;
+}
+
 .footer .tel {
     height: 56px;
     border: 1px solid #FFF;
@@ -331,13 +335,26 @@ li {
     display: flex;
 }
 
-.recommend video{
+.recommend .video {
     width: 100%;
     height: 280px;
-    flex: 1;
 }
 
-.recommend .video-js:first-child{
+.recommend .video-item{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.video-title {
+    height: 73px;
+    text-align: center;
+    line-height: 73px;
+    color: #333;
+}
+
+.recommend .video-item:first-child{
     margin-right: 43px;
 }
 
@@ -551,4 +568,8 @@ li {
     color: #FFF;
     font-size: 18px;
     text-align: center;
+}
+
+.pk-foot .pk-btn a {
+    color: #FFF;
 }
