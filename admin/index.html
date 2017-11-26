@@ -254,6 +254,7 @@
                     <div role="tabpanel" class="tab-pane" id="check">
                         <div class="tab-header">
                             <h2 class="title">快检管理</h2>
+                            <button class="btn btn-primary" id="addSupply">增加采购单</button>
                             <button class="btn btn-primary" id="addCheck">添加快检</button>
                         </div>
                         <div class="table-container">
@@ -1553,6 +1554,211 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="addSupplyModal" tabindex="-1" role="dialog" aria-labelledby="addEntryModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addSupplyModalLabel">增加采购单</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="">
+                        <div class="check-btntitle clearfix ">
+                            <span class="check-title">送货人信息</span>
+                        </div>
+                        <div class="supply-info">
+                            <div class="form-inline">
+                                <div class="form-group" style="width: 25%">
+                                    <label for="" class="control-label">身份证号：</label>
+                                    <input type="text" class="form-control" id="ID">
+                                </div>
+                                <div class="form-group" style="width: 25%">
+                                    <label for="driverName" class="control-label">联系方式：</label>
+                                    <input type="text" class="form-control" id="phone">
+                                </div>
+                                <div class="form-group" style="width: 25%">
+                                    <label for="goodStyle" class="no-padding control-label">车牌号码：</label>
+                                    <select name="" id="">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                    <input type="text" class="form-control" id="cardId" style="width: 100px;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="goodStyle" class="no-padding control-label">车     型：</label>
+                                    <select name="" id="">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-inline clearfix">
+                                <div class="form-group" style="width: 25%">
+                                    <label for="" class="control-label">&nbsp;&nbsp;单据号：</label>
+                                    <input type="text" class="form-control" id="order">
+                                </div>
+                                <div class="form-group" style="width: 25%">
+                                    <label for="price" class="control-label">&nbsp;&nbsp;供应商：</label>
+                                    <select name="" id="">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" style="width: 25%">
+                                    <label for="price" class="control-label">档&nbsp;&nbsp;&nbsp;&nbsp; 主：</label>
+                                    <select name="" id="">
+                                        <option value="请选择">请选择</option>
+                                    </select>
+                                    <input type="text" class="form-control" id="" style="width: 100px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-content" id="supplyContent">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>品名</th>
+                                        <th>数量</th>
+                                        <th>单价</th>
+                                        <th>金额</th>
+                                        <th>产地</th>
+                                        <th style="width: 100px"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="supplyForm">
+                                    <tr>
+                                        <td>
+                                            <span>1</span>
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="请选择">请选择</option>
+                                            </select>
+                                            <input type="text" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <label for="uploadAreaImg" class="uploadLabel">上传图片</label>
+                                            <input type="file" class="uploadImg" id="uploadAreaImg">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>2</span>
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="请选择">请选择</option>
+                                            </select>
+                                            <input type="text" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <label for="uploadAreaImg" class="uploadLabel">上传图片</label>
+                                            <input type="file" class="uploadImg" id="uploadAreaImg">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>3</span>
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="请选择">请选择</option>
+                                            </select>
+                                            <input type="text" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <label for="uploadAreaImg" class="uploadLabel">上传图片</label>
+                                            <input type="file" class="uploadImg" id="uploadAreaImg">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>4</span>
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="请选择">请选择</option>
+                                            </select>
+                                            <input type="text" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control" id="" style="width: 100px;">
+                                        </td>
+                                        <td>
+                                            <label for="uploadAreaImg" class="uploadLabel">上传图片</label>
+                                            <input type="file" class="uploadImg" id="uploadAreaImg">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>合计：</td>
+                                        <td></td>
+                                        <td>30</td>
+                                        <td></td>
+                                        <td>800元</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="form-group clearfix">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-primary">提交</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary" id="addSupplyForm">保存并增加</button>
+                                <button type="button" class="btn btn-primary">保存并打印</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -1790,6 +1996,9 @@
     $('#addGood').click(function () {
         $('#addGoodModal').modal('show');
     })
+    $('#addSupply').click(function () {
+      $('#addSupplyModal').modal('show');
+    })
     $('.edit-goods').click(function () {
       $('#editGoodModal').modal('show');
     })
@@ -1988,6 +2197,37 @@
         '                                </div>\n' +
         '                            </div>');
       $('#exitContent').append(exitInfo);
+    })
+    $('#addSupplyForm').click(function () {
+      var formItem = $('<tr>\n' +
+        '                                        <td>\n' +
+        '                                            <span>1</span>\n' +
+        '                                        </td>\n' +
+        '                                        <td>\n' +
+        '                                            <select name="" id="">\n' +
+        '                                                <option value="请选择">请选择</option>\n' +
+        '                                            </select>\n' +
+        '                                            <input type="text" id="" style="width: 100px;">\n' +
+        '                                        </td>\n' +
+        '                                        <td>\n' +
+        '                                            <input type="text" class="form-control" id="" style="width: 100px;">\n' +
+        '                                        </td>\n' +
+        '                                        <td>\n' +
+        '                                            <input type="text" class="form-control" id="" style="width: 100px;">\n' +
+        '                                        </td>\n' +
+        '                                        <td>\n' +
+        '                                            <input type="text" class="form-control" id="" style="width: 100px;">\n' +
+        '                                        </td>\n' +
+        '                                        <td>\n' +
+        '                                            <input type="text" class="form-control" id="" style="width: 100px;">\n' +
+        '                                        </td>\n' +
+        '                                        <td>\n' +
+        '                                            <label for="uploadAreaImg" class="uploadLabel">上传图片</label>\n' +
+        '                                            <input type="file" class="uploadImg" id="uploadAreaImg">\n' +
+        '                                        </td>\n' +
+        '                                    </tr>');
+      console.log(formItem)
+      $('#supplyForm').append(formItem);
     })
   })
 </script>

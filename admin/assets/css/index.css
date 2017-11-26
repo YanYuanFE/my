@@ -474,7 +474,29 @@ table tbody tr {
     #addCheckModal .modal-dialog {
          width: 638px;
     }
+    #addSupplyModal .modal-dialog {
+        min-width: 1176px;
+    }
 }
+
+#addSupplyModal .modal-dialog table select{
+    vertical-align: baseline;
+}
+
+#addSupplyModal .modal-dialog .uploadImg {
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+/*#addSupplyModal .modal-dialog .table-bordered>thead>tr>th{*/
+    /*border-top: 1px solid #333;*/
+/*}*/
+
+/*#addSupplyModal .modal-dialog .table {*/
+    /*border-top: 1px solid #333;*/
+/*}*/
+
 
 .modal .modal-header {
     background-color:rgba(245,245,245,1);

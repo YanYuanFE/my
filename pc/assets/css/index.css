@@ -26,8 +26,11 @@ input {
 }
 
 .home-container {
-    padding: 0;
     min-width: 1000px;
+    position: relative;
+    min-height: 100%;
+    padding:0 0 209px 0;
+    box-sizing: border-box;
 }
 
 ul {
@@ -208,6 +211,10 @@ li {
     margin: 20px 0;
 }
 
+.result-list {
+    min-height: 400px;
+}
+
 .weui-media-box_appmsg .weui-media-box__hd {
     width: 255px;
     height: 182px;
@@ -279,6 +286,9 @@ li {
     color: #FFF;
     height: 209px;
     padding-top: 33px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer li {
