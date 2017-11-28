@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/stylesheets/source.css" />
     <link rel="stylesheet" href="assets/stylesheets/weui.css">
     <link rel="stylesheet" href="assets/stylesheets/jquery-weui.css">
+    <link rel="stylesheet" href="assets/stylesheets/photo-sphere-viewer.min.css">
 </head>
 <body>
 <div class="source-detail">
@@ -30,7 +31,11 @@
 <script type='text/javascript' src='assets/js/swiper.js' charset='utf-8'></script>
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/three.min.js"></script>
-<script src="assets/js/photo-sphere-viewer.min.js"></script>
+<!--<script src="assets/js/photo-sphere-viewer.min.js"></script>-->
+<script src="assets/js/D.js"></script>
+<script src="assets/js/uevent.min.js"></script>
+<script src="assets/js/doT.js"></script>
+<script src="assets/stylesheets/photo-sphere-viewer.min.js"></script>
 
 <script>
   $(document).ready(function() {
@@ -39,7 +44,9 @@
           panorama: 'http://o9qn9041y.bkt.clouddn.com/80788126.jpg',
 
           // Container
-          container: vr,
+          container: 'vr',
+          autoload: true,
+          fisheye: true,
           time_anim: false,
           navbar: true,
           size: {
@@ -47,7 +54,7 @@
             height: '500px'
           },
           onready: function () {
-            viewer.toggleAutorotate();
+            viewer.autorotate({enabled: true});
           }
       });
     console.log(viewer)
