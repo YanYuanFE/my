@@ -1373,6 +1373,12 @@
       $('.changecity').html(city);
       $('#cityModal').modal('hide');
     })
+    $('#pre tr').on('click', 'td', function () {
+      location.href='./personpredetail.html';
+    })
+    $('#order tr').on('click', 'td', function () {
+      location.href='./personorderdetail.html';
+    })
   });
 </script>
 </body>

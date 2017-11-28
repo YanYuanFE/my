@@ -132,6 +132,10 @@ li {
     color: #8FD026;
 }
 
+.tab-title .back a {
+    color: #8FD026;
+}
+
 .tab-title span{
     display: inline-block;
     width: 6px ;
