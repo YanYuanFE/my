@@ -1373,10 +1373,12 @@
       $('.changecity').html(city);
       $('#cityModal').modal('hide');
     })
-    $('#pre tr').on('click', 'td', function () {
+    $('#pre tr').on('click', 'td', function (e) {
+      if(e.target.tagName.toUpperCase() === 'BUTTON') return;
       location.href='./personpredetail.html';
     })
-    $('#order tr').on('click', 'td', function () {
+    $('#order tr').on('click', 'td', function (e) {
+      if(e.target.tagName.toUpperCase() === 'BUTTON') return;
       location.href='./personorderdetail.html';
     })
   });

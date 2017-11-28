@@ -940,6 +940,14 @@
       $('.changecity').html(city);
       $('#cityModal').modal('hide');
     })
+    $('#prelist tr').on('click', 'td', function (e) {
+      if(e.target.tagName.toUpperCase() === 'BUTTON') return;
+      location.href='./companypredetail.html';
+    })
+    $('#order tr').on('click', 'td', function (e) {
+      if(e.target.tagName.toUpperCase() === 'BUTTON') return;
+      location.href='./companyorderdetail.html';
+    })
   });
 </script>
 </body>

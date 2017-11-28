@@ -387,10 +387,10 @@ table .btn {
     background: #8FD026;
     font-size: 16px;
     color: #FFF;
-    height: 205px;
+    height: 210px;
     padding-top: 33px;
     position: absolute;
-    bottom: 0;
+    bottom: -115px;
     width: 100%;
 }
 
