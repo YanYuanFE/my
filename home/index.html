@@ -289,7 +289,7 @@
       }]
     ];
     var areaData = [
-      [[]],
+      [[],[],[],[]],
       [
         [],
         [{
@@ -500,12 +500,22 @@
         cityPicker.refillColumn(2, areaData[index][0])
       } else if(index === 1){
         currentTwoIndex = selectedIndex;
+        console.log(areaData[currentOneIndex][selectedIndex])
         cityPicker.refillColumn(2, areaData[currentOneIndex][selectedIndex])
       }
 
     })
     cityPicker.on('picker.select', function (selectedVal, selectedIndex) {
       console.log(selectedVal, selectedIndex)
+      var index = selectedVal.length - 1;
+      var targetVal = '';
+      if(selectedVal[2]) {
+        targetVal = areaData[selectedIndex[0]][selectedIndex[1]][selectedIndex[2]]
+      } else {
+        targetVal = cityData[selectedIndex[0]][selectedIndex[1]]
+      }
+      console.log(targetVal)
+      $('#city').text(targetVal.text)
     })
     $("#type").click(function () {
       var typePicker = new tPicker({
