@@ -124,6 +124,10 @@ li {
     margin: 26px auto ;
 }
 
+.back-btn a{
+    color: #FFF;
+}
+
 .about h5 {
     margin: 40px auto 69px;
     text-align: center;
