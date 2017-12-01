@@ -168,6 +168,21 @@ li {
     margin-top: 20px;
 }
 
+.price-search input {
+    width: 60px;
+}
+
+.price-search button {
+    background-color: #8FD026;
+    border-radius: 0;
+    border-color: #8FD026;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    color: #FFF;
+    text-align: center;
+}
+
 .brand-more {
 
 }
