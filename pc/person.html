@@ -80,6 +80,11 @@
                             </div>
                         </div>
                         <div class="pk-foot">
+                            <div class="pk-check">
+                                <input type="checkbox" id="checkAll" class="check">
+                                <label for="checkAll"></label>
+                                <span>全选</span>
+                            </div>
                             <div class="pk-btn"><a href="./pk.html">立即对比</a></div>
                         </div>
                     </div>
@@ -193,7 +198,12 @@
                     </div>
                     <div class="person-info">
                         <div class="name">
-                            昵称：张三
+                            <span>昵称：张三</span>
+                            <div class="btn" id="changeName">修改</div>
+                        </div>
+                        <div class="change-name">
+                            <input type="text" id="newName" class="form-control">
+                            <div class="btn">确定</div>
                         </div>
                         <div class="tel">
                             <span>手机号码：13410202020</span>
@@ -1368,6 +1378,9 @@
     $('#changePhone').click(function () {
       $('.change-tel').toggle();
     })
+    $('#changeName').click(function () {
+      $('.change-name').toggle();
+    })
     $('.city-item').click(function (e) {
       var city = $(this).text();
       $('.changecity').html(city);
@@ -1381,6 +1394,13 @@
       if(e.target.tagName.toUpperCase() === 'BUTTON') return;
       location.href='./personorderdetail.html';
     })
+    $("#checkAll").click(function(){
+      if(this.checked){
+        $("#popover :checkbox").prop("checked", true);
+      }else{
+        $("#popover :checkbox").prop("checked", false);
+      }
+    });
   });
 </script>
 </body>

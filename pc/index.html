@@ -80,6 +80,11 @@
                             </div>
                         </div>
                         <div class="pk-foot">
+                            <div class="pk-check">
+                                <input type="checkbox" id="checkAll" class="check">
+                                <label for="checkAll"></label>
+                                <span>全选</span>
+                            </div>
                             <div class="pk-btn"><a href="./pk.html">立即对比</a></div>
                         </div>
                     </div>
@@ -591,6 +596,13 @@
       $('.changecity').html(city);
       $('#cityModal').modal('hide');
     })
+    $("#checkAll").click(function(){
+      if(this.checked){
+        $("#popover :checkbox").prop("checked", true);
+      }else{
+        $("#popover :checkbox").prop("checked", false);
+      }
+    });
     $('.kind-item').click(function () {
       $(this).toggleClass('active').siblings().removeClass('active');
     })

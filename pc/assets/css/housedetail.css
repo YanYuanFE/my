@@ -1030,6 +1030,17 @@ h2 span {
     text-align: center;
 }
 
+.pk-foot .check + label {
+    margin-right: 10px;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+.pk-foot span {
+    color: #333;
+    padding-right: 20px;
+}
+
 .pk-foot .pk-btn a {
     color: #FFF;
 }

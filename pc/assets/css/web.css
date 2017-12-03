@@ -371,6 +371,17 @@ li {
     justify-content: center;
 }
 
+.pk-foot .check + label {
+    margin-right: 10px;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+.pk-foot span {
+    color: #333;
+    padding-right: 20px;
+}
+
 .pk-foot .pk-btn {
     background-color: #8FD026;
     width: 323px;

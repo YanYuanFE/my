@@ -716,6 +716,13 @@
       $('.changecity').html(city);
       $('#cityModal').modal('hide');
     })
+    $("#checkAll").click(function(){
+      if(this.checked){
+        $("#popover :checkbox").prop("checked", true);
+      }else{
+        $("#popover :checkbox").prop("checked", false);
+      }
+    });
   });
 </script>
 </body>

@@ -221,9 +221,13 @@ li {
     margin-right: 20px;
 }
 
-.change-tel {
+.change-tel, .change-name {
     margin-top: 20px;
     display: none;
+}
+
+.tel, .name {
+    margin-top: 20px;
 }
 
 .weui-uploader__input-box:before, .weui-uploader__input-box:after {
@@ -830,6 +834,17 @@ table .btn {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.pk-foot .check + label {
+    margin-right: 10px;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+.pk-foot span {
+    color: #333;
+    padding-right: 20px;
 }
 
 .pk-foot .pk-btn {

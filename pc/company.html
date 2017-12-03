@@ -80,6 +80,11 @@
                             </div>
                         </div>
                         <div class="pk-foot">
+                            <div class="pk-check">
+                                <input type="checkbox" id="checkAll" class="check">
+                                <label for="checkAll"></label>
+                                <span>全选</span>
+                            </div>
                             <div class="pk-btn"><a href="./pk.html">立即对比</a></div>
                         </div>
                     </div>
@@ -184,7 +189,12 @@
                     </div>
                     <div class="person-info">
                         <div class="name">
-                            公寓名：创新公寓
+                            <span>公寓名：创新公寓</span>
+                            <div class="btn" id="changeName">修改</div>
+                        </div>
+                        <div class="change-name">
+                            <input type="text" id="newName">
+                            <div class="btn">确定</div>
                         </div>
                         <div class="tel">
                             <span>手机号码：13410202020</span>
@@ -914,6 +924,9 @@
     $('#changePhone').click(function () {
       $('.change-tel').toggle();
     })
+    $('#changeName').click(function () {
+      $('.change-name').toggle();
+    })
     $('#setUnrent').click(function () {
       var arr = [];
       $('.btn-select').each(function (i) {
@@ -948,6 +961,13 @@
       if(e.target.tagName.toUpperCase() === 'BUTTON') return;
       location.href='./companyorderdetail.html';
     })
+    $("#checkAll").click(function(){
+      if(this.checked){
+        $("#popover :checkbox").prop("checked", true);
+      }else{
+        $("#popover :checkbox").prop("checked", false);
+      }
+    });
   });
 </script>
 </body>

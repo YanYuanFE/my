@@ -149,13 +149,20 @@ li {
 
 .search-input input{
     height: 50px;
+    /*height: 16px;*/
     width: 624px;
     background: #FFF;
-    padding-left:21px;
+    padding:0px 21px;
     color: #9C9C9C;
     font-size: 16px;
     border: none;
-    position: relative;
+    /*position: relative;*/
+    vertical-align: middle;
+    line-height: 1.428;
+}
+
+input::-ms-clear {
+    display: none;
 }
 
 .search-icon {
@@ -533,6 +540,17 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.pk-foot .check + label {
+    margin-right: 10px;
+    line-height: 16px;
+    margin-bottom: 0;
+}
+
+.pk-foot span {
+    color: #333;
+    padding-right: 20px;
 }
 
 .pk-foot .pk-btn {
