@@ -49,8 +49,14 @@ li {
     padding-left: 20px;
 }
 
+.location {
+    font-size: 18px;
+}
+
 .changecity {
     padding-left: 14px;
+    font-size: 14px;
+    color: #6f6f6f;
 }
 
 .header-wrapper {

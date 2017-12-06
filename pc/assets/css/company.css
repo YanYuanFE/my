@@ -50,8 +50,14 @@ li {
     margin-left: 30px;
 }
 
+.location {
+    font-size: 18px;
+}
+
 .changecity {
-    margin-left: 24px;
+    padding-left: 14px;
+    font-size: 14px;
+    color: #6f6f6f;
 }
 
 .header-wrapper {

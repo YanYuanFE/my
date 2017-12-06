@@ -58,8 +58,14 @@ li {
     padding-left: 20px;
 }
 
+.location {
+    font-size: 18px;
+}
+
 .changecity {
     padding-left: 14px;
+    font-size: 14px;
+    color: #6f6f6f;
 }
 
 .header .menu ul {
@@ -165,10 +171,15 @@ input::-ms-clear {
     display: none;
 }
 
+.input-wrapper {
+    position: relative;
+    width: 624px;
+}
+
 .search-icon {
     position: absolute;
     top: 30px;
-    left: 600px;
+    right: 10px;
 }
 
 .kind-list {
