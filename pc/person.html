@@ -118,123 +118,126 @@
             </li>
         </ul>
     </div>
-    <div class="header-wrapper">
-        <div class="header container">
-            <div class="col-md-4 col-xs-4 col-sm-4">
-                <img src="assets/images/logo.png" alt="">
-                <img src="assets/images/area.png" alt="" class="gps">
-                <span class="location">深圳</span>
-                <span class="changecity" data-toggle="modal" data-target="#cityModal">切换城市</span>
-            </div>
-            <div class="col-md-3 col-xs-3 col-sm-3">
-                <div class="tab">
-                    <ul>
-                        <li>
-                            <a href="index.html">首页</a>
-                        </li>
-                        <li>
-                            <a href="hotel.html">品牌公寓</a>
-                        </li>
-                    </ul>
+    <div class="header-wrapper clearfix">
+        <div class="header container clearfix">
+            <div class="row">
+                <div class="col-md-4 col-xs-4 col-sm-4">
+                    <img src="assets/images/logo.png" alt="">
+                    <img src="assets/images/area.png" alt="" class="gps">
+                    <span class="location">深圳</span>
+                    <span class="changecity" data-toggle="modal" data-target="#cityModal">切换城市</span>
                 </div>
-            </div>
-            <div class="col-md-5 col-xs-5 col-sm-5">
-                <div class="menu">
-                    <ul>
-                        <li>
-                            <a href="login.html">登录</a>/<a href="register.html">注册</a>
-                        </li>
-                        <li>
-                            <a href="person.html" class="active">个人中心</a>
-                        </li>
-                        <li ><a href="company.html" >企业用户</a></li>
-                    </ul>
+                <div class="col-md-3 col-xs-3 col-sm-3">
+                    <div class="tab">
+                        <ul>
+                            <li>
+                                <a href="index.html">首页</a>
+                            </li>
+                            <li>
+                                <a href="hotel.html">品牌公寓</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5 col-xs-5 col-sm-5">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="login.html">登录</a>/<a href="register.html">注册</a>
+                            </li>
+                            <li>
+                                <a href="person.html" class="active">个人中心</a>
+                            </li>
+                            <li ><a href="company.html" >企业用户</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="person-container container">
-        <div class="col-md-2 col-sm-2 col-xs-2 sidenav">
-            <div class="title">
-                个人中心
-            </div>
-            <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">
-                <li role="presentation" class="active">
-                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">个人资料</a>
-                </li>
-                <li role="presentation">
-                    <a href="#message" aria-controls="home" role="tab" data-toggle="tab">我的消息</a>
-                </li>
-                <li role="presentation">
-                    <a href="#order" aria-controls="home" role="tab" data-toggle="tab">我的订单</a>
-                </li>
-                <li role="presentation">
-                    <a href="#pre" aria-controls="home" role="tab" data-toggle="tab">我的预约</a>
-                </li>
-                <li role="presentation">
-                    <a href="#collect" aria-controls="home" role="tab" data-toggle="tab">我的收藏</a>
-                </li>
-                <li role="presentation">
-                    <a href="#attention" aria-controls="home" role="tab" data-toggle="tab">关注</a>
-                </li>
-                <li role="presentation">
-                    <a href="#coupon" aria-controls="home" role="tab" data-toggle="tab">我的优惠券</a>
-                </li>
-            </ul>
-        </div>
-        <div class="main col-md-9 col-sm-9 col-xs-9">
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="profile">
-                    <div class="upload clearfix">
-                        <img src="assets/images/avatar.png" alt="" id="img">
-                        <div class="weui-uploader__input-box">
-                            <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
-                        </div>
-                        <div>上传头像</div>
-                    </div>
-                    <div class="tab-title">
-                        <span></span>修改个人资料
-                    </div>
-                    <div class="person-info">
-                        <div class="name">
-                            <span>昵称：张三</span>
-                            <div class="btn" id="changeName">修改</div>
-                        </div>
-                        <div class="change-name">
-                            <input type="text" id="newName" class="form-control">
-                            <div class="btn">确定</div>
-                        </div>
-                        <div class="tel">
-                            <span>手机号码：13410202020</span>
-                            <div class="btn" id="changePhone">修改</div>
-                        </div>
-                        <div class="change-tel">
-                            <input type="text" id="new-tel" class="form-control">
-                            <div class="btn">确定</div>
-                        </div>
-                    </div>
+    <div class="person-container container clearfix">
+        <div class="row clearfix">
+            <div class="col-md-2 col-sm-2 col-xs-2 sidenav">
+                <div class="title">
+                    个人中心
                 </div>
-                <div role="tabpanel" class="tab-pane" id="message">
-                    <div class="tab-title">
-                        <span></span>系统消息
-                    </div>
-                    <div class="message-filter">
-                        <div class="message-select clearfix">
-                            <select class="form-control pull-left">
-                                <option>全部</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <div class="message-num pull-left" >
-                                共4封，4封未读
+                <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">个人资料</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#message" aria-controls="home" role="tab" data-toggle="tab">我的消息</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#order" aria-controls="home" role="tab" data-toggle="tab">我的订单</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#pre" aria-controls="home" role="tab" data-toggle="tab">我的预约</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#collect" aria-controls="home" role="tab" data-toggle="tab">我的收藏</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#attention" aria-controls="home" role="tab" data-toggle="tab">关注</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#coupon" aria-controls="home" role="tab" data-toggle="tab">我的优惠券</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main col-md-9 col-sm-9 col-xs-9">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="profile">
+                        <div class="upload clearfix">
+                            <img src="assets/images/avatar.png" alt="" id="img">
+                            <div class="weui-uploader__input-box">
+                                <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" multiple="">
+                            </div>
+                            <div>上传头像</div>
+                        </div>
+                        <div class="tab-title">
+                            <span></span>修改个人资料
+                        </div>
+                        <div class="person-info">
+                            <div class="name">
+                                <span>昵称：张三</span>
+                                <div class="btn" id="changeName">修改</div>
+                            </div>
+                            <div class="change-name">
+                                <input type="text" id="newName" class="form-control">
+                                <div class="btn">确定</div>
+                            </div>
+                            <div class="tel">
+                                <span>手机号码：13410202020</span>
+                                <div class="btn" id="changePhone">修改</div>
+                            </div>
+                            <div class="change-tel">
+                                <input type="text" id="new-tel" class="form-control">
+                                <div class="btn">确定</div>
                             </div>
                         </div>
                     </div>
-                    <table class="table" id="messageList">
-                        <thead>
+                    <div role="tabpanel" class="tab-pane" id="message">
+                        <div class="tab-title">
+                            <span></span>系统消息
+                        </div>
+                        <div class="message-filter">
+                            <div class="message-select clearfix">
+                                <select class="form-control pull-left">
+                                    <option>全部</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                                <div class="message-num pull-left" >
+                                    共4封，4封未读
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table" id="messageList">
+                            <thead>
                             <tr>
                                 <th></th>
                                 <th>发件人</th>
@@ -242,8 +245,8 @@
                                 <th>时间</th>
                                 <th>操作</th>
                             </tr>
-                        </thead>
-                        <tbody>
+                            </thead>
+                            <tbody>
                             <tr>
                                 <td>
                                     <input type="checkbox">
@@ -289,8 +292,8 @@
                                 <td>2017-08-20 13:00</td>
                                 <td><img class="deleteMsg" src="assets/images/delete.png" alt="" width="10" height="14"></td>
                             </tr>
-                        </tbody>
-                        <tfoot>
+                            </tbody>
+                            <tfoot>
                             <tr>
                                 <td colspan="2">
                                     <label>
@@ -298,45 +301,45 @@
                                     </label>
                                 </td>
                                 <td colspan="3">
-                                   <button class="delete" id="deleteChecked">
-                                       删除选中项
-                                   </button>
+                                    <button class="delete" id="deleteChecked">
+                                        删除选中项
+                                    </button>
                                     <button class="read">
                                         设为已读
                                     </button>
                                 </td>
                             </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="order">
-                    <div class="tab-title">
-                        <span></span>订单管理
+                            </tfoot>
+                        </table>
                     </div>
-                    <div class="message-filter">
-                        <div class="message-select clearfix">
-                            <select class="form-control pull-left">
-                                <option>全部订单</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                    <div role="tabpanel" class="tab-pane" id="order">
+                        <div class="tab-title">
+                            <span></span>订单管理
                         </div>
-                    </div>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>公寓名称</th>
-                            <th>房号</th>
-                            <th>单价</th>
-                            <th>租房时长(月）</th>
-                            <th>实付款</th>
-                            <th>订单状态</th>
-                            <th>操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+                        <div class="message-filter">
+                            <div class="message-select clearfix">
+                                <select class="form-control pull-left">
+                                    <option>全部订单</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>公寓名称</th>
+                                <th>房号</th>
+                                <th>单价</th>
+                                <th>租房时长(月）</th>
+                                <th>实付款</th>
+                                <th>订单状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
                             <tr>
                                 <td>深意公寓A栋A户型</td>
                                 <td>301  </td>
@@ -387,455 +390,456 @@
                             <tr>
                                 <td colspan="7">没有订单</td>
                             </tr>
-                        </tbody>
-                    </table>
-                    <div class="pagination pull-right">
-                        <nav aria-label="Page navigation ">
-                            <ul class="pagination">
-                                <li class="active">
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">上一页</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">下一页</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                            </tbody>
+                        </table>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li class="active">
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">上一页</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">下一页</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
 
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="pre">
-                    <div class="tab-title">
-                        <span></span>预约管理
-                    </div>
-                    <div class="message-filter">
-                        <div class="message-select clearfix">
-                            <select class="form-control pull-left">
-                                <option>同意预约</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
                         </div>
                     </div>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>公寓名称</th>
-                            <th>房号</th>
-                            <th>单价</th>
-                            <th>预约时间</th>
-                            <th>联系方式</th>
-                            <th>预约状态</th>
-                            <th>操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>深意公寓A栋A户型</td>
-                            <td>301  </td>
-                            <td>3800</td>
-                            <td>
-                                <p>13410020203</p>
-                                <p>13:00-14:00</p>
-                            </td>
-                            <td>13410020202</td>
-                            <td>预约中</td>
-                            <td>
-                                <button class="btn btn-default red cancelPre">取消预约</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>深意公寓A栋A户型</td>
-                            <td>301  </td>
-                            <td>3800</td>
-                            <td>
-                                <p>13410020203</p>
-                                <p>13:00-14:00</p>
-                            </td>
-                            <td>13410020202</td>
-                            <td>预约成功</td>
-                            <td>
-                                <button class="btn btn-default red cancelPre">取消预约</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>深意公寓A栋A户型</td>
-                            <td>301  </td>
-                            <td>3800</td>
-                            <td>
-                                <p>13410020203</p>
-                                <p>13:00-14:00</p>
-                            </td>
-                            <td>13410020202</td>
-                            <td>预约结束</td>
-                            <td>
-                                <button class="btn btn-default deletePre" type="button">删除</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>深意公寓A栋A户型</td>
-                            <td>301  </td>
-                            <td>3800</td>
-                            <td>
-                                <p>13410020203</p>
-                                <p>13:00-14:00</p>
-                            </td>
-                            <td>13410020202</td>
-                            <td>预约失败 </td>
-                            <td>
-                                <button class="btn btn-default green">重新预约</button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="pagination pull-right">
-                        <nav aria-label="Page navigation ">
-                            <ul class="pagination">
-                                <li class="active">
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">上一页</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">下一页</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div role="tabpanel" class="tab-pane" id="pre">
+                        <div class="tab-title">
+                            <span></span>预约管理
+                        </div>
+                        <div class="message-filter">
+                            <div class="message-select clearfix">
+                                <select class="form-control pull-left">
+                                    <option>同意预约</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>公寓名称</th>
+                                <th>房号</th>
+                                <th>单价</th>
+                                <th>预约时间</th>
+                                <th>联系方式</th>
+                                <th>预约状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>深意公寓A栋A户型</td>
+                                <td>301  </td>
+                                <td>3800</td>
+                                <td>
+                                    <p>13410020203</p>
+                                    <p>13:00-14:00</p>
+                                </td>
+                                <td>13410020202</td>
+                                <td>预约中</td>
+                                <td>
+                                    <button class="btn btn-default red cancelPre">取消预约</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>深意公寓A栋A户型</td>
+                                <td>301  </td>
+                                <td>3800</td>
+                                <td>
+                                    <p>13410020203</p>
+                                    <p>13:00-14:00</p>
+                                </td>
+                                <td>13410020202</td>
+                                <td>预约成功</td>
+                                <td>
+                                    <button class="btn btn-default red cancelPre">取消预约</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>深意公寓A栋A户型</td>
+                                <td>301  </td>
+                                <td>3800</td>
+                                <td>
+                                    <p>13410020203</p>
+                                    <p>13:00-14:00</p>
+                                </td>
+                                <td>13410020202</td>
+                                <td>预约结束</td>
+                                <td>
+                                    <button class="btn btn-default deletePre" type="button">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>深意公寓A栋A户型</td>
+                                <td>301  </td>
+                                <td>3800</td>
+                                <td>
+                                    <p>13410020203</p>
+                                    <p>13:00-14:00</p>
+                                </td>
+                                <td>13410020202</td>
+                                <td>预约失败 </td>
+                                <td>
+                                    <button class="btn btn-default green">重新预约</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li class="active">
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">上一页</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">下一页</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
 
+                        </div>
                     </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="collect">
-                    <div class="tab-title">
-                        <span></span>我的收藏
-                    </div>
-                    <div class="collect-content">
-                        <div class="order-item weui-panel weui-panel_access">
-                            <div class="weui-panel__bd">
-                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
-                                    <div class="weui-media-box__hd">
-                                        <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
+                    <div role="tabpanel" class="tab-pane" id="collect">
+                        <div class="tab-title">
+                            <span></span>我的收藏
+                        </div>
+                        <div class="collect-content">
+                            <div class="order-item weui-panel weui-panel_access">
+                                <div class="weui-panel__bd">
+                                    <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                                        <div class="weui-media-box__hd">
+                                            <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
+                                        </div>
+                                        <div class="weui-media-box__bd">
+                                            <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/house-s.png" alt="">
+                                                1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
+                                            </div>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/area-s.png" alt="">
+                                                南山-南油租房-深意公寓
+                                            </div>
+                                            <div class="collect-time">
+                                                收藏时间：2017-08-20 13:20
+                                            </div>
+                                        </div>
+                                        <div class="weui-panel__ft">
+                                            <div class="price-time">
+                                                <div class="hotel-price">3300元/月</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="delete-btn">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
                                     </div>
-                                    <div class="weui-media-box__bd">
-                                        <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/house-s.png" alt="">
-                                            1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
+                                </div>
+                            </div>
+                            <div class="order-item weui-panel weui-panel_access">
+                                <div class="weui-panel__bd">
+                                    <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                                        <div class="weui-media-box__hd">
+                                            <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
                                         </div>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/area-s.png" alt="">
-                                            南山-南油租房-深意公寓
+                                        <div class="weui-media-box__bd">
+                                            <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/house-s.png" alt="">
+                                                1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
+                                            </div>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/area-s.png" alt="">
+                                                南山-南油租房-深意公寓
+                                            </div>
+                                            <div class="collect-time">
+                                                收藏时间：2017-08-20 13:20
+                                            </div>
                                         </div>
-                                        <div class="collect-time">
-                                            收藏时间：2017-08-20 13:20
+                                        <div class="weui-panel__ft">
+                                            <div class="price-time">
+                                                <div class="hotel-price">3300元/月</div>
+                                            </div>
                                         </div>
+                                    </a>
+                                    <div class="delete-btn">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
                                     </div>
-                                    <div class="weui-panel__ft">
-                                        <div class="price-time">
-                                            <div class="hotel-price">3300元/月</div>
+                                </div>
+                            </div>
+                            <div class="order-item weui-panel weui-panel_access">
+                                <div class="weui-panel__bd">
+                                    <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                                        <div class="weui-media-box__hd">
+                                            <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
                                         </div>
+                                        <div class="weui-media-box__bd">
+                                            <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/house-s.png" alt="">
+                                                1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
+                                            </div>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/area-s.png" alt="">
+                                                南山-南油租房-深意公寓
+                                            </div>
+                                            <div class="collect-time">
+                                                收藏时间：2017-08-20 13:20
+                                            </div>
+                                        </div>
+                                        <div class="weui-panel__ft">
+                                            <div class="price-time">
+                                                <div class="hotel-price">3300元/月</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="delete-btn">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
                                     </div>
-                                </a>
-                                <div class="delete-btn">
-                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
+                                </div>
+                            </div>
+                            <div class="order-item weui-panel weui-panel_access">
+                                <div class="weui-panel__bd">
+                                    <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                                        <div class="weui-media-box__hd">
+                                            <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
+                                        </div>
+                                        <div class="weui-media-box__bd">
+                                            <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/house-s.png" alt="">
+                                                1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
+                                            </div>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/area-s.png" alt="">
+                                                南山-南油租房-深意公寓
+                                            </div>
+                                            <div class="collect-time">
+                                                收藏时间：2017-08-20 13:20
+                                            </div>
+                                        </div>
+                                        <div class="weui-panel__ft">
+                                            <div class="price-time">
+                                                <div class="hotel-price">3300元/月</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="delete-btn">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-item weui-panel weui-panel_access">
+                                <div class="weui-panel__bd">
+                                    <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
+                                        <div class="weui-media-box__hd">
+                                            <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
+                                        </div>
+                                        <div class="weui-media-box__bd">
+                                            <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/house-s.png" alt="">
+                                                1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
+                                            </div>
+                                            <div class="hotel-house">
+                                                <img src="assets/images/area-s.png" alt="">
+                                                南山-南油租房-深意公寓
+                                            </div>
+                                            <div class="collect-time">
+                                                收藏时间：2017-08-20 13:20
+                                            </div>
+                                        </div>
+                                        <div class="weui-panel__ft">
+                                            <div class="price-time">
+                                                <div class="hotel-price">3300元/月</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="delete-btn">
+                                        <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="order-item weui-panel weui-panel_access">
-                            <div class="weui-panel__bd">
-                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
-                                    <div class="weui-media-box__hd">
-                                        <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
-                                    </div>
-                                    <div class="weui-media-box__bd">
-                                        <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/house-s.png" alt="">
-                                            1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
-                                        </div>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/area-s.png" alt="">
-                                            南山-南油租房-深意公寓
-                                        </div>
-                                        <div class="collect-time">
-                                            收藏时间：2017-08-20 13:20
-                                        </div>
-                                    </div>
-                                    <div class="weui-panel__ft">
-                                        <div class="price-time">
-                                            <div class="hotel-price">3300元/月</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="delete-btn">
-                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-item weui-panel weui-panel_access">
-                            <div class="weui-panel__bd">
-                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
-                                    <div class="weui-media-box__hd">
-                                        <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
-                                    </div>
-                                    <div class="weui-media-box__bd">
-                                        <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/house-s.png" alt="">
-                                            1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
-                                        </div>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/area-s.png" alt="">
-                                            南山-南油租房-深意公寓
-                                        </div>
-                                        <div class="collect-time">
-                                            收藏时间：2017-08-20 13:20
-                                        </div>
-                                    </div>
-                                    <div class="weui-panel__ft">
-                                        <div class="price-time">
-                                            <div class="hotel-price">3300元/月</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="delete-btn">
-                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-item weui-panel weui-panel_access">
-                            <div class="weui-panel__bd">
-                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
-                                    <div class="weui-media-box__hd">
-                                        <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
-                                    </div>
-                                    <div class="weui-media-box__bd">
-                                        <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/house-s.png" alt="">
-                                            1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
-                                        </div>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/area-s.png" alt="">
-                                            南山-南油租房-深意公寓
-                                        </div>
-                                        <div class="collect-time">
-                                            收藏时间：2017-08-20 13:20
-                                        </div>
-                                    </div>
-                                    <div class="weui-panel__ft">
-                                        <div class="price-time">
-                                            <div class="hotel-price">3300元/月</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="delete-btn">
-                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-item weui-panel weui-panel_access">
-                            <div class="weui-panel__bd">
-                                <a href="housedetail.html" class="weui-media-box weui-media-box_appmsg">
-                                    <div class="weui-media-box__hd">
-                                        <img class="lazy weui-media-box__thumb" src="assets/images/house1.png">
-                                    </div>
-                                    <div class="weui-media-box__bd">
-                                        <h5 class="weui-media-box__title">万科大厦A座A-1户型</h5>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/house-s.png" alt="">
-                                            1室1厅 | 41.89平米  |  朝南 | 高层/8层 | 整租
-                                        </div>
-                                        <div class="hotel-house">
-                                            <img src="assets/images/area-s.png" alt="">
-                                            南山-南油租房-深意公寓
-                                        </div>
-                                        <div class="collect-time">
-                                            收藏时间：2017-08-20 13:20
-                                        </div>
-                                    </div>
-                                    <div class="weui-panel__ft">
-                                        <div class="price-time">
-                                            <div class="hotel-price">3300元/月</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="delete-btn">
-                                    <img src="assets/images/delete-btn.png" alt="" class="deleteCollect">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pagination pull-right">
-                        <nav aria-label="Page navigation ">
-                            <ul class="pagination">
-                                <li class="active">
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">上一页</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">下一页</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li class="active">
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">上一页</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">下一页</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
 
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="attention">
-                    <div class="tab-title">
-                        <span></span>我的关注
-                    </div>
-                    <div class="attention-content">
-                        <div class="row attention-row">
-                            <div class="col-xs-6 col-md-6">
-                                <a href="hotelhome.html" class="thumbnail attention-item">
-                                    <img src="assets/images/attention1.png" alt="">
-                                    <div class="attention-name">创新公寓</div>
-                                    <div class="remove deleteAttention"><span>+</span></div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-md-6">
-                                <a href="hotelhome.html" class="thumbnail attention-item">
-                                    <img src="assets/images/attention2.png" alt="">
-                                    <div class="attention-name">创新公寓</div>
-                                    <div class="remove deleteAttention"><span>+</span></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row attention-row">
-                            <div class="col-xs-6 col-md-6">
-                                <a href="hotelhome.html" class="thumbnail attention-item">
-                                    <img src="assets/images/attention1.png" alt="">
-                                    <div class="attention-name">创新公寓</div>
-                                    <div class="remove deleteAttention"><span>+</span></div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-md-6">
-                                <a href="hotelhome.html" class="thumbnail attention-item">
-                                    <img src="assets/images/attention2.png" alt="">
-                                    <div class="attention-name">创新公寓</div>
-                                    <div class="remove deleteAttention"><span>+</span></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row attention-row">
-                            <div class="col-xs-6 col-md-6">
-                                <a href="hotelhome.html" class="thumbnail attention-item">
-                                    <img src="assets/images/attention1.png" alt="">
-                                    <div class="attention-name">创新公寓</div>
-                                    <div class="remove deleteAttention"><span>+</span></div>
-                                </a>
-                            </div>
-                            <div class="col-xs-6 col-md-6">
-                                <a href="hotelhome.html" class="thumbnail attention-item">
-                                    <img src="assets/images/attention2.png" alt="">
-                                    <div class="attention-name">创新公寓</div>
-                                    <div class="remove deleteAttention"><span>+</span></div>
-                                </a>
-                            </div>
                         </div>
                     </div>
-                    <div class="pagination pull-right">
-                        <nav aria-label="Page navigation ">
-                            <ul class="pagination">
-                                <li class="active">
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">上一页</span>
+                    <div role="tabpanel" class="tab-pane" id="attention">
+                        <div class="tab-title">
+                            <span></span>我的关注
+                        </div>
+                        <div class="attention-content">
+                            <div class="row attention-row">
+                                <div class="col-xs-6 col-md-6">
+                                    <a href="hotelhome.html" class="thumbnail attention-item">
+                                        <img src="assets/images/attention1.png" alt="">
+                                        <div class="attention-name">创新公寓</div>
+                                        <div class="remove deleteAttention"><span>+</span></div>
                                     </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">下一页</span>
+                                </div>
+                                <div class="col-xs-6 col-md-6">
+                                    <a href="hotelhome.html" class="thumbnail attention-item">
+                                        <img src="assets/images/attention2.png" alt="">
+                                        <div class="attention-name">创新公寓</div>
+                                        <div class="remove deleteAttention"><span>+</span></div>
                                     </a>
-                                </li>
-                            </ul>
-                        </nav>
+                                </div>
+                            </div>
+                            <div class="row attention-row">
+                                <div class="col-xs-6 col-md-6">
+                                    <a href="hotelhome.html" class="thumbnail attention-item">
+                                        <img src="assets/images/attention1.png" alt="">
+                                        <div class="attention-name">创新公寓</div>
+                                        <div class="remove deleteAttention"><span>+</span></div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-6">
+                                    <a href="hotelhome.html" class="thumbnail attention-item">
+                                        <img src="assets/images/attention2.png" alt="">
+                                        <div class="attention-name">创新公寓</div>
+                                        <div class="remove deleteAttention"><span>+</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row attention-row">
+                                <div class="col-xs-6 col-md-6">
+                                    <a href="hotelhome.html" class="thumbnail attention-item">
+                                        <img src="assets/images/attention1.png" alt="">
+                                        <div class="attention-name">创新公寓</div>
+                                        <div class="remove deleteAttention"><span>+</span></div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6 col-md-6">
+                                    <a href="hotelhome.html" class="thumbnail attention-item">
+                                        <img src="assets/images/attention2.png" alt="">
+                                        <div class="attention-name">创新公寓</div>
+                                        <div class="remove deleteAttention"><span>+</span></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li class="active">
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">上一页</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">下一页</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
 
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="coupon">
-                    <div class="tab-title">
-                        <span></span>我的优惠券
-                    </div>
-                    <div class="coupon-box">
-                        <div class="coupon-item">
-                            <div class="coupon-info">
-                                <p>全部公寓适用</p>
-                                <p>截止日期：2017-10-20</p>
-                            </div>
-                            <div class="coupon-price">
-                                <span>100</span>元
-                            </div>
-                        </div>
-                        <div class="coupon-item bg2">
-                            <div class="coupon-info">
-                                <p>全部公寓适用</p>
-                                <p>截止日期：2017-10-20</p>
-                            </div>
-                            <div class="coupon-price">
-                                <span>200</span>元
-                            </div>
-                        </div>
-                        <div class="coupon-item">
-                            <div class="coupon-info">
-                                <p>全部公寓适用</p>
-                                <p>截止日期：2017-10-20</p>
-                            </div>
-                            <div class="coupon-price">
-                                <span>100</span>元
-                            </div>
                         </div>
                     </div>
-                    <div class="pagination pull-right">
-                        <nav aria-label="Page navigation ">
-                            <ul class="pagination">
-                                <li class="active">
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">上一页</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">下一页</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div role="tabpanel" class="tab-pane" id="coupon">
+                        <div class="tab-title">
+                            <span></span>我的优惠券
+                        </div>
+                        <div class="coupon-box">
+                            <div class="coupon-item">
+                                <div class="coupon-info">
+                                    <p>全部公寓适用</p>
+                                    <p>截止日期：2017-10-20</p>
+                                </div>
+                                <div class="coupon-price">
+                                    <span>100</span>元
+                                </div>
+                            </div>
+                            <div class="coupon-item bg2">
+                                <div class="coupon-info">
+                                    <p>全部公寓适用</p>
+                                    <p>截止日期：2017-10-20</p>
+                                </div>
+                                <div class="coupon-price">
+                                    <span>200</span>元
+                                </div>
+                            </div>
+                            <div class="coupon-item">
+                                <div class="coupon-info">
+                                    <p>全部公寓适用</p>
+                                    <p>截止日期：2017-10-20</p>
+                                </div>
+                                <div class="coupon-price">
+                                    <span>100</span>元
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination pull-right">
+                            <nav aria-label="Page navigation ">
+                                <ul class="pagination">
+                                    <li class="active">
+                                        <a href="#" aria-label="Previous">
+                                            <span aria-hidden="true">上一页</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li>
+                                        <a href="#" aria-label="Next">
+                                            <span aria-hidden="true">下一页</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
 
+                        </div>
                     </div>
                 </div>
             </div>

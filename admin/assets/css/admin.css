@@ -1,0 +1,78 @@
+html,body {
+    height: 100%;
+    font-size: 16px;
+}
+
+.logo-container {
+    height: 400px;
+    display: table;
+}
+
+.logo-container span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.login-container {
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #22CEA5, #249D9C);
+}
+
+.login-wrapper {
+    margin-top: 150px;
+}
+
+@media (max-width: 768px) {
+    .login-wrapper {
+        margin-top: 0px;
+    }
+    .logo-container {
+        text-align: center;
+    }
+}
+
+.login-content .panel{
+    max-width: 440px;
+    height: 400px;
+}
+
+.login-content .panel-heading {
+    height: 80px;
+    line-height: 80px;
+    padding-left: 75px;
+    background-color: #FFF;
+    font-size: 18px;
+}
+
+.login-content .form-control{
+    height: 42px;
+}
+
+.login-content .panel-body {
+    padding: 30px 57px 0 59px;
+}
+
+.forget {
+    text-align: right;
+    color: #53d2b4;
+    margin-bottom: 25px;
+}
+
+.forget a {
+    color: #53d2b4;
+}
+
+.btn.btn-default {
+    background-color: #00bc8c;
+    width: 100%;
+    color: #FFF;
+    border-color: #00bc8c;
+    padding: 11px 12px;
+}
+
+.error {
+    color: #ff6422;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 30px;
+}

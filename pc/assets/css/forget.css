@@ -54,7 +54,8 @@ body {
 }
 
 .login-container .form-item input.code-input {
-    width: 193px;
+    /*dwidth: 193px;*/
+	width: 170px;
     margin: 0;
 }
 
