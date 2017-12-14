@@ -16,39 +16,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12810">
-              <caret line="610" column="24" lean-forward="false" selection-start-line="610" selection-start-column="24" selection-end-line="610" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sourcedetailrent.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home/sourcedetailrent.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="302" column="30" lean-forward="true" selection-start-line="302" selection-start-column="30" selection-end-line="302" selection-end-column="30" />
-              <folding>
-                <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="0">
               <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/assets/css/admin.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
@@ -58,68 +36,61 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="vr.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/assets/stylesheets/vr.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vrhotel.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/vrhotel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-168">
+              <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vr.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pc/vr.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="D.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pc/assets/js/D.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vr.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home/vr.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
+            <state relative-caret-position="46767">
               <caret line="2227" column="50" lean-forward="false" selection-start-line="2227" selection-start-column="50" selection-end-line="2227" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="57" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="housedetail.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc/assets/css/housedetail.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21966">
-              <caret line="1046" column="24" lean-forward="false" selection-start-line="1046" selection-start-column="23" selection-end-line="1046" selection-end-column="24" />
-              <folding>
-                <marker date="1512606830429" expanded="true" signature="16222:16225" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc/assets/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4242">
-              <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-              <folding>
-                <marker date="1512606830429" expanded="true" signature="395:401" ph="{...}" />
-                <marker date="1512606830429" expanded="true" signature="8632:8635" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="presuccess.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc/presuccess.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1281">
-              <caret line="61" column="64" lean-forward="false" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
-              <folding>
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rent.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pc/assets/css/rent.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2751">
-              <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -130,8 +101,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -224,6 +195,7 @@
         <option value="$PROJECT_DIR$/pc/assets/css/web.css" />
         <option value="$PROJECT_DIR$/admin/admin.html" />
         <option value="$PROJECT_DIR$/admin/assets/css/admin.css" />
+        <option value="$PROJECT_DIR$/pc/vr.html" />
       </list>
     </option>
   </component>
@@ -233,9 +205,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1803" />
-    <option name="y" value="100" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="18" />
+    <option name="y" value="67" />
     <option name="width" value="1600" />
     <option name="height" value="876" />
   </component>
@@ -257,7 +229,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -268,33 +240,51 @@
             <path>
               <item name="my" type="b2602c69:ProjectViewProjectNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my" type="b2602c69:ProjectViewProjectNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my" type="b2602c69:ProjectViewProjectNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my" type="b2602c69:ProjectViewProjectNode" />
               <item name="my" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
+              <item name="pc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
+              <item name="pc" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my" type="462c0819:PsiDirectoryNode" />
+              <item name="pc" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -305,13 +295,15 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/admin/assets/images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pc/assets/js" />
+      <recent name="$PROJECT_DIR$/pc/assets/css" />
       <recent name="$PROJECT_DIR$/admin/assets/css/img" />
       <recent name="D:\Users\YanYuan\Desktop\项目\my\home\assets\js" />
       <recent name="D:\Users\YanYuan\Desktop\项目\my\pc\assets\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/admin/assets/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -367,15 +359,15 @@
       <workItem from="1512565400783" duration="1182000" />
       <workItem from="1512606995092" duration="1456000" />
       <workItem from="1512612749606" duration="4712000" />
+      <workItem from="1513211607941" duration="2052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82902000" />
+    <option name="totallyTimeSpent" value="84954000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1803" y="100" width="1600" height="876" extended-state="0" />
-    <editor active="true" />
+    <frame x="18" y="67" width="1600" height="876" extended-state="1" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1912603" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -425,65 +417,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pc/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="906">
-          <caret line="229" column="4" lean-forward="false" selection-start-line="229" selection-start-column="4" selection-end-line="229" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc/error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="231" column="4" lean-forward="false" selection-start-line="231" selection-start-column="4" selection-end-line="231" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc/forgetpsw.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc/assets/css/weui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc/web.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/assets/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11316">
-          <caret line="492" column="17" lean-forward="false" selection-start-line="492" selection-start-column="17" selection-end-line="492" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home/vr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pc/rentsuccess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="61" column="57" lean-forward="false" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="813">
@@ -502,7 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3591">
           <caret line="171" column="29" lean-forward="false" selection-start-line="171" selection-start-column="29" selection-end-line="171" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -510,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9072">
           <caret line="432" column="51" lean-forward="false" selection-start-line="432" selection-start-column="51" selection-end-line="432" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -560,7 +491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9366">
           <caret line="446" column="66" lean-forward="false" selection-start-line="446" selection-start-column="66" selection-end-line="446" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,7 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6237">
           <caret line="297" column="44" lean-forward="false" selection-start-line="297" selection-start-column="44" selection-end-line="297" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,8 +559,8 @@
         <state relative-caret-position="4242">
           <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
           <folding>
-            <marker date="1512606830429" expanded="true" signature="395:401" ph="{...}" />
-            <marker date="1512606830429" expanded="true" signature="8632:8635" ph="{...}" />
+            <marker date="1512700298751" expanded="true" signature="395:401" ph="{...}" />
+            <marker date="1512700298751" expanded="true" signature="8632:8635" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -669,7 +598,7 @@
         <state relative-caret-position="21966">
           <caret line="1046" column="24" lean-forward="false" selection-start-line="1046" selection-start-column="23" selection-end-line="1046" selection-end-column="24" />
           <folding>
-            <marker date="1512606830429" expanded="true" signature="16222:16225" ph="{...}" />
+            <marker date="1512700298751" expanded="true" signature="16222:16225" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -768,8 +697,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home/sourcedetailrent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="302" column="30" lean-forward="true" selection-start-line="302" selection-start-column="30" selection-end-line="302" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="302" column="30" lean-forward="false" selection-start-line="302" selection-start-column="30" selection-end-line="302" selection-end-column="30" />
           <folding>
             <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
@@ -779,14 +708,14 @@
     <entry file="file://$PROJECT_DIR$/admin/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="10" column="57" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="57" />
+          <caret line="10" column="57" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
+        <state relative-caret-position="46767">
           <caret line="2227" column="50" lean-forward="false" selection-start-line="2227" selection-start-column="50" selection-end-line="2227" selection-end-column="50" />
           <folding />
         </state>
@@ -794,7 +723,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="0">
           <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
           <folding />
         </state>
@@ -804,6 +733,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/assets/stylesheets/vr.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc/assets/js/D.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc/assets/css/photo-sphere-viewer.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="253" lean-forward="true" selection-start-line="6" selection-start-column="253" selection-end-line="6" selection-end-column="253" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/vrhotel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="10" column="54" lean-forward="false" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc/assets/js/photo-sphere-viewer.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/vrimg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-693">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/vr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pc/vr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding />
         </state>
       </provider>
