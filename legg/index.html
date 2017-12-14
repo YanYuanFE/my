@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ä¸­å¦æµé€š-æ»å·å›½é™…å†œäº§å“ç‰©æµ</title>
+    <link rel="stylesheet" href="bootstrap.min.css" tppabs="http://www.legg.vip/nongpi/yum/Common/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrapStyle.css" tppabs="http://www.legg.vip/nongpi/yum/Common/assets/css/bootstrapStyle.css">
+    <link rel="stylesheet" href="index.css" tppabs="http://www.legg.vip/nongpi/yum/Common/assets/css/index.css">
+	
+	<!--
+	<link rel="stylesheet" href="/nongpi/yum/Common/assets/css/index_bak.css">
+	<link rel="stylesheet" href="/nongpi/yum/Common/assets/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css">
+	-->
+	
+</head>
+<body>
+    <div class="home-container">
+        <div class="header">
+            <div class="head-left pull-left">
+                <img src="nav_logo.png" tppabs="http://www.legg.vip/nongpi/yum/Common/assets/images/nav_logo.png" alt="">
+                <span>æ¬¢è¿ç™»å½•ä¸­å¦æµé€šåå°ç®¡ç†ç³»ç»Ÿ</span>
+            </div>
+            <div class="head-right pull-right">
+                <div class="right-box pull-left">
+                    <img src="nav_touxiang.png" tppabs="http://www.legg.vip/nongpi/yum/Common/assets/images/nav_touxiang.png" alt="">
+                    <span class="name">è¶…çº§ç®¡ç†å‘˜</span>
+                </div>
+                <div class="right-box pull-left">
+                    <img src="nav_tuichu.png" tppabs="http://www.legg.vip/nongpi/yum/Common/assets/images/nav_tuichu.png" alt="">
+                    <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/user/Logout.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/user/Logout.html'" tppabs="http://www.legg.vip/nongpi/index.php/user/Logout.html" ><span class="exit">é€€å‡ºç™»é™†</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="side">
+                <ul class="nav nav-pills nav-stacked" id="myTab" role="tablist">
+					<li role="presentation"  > 
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/admin/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/admin/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/admin/index.html" >ä¸»é¡µ</a>
+                    </li>
+					
+                    <li role="presentation"  > 
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/category/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/category/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/category/index.html" >åˆ†ç±»ç®¡ç†</a>
+                    </li>
+                    <li role="presentation"  >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/user/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/user/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/user/index.html" >ç”¨æˆ·ç®¡ç†</a>
+                    </li>
+                    <li role="presentation"  >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/gongyingshang/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/gongyingshang/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/gongyingshang/index.html" >ä¾›åº”å•†ç®¡ç†</a>
+                    </li>
+                    <li role="presentation"  >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/dangzhu/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/dangzhu/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/dangzhu/index.html" >æ¡£ä¸»ç®¡ç†</a>
+                    </li>
+                    <li role="presentation"  >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/kehu/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/kehu/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/kehu/index.html" >å®¢æˆ·ç®¡ç†</a>
+                    </li>
+                    <li role="presentation"  >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/siji/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/siji/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/siji/index.html" >å¸æœºç®¡ç†</a>
+                    </li>
+                    <li role="presentation"   >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/shangpin/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/shangpin/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/shangpin/index.html" >å•†å“ç®¡ç†</a>
+                    </li>					<li role="presentation" class="active" >
+                        <a href="index.html" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/index.html" >å¿«æ£€ç®¡ç†</a>
+                    </li>					
+					<li role="presentation"  >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/rukou/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/rukou/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/rukou/index.html" >å…¥å£ç®¡ç†</a>
+                    </li>
+					<li role="presentation"  >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/chukou/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/chukou/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/chukou/index.html">å‡ºå£ç®¡ç†</a>
+                    </li>					<li role="presentation"  >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/danju/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/danju/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/danju/index.html">å•æ®ä¸­å¿ƒ</a>
+                    </li>
+					<li role="presentation"  >
+                        <a href="javascript:if(confirm('http://www.legg.vip/nongpi/index.php/xiaosmx/index.html  \n\nÎÄ¼ş²¢Î´ÒÀ Teleport Pro È¡»Ø£¬ÒòÎª ËüµÄÓò»òÂ·¾¶³¬¹ı¿ªÊ¼ÍøÖ·ÖĞÉèÖÃµÄ·¶Î§¡£  \n\nÄãÒª´Ó·şÎñÆ÷ÉÏ´ò¿ªËüÂğ£¿'))window.location='http://www.legg.vip/nongpi/index.php/xiaosmx/index.html'" tppabs="http://www.legg.vip/nongpi/index.php/xiaosmx/index.html">é”€å”®æ˜ç»†</a>
+                    </li>                </ul>
+            </div><div class="main">
+	<div role="tabpanel" class="tab-pane" id="check">
+		<div class="tab-header" style="background:#fff;">
+			<h2 class="title">å¿«æ£€ç®¡ç†</h2>
+			<button class="btn btn-primary" id="addCheck">æ·»åŠ å¿«æ£€</button>
+		</div>
+		<div class="table-container" >
+			<table class="table">
+				<thead>
+				<tr>
+					<th>æ—¶é—´</th>
+					<th>ç”µè¯</th>
+					<th>è½¦ç‰Œ</th>
+					<th>è½¦å‹</th>
+					<th>èº«ä»½è¯</th>
+					<th>ç»“æœ</th>
+					<th>æ“ä½œ</th>
+				</tr>
+				</thead>
+				<tbody style="background:#fff;">
+				<tr>
+					<td>2017-11-24 22:32:26</td>
+					<td>18007625131</td>
+					<td>ç²¤A6WT59</td>
+					<td>è´§æŸœè½¦</td>
+					<td>139896</td>
+					<td>åˆæ ¼ </td>
+					<td>
+						<button class="icon_edit btn btn-primary view-check" pid="24">æŸ¥çœ‹å¿«æ£€å•</button>
+						<!--<button class="icon_edit btn btn-warning edit-check">ç¼–è¾‘</button>-->
+						<a href="index.html" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/del/id/24.html" role="button" class="icon_edit btn btn-danger">åˆ é™¤</a>
+					</td>
+				</tr><tr>
+					<td>2017-11-25 15:59:22</td>
+					<td>18007625131</td>
+					<td>ç²¤A6WT59</td>
+					<td>è´§æŸœè½¦</td>
+					<td>139896</td>
+					<td>åˆæ ¼ </td>
+					<td>
+						<button class="icon_edit btn btn-primary view-check" pid="26">æŸ¥çœ‹å¿«æ£€å•</button>
+						<!--<button class="icon_edit btn btn-warning edit-check">ç¼–è¾‘</button>-->
+						<a href="index.html" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/del/id/26.html" role="button" class="icon_edit btn btn-danger">åˆ é™¤</a>
+					</td>
+				</tr><tr>
+					<td>2017-12-04 07:02:01</td>
+					<td>160987654</td>
+					<td>agghj</td>
+					<td>è´§æŸœè½¦</td>
+					<td>123456</td>
+					<td>åˆæ ¼ </td>
+					<td>
+						<button class="icon_edit btn btn-primary view-check" pid="27">æŸ¥çœ‹å¿«æ£€å•</button>
+						<!--<button class="icon_edit btn btn-warning edit-check">ç¼–è¾‘</button>-->
+						<a href="index.html" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/del/id/27.html" role="button" class="icon_edit btn btn-danger">åˆ é™¤</a>
+					</td>
+				</tr><tr>
+					<td>2017-12-05 02:00:27</td>
+					<td>160987654</td>
+					<td>agghj</td>
+					<td>è´§æŸœè½¦</td>
+					<td>123456</td>
+					<td>ä¸åˆæ ¼</td>
+					<td>
+						<button class="icon_edit btn btn-primary view-check" pid="28">æŸ¥çœ‹å¿«æ£€å•</button>
+						<!--<button class="icon_edit btn btn-warning edit-check">ç¼–è¾‘</button>-->
+						<a href="index.html" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/del/id/28.html" role="button" class="icon_edit btn btn-danger">åˆ é™¤</a>
+					</td>
+				</tr><tr>
+					<td>2017-12-05 02:04:17</td>
+					<td>160987654</td>
+					<td>agghj</td>
+					<td>è´§æŸœè½¦</td>
+					<td>123456</td>
+					<td>åˆæ ¼ </td>
+					<td>
+						<button class="icon_edit btn btn-primary view-check" pid="29">æŸ¥çœ‹å¿«æ£€å•</button>
+						<!--<button class="icon_edit btn btn-warning edit-check">ç¼–è¾‘</button>-->
+						<a href="index.html" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/del/id/29.html" role="button" class="icon_edit btn btn-danger">åˆ é™¤</a>
+					</td>
+				</tr><tr>
+					<td>2017-12-05 02:06:56</td>
+					<td>160987654</td>
+					<td>agghj</td>
+					<td>è´§æŸœè½¦</td>
+					<td>123456</td>
+					<td>åˆæ ¼ </td>
+					<td>
+						<button class="icon_edit btn btn-primary view-check" pid="30">æŸ¥çœ‹å¿«æ£€å•</button>
+						<!--<button class="icon_edit btn btn-warning edit-check">ç¼–è¾‘</button>-->
+						<a href="index.html" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/del/id/30.html" role="button" class="icon_edit btn btn-danger">åˆ é™¤</a>
+					</td>
+				</tr><tr>
+					<td>2017-12-06 09:23:18</td>
+					<td>13650532563</td>
+					<td>æ™‹C1708f</td>
+					<td>è´§æŸœè½¦</td>
+					<td>4415161789053</td>
+					<td>åˆæ ¼ </td>
+					<td>
+						<button class="icon_edit btn btn-primary view-check" pid="31">æŸ¥çœ‹å¿«æ£€å•</button>
+						<!--<button class="icon_edit btn btn-warning edit-check">ç¼–è¾‘</button>-->
+						<a href="index.html" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/del/id/31.html" role="button" class="icon_edit btn btn-danger">åˆ é™¤</a>
+					</td>
+				</tr>				
+				</tbody>
+			</table>
+		</div>   
+	</div>
+</div> 
+<div class="modal fade" id="addCheckModal" tabindex="-1" role="dialog" aria-labelledby="addCheckModalLabel" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="addCheckModalLabel">æ·»åŠ å¿«æ£€</h4>
+            </div>
+            <div class="modal-body">
+                <div class="check-title">å¸æœºä¿¡æ¯</div>
+                <form class="form-horizontal" action="http://www.legg.vip/nongpi/index.php/kuaijian/add.html" method="post"  enctype="multipart/form-data" >
+                    <div class="form-inline clearfix">
+                        <div class="col-md-6 form-group">
+                            <label for="driverName" class="control-label">èº«ä»½è¯å·ï¼š</label>
+                            <input type="text" class="form-control" id="driverName" name="cardno">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="phone" class="control-label">è”ç³»æ–¹å¼ï¼š</label>
+                            <input type="text" class="form-control" id="phone" name="phone" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="form-inline clearfix">
+                        <div class="col-md-6 form-group">
+                            <label for="goodStyle" class="no-padding control-label">è½¦ç‰Œå·ç ï¼š</label>
+                            <select name="chepaihaoID" id="selectchepai">
+                                <option value="0">è¯·é€‰æ‹©</option>
+								<!--
+								<option value="ç²¤A6WT59" >ç²¤A6WT59</option><option value="agghj" >agghj</option><option value="æ™‹C1708f" >æ™‹C1708f</option>								-->
+                            </select>
+                            <!--<input type="text" class="form-control" id="cardId" style="width: 100px;" name="chepaihao" >-->
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="goodStyle" class="no-padding control-label">è½¦ å‹ï¼š</label>
+                            <select name="cartypeID" id="cartypeid" disabled="disabled" >
+                                <option value="0">è¯·é€‰æ‹©</option>
+								<option value="33" >ä¸‰è½®è½¦</option><option value="34" >è´§æŸœè½¦</option>                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="check-btntitle clearfix borderTop">
+                        <span class="check-title">å¿«æ£€å•</span>
+                        <button type="button" class="btn btn-primary addCheckOrder pull-right" id="addCheckOrder">å¢åŠ 
+                        </button>
+                    </div>
+                    <div class="order-content" id="orderContent">
+                        <div class="check-order-item">
+                            <div class="form-inline clearfix">
+                                <div class="form-group col-md-10">
+                                    <label for="duanhao" class="control-label">å•&nbsp;&nbsp;å·ï¼š</label>
+                                    <input type="text" class="form-control" id="duanhao" name="duanhao[]" value="">
+                                </div>
+                            </div>
+                            <div class="form-inline clearfix">
+                                <div class="form-group col-md-12">
+                                    <label for="price" class="control-label">å“&nbsp;&nbsp;ç§ï¼š</label>
+                                    <select name="pinzhongid1[]" class="pinzhongid1">
+                                        <option value="0">è¯·é€‰æ‹©</option>
+										<option value="1" >é’é»„ç“œvv</option><option value="3" >è€é»„ç“œ</option><option value="11" >çº¢å¯Œå£«è‹¹æœ</option>                                    </select>
+                                    <!--
+									<select name="pinzhongid2[]" class="pinzhongid2">
+                                        <option value="0">è¯·é€‰æ‹©</option>
+                                    </select>
+                                    <select name="pinzhongid3[]" class="pinzhongid3">
+                                        <option value="0">è¯·é€‰æ‹©</option>
+                                    </select>
+									-->
+                                </div>
+                            </div>
+
+                            <div class="form-inline clearfix">
+                                <div class="form-group col-md-12">
+                                    <label for="suppely" class="control-label">ä¾› åº” å•†ï¼š</label>
+									<select name="gongyingshangid[]" class="gongyingshangid">
+										<option value="0">è¯·é€‰æ‹©</option>
+										<option value="3" >æ¹–å—é›ªå³°å¯†æ¡”</option><option value="4" >å°¹å·¥æ°´æœ</option>									</select>
+                                    <input type="text" class="form-control" id="suppely" name="gongyingshang" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-inline clearfix">
+                                <div class="form-group col-md-12">
+                                    <label for="chekResult" class="control-label">æ£€éªŒç»“æœï¼š</label>                                    
+									<select name="resultid[]" class="resultid">
+										<option value="0">è¯·é€‰æ‹©</option>
+										<option value="59" >åˆæ ¼</option><option value="61" >ä¸åˆæ ¼</option>									</select>
+                                </div>
+                            </div>
+                            <div class="form-inline clearfix">
+                                <div class="form-group col-md-12">
+                                    <label for="discountOne" class="control-label">æ£€ éªŒ å•ï¼š</label>
+                                    <label for="uploadImg" class="uploadLabel">ä¸Šä¼ å›¾ç‰‡</label>
+                                    <input type="file" class="form-control uploadImg" id="uploadImg"  name="kjimg" style="width:0px;">
+									<input type="hidden" name="himgname" value="1512701181" />
+									<button class="paizhao" pid="1512701181">æ‹ç…§</button>
+                                </div>
+								
+                            </div>
+                        </div>
+                    </div>
+					
+					
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" class="btn btn-primary add-submit">æäº¤</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">å–æ¶ˆ</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+	
+	<object id="axCam_Ocx" style=" width:0; height:544px;" 
+	    classid="clsid:ce2d72f2-ad28-4013-a24b-c3f76c5a1944"  codebase="CamOcx.cab #version=1,0,0,1"> 	
+	</object>
+	
+</div> 
+
+<script type="text/javascript" for="axCam_Ocx" event="GetImageFileName(fileName);"> </script>
+
+<div class="modal fade" id="viewCheckModal" tabindex="-1" role="dialog" aria-labelledby="viewCheckModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="viewCheckModalLabel">å¿«æ£€ä¿¡æ¯</h4>
+            </div>
+            <div class="modal-body">
+                <div class="list">
+                    <div class="list-item">
+                        <span class="list-title">å•     å·ï¼š</span>
+                        <span class="list-value">154784411236</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-title">å“     ç§ï¼š</span>
+                        <span class="list-value">è”¬èœ/é»„ç“œ/è¿›å£é»„ç“œ</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-title">ä¾› åº” å•†ï¼š</span>
+                        <span class="list-value">å±±ä¸œå¤§é›†å›¢</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-title">æ£€éªŒç»“æœï¼š</span>
+                        <span class="list-value">åˆæ ¼</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-title">æ£€ éªŒ å•ï¼š</span>
+                        <img src="order.png" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/assets/images/order.png" alt="">
+                    </div>
+                </div>
+                <div class="list list-last">
+                    <div class="list-item">
+                        <span class="list-title">å•     å·ï¼š</span>
+                        <span class="list-value">154784411236</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-title">å“     ç§ï¼š</span>
+                        <span class="list-value">è”¬èœ/é»„ç“œ/è¿›å£é»„ç“œ</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-title">ä¾› åº” å•†ï¼š</span>
+                        <span class="list-value">å±±ä¸œå¤§é›†å›¢</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-title">æ£€éªŒç»“æœï¼š</span>
+                        <span class="list-value">åˆæ ¼</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-title">æ£€ éªŒ å•ï¼š</span>
+                        <img src="order.png" tppabs="http://www.legg.vip/nongpi/index.php/kuaijian/assets/images/order.png" alt="">
+                    </div>
+                </div>
+				
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="jquery.js" tppabs="http://www.legg.vip/nongpi/yum/Common/assets/js/jquery.js"></script>
+<script src="bootstrap.min.js" tppabs="http://www.legg.vip/nongpi/yum/Common/assets/js/bootstrap.min.js"></script>
+<script src="jquery.ztree.all.js" tppabs="http://www.legg.vip/nongpi/yum/Common/assets/js/jquery.ztree.all.js"></script>
+
+<script>
+
+		
+
+	function addCheckOrder(el,pc) {
+		var orderItem = $('<div class="check-order-item">\n' +
+			'                                <div class="form-inline clearfix">\n' +
+			'                                    <div class="form-group col-md-8">\n' +
+			'                                        <label for="" class="control-label">å•&nbsp;&nbsp;å·ï¼š</label>\n' +
+			'                                        <input type="text" class="form-control" id="" name="duanhao[]" value="">\n' +
+			'                                    </div>\n' +
+			'                                    <button class="btn btn-primary delete-check" type="button">åˆ é™¤</button>\n' +
+			'                                </div>\n' +
+			'                                <div class="form-inline clearfix">\n' +
+			'                                    <div class="form-group col-md-12">\n' +
+			'                                        <label for="price" class="control-label">å“&nbsp;&nbsp;ç§ï¼š</label>\n' +
+			'                                        <select name="pinzhongid1[]" class="pinzhongid1">\n' +
+			'                                            <option value="0">è¯·é€‰æ‹©</option>\n' +
+														'												<option value="1" >é’é»„ç“œvv</option> '+'												<option value="3" >è€é»„ç“œ</option> '+'												<option value="11" >çº¢å¯Œå£«è‹¹æœ</option> '+			
+			'                                        </select>\n' +
+			'                                    </div>\n' +
+			'                                </div>\n' +
+			'\n' +			
+			'                                <div class="form-inline clearfix">\n' +
+			'                                    <div class="form-group col-md-12">\n' +
+			'                                        <label for="suppely" class="control-label">ä¾› åº” å•†ï¼š</label>\n' +
+			'										 <select name="gongyingshangid[]" class="gongyingshangid">'+
+			'											<option value="0">è¯·é€‰æ‹©</option>'+	
+														'												<option value="3" >æ¹–å—é›ªå³°å¯†æ¡”</option>'+'												<option value="4" >å°¹å·¥æ°´æœ</option>'+			'				  						 </select>'+
+			'                                        <input type="text" class="form-control" id="suppely">\n' +
+			'                                    </div>\n' +
+			'                                </div>\n' +
+			'\n' +			
+			'                                <div class="form-inline clearfix">\n' +
+			'                                    <div class="form-group col-md-12">\n' +
+			'                                       <label for="chekResult" class="control-label">æ£€éªŒç»“æœï¼š</label>\n' +
+			'										<select name="resultid[]" class="resultid">'+
+			'											<option value="0">è¯·é€‰æ‹©</option>'	+	
+														'												<option value="59" >åˆæ ¼</option>'+'												<option value="61" >ä¸åˆæ ¼</option>'+			'										</select>	'+
+			'                                    </div>\n' +
+			'                                </div>\n' +
+			'                                <div class="form-inline clearfix">\n' +
+			'                                    <div class="form-group col-md-12">\n' +
+			'                                        <label for="discountOne" class="control-label">æ£€ éªŒ å•ï¼š</label>\n' +
+			'                                        <label for="uploadImg'+pc+'" class="uploadLabel">ä¸Šä¼ å›¾ç‰‡</label>\n' +
+			'                                        <input type="file" class="form-control uploadImg" id="uploadImg'+pc+'" name="kjimg'+pc+'" style="width:0px">\n' +
+			'<input type="hidden" name="himgname'+pc+'" value="1512701181'+pc+'" /><button class="paizhao" pid="1512701181'+pc+'">æ‹ç…§</button>'+
+			'                                    </div>\n' +
+			'                                </div>\n' +
+			'                            </div>')
+		$(el).append(orderItem);
+	}
+	
+$(function(){
+	var pcnt=0;
+	$('#addCheck').click(function () {
+            $('#addCheckModal').modal('show');
+    })
+		
+	$('#addCheckOrder').click(function () {
+            addCheckOrder('#orderContent',pcnt);
+			pcnt++;
+    })
+	
+	$('.add-submit').click(function(){
+		$('#addCheckModal form').submit();
+		return false;
+	})
+	
+
+	$('#addCheckModal').on('change','.check-order-item .pinzhongid1',function(){
+		var url=" /nongpi/index.php/shangpin/getnextclass.html ";
+		var id=$(this).val();
+		var obj=$(this).parent('.form-group').parent('.form-inline').parent('.check-order-item');
+		
+		console.log(id+':'+obj.html() );
+		
+		if(id==0)
+		{
+			obj.find('.pinzhongid2').html('<option value="0">è¯·é€‰æ‹©</option>');
+			obj.find('.pinzhongid3').html('<option value="0">è¯·é€‰æ‹©</option>');
+			return false;
+		}
+
+		
+		$.ajax({
+			url:url,
+			data:{id:id},
+			type:'post',
+			dataType:'json',
+			success:function(result){
+				if(result.result==1)
+				{
+					var h ='<option value="0">è¯·é€‰æ‹©</option> ';
+					for(var i=0;i<result.data.length;i++)
+						h+='<option value="'+result.data[i].id+'">'+result.data[i].name+'</option>'
+					obj.find('.pinzhongid2').html(h);	
+					obj.find('.pinzhongid3').html('<option value="0">è¯·é€‰æ‹©</option>');	
+				}
+				return false;
+			}	
+		})
+		return false;
+	});
+	
+	$('#addCheckModal').on('change','.check-order-item .pinzhongid2',function(){
+		var url=" /nongpi/index.php/shangpin/getnextclass.html ";
+		var id=$(this).val();
+		var obj=$(this).parent('.form-group').parent('.form-inline').parent('.check-order-item');
+		
+		if(id==0)
+		{
+			obj.find('.pinzhongid3').html('<option value="0">è¯·é€‰æ‹©</option>');
+			return false;
+		}
+		
+		$.ajax({
+			url:url,
+			data:{id:id},
+			type:'post',
+			dataType:'json',
+			success:function(result){
+				if(result.result==1)
+				{
+					var h ='<option value="0">è¯·é€‰æ‹©</option> ';
+					for(var i=0;i<result.data.length;i++)
+						h+='<option value="'+result.data[i].id+'">'+result.data[i].name+'</option>'
+					obj.find('.pinzhongid3').html(h);	
+				}
+				return false;
+			}	
+		})
+		return false;
+	});
+	
+	$('#addCheckModal').on('click','.check-order-item .delete-check',function(){
+		$(this).parent('.form-inline').parent('.check-order-item').remove();
+		return false;
+	})
+	
+	$('#selectchepai').on('change',function(){
+		var id=$(this).val();
+		var url=" /nongpi/index.php/kuaijian/getsijiid.html ";
+		
+		if(id==0)
+		{
+			$('#cartypeid').val(0)
+			return false;
+		}
+		
+		$.ajax({
+			url:url,
+			data:{id:id},
+			type:'post',
+			dataType:'json',
+			success:function(result){
+				if(result.result==1)
+				{
+					$('#cartypeid').val(result.data.cltypeid);	
+				}
+				
+				return false;
+			}	
+		})	
+		return false;
+	})
+	$('#driverName').blur(function(){
+		var cardno=$(this).val();
+		var url=" /nongpi/index.php/kuaijian/getsiji.html ";
+		
+		$.ajax({
+			url:url,
+			data:{cardno:cardno},
+			type:'post',
+			dataType:'json',
+			success:function(result){
+				console.log(result);
+				if(result.result==1)
+				{
+					$('#phone').val(result.data[0].mobile);	
+					var h='<option value="0">è¯·é€‰æ‹©</option>';
+					for(var i=0;i<result.data.length;i++)
+						h+='<option value="'+result.data[i].id+'">'+result.data[i].chepaihao+'</option>';
+					$('#selectchepai').html(h);		
+				}
+				else
+				{
+					alert(result.tips);
+					window.location.href = "http://www.legg.vip/nongpi/index.php/siji/index.html";
+				}
+				
+				return false;
+			}	
+		})		
+		return false;
+	})
+	
+	$('.view-check').click(function(){
+		var id=$(this).attr('pid');
+		var url=" /nongpi/index.php/kuaijian/getkuaijianid.html ";
+		
+		$.ajax({
+			url:url,
+			data:{id:id},
+			type:'post',
+			dataType:'json',
+			success:function(result){
+				console.log(result);
+				if(result.result==1)
+				{
+					var h='';
+					for(var i=0;i<result.data.length;i++)
+					{
+						h+='<div class="list">';
+						h+='<div class="list-item">';
+                        h+='<span class="list-title">å•     å·ï¼š</span>';
+                        h+='<span class="list-value">'+result.data[i].duanhao+'</span>';
+						h+='</div>';
+						h+='<div class="list-item">';
+                        h+='<span class="list-title">å“     ç§ï¼š</span>';
+                        h+='<span class="list-value">'+result.data[i].pinzhong.name+'</span>';
+						h+='</div>';
+						h+='<div class="list-item">';
+                        h+='<span class="list-title">ä¾› åº” å•†ï¼š</span>';
+                        h+='<span class="list-value">'+result.data[i].gongyingshang.name+'</span>';
+						h+='</div>';
+						h+='<div class="list-item">';
+                        h+='<span class="list-title">æ£€éªŒç»“æœï¼š</span>';
+                        h+='<span class="list-value">'+result.data[i].result.name+'</span>';
+						h+='</div>';
+						h+='<div class="list-item">';
+                        h+='<span class="list-title">æ£€ éªŒ å•ï¼š</span>';
+                        h+='<img src="/nongpi/Public/Uploads/'+result.data[i].kjimg+'" alt="" width="100" height="80">';
+						h+='</div>';
+						h+='</div>';
+					}
+					$('#viewCheckModal .modal-body').html(h);
+					$('#viewCheckModal').modal('show');
+				}
+				else
+				{
+					alert(result.tips);
+				}
+				
+				return false;
+			}	
+		})
+		
+		return false;
+	})
+	$('.paizhao').click(function(){
+		var str=axCam_Ocx.GetBase64String()
+		alert(str+'_123')
+		return false;
+	})
+})
+</script>	
+</div>
+</div>
+</body>
+</html>

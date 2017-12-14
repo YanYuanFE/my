@@ -126,7 +126,7 @@
     </div>
     <div class="section container">
         <div class="recommend">
-            <div class="title">
+            <div class="recommend-title">
                 <div class="line-left"></div>
                 <div class="text">VR视频</div>
                 <div class="line-right"></div>
@@ -286,6 +286,27 @@
                     <span class="title">客服热线</span>
                     <span class="phone">400-222-200</span>
                     <span class="time pull-right">周一至周日 08:00-23:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="suggestModal" tabindex="-1" role="dialog" aria-labelledby="suggestModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header">
+                <h4 class="modal-title" id="suggestModalLabel">意见反馈</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tip">您对阔壹有任何意见和建议，或使用中遇到的问题，请在本页面反馈。我们会每天关 注并不断优化产品，为您提供更好的服务！</div>
+                <div class="title">反馈内容</div>
+
+                <div class="input-area">
+                    <textarea class="weui-textarea" placeholder="我们非常乐意收到您的意见或建议" rows="5"></textarea>
+                </div>
+                <div class="submit">
+                    <div class="submit-btn">提交</div>
                 </div>
             </div>
         </div>
@@ -452,6 +473,7 @@
 </div>
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 <script>
     $(function () {
       $('.btn-search').hover(function () {
