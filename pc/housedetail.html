@@ -171,7 +171,7 @@
     <div class="home-header-container section container">
         <div class="flex-item">
             <div class="banner">
-                <div class="large_box">
+                <div class="large_box" id="swiper">
                     <ul>
                         <li>
                             <img src="assets/images/swiper.png" >
@@ -833,6 +833,14 @@
         $("#popover :checkbox").prop("checked", false);
       }
     });
+    $('#swiper').on('click', 'img', function (e) {
+      console.log($(this).index('#swiper img'));
+      var index = $(this).index('#swiper img');
+      if(index === 0) {
+        window.location = './vr.html';
+      }
+      // console.log(index)
+    })
   });
 </script>
 </body>
