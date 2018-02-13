@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="swiper.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="page-1 page">
+                    <div class="pre-text text-top">
+                        <img src="images/toptext1.png" alt="">
+                    </div>
+                    <div class="after-text text-top">
+                        <img src="images/toptext2.png" alt="">
+                    </div>
+                    <div class="swip-container stop-swiping">
+                        <img src="images/lung.png" alt="" id="lung">
+                        <img src="images/cancer.png" alt="" id="cancer">
+                        <img src="images/hand.png" alt="" class="hand">
+                    </div>
+                    <div class="pre-text text-bottom">
+                        <img src="images/bottomtext1.png" alt="">
+                    </div>
+                    <div class="after-text text-bottom">
+                        <img src="images/bottomtext2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page-2 page"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="avatar" id="avatar">
+                    <img src="images/ava.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="arrow-box">
+            <img src="images/arrow.png" id="array">
+        </div>
+    </div>
+    <script src="js/swiper.js"></script>
+    <script src='js/jquery-2.1.1.min.js' type='text/javascript'></script>
+    <script src='js/era.js' type='text/javascript'></script>
+    <script type = "text/javascript">
+
+      $(function(){
+        var mySwiper = new Swiper ('.swiper-container', {
+          direction: 'vertical',
+          loop: false,
+          noSwipingClass : 'stop-swiping',
+          on: {
+            slideChangeTransitionStart: function(){
+              console.log(this.activeIndex);
+              if (this.activeIndex === 2) {
+                console.log(111);
+                $('#avatar').addClass('animated zoomInUp');
+              }
+            },
+          },
+        });
+        var timer;
+
+        $('#cancer').eraser({
+          progressFunction: function(p) {
+            console.log(p);
+            if (p > 0.02) {
+              $('.hand').addClass('animated fadeOutRight')
+              // timer = setTimeout(getProgress, 500);
+            }
+            if (p > 0.97) {
+              $('.pre-text.text-top').addClass('animated fadeOutDown').hide();
+              $('.pre-text.text-bottom').addClass('animated fadeOutDown').hide();
+              $('.after-text.text-top').show().addClass('animated fadeInDown');
+              $('.after-text.text-bottom').show().addClass('animated fadeInUp');
+            }
+          },
+          completeRatio: .99,
+          completeFunction: afterEraser
+        });
+
+        function afterEraser() {
+          $('.pre-text.text-top').addClass('animated fadeOutDown').hide();
+          $('.pre-text.text-bottom').addClass('animated fadeOutDown').hide();
+          $('.after-text.text-top').show().addClass('animated fadeInDown');
+          $('.after-text.text-bottom').show().addClass('animated fadeInUp');
+        }
+
+        function getProgress() {
+          var progress = $('#cancer').eraser('progress');
+          console.log(progress);
+          if (progress > 0.98) {
+            clearTimeout(timer);
+          }
+        }
+
+      });
+
+    </script>
+</body>
+</html>
