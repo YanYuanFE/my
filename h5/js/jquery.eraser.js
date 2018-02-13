@@ -304,7 +304,7 @@
         while(n--) data.parts[n] = 0;
         data.ratio = data.numParts;
         data.complete = true;
-        if (data.completeFunction != null) data.completeFunction();
+        // if (data.completeFunction != null) data.completeFunction();
       }
     },
 
