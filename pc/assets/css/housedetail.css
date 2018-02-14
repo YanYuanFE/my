@@ -14,6 +14,10 @@ a {
     text-decoration: none;
 }
 
+span {
+    cursor: pointer;
+}
+
 a:focus,
 a:hover {
     color: #333;
@@ -23,6 +27,18 @@ img{border:0;}
 
 .home-container {
     padding: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 ul {
@@ -72,6 +88,10 @@ li {
     list-style: none;
     color: #333;
     margin-right: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 200px;
 }
 
 .header ul li a {
@@ -99,6 +119,7 @@ li {
     background: #F9F9F9;
     padding: 0 46px 0 13px;
     height: 87px;
+    width: 100%;
 }
 
 .op-btn {
@@ -108,6 +129,7 @@ li {
 .title-text {
     font-size: 24px;
     font-weight: 500;
+    cursor: default;
 }
 
 .title .btn-item {
@@ -272,11 +294,13 @@ li {
 .img-house .hotel-price {
     color: #FA2F2F;
     font-size: 30px;
+    cursor: default;
 }
 
 
 .price-btn {
     color: #8FD026;
+    cursor: pointer;
 }
 
 .price-btn .money-icon {
@@ -288,6 +312,7 @@ li {
     line-height: 20px;
     border-radius: 50%;
     display: inline-block;
+    cursor: pointer;
 }
 
 .select-box {
@@ -300,9 +325,11 @@ li {
     color: #8FD026;
     background: #FFF;
     border: 1px solid #8FD026;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     margin: 0 10px 10px 0;
     cursor: pointer;
+    width: 20%;
+    text-align: center;
 }
 
 .select-box .select-item.selected {
@@ -532,6 +559,13 @@ h2 span {
     padding: 13px 19px;
 }
 
+.re-text p {
+    text-overflow: ellipsis;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .re-text .price {
     font-size: 24px;
     color: #8FD026;
@@ -559,6 +593,7 @@ h2 span {
     border: 1px solid #FFF;
     line-height: 56px;
     text-align: center;
+    cursor: default;
 }
 
 .footer .code-item {
@@ -935,7 +970,7 @@ h2 span {
     max-width: 428px;
     border: 1px solid #F0F0F0;
     border-radius: 0;
-    top: 2.5px !important;
+    top: 143.5px !important;
     left: -417px !important;
 }
 
@@ -1049,4 +1084,13 @@ h2 span {
 
 .pk-foot .pk-btn a {
     color: #FFF;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+    .img-house {
+        margin-left: 13px;
+    }
 }

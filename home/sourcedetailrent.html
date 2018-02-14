@@ -398,7 +398,7 @@
 <script type='text/javascript' src='assets/js/swiper.js' charset='utf-8'></script>
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/layer.js"></script>
-<script src="assets/js/iscroll.js"></script>
+<script src="assets/js/bscroll.min.js"></script>
 <script src="assets/js/three.min.js"></script>
 <script src="assets/js/photo-sphere-viewer.min.js"></script>
 <script>
@@ -470,7 +470,7 @@
       $('.mask').bind("touchmove",function(e){
         e.preventDefault();
       }, false);
-      new IScroll('#rentModal', { mouseWheel: true, click: true });
+      new BScroll('#rentModal', { tap: true, click: true });
       $(".add").click(function(){
         var n=$(this).prev().val();
         var num=parseInt(n)+1;
@@ -498,7 +498,7 @@
       $('.mask').bind("touchmove",function(e){
         e.preventDefault();
       }, false);
-      new IScroll('#selectModal', { mouseWheel: true, click: true });
+      new BScroll('#selectModal', { tap: true, click: true });
       $(".add").click(function(){
         var n=$(this).prev().val();
         var num=parseInt(n)+1;

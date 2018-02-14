@@ -174,10 +174,29 @@ body, html {
     width: 100%;
     height: 100%;
 }
-.vr-hotel .recommend video{
+.vr-hotel .recommend .video{
     width: 100%;
     height: 8.2rem;
     margin-bottom: .8rem;
+    position: relative;
+}
+
+.vr-hotel .recommend .video .icon-play {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url("../images/play.png") no-repeat;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    margin-top: -1.25rem;
+    margin-left: -1.25rem;
+}
+
+
+.vr-hotel .recommend .video img {
+    width: 100%;
+    height: 8.2rem;
 }
 
 .vr-hotel .source .img-list {
@@ -225,4 +244,13 @@ body, html {
     height: 2.5rem;
     margin-top: -1.25rem;
     margin-left: -1.25rem;
+}
+
+#panoDesk {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0px;
+    top:0px;
+    overflow: hidden;
 }
