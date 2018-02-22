@@ -19,6 +19,7 @@ body {
     padding: 0px;
     text-align: center;
     font-family: Helvetica, Arial;
+    position: relative;
 }
 
 a {
@@ -46,7 +47,7 @@ a {
     text-align: center;
 }
 
-.pre-text img, .after-text img {
+.page-1 .text-top img {
     width: 80%;
 }
 
@@ -111,22 +112,100 @@ a {
     background-position: center center;
 }
 
-.page-1 {
+.page-1, .page-4, .page-6{
     background-image: url("./images/bg.jpg");
 }
 
-.page-2 {
+.page-5, #avatar, .page-2 {
+    background-image: url("./images/pagebg.jpg");
+}
+
+/*.page-6 {
+    background-image: url("./images/page6.jpg");
+}*/
+
+.page-2 img.logo {
+    width: 80%;
+    padding-top: 45px;
+}
+
+.page-4 img {
+    padding-top: 66px;
+}
+
+.page-5 img, .page-6 img {
+    width: 80%;
+}
+
+.page-6 .text-top {
+    width: 50%;
+    padding-top: 45px;
+}
+
+
+/*.page-2 {
     background-image: url("./images/home.png");
-}
+}*/
 
-.avatar {
-    margin: 50px auto;
-}
-
-.avatar img {
+#avatar img.ava-list.avatar-logo {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 100%;
+    margin-top: 50px;
+}
+
+#avatar img.ava-list {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+#avatar .logo {
+    display: none;
+}
+
+#music {
+    position: absolute;
+    right: 5%;
+    bottom: 3%;
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+}
+
+.ico-video {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+    /*background: url('./images/music.png') 0 0 no-repeat;*/
+    background-size: 100% auto;
+    /*text-indent: -9999px;
+    overflow: hidden;*/
+    opacity: .8;
+    -webkit-animation: 2s fadeRound linear infinite;
+}
+
+.ico-video.close {
+    -webkit-animation: none;
+}
+
+.word .ori {
+    width: 14rem;
+    height: 0rem;
+    padding-top: 45px;
+    background: url('images/textlogo.png') no-repeat;
+    background-size: 14rem 14rem;
+    margin: 0 auto;
+    background-position: 0 45px;
+    /*position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -99;
+    overflow: hidden;*/ 
 }
 
 @-webkit-keyframes start {
@@ -143,4 +222,14 @@ a {
     0%,30% {opacity: 0;transform: translate(0,10px);}
     60% {opacity: 1;transform: translate(0,0);}
     100% {opacity: 0;transform: translate(0,-8px);}
+}
+
+@-webkit-keyframes fadeRound {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn)
+    }
 }

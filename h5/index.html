@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>谈菁论道</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="swiper.css">
@@ -13,7 +13,7 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="page-1 page">
+                <div class="page-1 page stop-swiping" id="first">
                     <div class="pre-text text-top">
                         <img src="images/toptext1.png" alt="">
                     </div>
@@ -33,12 +33,34 @@
                     </div>
                 </div>
             </div>
+            <!-- <img src="images/ava.jpg" alt="" id="avaImg" class="avatar-logo ava-list">
+                  <div class="avatar-content" id="avatarContent">
+                  </div> -->
             <div class="swiper-slide">
-                <div class="page-2 page"></div>
+                <div class="avatar page page-2 word" id="avatar">
+                  
+                </div>
+            </div>
+            <!-- <div class="swiper-slide">
+                <div class="page-2 page">
+                  <img src="images/textlogo.png" class="logo">
+                </div>
+            </div> -->
+            <div class="swiper-slide">
+                <div class="page-4 page">
+                  <img src="images/page4text.png" class="logo">
+                </div>
             </div>
             <div class="swiper-slide">
-                <div class="avatar" id="avatar">
-                    <img src="images/ava.jpg" alt="">
+                <div class="page-5 page">
+                  <img src="images/page5text.png" class="text-top logo">
+                  <img src="images/map.png">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page-6 page">
+                  <img src="images/textlogo.png" class="text-top logo">
+                  <img src="images/finaltext.png" class="logo">
                 </div>
             </div>
         </div>
@@ -46,23 +68,107 @@
             <img src="images/arrow.png" id="array">
         </div>
     </div>
+    <audio id="audio" preload="true" autoplay="" loop=""  src="./images/bg.mp3"></audio>
+    <div id="music">
+      <img class="ico-video fadeRound" src="../images/music.png"></span>
+    </div>
     <script src="js/swiper.js"></script>
     <script src='js/jquery-2.1.1.min.js' type='text/javascript'></script>
     <script src='js/jquery.eraser.js' type='text/javascript'></script>
+    <script src='js/TweenMax.min.js' type='text/javascript'></script>
     <script type = "text/javascript">
 
       $(function(){
+        var html = '<div class="ori"></div>';
+        $('.arrow-box').hide();
+        $('#music').on('click', function(e) {
+          console.log(e.target);
+          $('#music img').toggleClass('close');
+          console.log($('#music img').hasClass('close'));
+          if ($('#music img').hasClass('close')) {
+            document.getElementById("audio").pause();
+          } else {
+            document.getElementById("audio").play();
+          }
+        })
+        var userId = getCookie('userid2');
+        // alert(userId);
+        var api = 'http://minisite.medtoday.com.cn/cycle'
+        if(!userId) {
+          // window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?scope=snsapi_userinfo&appid=wx967511ec58e38c2d&redirect_uri=http%3A%2F%2Fminisite.medtoday.com.cn%2Fcycle%2Fwechat%2Fgetuserinforfortopeasy.php%3Fresourceid%3D8&state=STATE&response_type=code&connect_redirect=1#wechat_redirect';
+        }
+        var objParam = {
+          user_id: 8083
+        };
+        $.getJSON(api + '/wechat/getonewechauserinforbyuserid.php', objParam, function (ret) {
+            console.log(ret);
+            // $('#console').html(ret);
+            var user = ret.user[0].headimgur;
+            console.log(html)
+            html += '<img src=' + user + 'alt="" id="avaImg" class="avatar-logo ava-list" />';
+            // $('#avaImg').attr('src', user);
+
+        });
+        var headList = [];
+        $.getJSON(api + '/wechat/getallwechatuserforgameuser.php', objParam, function (ret) {
+            if (ret.user.length) {
+              var userList = ret.user;
+              userList.forEach(function(val, index) {
+                if (index < 200) {
+                  if (val.headimgur.length > 5) {
+                    headList.push(val.headimgur);
+                  }
+                }
+              })
+              console.log(headList);
+              renderAvatar();
+            }
+        });
+
+        function renderAvatar() {
+          // var html = '';
+          html += '<div class="avatar-content" id="avatarContent">';
+          headList.forEach(function(val) {
+            html += '<img class="ava-list" src=' + val + '/>';
+          })
+          html += '</div>';
+          console.log(html);
+          // $('#avatarContent').html(html);
+        }
+
+        function first() {
+          console.log(111);
+          $('.arrow-box').hide();
+        }
+
+        
+        
         var mySwiper = new Swiper ('.swiper-container', {
           direction: 'vertical',
           loop: false,
           noSwipingClass : 'stop-swiping',
           on: {
             slideChangeTransitionStart: function(){
-              console.log(this.activeIndex);
-              if (this.activeIndex === 2) {
-                console.log(111);
-                $('#avatar').addClass('animated zoomInUp');
+              if (this.activeIndex === 0) {
+                first();
               }
+              if (this.activeIndex === 1) {
+                second();
+              }
+              if (this.activeIndex !==1) {
+                // if (this.isEnd) return;
+                $('.logo').removeClass('animated fadeInUp').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass('animated fadeInUp');
+                  });
+              }
+              console.log(this.activeIndex);
+
+              if (this.activeIndex ===4 || this.activeIndex ===0) {
+                $('.arrow-box').hide();
+              } else {
+                $('.arrow-box').show();
+              }
+              
             },
           },
         });
@@ -92,15 +198,98 @@
           $('.pre-text.text-bottom').addClass('animated fadeOutDown').hide();
           $('.after-text.text-top').show().addClass('animated fadeInDown');
           $('.after-text.text-bottom').show().addClass('animated fadeInUp');
+          $('.arrow-box').show();
+          $('#first').removeClass('stop-swiping');
         }
 
-        function getProgress() {
-          var progress = $('#cancer').eraser('progress');
-          console.log(progress);
-          if (progress > 0.98) {
-            clearTimeout(timer);
+        function getCookie(name){
+          var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+          if(arr=document.cookie.match(reg)) {
+            return unescape(arr[2]);
           }
+          return null;
         }
+
+        //第二屏动画
+        var tl2 = new TimelineMax();
+        var tl21 = new TimelineMax();
+        var doc = document.documentElement;
+        var width = doc.getBoundingClientRect().width;
+        var fs = width/16;
+        var timesec = 0;
+        var onoff2 = true;
+        var outer;
+        var ori;
+        var timer; 
+        var timer2;
+        function second () {
+          if(onoff2){
+            onoff2 = false;
+        //      生成box中盒子
+            // var colarr = ["#020e4e","#dbe3f3","#6581bf","#8da2d2","#ffffff","#6b86c3"]
+            var word = document.querySelector(".word");
+            console.log(html);
+            word.innerHTML = html;
+            // return;
+            outer = document.querySelectorAll(".ava-list");
+            ori = document.querySelector(".ori");
+            
+            tl2.set(outer,{opacity:1,x:900,y:800,z:2050,transformPerspective:1000});
+            tl2.staggerTo(outer,2.5,{
+              cycle:{
+                bezier:function(){
+                  return [
+                    {x:Math.random()*300+400, y:Math.random()*200+500,z:1050},
+                    {x:Math.random()*300+200, y:Math.random()*200+300,z:550},
+                    {x:Math.random()*100, y:Math.random()*200+300,z:500},
+                    {x:Math.random()*100-300, y:Math.random()*100+200,z:450},
+                    {x:Math.random()*100-300, y:Math.random()*20+60,z:400},
+                    {x:Math.random()*50-150, y:Math.random()*100-200,z:350},
+                    {x:Math.random()*100+150, y:Math.random()*100-200,z:300},
+                    {x:Math.random()*100+220, y:Math.random()*100+20,z:400},
+                    {x:Math.random()*10+100, y:Math.random()*100+30,z:350},
+                    {x:0, y:0,z:0}
+                  ]
+                },
+                // rotationX:function(){
+                //   return Math.random()*70
+                // },
+                // rotationY:function(){
+                //   return Math.random()*70
+                // },
+              }
+            },0.022);
+            timesec = tl2.totalDuration();
+            
+          }else{
+            tl2.restart();
+          }
+          
+          ori.style.height = 0;
+          clearTimeout(timer);
+          clearInterval(timer2);
+          timer = setTimeout(function(){
+            var num = 0
+            var timer2 = setInterval(function(){
+             console.log( outer[num]);
+              outer[num].style.opacity = 0;
+              // return;
+              var h = Math.floor(num/14)/14*15*fs;
+              ori.style.height = h +"px";
+              num++;
+              if(num >= 200){
+                num = 0;
+                clearTimeout(timer)
+                clearInterval(timer2);
+                // swiperSlide[1].classList.remove("swiper-no-swiping")
+              }
+            },1)
+          },(timesec*2000)-4200)
+        //  },(timesec*1000)-2200)//17:12
+          
+        }
+
+
 
       });
 
