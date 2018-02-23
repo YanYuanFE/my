@@ -33,19 +33,22 @@
                     </div>
                 </div>
             </div>
-            <!-- <img src="images/ava.jpg" alt="" id="avaImg" class="avatar-logo ava-list">
-                  <div class="avatar-content" id="avatarContent">
+
+                  <!-- <div class="avatar-content" id="avatarContent">
                   </div> -->
+            <!--<div class="swiper-slide">-->
+              <!--<div class="page-2 page">-->
+                <!--&lt;!&ndash;<img src="images/ava.jpg" alt="" id="avaImg" class="avatar-logo ava-list logo">&ndash;&gt;-->
+                <!--<div class="logo-box">-->
+                  <!--<img src="images/textlogo.png" class="logo" id="logo">-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
             <div class="swiper-slide">
-                <div class="avatar page page-2 word" id="avatar">
-                  
-                </div>
-            </div>
-            <!-- <div class="swiper-slide">
                 <div class="page-2 page">
                   <img src="images/textlogo.png" class="logo">
                 </div>
-            </div> -->
+            </div>
             <div class="swiper-slide">
                 <div class="page-4 page">
                   <img src="images/page4text.png" class="logo">
@@ -68,9 +71,9 @@
             <img src="images/arrow.png" id="array">
         </div>
     </div>
-    <audio id="audio" preload="true" autoplay="" loop=""  src="./images/bg.mp3"></audio>
+    <audio id="audio" preload="true" loop="" autoplay="autoplay"  src="./images/bg.mp3"></audio>
     <div id="music">
-      <img class="ico-video fadeRound" src="../images/music.png"></span>
+      <img class="ico-video fadeRound" src="images/music.png"></span>
     </div>
     <script src="js/swiper.js"></script>
     <script src='js/jquery-2.1.1.min.js' type='text/javascript'></script>
@@ -81,6 +84,13 @@
       $(function(){
         var html = '<div class="ori"></div>';
         $('.arrow-box').hide();
+        var audio = document.getElementById("audio");
+        audio.load();
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.load();
+            audio.play();
+        }, false);
         $('#music').on('click', function(e) {
           console.log(e.target);
           $('#music img').toggleClass('close');
@@ -91,39 +101,39 @@
             document.getElementById("audio").play();
           }
         })
-        var userId = getCookie('userid2');
+        // var userId = getCookie('userid2');
         // alert(userId);
         var api = 'http://minisite.medtoday.com.cn/cycle'
-        if(!userId) {
-          // window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?scope=snsapi_userinfo&appid=wx967511ec58e38c2d&redirect_uri=http%3A%2F%2Fminisite.medtoday.com.cn%2Fcycle%2Fwechat%2Fgetuserinforfortopeasy.php%3Fresourceid%3D8&state=STATE&response_type=code&connect_redirect=1#wechat_redirect';
-        }
-        var objParam = {
-          user_id: 8083
-        };
-        $.getJSON(api + '/wechat/getonewechauserinforbyuserid.php', objParam, function (ret) {
-            console.log(ret);
-            // $('#console').html(ret);
-            var user = ret.user[0].headimgur;
-            console.log(html)
-            html += '<img src=' + user + 'alt="" id="avaImg" class="avatar-logo ava-list" />';
-            // $('#avaImg').attr('src', user);
-
-        });
+        // if(!userId) {
+        //   window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?scope=snsapi_userinfo&appid=wx967511ec58e38c2d&redirect_uri=http%3A%2F%2Fminisite.medtoday.com.cn%2Fcycle%2Fwechat%2Fgetuserinforfortopeasy.php%3Fresourceid%3D8&state=STATE&response_type=code&connect_redirect=1#wechat_redirect';
+        // }
+        // var objParam = {
+        //   user_id: userId
+        // };
+        // $.getJSON(api + '/wechat/getonewechauserinforbyuserid.php', objParam, function (ret) {
+        //     console.log(ret);
+        //     // $('#console').html(ret);
+        //     var user = ret.user[0].headimgur;
+        //     console.log(html)
+        //     // html += '<img src=' + user + 'alt="" id="avaImg" class="avatar-logo ava-list" />';
+        //     $('#avaImg').attr('src', user);
+        //
+        // });
         var headList = [];
-        $.getJSON(api + '/wechat/getallwechatuserforgameuser.php', objParam, function (ret) {
-            if (ret.user.length) {
-              var userList = ret.user;
-              userList.forEach(function(val, index) {
-                if (index < 200) {
-                  if (val.headimgur.length > 5) {
-                    headList.push(val.headimgur);
-                  }
-                }
-              })
-              console.log(headList);
-              renderAvatar();
-            }
-        });
+        // $.getJSON(api + '/wechat/getallwechatuserforgameuser.php', objParam, function (ret) {
+        //     if (ret.user.length) {
+        //       var userList = ret.user;
+        //       userList.forEach(function(val, index) {
+        //         if (index < 200) {
+        //           if (val.headimgur.length > 5) {
+        //             headList.push(val.headimgur);
+        //           }
+        //         }
+        //       })
+        //       console.log(headList);
+        //       renderAvatar();
+        //     }
+        // });
 
         function renderAvatar() {
           // var html = '';
@@ -139,10 +149,17 @@
         function first() {
           console.log(111);
           $('.arrow-box').hide();
+          $('#lung').removeClass('heart');
         }
 
-        
-        
+        function second() {
+          $('.logo').removeClass('animated fadeInUp').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass('animated fadeInUp');
+                  });
+        }
+
+
+
         var mySwiper = new Swiper ('.swiper-container', {
           direction: 'vertical',
           loop: false,
@@ -152,14 +169,10 @@
               if (this.activeIndex === 0) {
                 first();
               }
-              if (this.activeIndex === 1) {
-                second();
-              }
-              if (this.activeIndex !==1) {
+              if (this.activeIndex !==0) {
+                // document.getElementById("audio").play();
                 // if (this.isEnd) return;
-                $('.logo').removeClass('animated fadeInUp').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $(this).removeClass('animated fadeInUp');
-                  });
+                second();
               }
               console.log(this.activeIndex);
 
@@ -168,7 +181,7 @@
               } else {
                 $('.arrow-box').show();
               }
-              
+
             },
           },
         });
@@ -194,6 +207,7 @@
 
         function afterEraser() {
           $('#cancer').eraser('clear');
+          $('#lung').addClass('heart');
           $('.pre-text.text-top').addClass('animated fadeOutDown').hide();
           $('.pre-text.text-bottom').addClass('animated fadeOutDown').hide();
           $('.after-text.text-top').show().addClass('animated fadeInDown');
@@ -210,6 +224,8 @@
           return null;
         }
 
+
+
         //第二屏动画
         var tl2 = new TimelineMax();
         var tl21 = new TimelineMax();
@@ -220,9 +236,9 @@
         var onoff2 = true;
         var outer;
         var ori;
-        var timer; 
+        var timer;
         var timer2;
-        function second () {
+        function second1 () {
           if(onoff2){
             onoff2 = false;
         //      生成box中盒子
@@ -233,7 +249,7 @@
             // return;
             outer = document.querySelectorAll(".ava-list");
             ori = document.querySelector(".ori");
-            
+
             tl2.set(outer,{opacity:1,x:900,y:800,z:2050,transformPerspective:1000});
             tl2.staggerTo(outer,2.5,{
               cycle:{
@@ -260,11 +276,11 @@
               }
             },0.022);
             timesec = tl2.totalDuration();
-            
+
           }else{
             tl2.restart();
           }
-          
+
           ori.style.height = 0;
           clearTimeout(timer);
           clearInterval(timer2);
@@ -286,7 +302,7 @@
             },1)
           },(timesec*2000)-4200)
         //  },(timesec*1000)-2200)//17:12
-          
+
         }
 
 
