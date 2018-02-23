@@ -23,7 +23,7 @@
                     <div class="swip-container stop-swiping">
                         <img src="images/lung.png" alt="" id="lung">
                         <img src="images/cancer.png" alt="" id="cancer">
-                        <img src="images/hand.png" alt="" class="hand">
+                        <img src="images/hand.png" alt="" class="hand animated flash infinite">
                     </div>
                     <div class="pre-text text-bottom">
                         <img src="images/bottomtext1.png" alt="">
@@ -72,19 +72,20 @@
         </div>
     </div>
     <audio id="audio" preload="true" loop="" autoplay="autoplay"  src="./images/bg.mp3"></audio>
+    <audio id="heart" preload="true" loop=""   src="./images/heart.mp3"></audio>
     <div id="music">
       <img class="ico-video fadeRound" src="images/music.png"></span>
     </div>
     <script src="js/swiper.js"></script>
     <script src='js/jquery-2.1.1.min.js' type='text/javascript'></script>
     <script src='js/jquery.eraser.js' type='text/javascript'></script>
-    <script src='js/TweenMax.min.js' type='text/javascript'></script>
     <script type = "text/javascript">
 
       $(function(){
         var html = '<div class="ori"></div>';
         $('.arrow-box').hide();
         var audio = document.getElementById("audio");
+        var heartAudio = document.getElementById("heart");
         audio.load();
         audio.play();
         document.addEventListener("WeixinJSBridgeReady", function () {
@@ -96,9 +97,9 @@
           $('#music img').toggleClass('close');
           console.log($('#music img').hasClass('close'));
           if ($('#music img').hasClass('close')) {
-            document.getElementById("audio").pause();
+              audio.pause();
           } else {
-            document.getElementById("audio").play();
+              audio.play();
           }
         })
         // var userId = getCookie('userid2');
@@ -156,6 +157,7 @@
           $('.logo').removeClass('animated fadeInUp').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                     $(this).removeClass('animated fadeInUp');
                   });
+          heartAudio.pause();
         }
 
 
@@ -191,7 +193,7 @@
           progressFunction: function(p) {
             console.log(p);
             if (p > 0.02) {
-              $('.hand').addClass('animated fadeOutRight')
+              $('.hand').removeClass('animated flash infinite').addClass('animated fadeOutRight')
               // timer = setTimeout(getProgress, 500);
             }
             if (p > 0.97) {
@@ -208,6 +210,11 @@
         function afterEraser() {
           $('#cancer').eraser('clear');
           $('#lung').addClass('heart');
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                heartAudio.load();
+                heartAudio.play();
+            }, false);
+
           $('.pre-text.text-top').addClass('animated fadeOutDown').hide();
           $('.pre-text.text-bottom').addClass('animated fadeOutDown').hide();
           $('.after-text.text-top').show().addClass('animated fadeInDown');
@@ -223,88 +230,6 @@
           }
           return null;
         }
-
-
-
-        //第二屏动画
-        var tl2 = new TimelineMax();
-        var tl21 = new TimelineMax();
-        var doc = document.documentElement;
-        var width = doc.getBoundingClientRect().width;
-        var fs = width/16;
-        var timesec = 0;
-        var onoff2 = true;
-        var outer;
-        var ori;
-        var timer;
-        var timer2;
-        function second1 () {
-          if(onoff2){
-            onoff2 = false;
-        //      生成box中盒子
-            // var colarr = ["#020e4e","#dbe3f3","#6581bf","#8da2d2","#ffffff","#6b86c3"]
-            var word = document.querySelector(".word");
-            console.log(html);
-            word.innerHTML = html;
-            // return;
-            outer = document.querySelectorAll(".ava-list");
-            ori = document.querySelector(".ori");
-
-            tl2.set(outer,{opacity:1,x:900,y:800,z:2050,transformPerspective:1000});
-            tl2.staggerTo(outer,2.5,{
-              cycle:{
-                bezier:function(){
-                  return [
-                    {x:Math.random()*300+400, y:Math.random()*200+500,z:1050},
-                    {x:Math.random()*300+200, y:Math.random()*200+300,z:550},
-                    {x:Math.random()*100, y:Math.random()*200+300,z:500},
-                    {x:Math.random()*100-300, y:Math.random()*100+200,z:450},
-                    {x:Math.random()*100-300, y:Math.random()*20+60,z:400},
-                    {x:Math.random()*50-150, y:Math.random()*100-200,z:350},
-                    {x:Math.random()*100+150, y:Math.random()*100-200,z:300},
-                    {x:Math.random()*100+220, y:Math.random()*100+20,z:400},
-                    {x:Math.random()*10+100, y:Math.random()*100+30,z:350},
-                    {x:0, y:0,z:0}
-                  ]
-                },
-                // rotationX:function(){
-                //   return Math.random()*70
-                // },
-                // rotationY:function(){
-                //   return Math.random()*70
-                // },
-              }
-            },0.022);
-            timesec = tl2.totalDuration();
-
-          }else{
-            tl2.restart();
-          }
-
-          ori.style.height = 0;
-          clearTimeout(timer);
-          clearInterval(timer2);
-          timer = setTimeout(function(){
-            var num = 0
-            var timer2 = setInterval(function(){
-             console.log( outer[num]);
-              outer[num].style.opacity = 0;
-              // return;
-              var h = Math.floor(num/14)/14*15*fs;
-              ori.style.height = h +"px";
-              num++;
-              if(num >= 200){
-                num = 0;
-                clearTimeout(timer)
-                clearInterval(timer2);
-                // swiperSlide[1].classList.remove("swiper-no-swiping")
-              }
-            },1)
-          },(timesec*2000)-4200)
-        //  },(timesec*1000)-2200)//17:12
-
-        }
-
 
 
       });

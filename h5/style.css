@@ -58,6 +58,8 @@ a {
     position: absolute;
     right: 10px;
     bottom: 20px;
+    animation-delay: 1s;
+    animation-duration: 3s;
 }
 
 .swip-container img{
