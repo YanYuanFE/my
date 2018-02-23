@@ -210,10 +210,12 @@
         function afterEraser() {
           $('#cancer').eraser('clear');
           $('#lung').addClass('heart');
-            document.addEventListener("WeixinJSBridgeReady", function () {
-                heartAudio.load();
-                heartAudio.play();
-            }, false);
+          heartAudio.load();
+          heartAudio.play();
+          document.addEventListener("WeixinJSBridgeReady", function () {
+            heartAudio.load();
+            heartAudio.play();
+          }, false);
 
           $('.pre-text.text-top').addClass('animated fadeOutDown').hide();
           $('.pre-text.text-bottom').addClass('animated fadeOutDown').hide();
