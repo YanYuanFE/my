@@ -34,12 +34,67 @@ a {
     text-align: center;
 }
 
+.page-1 {
+    padding-top: 66px;
+}
+
+.text-bg {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 300px 0;
+    margin: 0 auto;
+}
+
 .pre-text {
     text-align: center;
 }
 
-.text-top {
-    padding-top: 66px;
+.pre-text.text-top {
+    width: 80%;
+    height: 43px;
+    background-image: url("./images/toptext1.png");
+}
+.after-text.text-top {
+    width: 80%;
+    height: 47px;
+    background-image: url("./images/toptext2.png");
+}
+
+.page-2 .page-text{
+    width: 80%;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 300px 0;
+    margin: 10px auto;
+}
+
+#textthree1 {
+    width: 95px;
+    height: 50px;
+    background-image: url("./images/title.jpg");
+}
+
+#textthree2 {
+    background-image: url("./images/31.png");
+}
+#textthree3 {
+    background-image: url("./images/32.png");
+}
+#textthree4 {
+    background-image: url("./images/33.png");
+}
+#textthree5 {
+    background-image: url("./images/34.png");
+}
+#textthree6 {
+    background-image: url("./images/35.png");
+}
+#textthree7 {
+    background-image: url("./images/36.png");
+}
+#textthree8 {
+    background-image: url("./images/37.png");
 }
 
 .after-text {
@@ -49,6 +104,10 @@ a {
 
 .page-1 .text-top img {
     width: 80%;
+}
+
+.pre-text.text-bottom, .hand {
+    display: none;
 }
 
 .swip-container img.hand {
@@ -118,24 +177,25 @@ a {
     background-image: url("./images/bg.jpg");
 }
 
-.page-5, #avatar, .page-2 {
+.page-3, .page-2 {
     background-image: url("./images/pagebg.jpg");
 }
 
-/*.page-6 {
-    background-image: url("./images/page6.jpg");
-}*/
-
-.page-2 .logo {
-    width: 80%;
+.page-2 {
     padding-top: 45px;
 }
+
+.page-3 {
+    padding-top: 66px;
+}
+
+
 
 .page-4 img {
     padding-top: 66px;
 }
 
-.page-5 img, .page-6 img {
+.page-3 img, .page-4 img, .page-6 img {
     width: 80%;
 }
 
@@ -243,4 +303,24 @@ a {
 .heart {
     animation: pound .5s infinite alternate;
     transform-origin: center;
+}
+
+@-webkit-keyframes move {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(-50px,0);}
+}
+
+.move {
+    animation: move .2s ease infinite;
+}
+
+.animated.flash {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.finaltext {
+    display: none;
 }

@@ -13,17 +13,16 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="page-1 page stop-swiping" id="first">
-                    <div class="pre-text text-top">
-                        <img src="images/toptext1.png" alt="">
+                <!--//todo stop-swiping-->
+                <div class="page-1 page " id="first">
+                    <div class="pre-text text-top text-bg" id="textone">
                     </div>
-                    <div class="after-text text-top">
-                        <img src="images/toptext2.png" alt="">
+                    <div class="after-text text-top text-bg" id="texttwo">
                     </div>
                     <div class="swip-container stop-swiping">
                         <img src="images/lung.png" alt="" id="lung">
                         <img src="images/cancer.png" alt="" id="cancer">
-                        <img src="images/hand.png" alt="" class="hand animated flash infinite">
+                        <img src="images/hand.png" alt="" class="hand move" id="hand">
                     </div>
                     <div class="pre-text text-bottom">
                         <img src="images/bottomtext1.png" alt="">
@@ -33,37 +32,33 @@
                     </div>
                 </div>
             </div>
-
-                  <!-- <div class="avatar-content" id="avatarContent">
-                  </div> -->
-            <!--<div class="swiper-slide">-->
-              <!--<div class="page-2 page">-->
-                <!--&lt;!&ndash;<img src="images/ava.jpg" alt="" id="avaImg" class="avatar-logo ava-list logo">&ndash;&gt;-->
-                <!--<div class="logo-box">-->
-                  <!--<img src="images/textlogo.png" class="logo" id="logo">-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
             <div class="swiper-slide">
                 <div class="page-2 page">
-                  <img src="images/textlogo.png" class="logo">
+                    <div class="page-text" id="textthree1"></div>
+                    <div class="page-text" id="textthree2"></div>
+                    <div class="page-text" id="textthree3"></div>
+                    <div class="page-text" id="textthree4"></div>
+                    <div class="page-text" id="textthree5"></div>
+                    <div class="page-text" id="textthree6"></div>
+                    <div class="page-text" id="textthree7"></div>
+                    <div class="page-text" id="textthree8"></div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="page-4 page">
-                  <img src="images/page4text.png" class="logo">
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="page-5 page">
+                <div class="page-3 page">
                   <img src="images/page5text.png" class="text-top logo">
                   <img src="images/map.png">
                 </div>
             </div>
             <div class="swiper-slide">
+                <div class="page-4 page">
+                    <img src="images/textlogo.png" class="logo">
+                </div>
+            </div>
+            <div class="swiper-slide">
                 <div class="page-6 page">
                   <img src="images/textlogo.png" class="text-top logo">
-                  <img src="images/finaltext.png" class="logo">
+                  <img src="images/finaltext.png" class="finaltext">
                 </div>
             </div>
         </div>
@@ -77,6 +72,7 @@
       <img class="ico-video fadeRound" src="images/music.png"></span>
     </div>
     <script src="js/swiper.js"></script>
+    <script src="js/animation.js"></script>
     <script src='js/jquery-2.1.1.min.js' type='text/javascript'></script>
     <script src='js/jquery.eraser.js' type='text/javascript'></script>
     <script type = "text/javascript">
@@ -101,63 +97,70 @@
           } else {
               audio.play();
           }
-        })
-        // var userId = getCookie('userid2');
-        // alert(userId);
+        });
         var api = 'http://minisite.medtoday.com.cn/cycle'
-        // if(!userId) {
-        //   window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?scope=snsapi_userinfo&appid=wx967511ec58e38c2d&redirect_uri=http%3A%2F%2Fminisite.medtoday.com.cn%2Fcycle%2Fwechat%2Fgetuserinforfortopeasy.php%3Fresourceid%3D8&state=STATE&response_type=code&connect_redirect=1#wechat_redirect';
-        // }
-        // var objParam = {
-        //   user_id: userId
-        // };
-        // $.getJSON(api + '/wechat/getonewechauserinforbyuserid.php', objParam, function (ret) {
-        //     console.log(ret);
-        //     // $('#console').html(ret);
-        //     var user = ret.user[0].headimgur;
-        //     console.log(html)
-        //     // html += '<img src=' + user + 'alt="" id="avaImg" class="avatar-logo ava-list" />';
-        //     $('#avaImg').attr('src', user);
-        //
-        // });
         var headList = [];
-        // $.getJSON(api + '/wechat/getallwechatuserforgameuser.php', objParam, function (ret) {
-        //     if (ret.user.length) {
-        //       var userList = ret.user;
-        //       userList.forEach(function(val, index) {
-        //         if (index < 200) {
-        //           if (val.headimgur.length > 5) {
-        //             headList.push(val.headimgur);
-        //           }
-        //         }
-        //       })
-        //       console.log(headList);
-        //       renderAvatar();
-        //     }
-        // });
 
         function renderAvatar() {
-          // var html = '';
           html += '<div class="avatar-content" id="avatarContent">';
           headList.forEach(function(val) {
             html += '<img class="ava-list" src=' + val + '/>';
           })
           html += '</div>';
-          console.log(html);
-          // $('#avatarContent').html(html);
         }
 
         function first() {
           console.log(111);
           $('.arrow-box').hide();
           $('#lung').removeClass('heart');
+          var ele = document.getElementById('textone');
+          var positions = ['265 0', '232 0', '197 0', '166 0', '129 0', '98 0', '63 0', '34 0', '0 0'];
+          var demoAnimation = animation().changePosition(ele, positions).dispose().then(function () {
+            $('#hand').show().removeClass('animated fadeInUp').addClass('animated fadeInUp');
+            $('.pre-text.text-bottom').show().removeClass('animated fadeInUp').addClass('animated fadeInUp');
+          })
+          demoAnimation.start(200);
         }
 
+        first();
+
         function second() {
-          $('.logo').removeClass('animated fadeInUp').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $(this).removeClass('animated fadeInUp');
-                  });
           heartAudio.pause();
+
+          var position1 = ['44 0', '7 0'];
+          var position2 = ['253 0', '222 0', '194 0', '161 0', '134 0', '105 0', '73 0', '43 0', '4 0'];
+          var position3 = ['215 0', '191 0', '140 0', '113 0', '84 0', '50 0', '21 0', '0 0'];
+          var position4 = ['200 0', '170 0', '140 0', '110 0', '94 0', '67 0', '20 0', '0 0'];
+          var position5 = ['246 0', '213 0', '186 0', '157 0', '110 0', '82 0', '54 0', '20 0', '0 0'];
+          var position6 = ['268 0', '238 0', '208 0', '178 0', '148 0', '118 0', '88 0', '58 0', '28 0', '0 0'];
+          var position7 = ['179 0', '150 0', '120 0', '90 0', '60 0', '30 0', '0 0'];
+          var position8 = ['268 0', '238 0', '208 0', '178 0', '148 0', '118 0', '88 0', '58 0', '28 0', '0 0'];
+
+          var positions = [position1, position2, position3, position4, position5, position6, position7, position8];
+          animate(1);
+          function animate(i) {
+            var node = 'textthree'+i;
+            console.log(i);
+            var ele = document.getElementById(node);
+            var demoAnimation = animation().changePosition(ele, positions[i-1]).dispose().then(function () {
+                if(i < 8) {
+                  animate(++i);
+                } else {
+                  $('#textthree1').addClass('animated flash infinite');
+                }
+            })
+            demoAnimation.start(200);
+          }
+        }
+
+        function three() {
+          $('.logo').removeClass('animated fadeInUp').addClass('animated fadeInUp')
+            .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+              $(this).removeClass('animated fadeInUp');
+              $('.finaltext').show().removeClass('animated zoomIn').addClass('animated zoomIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $(this).removeClass('animated zoomIn').addClass('animated flash infinite');
+              })
+            });
         }
 
 
@@ -171,10 +174,11 @@
               if (this.activeIndex === 0) {
                 first();
               }
-              if (this.activeIndex !==0) {
-                // document.getElementById("audio").play();
-                // if (this.isEnd) return;
+              if (this.activeIndex ===1) {
                 second();
+              }
+              if (this.activeIndex ===4) {
+                three();
               }
               console.log(this.activeIndex);
 
@@ -193,14 +197,7 @@
           progressFunction: function(p) {
             console.log(p);
             if (p > 0.02) {
-              $('.hand').removeClass('animated flash infinite').addClass('animated fadeOutRight')
-              // timer = setTimeout(getProgress, 500);
-            }
-            if (p > 0.97) {
-              $('.pre-text.text-top').addClass('animated fadeOutDown').hide();
-              $('.pre-text.text-bottom').addClass('animated fadeOutDown').hide();
-              $('.after-text.text-top').show().addClass('animated fadeInDown');
-              $('.after-text.text-bottom').show().addClass('animated fadeInUp');
+              $('.hand').removeClass('animated fadeInUp').addClass('animated fadeOutRight').hide();
             }
           },
           completeRatio: .5,
@@ -214,11 +211,16 @@
           heartAudio.play();
 
           $('.pre-text.text-top').addClass('animated fadeOutDown').hide();
-          $('.pre-text.text-bottom').addClass('animated fadeOutDown').hide();
-          $('.after-text.text-top').show().addClass('animated fadeInDown');
-          $('.after-text.text-bottom').show().addClass('animated fadeInUp');
-          $('.arrow-box').show();
-          $('#first').removeClass('stop-swiping');
+          $('.pre-text.text-bottom').addClass('animated fadeOut').hide();
+          $('.after-text.text-top').show();
+          var ele = document.getElementById('texttwo');
+          var positions = ['210 0', '96 0', '0 0'];
+          var demoAnimation = animation().changePosition(ele, positions).dispose().then(function () {
+            $('.after-text.text-bottom').show().addClass('animated fadeInUp');
+            $('.arrow-box').show();
+            $('#first').removeClass('stop-swiping');
+          })
+          demoAnimation.start(500);
         }
 
         function getCookie(name){
