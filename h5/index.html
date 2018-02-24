@@ -72,7 +72,7 @@
         </div>
     </div>
     <audio id="audio" preload="true" loop="" autoplay="autoplay"  src="./images/bg.mp3"></audio>
-    <audio id="heart" preload="true" loop=""   src="./images/heart.mp3"></audio>
+    <audio id="heart" preload="true" loop=""   src="./images/heart.MP3"></audio>
     <div id="music">
       <img class="ico-video fadeRound" src="images/music.png"></span>
     </div>
@@ -212,10 +212,6 @@
           $('#lung').addClass('heart');
           heartAudio.load();
           heartAudio.play();
-          document.addEventListener("WeixinJSBridgeReady", function () {
-            heartAudio.load();
-            heartAudio.play();
-          }, false);
 
           $('.pre-text.text-top').addClass('animated fadeOutDown').hide();
           $('.pre-text.text-bottom').addClass('animated fadeOutDown').hide();
