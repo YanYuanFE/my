@@ -14,7 +14,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <!--//todo stop-swiping-->
-                <div class="page-1 page " id="first">
+                <div class="page-1 page stop-swiping" id="first">
                     <div class="pre-text text-top text-bg" id="textone">
                     </div>
                     <div class="after-text text-top text-bg" id="texttwo">
@@ -25,10 +25,10 @@
                         <img src="images/hand.png" alt="" class="hand move" id="hand">
                     </div>
                     <div class="pre-text text-bottom">
-                        <img src="images/bottomtext1.png" alt="">
+                        <img src="images/bottomtext1.jpg" alt="">
                     </div>
                     <div class="after-text text-bottom">
-                        <img src="images/bottomtext2.png" alt="">
+                        <img src="images/bottomtext2.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -46,19 +46,31 @@
             </div>
             <div class="swiper-slide">
                 <div class="page-3 page">
-                  <img src="images/page5text.png" class="text-top logo">
-                  <img src="images/map.png">
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="page-4 page">
-                    <img src="images/textlogo.png" class="logo">
+                  <!-- <img src="images/page5text.png" class="text-top logo">
+                  <img src="images/map.png"> -->
+                  <div class="video-box">
+                    <video x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" preload="" id="video">
+                        <source src="http://ipsen1.medtoday.com.cn/video/gowinJANCN0106.mp4" type="video/mp4">
+                    </video>
+                  </div>
                 </div>
             </div>
             <div class="swiper-slide">
                 <div class="page-6 page">
                   <img src="images/textlogo.png" class="text-top logo">
-                  <img src="images/finaltext.png" class="finaltext">
+                  <img src="images/61.png" class="zoom sixone">
+                  <img src="images/62.png" class="zoom">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page-4 page">
+                    <img src="images/textlogo.png" class="logo three">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page-7 page">
+                  <img src="images/71.png" class="seventop seven">
+                  <img src="images/72.png" class="sevenbottom seven">
                 </div>
             </div>
         </div>
@@ -67,7 +79,7 @@
         </div>
     </div>
     <audio id="audio" preload="true" loop="" autoplay="autoplay"  src="./images/bg.mp3"></audio>
-    <audio id="heart" preload="true" loop=""   src="./images/heart.MP3"></audio>
+    <audio id="heart" preload="true" loop=""   src="./images/bg.mp3"></audio>
     <div id="music">
       <img class="ico-video fadeRound" src="images/music.png"></span>
     </div>
@@ -80,7 +92,9 @@
       $(function(){
         var html = '<div class="ori"></div>';
         $('.arrow-box').hide();
+        var Animation;
         var audio = document.getElementById("audio");
+        var video = document.getElementById('video');
         var heartAudio = document.getElementById("heart");
         audio.load();
         audio.play();
@@ -110,7 +124,7 @@
         }
 
         function first() {
-          console.log(111);
+          Animation && Animation.dispose && Animation.dispose();
           $('.arrow-box').hide();
           $('#lung').removeClass('heart');
           var ele = document.getElementById('textone');
@@ -126,6 +140,8 @@
 
         function second() {
           heartAudio.pause();
+          $('.page-text').css('background-position', '500px 0');
+          $('#textthree1').removeClass('animated flash infinite');
 
           var position1 = ['44 0', '7 0'];
           var position2 = ['253 0', '222 0', '194 0', '161 0', '134 0', '105 0', '73 0', '43 0', '4 0'];
@@ -140,28 +156,72 @@
           animate(1);
           function animate(i) {
             var node = 'textthree'+i;
-            console.log(i);
             var ele = document.getElementById(node);
-            var demoAnimation = animation().changePosition(ele, positions[i-1]).dispose().then(function () {
+            Animation = animation().changePosition(ele, positions[i-1]).dispose().then(function () {
                 if(i < 8) {
                   animate(++i);
                 } else {
+                  console.log(i);
                   $('#textthree1').addClass('animated flash infinite');
                 }
             })
-            demoAnimation.start(200);
+            Animation.start(200);
           }
         }
 
         function three() {
+          Animation.dispose();
+          $('.page-3').addClass(playingClsName);
+          video.play();
+          $('.arrow-box').hide();       
+        }
+
+        function four() {
           $('.logo').removeClass('animated fadeInUp').addClass('animated fadeInUp')
             .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
               $(this).removeClass('animated fadeInUp');
-              $('.finaltext').show().removeClass('animated zoomIn').addClass('animated zoomIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                $(this).removeClass('animated zoomIn').addClass('animated flash infinite');
+              $('.zoom').show().removeClass('animated zoomIn').addClass('animated zoomIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                $('.sixone').removeClass('animated zoomIn').addClass('animated flash infinite');
               })
             });
         }
+
+        function up() {
+          $('.three').removeClass('animated fadeInUp').addClass('animated fadeInUp')
+          .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+            $(this).removeClass('animated fadeInUp');
+            });
+        }
+
+        function five() {
+          $('.sevenbottom').hide().removeClass('animated fadeInRight');
+          $('.seventop').removeClass('animated fadeInLeft flash infinite').addClass('animated fadeInLeft')
+            .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+              $('.seventop').removeClass('animated fadeInLeft flash infinite');
+              $('.sevenbottom').show().removeClass('animated fadeInRight').addClass('animated fadeInRight')
+                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                  $(this).removeClass('animated fadeInLeft');
+                  $('.seventop').addClass('animated flash infinite');
+                });
+            });
+        }
+
+        
+        var playingClsName = 'layout-playing';
+        $(video).on('tap', function (e) {
+          e.preventDefault();
+          if (video.paused || video.ended) {
+            video.play();
+          }
+        });
+        video.addEventListener('ended', function () {
+          setTimeout(function () {
+            $('.page-3').removeClass(playingClsName);
+            $('.arrow-box').show();
+            mySwiper.slideNext();
+            audio.muted = false;
+          }, 40)
+        }, false)
 
 
 
@@ -171,18 +231,28 @@
           noSwipingClass : 'stop-swiping',
           on: {
             slideChangeTransitionStart: function(){
+              video.pause();
               if (this.activeIndex === 0) {
                 first();
               }
               if (this.activeIndex ===1) {
                 second();
               }
-              if (this.activeIndex ===4) {
+              if (this.activeIndex ===2) {
                 three();
+              }
+              if (this.activeIndex ===3) {
+                four();
+              }
+              if (this.activeIndex ===4) {
+                up();
+              }
+              if (this.activeIndex ===5 ) {
+                five();
               }
               console.log(this.activeIndex);
 
-              if (this.activeIndex ===4 || this.activeIndex ===0) {
+              if (this.activeIndex ===5 || this.activeIndex ===0 || this.activeIndex ===2) {
                 $('.arrow-box').hide();
               } else {
                 $('.arrow-box').show();
