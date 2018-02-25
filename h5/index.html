@@ -79,7 +79,7 @@
         </div>
     </div>
     <audio id="audio" preload="true" loop="" autoplay="autoplay"  src="./images/bg.mp3"></audio>
-    <audio id="heart" preload="true" loop=""   src="./images/bg.mp3"></audio>
+    <audio id="heart" preload="true" loop=""   src="./images/heart.MP3"></audio>
     <div id="music">
       <img class="ico-video fadeRound" src="images/music.png"></span>
     </div>
@@ -103,6 +103,9 @@
             heartAudio.load();
             audio.load();
             audio.play();
+            var _video = document.querySelector('#video');
+            _video.play();
+            _video.pause();
         }, false);
         $('#music').on('click', function(e) {
           console.log(e.target);
