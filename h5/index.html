@@ -95,10 +95,12 @@
         var Animation;
         var audio = document.getElementById("audio");
         var video = document.getElementById('video');
-        var heartAudio = document.getElementById("heart");
+        var heartAudio = $("#heart")[0];
+        heartAudio.load();
         audio.load();
         audio.play();
         document.addEventListener("WeixinJSBridgeReady", function () {
+            heartAudio.load();
             audio.load();
             audio.play();
         }, false);
