@@ -140,6 +140,7 @@
 
         function second() {
           heartAudio.pause();
+          audio.play();
           $('.page-text').css('background-position', '500px 0');
           $('#textthree1').removeClass('animated flash infinite');
 
@@ -262,8 +263,8 @@
           },
         });
         var timer;
-        document.body.addEventListener('touchstart',function(){
-          conssole.log('audio');
+        $(document).on('touchstart',function(){
+          console.log('audio');
           heartAudio.load();
         },false);
 
@@ -282,6 +283,7 @@
         function afterEraser() {
           $('#cancer').eraser('clear');
           $('#lung').addClass('heart');
+          audio.pause();
           heartAudio.load();
           heartAudio.play();
 
