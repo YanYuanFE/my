@@ -181,8 +181,9 @@
             _video.play();
             _video.pause();
         }, false);
-        $('#music').on('click', function(e) {
+        $(document).on('touchstart', '.ico-video', function(e) {
           console.log(e.target);
+          e.stopPropagation();
           $('#music img').toggleClass('close');
           console.log($('#music img').hasClass('close'));
           if ($('#music img').hasClass('close')) {
