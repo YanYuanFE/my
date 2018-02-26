@@ -74,7 +74,7 @@
             <div class="swiper-slide">
                 <div class="page-4 page">
                     <img src="images/textlogo.png" class="logo three">
-                    <img src="images/hand1.jpg" class="bottom three" id="bottomT">
+                    <img src="images/hand1.png" class="bottom three" id="bottomT">
                 </div>
             </div>
             <div class="swiper-slide">
@@ -213,9 +213,9 @@
             $($('.single')[i]).show().removeClass('animated slideInDown').addClass('animated slideInDown')
               .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 $(this).removeClass('animated slideInDown');
-                pengAudio.play();
                 ++i;
                 if(i < 9) {
+                  pengAudio.play();
                   slide(i);
                 } else {
                   $('#hand').show().removeClass('animated fadeInUp').addClass('animated fadeInUp');
@@ -293,7 +293,7 @@
           $('.three.logo').removeClass('animated fadeInUp').addClass('animated fadeInUp')
           .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
             $(this).removeClass('animated fadeInUp');
-            $('#bottomT').show().removeClass('animated lightSpeedIn').addClass('animated lightSpeedIn');
+            $('#bottomT').show().removeClass('animated slideInRight').addClass('animated slideInRight');
             });
         }
 
