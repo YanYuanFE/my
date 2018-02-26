@@ -50,23 +50,28 @@ a {
 }
 
 .pre-text.text-top {
-    width: 80%;
+    width: 85%;
     height: 43px;
-    background-image: url("./images/toptext1.png");
+    text-align: left;
+    /*background-image: url("./images/toptext1.png");*/
 }
 .after-text.text-top {
-    width: 80%;
+    width: 70%;
     height: 47px;
     background-image: url("./images/toptext2.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0px 0;
+    margin: 0 auto;
 }
 
 .page-2 .page-text{
-    width: 80%;
+    width: 65%;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 300px 0;
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
 #textthree1 {
@@ -102,8 +107,12 @@ a {
     text-align: center;
 }
 
-.page-1 .text-top img {
+.page-1 .after-text.text-top img {
     width: 80%;
+}
+
+.page-1 .pre-text.text-top img {
+    width: 30px;
 }
 
 .pre-text.text-bottom, .hand {
@@ -111,7 +120,11 @@ a {
 }
 
 .text-bottom img{
-    width: 80%;
+    width: 70%;
+}
+
+.after-text.text-bottom img{
+    width: 50%;
 }
 
 .swip-container img.hand {
@@ -185,8 +198,20 @@ a {
     background-image: url("./images/bg.jpg");
 }
 
-.page-3, .page-2, .page-4, .page-7 {
+.page-2, .page-7 {
     background-image: url("./images/pagebg.jpg");
+}
+
+.page-4 {
+    background-image: url("./images/black.jpg");
+    position: relative;
+}
+
+.page-4 .bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
 }
 
 .page-2 {
@@ -195,7 +220,7 @@ a {
 
 
 .page-7 .seventop{
-    padding-top: 50px;
+    padding-top: 150px;
 }
 
 .video-box {
@@ -223,7 +248,7 @@ video {
     -ms-user-select: none;
     user-select: none;
     outline: none;
-    background-color: black;
+    /*background-color: black;*/
     display: block;
     margin: 0 auto;
 }
@@ -234,12 +259,13 @@ video {
 }
 
 .page-3 img, .page-4 img, .page-6 img, .page-7 img {
-    width: 80%;
+    width: 70%;
 }
 
-.sevenbottom {
+.page-7 img.sevenbottom {
     margin-top: 20px;
     display: none;
+    width: 54%;
 }
 
 .page-6 .text-top {
@@ -358,8 +384,15 @@ video {
 }
 
 .animated.flash {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.single {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>css3实现飘落动画</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <style type="text/css">
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .page{
+            width: 100vw;
+            height: 100vh;
+            background: url('http://pic.90sjimg.com/back_pic/u/00/28/77/06/56162d121fdcf.jpg') no-repeat;
+            background-size:cover;
+        }
+        .test{
+
+        }
+        .test1{
+            position: absolute;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;/*背景只显示有文字的地方*/
+        }/*
+@keyframes test{
+    100%{
+        opacity: 0.4
+    }
+}
+@-webkit-keyframes test{
+    100%{
+        opacity: 0.4
+    }
+}
+.animated{
+    animation: 'test' 5s linear forwards;
+    -webkit-animation: 'test' 5s linear both;
+}*/
+    </style>
+    <script type="text/javascript">
+      $(function(){
+        setInterval(function(){
+          var content = ['✿','♫','❤','✪'];//文字图案数组
+          var test = $('<div class="test1"></div>').text(content[parseInt(Math.random()*7)]);
+          var pageWidth = $('.page').width();//页面宽度
+          var x = Math.random()*(pageWidth)-100;//开始横向位置
+          var deg = Math.random()*360;//开始旋转角度
+          var size = 25 + Math.random()*30;//文字图案的大小
+          var duration = 5 + Math.random()*2;//transition动画执行时间
+          var colorArray =['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+          var beginColor = '#';//背景渐变开始颜色
+          var endColor = '#';//背景渐变结束颜色
+          var endPositionX = parseInt(Math.random()*100+50);//结束位置的横向位置
+          var endHeight = document.documentElement.clientHeight - 65 - parseInt(Math.random()*40);//结束高度
+          for(var i =0; i<6; i++){
+            beginColor+=colorArray[parseInt(Math.random()*15)];
+            endColor+=colorArray[parseInt(Math.random()*15)];
+          }
+          test.appendTo('.page')
+            .css({
+              transform:'translate3d('+ x +'px,-100px,0)' + 'rotateZ('+ deg +'deg)',
+              'font-size':size + 'px',
+              'background-image':'-webkit-linear-gradient('+beginColor+','+endColor+')',//渐变背景
+            });
+          setTimeout(function(){
+            test.css({
+              transition:'all '+ duration +'s linear',
+              opacity:'0.4',
+              transform:"translate3d("+ endPositionX +"px,"+endHeight+"px,0) rotateZ(360deg)",
+            });
+          },100);//延迟0.1秒是因为js执行过快把后面的transform覆盖前面的transform,造成效果丢失
+          setTimeout(function(){
+            test.remove();
+          },duration*1000);
+        },1000);
+
+      });
+    </script>
+</head>
+<body>
+<div class="page">
+    <div class="test">
+        <audio src="http://dl.stream.qqmusic.qq.com/C400002R32LQ2u9c4z.m4a?vkey=694477E98A99B2D95AEB444C98A94C0ADE92691376297496CED3C04AF48A67C44E26746E3F259AA9AB3DC20769F957BA42544460523D4459&guid=9645588772&uin=0&fromtag=66" autoplay loop>
+            您的浏览器不支持 audio 标签。
+        </audio>
+    </div>
+</div>
+</body>
+</html>
