@@ -187,8 +187,9 @@
           console.log($('#music img').hasClass('close'));
           if ($('#music img').hasClass('close')) {
               audio.pause();
+              audio2.pause();
           } else {
-              audio.play();
+              audio2.play();
           }
         });
         var api = 'http://minisite.medtoday.com.cn/cycle'
