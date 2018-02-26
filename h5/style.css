@@ -175,6 +175,10 @@ a {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center center;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .page-1, .page-6{
