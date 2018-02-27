@@ -161,6 +161,7 @@
         var html = '<div class="ori"></div>';
         $('.arrow-box').hide();
         var Animation;
+        var pageIndex = 0;
         var audio = document.getElementById("audio");
         var audio2 = $("#bgaudio")[0];
         var video = document.getElementById('video');
@@ -190,7 +191,12 @@
               audio.pause();
               audio2.pause();
           } else {
+            if(pageIndex === 0) {
+              audio.play();
+            } else {
               audio2.play();
+            }
+
           }
         });
         var api = 'http://minisite.medtoday.com.cn/cycle'
@@ -337,6 +343,7 @@
           on: {
             slideChangeTransitionStart: function(){
               video.pause();
+              pageIndex = this.activeIndex;
               if (this.activeIndex === 0) {
                 first();
               }
