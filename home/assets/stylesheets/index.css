@@ -24,6 +24,14 @@ body, html {
     padding:0 .5rem;
 }
 
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
 .search-container .index {
     display: block;
     margin-top: .4rem;
@@ -47,7 +55,7 @@ body, html {
     color: #FFF;
     background: #8FD026;
     border-radius: 50%;
-    font-size: 0.3rem;
+    font-size: 0.8rem;
     position: absolute;
     right: -1.6rem;
     top:.4rem;
@@ -198,9 +206,10 @@ ul {
 
 .select{
     background: url("../images/drop-arow.png") scroll right center transparent;
-    background-size:8px 12px ;
+    background-size:10px 8px ;
     background-repeat: no-repeat;
     /*padding-right: 13px;*/
+    background-position: right 10px top 9px;
 }
 
 .select span {
@@ -219,6 +228,7 @@ ul {
     /*padding: .55rem .55rem;*/
     height: 100%;
     background: #F5F5F5;
+    margin-top: 88px;
 }
 
 .search-container .order-content .location img {

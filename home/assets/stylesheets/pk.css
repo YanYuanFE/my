@@ -147,6 +147,10 @@ table th {
     font-weight: 400;
 }
 
+table th:not(:first-child) {
+    width: 40%;
+}
+
 .no-border, .no-border td {
     border: none;
 }
