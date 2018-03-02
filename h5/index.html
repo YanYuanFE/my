@@ -65,6 +65,17 @@
                 </div>
             </div>
             <div class="swiper-slide">
+                <div class="page-3 page">
+                    <!-- <img src="images/page5text.png" class="text-top logo">
+                    <img src="images/map.png"> -->
+                    <div class="video-box">
+                        <video x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" preload="" id="video1">
+                            <source src="http://ipsen1.medtoday.com.cn/video/lilly2018-1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
                 <div class="page-6 page">
                   <img src="images/textlogo.png" class="text-top logo">
                   <img src="images/61.png" class="zoom sixone">
@@ -165,6 +176,7 @@
         var audio = document.getElementById("audio");
         var audio2 = $("#bgaudio")[0];
         var video = document.getElementById('video');
+        var video1 = document.getElementById('video1');
         var heartAudio = $("#heart")[0];
         var pengAudio = $("#peng")[0];
         heartAudio.load();
@@ -181,6 +193,8 @@
             var _video = document.querySelector('#video');
             _video.play();
             _video.pause();
+            video1.play();
+            video1.pause();
         }, false);
         $(document).on('touchstart', '.ico-video', function(e) {
           console.log(e.target);
@@ -282,6 +296,12 @@
           $('.arrow-box').hide();
         }
 
+        function three1() {
+          $('.page-3').addClass(playingClsName);
+          video1.play();
+          $('.arrow-box').hide();
+        }
+
         function four() {
           $('.zoom').hide();
           // $('.sixone').removeClass('animated flash infinite');
@@ -327,12 +347,19 @@
         });
         video.addEventListener('ended', function () {
           setTimeout(function () {
+              $('.page-3').removeClass(playingClsName);
+              $('.arrow-box').show();
+              audio.muted = false;
+          }, 40)
+        }, false)
+        video1.addEventListener('ended', function () {
+          setTimeout(function () {
             $('.page-3').removeClass(playingClsName);
             $('.arrow-box').show();
             mySwiper.slideNext();
             audio.muted = false;
           }, 40)
-        }, false)
+        }, false);
 
 
 
@@ -354,12 +381,15 @@
                 three();
               }
               if (this.activeIndex ===3) {
-                four();
+                three1();
               }
               if (this.activeIndex ===4) {
+                four();
+              }
+              if (this.activeIndex ===5) {
                 up();
               }
-              if (this.activeIndex ===5 ) {
+              if (this.activeIndex ===6 ) {
                 five();
               }
               console.log(this.activeIndex);
