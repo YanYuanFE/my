@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="theme-color" content="#91D4DA">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>阔壹搜</title>
+    <link rel="stylesheet" href="assets/stylesheets/index.css" />
+    <link rel="stylesheet" href="assets/stylesheets/weui.css">
+    <link rel="stylesheet" href="assets/stylesheets/jquery-weui.css">
+    <script src="assets/js/picker.min.js"></script>
+</head>
+<body>
+<div class="order-content list-wrapper" id="list">
+    <div id="content" class="scroll-content">
+        <div class="hotel-list list-content">
+            <div class="order-item weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class=" weui-media-box__thumb" src="assets/images/my-order.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
+                            <h5 class="hotel-house">3室2厅2卫/朝南/120㎡</h5>
+                            <div class="price-time">
+                                <div class="hotel-price">￥1500元</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="order-item weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class=" weui-media-box__thumb" src="assets/images/house4.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
+                            <h5 class="hotel-house">3室2厅2卫/朝南/120㎡</h5>
+                            <div class="price-time">
+                                <div class="hotel-price">￥1500元</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="order-item weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class=" weui-media-box__thumb" src="assets/images/house5.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
+                            <h5 class="hotel-house">3室2厅2卫/朝南/120㎡</h5>
+                            <div class="price-time">
+                                <div class="hotel-price">￥1500元</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="order-item weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class=" weui-media-box__thumb" src="assets/images/house4.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
+                            <h5 class="hotel-house">3室2厅2卫/朝南/120㎡</h5>
+                            <div class="price-time">
+                                <div class="hotel-price">￥1500元</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="order-item weui-panel weui-panel_access">
+                <div class="weui-panel__bd">
+                    <a href="sourcedetailrent.html" class="weui-media-box weui-media-box_appmsg">
+                        <div class="weui-media-box__hd">
+                            <img class=" weui-media-box__thumb" src="assets/images/house5.png">
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <h4 class="weui-media-box__title">万科大厦A座A-1户型</h4>
+                            <h5 class="hotel-house">3室2厅2卫/朝南/120㎡</h5>
+                            <div class="price-time">
+                                <div class="hotel-price">￥1500元</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="weui-loadmore">
+            <i class="weui-loading"></i>
+            <span class="weui-loadmore__tips">正在加载</span>
+        </div>
+    </div>
+</div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery-weui.js"></script>
+<script src="assets/js/bscroll.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var scroll;
+    var wrapper = document.querySelector('#list');
+    scroll = new BScroll(wrapper, {
+        tap: true,
+        click: true,
+        pullUpLoad: {
+          threshold: 50,
+        }
+    });
+    $('.weui-loadmore').hide();
+    var loading = false;
+    scroll.on("scroll", function (pos) {
+      console.log(pos);
+    });
+    function onPullingUp() {
+      $('.weui-loadmore').css('display', 'block');
+      console.log(scroll);
+      if(loading) return;
+      loading = true;
+      console.log('success');
+      setTimeout(function() {
+        console.log(loading);
+        console.log('success');
+        loading = false;
+        $('.weui-loadmore').hide();
+      }, 2000);
+    }
+    scroll.on("pullingUp", onPullingUp);
+
+    console.log(scroll);
+    $("#search").focus(function(){
+//      window.location.pathname="/my/home/search.html"
+    });
+  });
+</script>
+</body>
+</html>

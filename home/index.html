@@ -159,16 +159,16 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/jquery-weui.js"></script>
-<script src="assets/js/lazyload.min.js"></script>
-<script src="assets/js/iscroll.js"></script>
+<!--<script src="assets/js/lazyload.min.js"></script>-->
+<!--<script src="assets/js/iscroll.js"></script>-->
 <script src="assets/js/bscroll.min.js"></script>
 
 <script>
   $(document).ready(function(){
-    $(".lazy").lazyload();
-    $(function() {
-      FastClick.attach(document.body);
-    });
+    // $(".lazy").lazyload();
+    // $(function() {
+    //   FastClick.attach(document.body);
+    // });
     var scroll;
     var wrapper = document.querySelector('#list');
     scroll = new BScroll(wrapper,
@@ -189,24 +189,10 @@
       console.log(scroll);
       if(loading) return;
       loading = true;
+      console.log('success');
       setTimeout(function() {
         console.log(loading);
-        $("#content .hotel-list").append("<div class=\"order-item weui-panel weui-panel_access\">\n" +
-          "                <div class=\"weui-panel__bd\">\n" +
-          "                    <a href=\"sourcedetailrent.html\" class=\"weui-media-box weui-media-box_appmsg\">\n" +
-          "                        <div class=\"weui-media-box__hd\">\n" +
-          "                            <img class=\"lazy weui-media-box__thumb\" data-original=\"assets/images/house3.png\">\n" +
-          "                        </div>\n" +
-          "                        <div class=\"weui-media-box__bd\">\n" +
-          "                            <h4 class=\"weui-media-box__title\">万科大厦A座A-1户型</h4>\n" +
-          "                            <h5 class=\"hotel-house\">3室2厅2卫/朝南/120㎡</h5>\n" +
-          "                            <div class=\"price-time\">\n" +
-          "                                <div class=\"hotel-price\">￥1500元</div>\n" +
-          "                            </div>\n" +
-          "                        </div>\n" +
-          "                    </a>\n" +
-          "                </div>\n" +
-          "            </div>");
+        console.log('success');
         loading = false;
         $('.weui-loadmore').hide();
       }, 2000);
@@ -484,62 +470,62 @@
         this.mask.hide();
       }
     }
-    var cityPicker = new Picker({
-      data: [cityLeftData, cityData[0], areaData[0][0]],
-    });
+    // var cityPicker = new Picker({
+    //   data: [cityLeftData, cityData[0], areaData[0][0]],
+    // });
 
-    $("#city").click(function () {
-      cityPicker.show();
-    })
-    var currentOneIndex = 0;
-    var currentTwoIndex = 0;
-    cityPicker.on('picker.change', function (index, selectedIndex) {
-        //当一列滚动停止的时候，会派发picker.change事件，同时会传递列序号index及滚动停止的位置selectIndex。
-      console.log(index, selectedIndex)
-      if(index === 0) {
-        currentOneIndex = selectedIndex;
-        cityPicker.refillColumn(1, cityData[selectedIndex])
-        cityPicker.refillColumn(2, areaData[index][0])
-      } else if(index === 1){
-        currentTwoIndex = selectedIndex;
-        console.log(areaData[currentOneIndex][selectedIndex])
-        cityPicker.refillColumn(2, areaData[currentOneIndex][selectedIndex])
-      }
-
-    })
-    cityPicker.on('picker.select', function (selectedVal, selectedIndex) {
-      console.log(selectedVal, selectedIndex)
-      var index = selectedVal.length - 1;
-      var targetVal = '';
-      if(selectedVal[2]) {
-        targetVal = areaData[selectedIndex[0]][selectedIndex[1]][selectedIndex[2]]
-      } else {
-        targetVal = cityData[selectedIndex[0]][selectedIndex[1]]
-      }
-      console.log(targetVal)
-      $('#city').text(targetVal.text)
-    })
-    $("#type").click(function () {
-      var typePicker = new tPicker({
-        data: [typeData],
-        el: '#type',
-      })
-      typePicker.show();
-    })
-    $("#price").click(function () {
-      var pricePicker = new tPicker({
-        data: [priceData],
-        el: '#price',
-      })
-      pricePicker.show();
-    })
-    $("#brand").click(function () {
-      var brandPicker = new tPicker({
-        data: [brandData],
-        el: '#brand',
-      })
-      brandPicker.show();
-    })
+    // $("#city").click(function () {
+    //   cityPicker.show();
+    // })
+    // var currentOneIndex = 0;
+    // var currentTwoIndex = 0;
+    // cityPicker.on('picker.change', function (index, selectedIndex) {
+    //     //当一列滚动停止的时候，会派发picker.change事件，同时会传递列序号index及滚动停止的位置selectIndex。
+    //   console.log(index, selectedIndex)
+    //   if(index === 0) {
+    //     currentOneIndex = selectedIndex;
+    //     cityPicker.refillColumn(1, cityData[selectedIndex])
+    //     cityPicker.refillColumn(2, areaData[index][0])
+    //   } else if(index === 1){
+    //     currentTwoIndex = selectedIndex;
+    //     console.log(areaData[currentOneIndex][selectedIndex])
+    //     cityPicker.refillColumn(2, areaData[currentOneIndex][selectedIndex])
+    //   }
+    //
+    // })
+    // cityPicker.on('picker.select', function (selectedVal, selectedIndex) {
+    //   console.log(selectedVal, selectedIndex)
+    //   var index = selectedVal.length - 1;
+    //   var targetVal = '';
+    //   if(selectedVal[2]) {
+    //     targetVal = areaData[selectedIndex[0]][selectedIndex[1]][selectedIndex[2]]
+    //   } else {
+    //     targetVal = cityData[selectedIndex[0]][selectedIndex[1]]
+    //   }
+    //   console.log(targetVal)
+    //   $('#city').text(targetVal.text)
+    // })
+    // $("#type").click(function () {
+    //   var typePicker = new tPicker({
+    //     data: [typeData],
+    //     el: '#type',
+    //   })
+    //   typePicker.show();
+    // })
+    // $("#price").click(function () {
+    //   var pricePicker = new tPicker({
+    //     data: [priceData],
+    //     el: '#price',
+    //   })
+    //   pricePicker.show();
+    // })
+    // $("#brand").click(function () {
+    //   var brandPicker = new tPicker({
+    //     data: [brandData],
+    //     el: '#brand',
+    //   })
+    //   brandPicker.show();
+    // })
   });
 </script>
 </body>

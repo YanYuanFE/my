@@ -229,9 +229,10 @@ ul {
     height: 540px;
     background: #F5F5F5;
     /*margin-top: 88px;*/
-    position: fixed;
-    top: 88px;
+    /*position: fixed;*/
+    /*top: 88px;*/
     width: 100%;
+    overflow: hidden;
 }
 
 .weui-loadmore {
