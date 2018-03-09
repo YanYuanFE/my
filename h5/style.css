@@ -111,6 +111,24 @@ a {
     width: 80%;
 }
 
+.page-8 img.eighttop {
+    width: 70%;
+    padding-top: 66px;
+}
+
+.page-8 img.eightbottom {
+    width: 30%;
+    margin-top: 20px;
+    display: none;
+}
+
+.video-box2 {
+    width: 90%;
+    height: 300px;
+    margin: 20px auto;
+    z-index: 999;
+}
+
 .page-1 .pre-text.text-top img {
     width: 30px;
 }
@@ -198,7 +216,7 @@ a {
     background-image: url("./images/bg.jpg");
 }
 
-.page-2, .page-7 {
+.page-2, .page-7, .page-8 {
     background-image: url("./images/pagebg.jpg");
 }
 

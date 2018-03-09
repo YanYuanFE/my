@@ -135,6 +135,7 @@
         console.log('success');
         loading = false;
         $('.weui-loadmore').hide();
+        scroll.finishPullUp();
       }, 2000);
     }
     scroll.on("pullingUp", onPullingUp);

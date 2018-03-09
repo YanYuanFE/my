@@ -94,6 +94,17 @@
                   <img src="images/72.png" class="sevenbottom seven">
                 </div>
             </div>
+            <div class="swiper-slide">
+                <div class="page-8 page">
+                    <img src="images/listen.jpg" class="eighttop">
+                    <img src="images/click.jpg" class="eightbottom">
+                    <div class="video-box2">
+                        <video x5-video-player-type="h5" x5-video-player-fullscreen="false" webkit-playsinline="true" playsinline="true" preload="" id="video2">
+                            <source src="http://ipsen1.medtoday.com.cn/video/lilly2018-1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="arrow-box">
             <img src="images/arrow.png" id="array">
@@ -178,6 +189,7 @@
         var video = document.getElementById('video');
         var video1 = document.getElementById('video1');
         var heartAudio = $("#heart")[0];
+        var video2 = document.getElementById('video2');
         var pengAudio = $("#peng")[0];
         heartAudio.load();
         audio2.load();
@@ -195,6 +207,8 @@
             _video.pause();
             video1.play();
             video1.pause();
+            video2.play();
+            video2.pause();
         }, false);
         $(document).on('touchstart', '.ico-video', function(e) {
           console.log(e.target);
@@ -337,6 +351,19 @@
             });
         }
 
+        function six() {
+          $('.eightbottom').hide().removeClass('animated fadeInRight');
+          $('.eighttop').removeClass('animated fadeInLeft').addClass('animated fadeInLeft')
+            .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+              $('.eighttop').removeClass('animated fadeInLeft');
+              $('.eightbottom').show().removeClass('animated fadeInRight').addClass('animated fadeInRight')
+                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                  $(this).removeClass('animated fadeInLeft');
+                });
+            });
+          // video2.play();
+        }
+
 
         var playingClsName = 'layout-playing';
         $(video).on('tap', function (e) {
@@ -391,6 +418,9 @@
               }
               if (this.activeIndex ===6 ) {
                 five();
+              }
+              if (this.activeIndex ===7 ) {
+                six();
               }
               console.log(this.activeIndex);
 

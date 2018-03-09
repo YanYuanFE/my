@@ -45,6 +45,7 @@ body, html {
 .search-container .header .search-input {
     position: relative;
     margin: 0 .5rem;
+    flex: 1;
 }
 
 .search-container .header .search-input .cancel {
@@ -57,7 +58,7 @@ body, html {
     border-radius: 50%;
     font-size: 0.8rem;
     position: absolute;
-    right: -1.6rem;
+    right: 1.6rem;
     top:.4rem;
     transform: rotate(45deg);
 }
@@ -70,7 +71,7 @@ body, html {
 }
 
 .search-container .header .search-input input {
-    width: 100%;
+    width: 84%;
     height: 1.4rem;
     border-radius: 0.25rem;
     background: #FFF;
@@ -226,11 +227,11 @@ ul {
 
 .order-content {
     /*padding: .55rem .55rem;*/
-    height: 540px;
+    height: 80vh;
     background: #F5F5F5;
     /*margin-top: 88px;*/
-    /*position: fixed;*/
-    /*top: 88px;*/
+    position: fixed;
+    top: 88px;
     width: 100%;
     overflow: hidden;
 }

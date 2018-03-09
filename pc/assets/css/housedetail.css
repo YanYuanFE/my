@@ -278,6 +278,7 @@ li {
     margin-right: 40px;
     min-width: 100px;
     color: #9C9C9C;
+    align-self: flex-start;
 }
 
 .hotel-house {
@@ -316,9 +317,14 @@ li {
 }
 
 .select-box {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    /*flex-wrap: wrap;*/
+}
+
+.select-box .kind-title {
+    padding: 10px 0;
+    display: block;
 }
 
 .select-box .select-item {
@@ -330,6 +336,7 @@ li {
     cursor: pointer;
     width: 20%;
     text-align: center;
+    display: inline;
 }
 
 .select-box .select-item.selected {
