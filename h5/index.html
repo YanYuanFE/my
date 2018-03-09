@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="swiper.css">
     <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="style.css">
-    <link href="js/video-js.min.css" rel="stylesheet">
-    <script src="js/video.min.js"></script>
 </head>
 <body>
     <div class="swiper-container">
@@ -89,8 +87,11 @@
                 <div class="page-8 page">
                     <img src="images/listen.jpg" class="eighttop">
                     <img src="images/click.jpg" class="eightbottom">
-                    <div class="video-box2">
-                        <video class="video-js" width="350" height="160"  x5-video-player-type="h5" preload="auto" id="video2" controls poster="images/poster.jpg" data-setup="{}">
+                    <div class="player" id="player">
+                        <img src="images/button.jpg" class="eight">
+                    </div>
+                    <div class="video-box">
+                        <video x5-video-player-type="h5" x5-video-player-fullscreen="true" webkit-playsinline="true" playsinline="true" preload=""  id="video2" >
                             <source src="http://ipsen1.medtoday.com.cn/video/lilly2018-3.mp4" type='video/mp4'>
                         </video>
                     </div>
@@ -354,6 +355,10 @@
             });
           // video2.play();
         }
+
+        $('#player').click(function () {
+          video2.play();
+        });
 
 
         var playingClsName = 'layout-playing';
