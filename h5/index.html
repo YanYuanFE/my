@@ -363,13 +363,6 @@
         });
         video.addEventListener('ended', function () {
           setTimeout(function () {
-              $('.page-3').removeClass(playingClsName);
-              $('.arrow-box').show();
-              audio.muted = false;
-          }, 40)
-        }, false)
-        video1.addEventListener('ended', function () {
-          setTimeout(function () {
             $('.page-3').removeClass(playingClsName);
             $('.arrow-box').show();
             mySwiper.slideNext();
