@@ -1,0 +1,223 @@
+html, body,.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+    /* -webkit-tap-highlight-color: rgba(0,0,0,0); */
+}
+
+body {
+    background: #FFF;
+    color: #000;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+    font-family: Helvetica, Arial;
+    position: relative;
+}
+
+a {
+    color: #000;
+}
+
+.swip-container {
+    position: relative;
+    /*display: inline-block;*/
+    width: 100%;
+    height: 320px;
+    text-align: center;
+}
+
+.page-1 .full{
+    background-image: url("./images/loadbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.full {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.progress {
+    text-align: center;
+    padding: 15% 0;
+    font-size: .8rem;
+    color: #073d75;
+}
+
+.click-box {
+    position: absolute;
+    left: 20%;
+    top: 32%;
+    width: 60%;
+    height: 30%;
+}
+
+.click-box .hand {
+    width: 20%;
+}
+
+.click-box .tip {
+    width: 15%;
+    margin: 3% 0 0 45%;
+}
+
+.wifi-tip {
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    width: 60%;
+}
+
+.arrow-box {
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 50%;
+    height: 90px;
+    border-radius: 100%;
+    background: rgba(255,255,255,.18);
+    z-index: 900;
+}
+
+#array {
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 20px;
+    height: 15px;
+    z-index: 999;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.page-2{
+    background-image: url("./images/bg1.jpg");
+}
+
+.page-3 {
+    background-image: url("./images/bg2.jpg");
+    position: relative;
+}
+
+.video-box {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+}
+
+.layout-playing .video-box {
+    z-index: 0;
+    display: block;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    vertical-align: baseline;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    /*background-color: black;*/
+    display: block;
+    margin: 0 auto;
+    object-fit: fill;
+}
+
+
+
+@-webkit-keyframes start {
+    0%,30% {opacity: 0;-webkit-transform: translate(0,10px);}
+    60% {opacity: 1;-webkit-transform: translate(0,0);}
+    100% {opacity: 0;-webkit-transform: translate(0,-8px);}
+}
+@-moz-keyframes start {
+    0%,30% {opacity: 0;-moz-transform: translate(0,10px);}
+    60% {opacity: 1;-moz-transform: translate(0,0);}
+    100% {opacity: 0;-moz-transform: translate(0,-8px);}
+}
+@keyframes start {
+    0%,30% {opacity: 0;transform: translate(0,10px);}
+    60% {opacity: 1;transform: translate(0,0);}
+    100% {opacity: 0;transform: translate(0,-8px);}
+}
+
+@-webkit-keyframes fadeRound {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn)
+    }
+}
+
+@-webkit-keyframes pound {
+    to { transform: scale(1.1); }
+}
+
+.heart {
+    animation: pound .5s infinite alternate;
+    transform-origin: center;
+}
+
+@-webkit-keyframes move {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(-50px,0);}
+}
+
+.move {
+    animation: move .2s ease infinite;
+}
+
+.animated.flash {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.single {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.zoom {
+    display: none;
+}
