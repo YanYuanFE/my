@@ -15,9 +15,11 @@
 <div class="search-container">
     <div class="header">
         <div class="search-input">
-            <img src="assets/images/search-input.png" alt="">
-            <input type="text" placeholder="搜索片区、小区、品牌公寓名">
-            <span class="cancel">+</span>
+            <form id="form" name="searchForm">
+                <img src="assets/images/search-input.png" alt="">
+                <input id="search" type="search" placeholder="搜索片区、小区、品牌公寓名">
+                <span class="cancel">+</span>
+            </form>
         </div>
 
         <a href="index.html">取消</a>
@@ -25,7 +27,7 @@
     <div class="content">
         <div class="recent">
             <p class="title">
-              最近热搜  
+              最近热搜
             </p>
             <div class="recent-item"><a href="index.html">租房</a></div>
             <div class="recent-item"><a href="index.html">西丽</a></div>
@@ -36,14 +38,24 @@
         </div>
         <div class="history">
             <p class="title">
-               历史记录 
+               历史记录
             </p>
             <div class="recent-item"><a href="index.html">租房</a></div>
             <div class="recent-item"><a href="index.html">西丽</a></div>
             <div class="recent-item"><a href="index.html">永丰社区</a></div>
         </div>
-        
+
     </div>
 </div>
 </body>
+<script src="assets/js/jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#form').submit(function () {
+            console.log($('#search').val())
+            alert($('#search').val())
+            return false;
+        })
+    })
+</script>
 </html>

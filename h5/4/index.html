@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>谈菁论道</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="swiper.css">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="page-1 page stop-swiping" id="first">
+                    video play
+                    <div class="video-box">
+                        <video
+                            src="http://ipsen1.medtoday.com.cn/video/lilly0321.mp4"
+                            controls=""
+                            x5-playsinline=""
+                            playsinline=""
+                            webkit-playsinline=""
+                            poster=""
+                            preload="auto"
+                            id="video">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page-2 page">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page-3 page">
+                </div>
+            </div>
+        </div>
+        <div class="arrow-box">
+            <img src="images/arrow.png" id="array">
+        </div>
+    </div>
+    <script src="js/swiper.js"></script>
+    <script src="js/iphone-inline-video.js"></script>
+    <script src='js/jquery-2.1.1.min.js' type='text/javascript'></script>
+    <script type = "text/javascript">
+
+      $(function(){
+        var video = document.querySelector('video');
+        videoMethod(video);
+
+        function videoMethod(video) {
+              video.addEventListener('touchstart', function () {
+                  video.play();
+              });
+              setTimeout(function () { video.play(); }, 1000);
+              document.addEventListener("WeixinJSBridgeReady", function (){
+                  video.play();
+                  // video.pause();
+              }, false);
+              video.addEventListener('ended', function (e) {
+                  video.play();
+              })
+              //进入全屏
+              video.addEventListener("x5videoenterfullscreen", function(){
+
+                  window.onresize = function(){
+                      video.style.width = window.innerWidth + "px";
+                      video.style.height = window.innerHeight + "px";
+                  }
+              })
+              //退出全屏
+              video.addEventListener("x5videoexitfullscreen", function(){
+                  window.onresize = function(){
+                      video.style.width = '300px';
+                      video.style.height = '200px';
+                  }
+
+              })
+          }
+
+
+
+        var mySwiper = new Swiper ('.swiper-container', {
+          direction: 'vertical',
+          loop: false,
+        });
+
+
+      });
+
+    </script>
+</body>
+</html>
